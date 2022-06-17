@@ -9,12 +9,48 @@ import SwiftUI
 
 struct EllanaWIP: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack(){
+                ZStack(){
+                    Color("LavenderBlush")
+                        .frame(width: 243, height: 5)
+                        .opacity(0.5)
+                    
+                    HStack(){
+                        
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(Color("LavenderBlush"))
+                        Spacer()
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(Color("LavenderBlush"))
+                        Spacer()
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(Color("LavenderBlush"))
+                        Spacer()
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(Color("LavenderBlush"))
+                        Spacer()
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(Color("LavenderBlush"))
+                        
+                    }.padding(70)
+                }
+                Spacer()
+            }
+            Text("Question  sur 5")
+                
+        }
     }
 }
 
 struct EllanaWIP_Previews: PreviewProvider {
     static var previews: some View {
         EllanaWIP()
+            .preferredColorScheme(.dark)
     }
 }
