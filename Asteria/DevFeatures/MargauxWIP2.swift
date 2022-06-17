@@ -35,6 +35,7 @@ struct MargauxWIP2: View {
                     .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .frame(width: 146, height: 146)
                     .clipShape(Circle())
+                    .shadow(color: Color.white, radius: 5)
                     .padding(.vertical, 20)
                 
                 Divider()
