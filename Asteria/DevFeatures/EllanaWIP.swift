@@ -31,8 +31,9 @@ struct ProgressBar: View {
                 HStack (spacing:0) {
                     ForEach(0..<questionNoTotal) { index in
                         if index > 0 {
-                            Spacer()}
-                            Circle()
+                            Spacer()
+                        }
+                        Circle()
                             .frame(width: 15, height: 15)
                             .foregroundColor(Color("LavenderBlush"))
                     }
