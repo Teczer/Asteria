@@ -14,6 +14,7 @@ struct MehdiWIP: View {
         NavigationView {
             VStack {
                 AnswerButton(textInButton: "ce n’est pas un satellite")
+                    .padding(.bottom)
                 NavigationLink(isActive: $change, destination: {VeroWIP()}) {}
                 
                 Button {
