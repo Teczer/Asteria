@@ -47,7 +47,8 @@ struct QACardAnswerContent: View {
             Text("La Lune, aussi connue sous le nom de Terre I, est le seul satellite de la planète Terre.")
                 .font(.system(size: 16))
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:175)
+                .frame(width:270, height:150)
+            CustomButton(colorOfButton: "blue", textInButton: "Continuer")
             Spacer()
         }
     }
