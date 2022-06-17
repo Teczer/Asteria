@@ -18,13 +18,16 @@ struct MargauxWIP: View {
                 .frame(width: 299, height: 597)
                 .clipped()
                 .cornerRadius(20)
-                    
+
             VStack {
+                Spacer()
                 
                 Text("T I T R E")
                     .font(.custom("Montserrat", size: 30))
                     .fontWeight(.light)
                   
+                Spacer(minLength: 400)
+                
                 // ROND + CHIFFRE
                 ZStack {
                     Circle()
@@ -44,6 +47,8 @@ struct MargauxWIP: View {
                 Text("NOM DE LA COLLECTION")
                     .font(.custom("Montserrat", size: 15))
                     .fontWeight(.semibold)
+                
+                Spacer()
                 
                     } // fin Vstack
                     
