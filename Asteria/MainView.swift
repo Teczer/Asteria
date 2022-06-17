@@ -28,7 +28,6 @@ struct MainView: View {
                     ZStack {
                         VStack {
                             Circle()
-                            
                                 .fill(
                                     LinearGradient(gradient: Gradient(colors: [Color("CarnationPink"), Color("CyberGrape")]), startPoint: .top, endPoint: .bottom)
                                 )
