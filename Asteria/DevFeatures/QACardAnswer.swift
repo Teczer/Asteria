@@ -10,7 +10,9 @@ import Foundation   // needed for markdown formatting in text
 
 // sample values
 let answerName = "Terre"
-let answerExplanation: LocalizedStringKey = "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."
+let answerExplanation: LocalizedStringKey = """
+La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre.
+"""
 
 struct QACardAnswer: View {
     var body: some View {

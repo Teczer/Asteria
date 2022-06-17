@@ -9,7 +9,9 @@ import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
 // sample values
-let questionValue = "La Lune est un satellite de la planète..."
+let questionValue = """
+La Lune est un satellite de la planète...
+"""
 let questionAnswer1 = "Jupiter"
 let questionAnswer2 = "Terre"
 let questionAnswer3 = "Mars"
