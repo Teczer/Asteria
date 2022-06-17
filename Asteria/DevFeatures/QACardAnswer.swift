@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation   // needed for markdown formatting in text
 
 struct QACardAnswer: View {
     var body: some View {
@@ -43,8 +44,8 @@ struct QACardAnswerContent: View {
                 .fontWeight(.semibold)
                 .tracking(5)
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:75)
-            Text("La Lune, aussi connue sous le nom de Terre I, est le seul satellite de la planète Terre.")
+                .frame(width:270, height:65)
+            Text("La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre.")
                 .font(.system(size: 16))
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)

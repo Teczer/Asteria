@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation   // needed for markdown formatting in text
 
 struct QACard: View {
     var body: some View {
