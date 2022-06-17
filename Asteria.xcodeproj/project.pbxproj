@@ -12,6 +12,11 @@
 		9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */; };
 		9F2084B0285C6EDD00EB8AC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */; };
 		9F2084B7285C6F0600EB8AC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084B6285C6F0600EB8AC5 /* .gitignore */; };
+		9F76C3B8285C71BF0095D087 /* AnneWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3B7285C71BF0095D087 /* AnneWIP.swift */; };
+		9F76C3BA285C71DD0095D087 /* EllanaWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3B9285C71DD0095D087 /* EllanaWIP.swift */; };
+		9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */; };
+		9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BD285C71F60095D087 /* VeroWIP.swift */; };
+		9F76C3C0285C71FF0095D087 /* MargauxWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BF285C71FF0095D087 /* MargauxWIP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F2084B6285C6F0600EB8AC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		9F76C3B7285C71BF0095D087 /* AnneWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnneWIP.swift; sourceTree = "<group>"; };
+		9F76C3B9285C71DD0095D087 /* EllanaWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllanaWIP.swift; sourceTree = "<group>"; };
+		9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehdiWIP.swift; sourceTree = "<group>"; };
+		9F76C3BD285C71F60095D087 /* VeroWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeroWIP.swift; sourceTree = "<group>"; };
+		9F76C3BF285C71FF0095D087 /* MargauxWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargauxWIP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 		9F2084A7285C6EDC00EB8AC5 /* Asteria */ = {
 			isa = PBXGroup;
 			children = (
+				9F76C3B6285C719A0095D087 /* DevFeatures */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
@@ -68,6 +79,18 @@
 				9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F76C3B6285C719A0095D087 /* DevFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				9F76C3B7285C71BF0095D087 /* AnneWIP.swift */,
+				9F76C3B9285C71DD0095D087 /* EllanaWIP.swift */,
+				9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */,
+				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
+				9F76C3BF285C71FF0095D087 /* MargauxWIP.swift */,
+			);
+			path = DevFeatures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
+				9F76C3B8285C71BF0095D087 /* AnneWIP.swift in Sources */,
+				9F76C3C0285C71FF0095D087 /* MargauxWIP.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
+				9F76C3BA285C71DD0095D087 /* EllanaWIP.swift in Sources */,
+				9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
