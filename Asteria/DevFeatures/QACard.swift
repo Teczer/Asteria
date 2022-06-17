@@ -43,12 +43,13 @@ struct QACardContent: View {
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
-            ZStack {
-                Rectangle()
-                    .fill(.red)
-                    .frame(height:150)
-                Text("Ici je mettrai les boutons dès qu'ils seront disponibles")
-            }
+            AnswerButton(colorOfButton: true, textInButton: "Terre")
+//            ZStack {
+//                Rectangle()
+//                    .fill(.red)
+//                    .frame(height:150)
+//                Text("Ici je mettrai les boutons dès qu'ils seront disponibles")
+//            }
             Spacer()
         }
     }
