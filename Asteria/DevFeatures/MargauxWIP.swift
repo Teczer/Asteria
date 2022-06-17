@@ -9,7 +9,31 @@ import SwiftUI
 
 struct MargauxWIP: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+                    
+            Image("card-background-image")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 299, height: 597)
+                .clipped()
+                .cornerRadius(20)
+                    
+            VStack {
+                Text("T I T R E")
+                    .font(.largeTitle)
+                    .fontWeight(.ultraLight)
+                        
+                ZStack {
+                    Circle()
+                        .background(Color("OxfordBlue"))
+                            
+                    Text("1")
+                        }
+                        
+                    } // fin Vstack
+                    
+                } // fin Zstack
     }
 }
 
