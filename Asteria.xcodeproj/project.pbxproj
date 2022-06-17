@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */; };
-		9F2084AB285C6EDC00EB8AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084AA285C6EDC00EB8AC5 /* ContentView.swift */; };
+		9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084AA285C6EDC00EB8AC5 /* MainView.swift */; };
 		9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */; };
 		9F2084B0285C6EDD00EB8AC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */; };
+		9F2084B7285C6F0600EB8AC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084B6285C6F0600EB8AC5 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F2084A5285C6EDC00EB8AC5 /* Asteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteriaApp.swift; sourceTree = "<group>"; };
-		9F2084AA285C6EDC00EB8AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F2084AA285C6EDC00EB8AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F2084B6285C6F0600EB8AC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
-				9F2084AA285C6EDC00EB8AC5 /* ContentView.swift */,
+				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
 			);
@@ -62,6 +64,7 @@
 		9F2084AE285C6EDD00EB8AC5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				9F2084B6285C6F0600EB8AC5 /* .gitignore */,
 				9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2084B0285C6EDD00EB8AC5 /* Preview Assets.xcassets in Resources */,
+				9F2084B7285C6F0600EB8AC5 /* .gitignore in Resources */,
 				9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F2084AB285C6EDC00EB8AC5 /* ContentView.swift in Sources */,
+				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

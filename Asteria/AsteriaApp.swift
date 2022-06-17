@@ -2,7 +2,7 @@
 //  AsteriaApp.swift
 //  Asteria
 //
-//  Created by apprenant70 on 17/06/2022.
+//  Created by Theia Team on 17/06/2022.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct AsteriaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
