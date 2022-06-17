@@ -10,11 +10,7 @@ import SwiftUI
 struct MehdiWIP: View {
     var body: some View {
         VStack {
-            ButtonEdit(textInButton: "Bouton", typeOfButton: false)
-            ButtonEdit(textInButton: "Bouton", typeOfButton: true)
-                .padding(.bottom)
-            WhiteButton(textInButton: "Bouton")
-            
+            CustomButton(colorOfButton: "pink", textInButton: "button")
         }
     }
 }
@@ -27,27 +23,13 @@ struct MehdiWIP_Previews: PreviewProvider {
     }
 }
 
-struct WhiteButton: View {
+struct CustomButton: View {
+    var colorOfButton : String
     var textInButton : String
-    var body: some View {
-        RoundedRectangle(cornerRadius: 10)
-            .frame(width: 280, height: 50)
-            .foregroundColor(.white)
-            .overlay(
-                Text(textInButton)
-                    .foregroundColor(Color("OxfordBlue"))
-            )
-    }
-}
-
-struct ButtonEdit: View {
-    var textInButton : String
-    var typeOfButton : Bool
-    
     var body: some View {
         
         
-        if typeOfButton == true {
+        if colorOfButton == "pink" {
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 280, height: 50)
                 .foregroundColor(Color("CarnationPink"))
@@ -55,13 +37,21 @@ struct ButtonEdit: View {
                     Text(textInButton)
                         .foregroundColor(Color("SpaceCadet"))
                 )
-        } else {
+        } else if colorOfButton == "blue" {
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 280, height: 50)
                 .foregroundColor(Color("SpaceCadet"))
                 .overlay(
                     Text(textInButton)
                         .foregroundColor(Color("LavenderBlush"))
+                )
+        } else if colorOfButton == "white" {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 280, height: 50)
+                .foregroundColor(.white)
+                .overlay(
+                    Text(textInButton)
+                        .foregroundColor(Color("OxfordBlue"))
                 )
         }
     }
