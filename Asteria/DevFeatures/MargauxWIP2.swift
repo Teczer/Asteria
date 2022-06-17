@@ -12,9 +12,12 @@ struct MargauxWIP2: View {
         
         ZStack {
                     
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.white, lineWidth: 2)
+            Rectangle()
+                .cornerRadius(20)
+                .background(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 2))
+                .foregroundColor(Color("OxfordBlue"))
                 .frame(width: 299, height: 597)
+                .shadow(color: Color.white, radius: 10)
             
             VStack {
                 
