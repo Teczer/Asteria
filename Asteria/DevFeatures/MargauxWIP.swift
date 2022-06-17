@@ -42,14 +42,14 @@ struct MargauxWIP: View {
                         .fontWeight(.semibold)
                         } // fin rond + chiffre
                 
-                Text("C O L L E C T I O N")
-                    .font(.custom("Montserrat", size: 15))
-                    .fontWeight(.light)
-                    .padding(.vertical, 1)
+                    Text("C O L L E C T I O N")
+                        .font(.custom("Montserrat", size: 15))
+                        .fontWeight(.light)
+                        .padding(.vertical, 1)
                         
-                Text("NOM DE LA COLLECTION")
-                    .font(.custom("Montserrat", size: 15))
-                    .fontWeight(.semibold)
+                    Text("NOM DE LA COLLECTION")
+                        .font(.custom("Montserrat", size: 15))
+                        .fontWeight(.semibold)
                 
                 Spacer()
                 
