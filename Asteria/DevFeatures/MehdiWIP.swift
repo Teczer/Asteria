@@ -12,27 +12,23 @@ struct MehdiWIP: View {
     var body: some View {
         NavigationView {
             VStack {
-                CustomButton(colorOfButton: "blue", textInButton: "Connexion")
-                
-                
-                
-                
+                AnswerButton(textInButton: "Bouton")
                 NavigationLink(isActive: $change, destination: {VeroWIP()}) {
                     if change == false {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 280, height: 50)
-                            .foregroundColor(Color("CarnationPink"))
+                            .frame(width: 270, height: 50)
+                            .foregroundColor(Color("OxfordBlue"))
                             .overlay(
-                                Text("textInButton")
+                                Text("NavigationLink")
                                     .fontWeight(.bold)
-                                    .foregroundColor(Color("SpaceCadet"))
+                                    .foregroundColor(.white)
                             )
                     } else {
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 280, height: 50)
+                            .frame(width: 270, height: 50)
                             .foregroundColor(Color("CarnationPink"))
                             .overlay(
-                                Text("textInButton")
+                                Text("NavigationLink")
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("SpaceCadet"))
                             )
@@ -87,7 +83,24 @@ struct CustomButton: View {
     }
 }
 
-
+struct AnswerButton: View {
+    @State var colorOfButton : Bool = false
+    var textInButton : String
+    var body: some View {
+        Button {
+            self.colorOfButton.toggle()
+        } label: {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 270, height: 50)
+                .foregroundColor(colorOfButton ? Color("CarnationPink") : Color("OxfordBlue"))
+                .overlay(
+                    Text(textInButton)
+                        .fontWeight(.bold)
+                        .foregroundColor(colorOfButton ? Color("SpaceCadet") : Color.white )
+                )
+        }
+    }
+}
 
 
 
