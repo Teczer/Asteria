@@ -20,17 +20,31 @@ struct MargauxWIP: View {
                 .cornerRadius(20)
                     
             VStack {
+                
                 Text("T I T R E")
-                    .font(.largeTitle)
-                    .fontWeight(.ultraLight)
-                        
+                    .font(.custom("Montserrat", size: 30))
+                    .fontWeight(.light)
+                  
+                // ROND + CHIFFRE
                 ZStack {
                     Circle()
-                        .background(Color("OxfordBlue"))
-                            
+                        .fill(Color("OxfordBlue"))
+                        .frame(width: 40, height: 40)
+
                     Text("1")
-                        }
+                        .font(.custom("Montserrat", size: 24))
+                        .fontWeight(.semibold)
+                        } // fin rond + chiffre
+                
+                Text("C O L L E C T I O N")
+                    .font(.custom("Montserrat", size: 15))
+                    .fontWeight(.light)
+                    .padding(.vertical, 1)
                         
+                Text("NOM DE LA COLLECTION")
+                    .font(.custom("Montserrat", size: 15))
+                    .fontWeight(.semibold)
+                
                     } // fin Vstack
                     
                 } // fin Zstack
@@ -40,5 +54,6 @@ struct MargauxWIP: View {
 struct MargauxWIP_Previews: PreviewProvider {
     static var previews: some View {
         MargauxWIP()
+            .preferredColorScheme(.dark)
     }
 }
