@@ -17,33 +17,25 @@ let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoT
 struct ProgressBar: View {
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .leading) {
+            ZStack {
                 HStack (spacing:0) {
+                    Spacer()
+                        .frame(width:5)
                     Color("CarnationPink").opacity(0.8)
                         .frame(width: geometry.size.width*CGFloat(questionProgression), height: 5)
                     Color("LavenderBlush").opacity(0.8)
                         .frame(height: 5)
+                    Spacer()
+                        .frame(width:5)
                 }
-                HStack {
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color("LavenderBlush"))
+                HStack (spacing:0) {
+                    ForEach(0..<questionNoTotal) { index in
+                        if index > 0 {
+                            Spacer()}
+                            Circle()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(Color("LavenderBlush"))
+                    }
                 }
             }
         }
