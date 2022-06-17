@@ -84,19 +84,19 @@ struct CustomButton: View {
 }
 
 struct AnswerButton: View {
-    @State var colorOfButton : Bool = false
+    @State var selectedButton : Bool = false
     var textInButton : String
     var body: some View {
         Button {
-            self.colorOfButton.toggle()
+            self.selectedButton.toggle()
         } label: {
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: 270, height: 50)
-                .foregroundColor(colorOfButton ? Color("CarnationPink") : Color("OxfordBlue"))
+                .frame(width: 128, height: 58)
+                .foregroundColor(selectedButton ? Color("CarnationPink") : Color("OxfordBlue"))
                 .overlay(
                     Text(textInButton)
                         .fontWeight(.bold)
-                        .foregroundColor(colorOfButton ? Color("SpaceCadet") : Color.white )
+                        .foregroundColor(selectedButton ? Color("SpaceCadet") : Color.white )
                 )
         }
     }
