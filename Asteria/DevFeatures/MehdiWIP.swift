@@ -12,26 +12,30 @@ struct MehdiWIP: View {
     @State var change: Bool = false
     var body: some View {
         NavigationView {
-            VStack {
-                AnswerButton(textInButton: "ce n’est pas un satellite")
-                    .padding(.bottom)
-                NavigationLink(isActive: $change, destination: {VeroWIP()}) {}
-                
-                Button {
-                    self.changeA.toggle()
-                    DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-                        self.change.toggle()
+            ZStack {
+                Color("CarnationPink")
+                    .ignoresSafeArea()
+                VStack {
+                    AnswerButton(textInButton: "ce n’est pas un satellite")
+                        .padding(.bottom)
+                    NavigationLink(isActive: $change, destination: {VeroWIP()}) {}
+                    
+                    Button {
+                        self.changeA.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                            self.change.toggle()
+                        }
+                    } label: {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 128, height: 50)
+                            .foregroundColor(changeA ? Color("CarnationPink") : Color("OxfordBlue"))
+                            .overlay(
+                                Text("ce n’est pas un satellite")
+                                    .font(.system(size: 12))
+                                    .frame(width: 73, height: 50)
+                                    .foregroundColor(changeA ? Color("SpaceCadet") : Color.white )
+                            )
                     }
-                } label: {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 128, height: 50)
-                        .foregroundColor(changeA ? Color("CarnationPink") : Color("OxfordBlue"))
-                        .overlay(
-                            Text("ce n’est pas un satellite")
-                                .font(.system(size: 12))
-                                .frame(width: 73, height: 50)
-                                .foregroundColor(changeA ? Color("SpaceCadet") : Color.white )
-                        )
                 }
             }
         }

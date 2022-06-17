@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D57AC285CCC0C00307D20 /* ViewRouter.swift */; };
 		9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */; };
 		9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084AA285C6EDC00EB8AC5 /* MainView.swift */; };
 		9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		671D57AC285CCC0C00307D20 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		9F2084A5285C6EDC00EB8AC5 /* Asteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteriaApp.swift; sourceTree = "<group>"; };
 		9F2084AA285C6EDC00EB8AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				9F76C3B6285C719A0095D087 /* DevFeatures */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
+				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
 			);
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
+				671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* MargauxWIP.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
