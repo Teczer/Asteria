@@ -6,6 +6,16 @@
 //
 
 import SwiftUI
+import Foundation   // needed for markdown formatting in text
+
+// sample values
+let questionValue = """
+La Lune est un satellite de la planète...
+"""
+let questionAnswer1 = "Jupiter"
+let questionAnswer2 = "Terre"
+let questionAnswer3 = "Mars"
+let questionAnswer4 = "Ce n'est pas un satellite"
 
 struct QACard: View {
     var body: some View {
@@ -24,7 +34,6 @@ struct QACard: View {
     }
 }
 
-
 struct QACardContent: View {
     var body: some View {
         VStack(alignment:.center) {
@@ -38,22 +47,31 @@ struct QACardContent: View {
             Rectangle()
                 .fill(.black)
                 .frame(height:200)
-            Text("La Lune est un satellite de la planète...")
-                .font(.system(size: 24))
+            Text(questionValue)
+                .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:150)
-            ZStack {
-                Rectangle()
-                    .fill(.red)
-                    .frame(height:150)
-                Text("Ici je mettrai les boutons dès qu'ils seront disponibles")
+                .frame(width:270, height:145)
+            VStack {
+                HStack {
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer1)
+                    Spacer()
+                        .frame(width:15)
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer2)
+                }
+                Spacer()
+                HStack {
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer3)
+                    Spacer()
+                        .frame(width:15)
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer4)
+                }
             }
+            .frame(height:125)
             Spacer()
         }
     }
 }
-
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
