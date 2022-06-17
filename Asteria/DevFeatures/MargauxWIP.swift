@@ -18,6 +18,9 @@ struct MargauxWIP: View {
                 .frame(width: 299, height: 597)
                 .clipped()
                 .cornerRadius(20)
+                .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.white, lineWidth: 1))
+                .shadow(color: Color.white, radius: 10)
 
             VStack {
                 Spacer()
@@ -51,7 +54,7 @@ struct MargauxWIP: View {
                 Spacer()
                 
                     } // fin Vstack
-                    
+                
                 } // fin Zstack
     }
 }
