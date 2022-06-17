@@ -8,6 +8,10 @@
 import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
+// sample values
+let answerName = "Terre"
+let answerExplanation: LocalizedStringKey = "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."
+
 struct QACardAnswer: View {
     var body: some View {
         ZStack {
@@ -25,7 +29,6 @@ struct QACardAnswer: View {
     }
 }
 
-
 struct QACardAnswerContent: View {
     var body: some View {
         VStack(alignment:.center) {
@@ -39,13 +42,13 @@ struct QACardAnswerContent: View {
             Rectangle()
                 .fill(.black)
                 .frame(height:200)
-            Text("TERRE")
+            Text(answerName.uppercased())
                 .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .tracking(5)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:65)
-            Text("La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre.")
+            Text(answerExplanation)
                 .font(.system(size: 16))
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
@@ -54,7 +57,6 @@ struct QACardAnswerContent: View {
         }
     }
 }
-
 
 struct QACardAnswer_Previews: PreviewProvider {
     static var previews: some View {

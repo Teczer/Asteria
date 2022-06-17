@@ -8,6 +8,13 @@
 import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
+// sample values
+let questionValue = "La Lune est un satellite de la planète..."
+let questionAnswer1 = "Jupiter"
+let questionAnswer2 = "Terre"
+let questionAnswer3 = "Mars"
+let questionAnswer4 = "Ce n'est pas un satellite"
+
 struct QACard: View {
     var body: some View {
         ZStack {
@@ -25,7 +32,6 @@ struct QACard: View {
     }
 }
 
-
 struct QACardContent: View {
     var body: some View {
         VStack(alignment:.center) {
@@ -39,24 +45,24 @@ struct QACardContent: View {
             Rectangle()
                 .fill(.black)
                 .frame(height:200)
-            Text("La Lune est un satellite de la planète...")
+            Text(questionValue)
                 .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:140)
             VStack {
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: "Jupiter")
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer1)
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: "Terre")
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer2)
                 }
                 Spacer()
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: "Mars")
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer3)
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: "Ce n'est pas un satellite")
+                    AnswerButton(selectedButton: false, textInButton: questionAnswer4)
                 }
             }
             .frame(height:135)
@@ -64,7 +70,6 @@ struct QACardContent: View {
         }
     }
 }
-
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
