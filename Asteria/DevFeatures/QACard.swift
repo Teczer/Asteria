@@ -42,14 +42,23 @@ struct QACardContent: View {
                 .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:150)
-            AnswerButton(colorOfButton: true, textInButton: "Terre")
-//            ZStack {
-//                Rectangle()
-//                    .fill(.red)
-//                    .frame(height:150)
-//                Text("Ici je mettrai les boutons dès qu'ils seront disponibles")
-//            }
+                .frame(width:270, height:140)
+            VStack {
+                HStack {
+                    AnswerButton(selectedButton: false, textInButton: "Jupiter")
+                    Spacer()
+                        .frame(width:15)
+                    AnswerButton(selectedButton: false, textInButton: "Terre")
+                }
+                Spacer()
+                HStack {
+                    AnswerButton(selectedButton: false, textInButton: "Mars")
+                    Spacer()
+                        .frame(width:15)
+                    AnswerButton(selectedButton: false, textInButton: "Ce n'est pas un satellite")
+                }
+            }
+            .frame(height:135)
             Spacer()
         }
     }
