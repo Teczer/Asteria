@@ -9,14 +9,25 @@ import SwiftUI
 
 struct QACard: View {
     var body: some View {
-        Rectangle()
-            .foregroundColor(Color("CyberGrape"))
-            .frame(width:300, height:600)
+        ZStack {
+            Rectangle()
+                .fill(
+                    LinearGradient(gradient: Gradient(colors: [Color("CyberGrape"), Color("SpaceCadet")]), startPoint: .top, endPoint: .bottom)
+                )
+                .frame(width:300, height:600)
+                .cornerRadius(24)
+                .shadow(color: .white.opacity(0.8), radius: 32)
+            
+            VStack {
+//                Text("Question")
+            }
+        }
     }
 }
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
         QACard()
+            .preferredColorScheme(.dark)
     }
 }
