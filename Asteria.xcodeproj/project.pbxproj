@@ -16,6 +16,7 @@
 		9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */; };
 		9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BD285C71F60095D087 /* VeroWIP.swift */; };
 		9F76C3C0285C71FF0095D087 /* MargauxWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BF285C71FF0095D087 /* MargauxWIP.swift */; };
+		9F978366285C953800B11604 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 9F978365285C953800B11604 /* .gitattributes */; };
 		9FD1F6CE285C8A3C00C26900 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */; };
 		9FD1F6CF285C8A3C00C26900 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehdiWIP.swift; sourceTree = "<group>"; };
 		9F76C3BD285C71F60095D087 /* VeroWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeroWIP.swift; sourceTree = "<group>"; };
 		9F76C3BF285C71FF0095D087 /* MargauxWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargauxWIP.swift; sourceTree = "<group>"; };
+		9F978365285C953800B11604 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		9FD1F6D0285C8A4D00C26900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */,
 				9F2084B6285C6F0600EB8AC5 /* .gitignore */,
 				9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */,
+				9F978365285C953800B11604 /* .gitattributes */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2084B0285C6EDD00EB8AC5 /* Preview Assets.xcassets in Resources */,
+				9F978366285C953800B11604 /* .gitattributes in Resources */,
 				9FD1F6CF285C8A3C00C26900 /* Montserrat.ttf in Resources */,
 				9F2084B7285C6F0600EB8AC5 /* .gitignore in Resources */,
 				9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */,
