@@ -32,6 +32,7 @@ struct MargauxWIP2: View {
                     .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .frame(width: 146, height: 146)
                     .clipShape(Circle())
+                    .padding(.vertical, 20)
                 
                 Divider()
                     .background(Color.white)
@@ -46,9 +47,11 @@ struct MargauxWIP2: View {
                         VStack {
                             Image(systemName: "bolt.circle.fill")
                                 .font(.system(size: 25))
+                                .padding(.vertical, 1)
                             Text("Spec 1 :")
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .padding(.vertical, 1)
                             Text("""
                                  Chiffre
                                  ou fun fact
@@ -64,9 +67,11 @@ struct MargauxWIP2: View {
                         VStack {
                             Image(systemName: "bolt.circle.fill")
                                 .font(.system(size: 25))
+                                .padding(.vertical, 1)
                             Text("Spec 2 :")
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .padding(.vertical, 1)
                             Text("""
                                  Chiffre
                                  ou fun fact
@@ -81,9 +86,11 @@ struct MargauxWIP2: View {
                         VStack {
                             Image(systemName: "bolt.circle.fill")
                                 .font(.system(size: 25))
+                                .padding(.vertical, 1)
                             Text("Spec 3 :")
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .padding(.vertical, 1)
                             Text("""
                                  Chiffre
                                  ou fun fact
@@ -95,7 +102,20 @@ struct MargauxWIP2: View {
                         
                         Spacer()
                     
-                    } // fin Hstack fun facts
+                    }.padding(.vertical, 2) // fin Hstack fun facts
+                
+                Divider()
+                    .background(Color.white)
+                    .frame(width: 299)
+                
+                
+                // TEXTE DESCRIPTIF
+                
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue placerat quam id blandit. Cras maximus tempor efficitur. Curabitur leo metus, porta vel blandit vitae, suscipit et ex. Etiam ac rutrum mauris, sed euismod magna. Sed a porta urna. Nullam vehicula fermentum facilisis. Pellentesque gravida, nisl a consectetur mattis, magna urna pretium elit, eget euismod enim sapien quis orci. Proin quis tellus eros.")
+                    .font(.custom("Montserrat", size: 12))
+                    .fontWeight(.light)
+                    .frame(width: 260)
+                    .padding(.top, 3)
                 
             } // fin Vstack
 
