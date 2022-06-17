@@ -48,10 +48,10 @@ struct QACardContent: View {
                 .fill(.black)
                 .frame(height:200)
             Text(questionValue)
-                .font(.system(size: 24))
+                .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:140)
+                .frame(width:270, height:145)
             VStack {
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: questionAnswer1)
@@ -67,7 +67,7 @@ struct QACardContent: View {
                     AnswerButton(selectedButton: false, textInButton: questionAnswer4)
                 }
             }
-            .frame(height:135)
+            .frame(height:125)
             Spacer()
         }
     }
