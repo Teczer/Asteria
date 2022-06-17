@@ -13,14 +13,13 @@ struct ProgressBar: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                Color("LavenderBlush")
-                    .frame(width: geometry.size.width, height: 5)
-                    .opacity(0.5)
-                    .frame(width: geometry.size.width*1)
-                
-                Color("CarnationPink")
-                    .frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: 5)
-                    .animation(.linear)
+                HStack{
+                    Color("CarnationPink")
+                        .frame(width: geometry.size.width*0.75, height: 5)
+                    Color("LavenderBlush")
+                        .frame(width: geometry.size.width*0.25, height: 5)
+                        .opacity(0.5)
+                }
                 HStack{
                     Circle()
                         .frame(width: 10, height: 10)
