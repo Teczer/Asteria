@@ -7,78 +7,55 @@
 
 import SwiftUI
 
+//sample values
+let questionNoCurrent = 4
+let questionNoTotal = 5
+
+//unmutable values
+let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)
+
 struct ProgressBar: View {
-    @Binding var value: Float
-    
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                HStack{
-                    Color("CarnationPink")
-                        .frame(width: geometry.size.width*0.75, height: 5)
-                    Color("LavenderBlush")
-                        .frame(width: geometry.size.width*0.25, height: 5)
-                        .opacity(0.5)
+            ZStack {
+                HStack (spacing:0) {
+                    Spacer()
+                        .frame(width:5)
+                    Color("CarnationPink").opacity(0.8)
+                        .frame(width: geometry.size.width*CGFloat(questionProgression), height: 5)
+                    Color("LavenderBlush").opacity(0.8)
+                        .frame(height: 5)
+                    Spacer()
+                        .frame(width:5)
                 }
-                HStack{
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(Color("LavenderBlush"))
-                    Spacer()
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(Color("LavenderBlush"))
+                HStack (spacing:0) {
+                    ForEach(0..<questionNoTotal) { index in
+                        if index > 0 {
+                            Spacer()
+                        }
+                        Circle()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(Color("LavenderBlush"))
+                    }
                 }
             }
         }
-    }
-}
-struct EllaView: View {
-    @State var progressValue: Float = 0.0
-    
-    var body: some View {
-        VStack {
-            ProgressBar(value: $progressValue).frame(height: 20)
-            
-            Button(action: {
-                self.startProgressBar()
-            }) {
-                Text("Start Progress")
-            }.padding()
-            
-            Button(action: {
-                self.resetProgressBar()
-            }) {
-                Text("Reset")
-            }
-            
-            Spacer()
-        }.padding()
-    }
-    
-    func startProgressBar() {
-        for _ in 0...100 {
-            self.progressValue += 0.25
-        }
-    }
-    
-    func resetProgressBar() {
-        self.progressValue = 0.0
     }
 }
 
+struct EllaView: View {
+    
+    var body: some View {
+        VStack {
+            ProgressBar()
+            
+            Text("Progression \(questionProgression)")
+                .foregroundColor(Color.red)
+            
+        }.padding()
+    }
+    
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
