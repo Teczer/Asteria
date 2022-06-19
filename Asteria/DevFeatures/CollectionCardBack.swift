@@ -100,6 +100,7 @@ struct CollectionCardBack: View {
                         
                         Spacer()
                         
+                        // FUN FACT 3
                         VStack {
                             Image(systemName: collectionCardBack.cardFunFactIcon3)
                                 .font(.system(size: 25))

@@ -42,7 +42,7 @@ struct CollectionCardFront: View {
                   
                 Spacer(minLength: 400)
                 
-                // ROND + CHIFFRE
+                // ROND + NUMERO CARTE
                 ZStack {
                     Circle()
                         .fill(Color("OxfordBlue"))
@@ -51,14 +51,14 @@ struct CollectionCardFront: View {
                     Text(collectionCardFront.cardNumber)
                         .font(.custom("Montserrat", size: 24))
                         .fontWeight(.semibold)
-                        } // fin rond + chiffre
+                        } // fin
                 
                     Text("C O L L E C T I O N")
                         .font(.custom("Montserrat", size: 15))
                         .fontWeight(.light)
                         .padding(.vertical, 1)
                         
-                Text(collectionCardFront.collectionName)
+                    Text(collectionCardFront.collectionName)
                         .font(.custom("Montserrat", size: 15))
                         .fontWeight(.semibold)
                 
