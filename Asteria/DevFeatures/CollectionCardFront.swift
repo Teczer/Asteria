@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct MargauxWIP: View {
+struct CardFront: Identifiable {
+    var id = UUID()
+    var cardFrontImage: String
+    var cardTitle: String
+    var cardNumber: String
+    var collectionName: String
+}
+
+struct CollectionCardFront: View {
+    
+    var collectionCardFront: CardFront
+    
     var body: some View {
         
         ZStack {
                     
-            Image("card-background-image")
+            Image(collectionCardFront.cardFrontImage)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 299, height: 597)
@@ -25,7 +36,7 @@ struct MargauxWIP: View {
             VStack {
                 Spacer()
                 
-                Text("T I T R E")
+                Text(collectionCardFront.cardTitle)
                     .font(.custom("Montserrat", size: 30))
                     .fontWeight(.light)
                   
@@ -37,7 +48,7 @@ struct MargauxWIP: View {
                         .fill(Color("OxfordBlue"))
                         .frame(width: 40, height: 40)
 
-                    Text("1")
+                    Text(collectionCardFront.cardNumber)
                         .font(.custom("Montserrat", size: 24))
                         .fontWeight(.semibold)
                         } // fin rond + chiffre
@@ -47,7 +58,7 @@ struct MargauxWIP: View {
                         .fontWeight(.light)
                         .padding(.vertical, 1)
                         
-                    Text("NOM DE LA COLLECTION")
+                Text(collectionCardFront.collectionName)
                         .font(.custom("Montserrat", size: 15))
                         .fontWeight(.semibold)
                 
@@ -59,9 +70,9 @@ struct MargauxWIP: View {
     }
 }
 
-struct MargauxWIP_Previews: PreviewProvider {
+struct CollectionCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        MargauxWIP()
+        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "T I T R E", cardNumber: "1", collectionName: "NOM DE LA COLLECTION"))
             .preferredColorScheme(.dark)
     }
 }
