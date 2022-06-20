@@ -24,6 +24,7 @@
 		9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */; };
 		9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F949BF028605E080001DC72 /* ProgressionBar.swift */; };
 		9F949BF32860621A0001DC72 /* ScoreBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F949BF22860621A0001DC72 /* ScoreBar.swift */; };
+		9F949BF528606F760001DC72 /* TutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F949BF428606F760001DC72 /* TutoView.swift */; };
 		9F978360285C8E3300B11604 /* QACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97835F285C8E3300B11604 /* QACard.swift */; };
 		9F978366285C953800B11604 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 9F978365285C953800B11604 /* .gitattributes */; };
 		9F978368285CA33700B11604 /* QACardAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978367285CA33700B11604 /* QACardAnswer.swift */; };
@@ -51,6 +52,7 @@
 		9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCardFront.swift; sourceTree = "<group>"; };
 		9F949BF028605E080001DC72 /* ProgressionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionBar.swift; sourceTree = "<group>"; };
 		9F949BF22860621A0001DC72 /* ScoreBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBar.swift; sourceTree = "<group>"; };
+		9F949BF428606F760001DC72 /* TutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutoView.swift; sourceTree = "<group>"; };
 		9F97835F285C8E3300B11604 /* QACard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QACard.swift; sourceTree = "<group>"; };
 		9F978365285C953800B11604 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		9F978367285CA33700B11604 /* QACardAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QACardAnswer.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
+				9F949BF428606F760001DC72 /* TutoView.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
 			);
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F949BF528606F760001DC72 /* TutoView.swift in Sources */,
 				A7C48F38285CABB800D47D05 /* CollectionCardBack.swift in Sources */,
 				9F949BF32860621A0001DC72 /* ScoreBar.swift in Sources */,
 				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
