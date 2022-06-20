@@ -17,7 +17,7 @@ struct ScoreBar: View {
                 Spacer()
                     .frame(width:16)
                 Color("LavenderBlush").opacity(0.8)
-                    .frame(height: 5)
+                    .frame(height: 12)
                 Spacer()
                     .frame(width:16)
             }
@@ -32,13 +32,13 @@ struct ScoreBar: View {
                                 .resizable()
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(Color("OxfordBlue"), Color("CarnationPink"))
-                                .frame(width: 32, height: 32)
+                                .frame(width: 36, height: 36)
                         } else {
                             Image(systemName: "xmark.circle.fill")
                                 .resizable()
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(Color("OxfordBlue"), Color("LavenderBlush"))
-                                .frame(width: 32, height: 32)
+                                .frame(width: 36, height: 36)
                         }
                         
                     }
