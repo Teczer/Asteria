@@ -26,6 +26,7 @@ struct CollectionScreen: View {
                 .scaledToFill()
                 .ignoresSafeArea()
             
+            
         Rectangle()
                 .fill(Color("OrchidCrayola"))
                 .opacity(0.4)
@@ -41,7 +42,20 @@ struct CollectionScreen: View {
             } // fin scroll view
 //            .padding(.leading, 50)
             .frame(width: 330, height: 150)
-
+            
+            HStack {
+            Rectangle()
+                    .fill(.black)
+                .frame(width: 85, height: 220)
+                .blur(radius: 30)
+            
+            Spacer()
+            
+            Rectangle()
+                    .fill(.black)
+                .frame(width: 85, height: 220)
+                .blur(radius: 30)
+            }
 
             
         }
