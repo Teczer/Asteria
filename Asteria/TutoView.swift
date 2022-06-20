@@ -11,57 +11,50 @@ import Foundation   // needed for markdown formatting in text
 struct TutoView: View {
     var body: some View {
         ZStack {
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-            Color("OxfordBlue").opacity(0.3)
-                .ignoresSafeArea()
-            VStack {
-                Image("tutoscreen02")
+            GeometryReader { geometry in
+                Image("background")
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .ignoresSafeArea()
-                Spacer()
-                    .frame(height:220)
-            }
-            VStack {
-                Spacer()
-                ZStack {
+                Color("OxfordBlue").opacity(0.3)
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
                     Rectangle()
-                        .fill(
-                            LinearGradient(gradient: Gradient(stops: [
-                                Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
-                                Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
-                            ]), startPoint: .top, endPoint: .bottom)
-                        )
+                            .fill(
+                                LinearGradient(gradient: Gradient(stops: [
+                                    Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
+                                    Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
+                                ]), startPoint: .top, endPoint: .bottom)
+                            )
                         .ignoresSafeArea()
-                    VStack {
-                        Spacer()
-                            .frame(height:50)
-                        HStack {
-                            Image(systemName: "chevron.compact.left")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(Color("LavenderBlush").opacity(0.5))
-                                .frame(width:10)
-                                .padding()
-                            Spacer()
-                            Text("Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...")
-                                .multilineTextAlignment(.center)
-                                .frame(width:180)
-                            Spacer()
-                            Image(systemName: "chevron.compact.right")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(Color("LavenderBlush").opacity(0.5))
-                                .frame(width:10)
-                                .padding()
+                        .frame(height:300)
+                }
+                ScrollView(.horizontal) {
+                    HStack(spacing:0) {
+                        ForEach(0..<3) { index in
+                            VStack {
+                                ZStack {
+                                    VStack {
+                                        Spacer()
+                                    }
+                                    VStack {
+                                        Image("tutoscreen\(index)")
+                                            .resizable()
+                                            .scaledToFit()
+                                        .ignoresSafeArea()
+                                        Spacer()
+                                        Text("Test")
+                                    }
+                                }
+
+                                }
+                                .frame(width:geometry.size.width)
                         }
                     }
                 }
-                .frame(height:300)
             }
+            
         }
     }
 }
