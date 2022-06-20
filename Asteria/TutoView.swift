@@ -18,6 +18,18 @@ struct TutoView: View {
                     .ignoresSafeArea()
                 Color("OxfordBlue").opacity(0.3)
                     .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Rectangle()
+                            .fill(
+                                LinearGradient(gradient: Gradient(stops: [
+                                    Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
+                                    Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
+                                ]), startPoint: .top, endPoint: .bottom)
+                            )
+                        .ignoresSafeArea()
+                        .frame(height:300)
+                }
                 ScrollView(.horizontal) {
                     HStack(spacing:0) {
                         ForEach(0..<3) { index in
@@ -25,15 +37,6 @@ struct TutoView: View {
                                 ZStack {
                                     VStack {
                                         Spacer()
-                                        Rectangle()
-                                                .fill(
-                                                    LinearGradient(gradient: Gradient(stops: [
-                                                        Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
-                                                        Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
-                                                    ]), startPoint: .top, endPoint: .bottom)
-                                                )
-                                            .ignoresSafeArea()
-                                            .frame(height:300)
                                     }
                                     VStack {
                                         Image("tutoscreen\(index)")
