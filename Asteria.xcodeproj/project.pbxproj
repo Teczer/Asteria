@@ -23,7 +23,7 @@
 		9FD1F6CE285C8A3C00C26900 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */; };
 		9FD1F6CF285C8A3C00C26900 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */; };
 		A7C48F38285CABB800D47D05 /* CollectionCardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */; };
-		A7EACD542860607800EEDD28 /* CollectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD532860607800EEDD28 /* CollectionScreen.swift */; };
+		A7EACD542860607800EEDD28 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD532860607800EEDD28 /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		9FD1F6D0285C8A4D00C26900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCardBack.swift; sourceTree = "<group>"; };
-		A7EACD532860607800EEDD28 /* CollectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreen.swift; sourceTree = "<group>"; };
+		A7EACD532860607800EEDD28 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				9F76C3B9285C71DD0095D087 /* EllanaWIP.swift */,
 				9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */,
 				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
-				A7EACD532860607800EEDD28 /* CollectionScreen.swift */,
+				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
 				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
 				9F97835F285C8E3300B11604 /* QACard.swift */,
@@ -194,7 +194,7 @@
 				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
 				671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */,
 				9F978368285CA33700B11604 /* QACardAnswer.swift in Sources */,
-				A7EACD542860607800EEDD28 /* CollectionScreen.swift in Sources */,
+				A7EACD542860607800EEDD28 /* CollectionView.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
