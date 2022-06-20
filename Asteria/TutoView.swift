@@ -18,52 +18,35 @@ struct TutoView: View {
                     .ignoresSafeArea()
                 Color("OxfordBlue").opacity(0.3)
                     .ignoresSafeArea()
-                VStack {
-                    Spacer()
-                    ZStack {
-                        Rectangle()
-                            .fill(
-                                LinearGradient(gradient: Gradient(stops: [
-                                    Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
-                                    Gradient.Stop(color: Color("OxfordBlue"), location: 0.25),
-                                ]), startPoint: .top, endPoint: .bottom)
-                            )
-                            .ignoresSafeArea()
-                        VStack {
-                            Spacer()
-                                .frame(height:40)
-                            HStack {
-                                Image(systemName: "chevron.compact.left")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(Color("LavenderBlush").opacity(0.5))
-                                    .frame(width:10)
-                                    .padding()
-                                Spacer()
-                                Image(systemName: "chevron.compact.right")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(Color("LavenderBlush").opacity(0.5))
-                                    .frame(width:10)
-                                    .padding()
-                            }
-                        }
-                    }
-                    .frame(height:330)
-                }
-                
                 ScrollView(.horizontal) {
-                    HStack {
+                    HStack(spacing:0) {
                         ForEach(0..<3) { index in
                             VStack {
-                                Image("tutoscreen0")
-                                Spacer()
-                                HStack {
-                                    Text("Test")
+                                ZStack {
+                                    VStack {
+                                        Spacer()
+                                        Rectangle()
+                                                .fill(
+                                                    LinearGradient(gradient: Gradient(stops: [
+                                                        Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
+                                                        Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
+                                                    ]), startPoint: .top, endPoint: .bottom)
+                                                )
+                                            .ignoresSafeArea()
+                                            .frame(height:300)
+                                    }
+                                    VStack {
+                                        Image("tutoscreen\(index)")
+                                            .resizable()
+                                            .scaledToFit()
+                                        .ignoresSafeArea()
+                                        Spacer()
+                                        Text("Test")
+                                    }
                                 }
-                                .frame(height:330)
-                            }
-                            .frame(width:geometry.size.width)
+
+                                }
+                                .frame(width:geometry.size.width)
                         }
                     }
                 }
