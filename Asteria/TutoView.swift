@@ -9,27 +9,15 @@ import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
 struct TutoView: View {
-    
-    var tutoScreenNo : Int = 0
-    let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d'en apprendre plus sur l'Univers, ce monde **lointain et mystérieux** qui nous entoure..."]
-    
     var body: some View {
-        NavigationView {
-            ZStack {
+        ZStack {
+            GeometryReader { geometry in
                 Image("background")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
                 Color("OxfordBlue").opacity(0.3)
                     .ignoresSafeArea()
-                VStack {
-                    Image("tutoscreen02")
-                        .resizable()
-                        .scaledToFit()
-                        .ignoresSafeArea()
-                    Spacer()
-                        .frame(height:240)
-                }
                 VStack {
                     Spacer()
                     ZStack {
@@ -52,10 +40,6 @@ struct TutoView: View {
                                     .frame(width:10)
                                     .padding()
                                 Spacer()
-                                Text(tutoText[0])
-                                    .multilineTextAlignment(.center)
-                                    .frame(width:180)
-                                Spacer()
                                 Image(systemName: "chevron.compact.right")
                                     .resizable()
                                     .scaledToFit()
@@ -67,7 +51,24 @@ struct TutoView: View {
                     }
                     .frame(height:330)
                 }
+                
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0..<3) { index in
+                            VStack {
+                                Image("tutoscreen0")
+                                Spacer()
+                                HStack {
+                                    Text("Test")
+                                }
+                                .frame(height:330)
+                            }
+                            .frame(width:geometry.size.width)
+                        }
+                    }
+                }
             }
+            
         }
     }
 }
