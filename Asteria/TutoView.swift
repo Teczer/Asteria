@@ -11,7 +11,11 @@ import Foundation   // needed for markdown formatting in text
 struct TutoView: View {
     var body: some View {
         ZStack {
-            Color("CyberGrape")
+            Image("background")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            Color("OxfordBlue").opacity(0.3)
                 .ignoresSafeArea()
             VStack {
                 Image("tutoscreen02")
