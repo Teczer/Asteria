@@ -12,17 +12,35 @@ let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, tr
 
 struct ScoreBar: View {
     var body: some View {
-        GeometryReader { geometry in
+        ZStack {
+            HStack (spacing:0) {
+                Spacer()
+                    .frame(width:16)
+                Color("LavenderBlush").opacity(0.8)
+                    .frame(height: 5)
+                Spacer()
+                    .frame(width:16)
+            }
             HStack (spacing:0) {
                 ForEach(0..<questionNoTotal) { index in
                     if index > 0 {
-                        Color("LavenderBlush").opacity(0.8)
-                        .frame(height: 10)                        }
+                        Spacer()
+                    }
                     ZStack {
-                        Image(systemName: goodAnswers[index] ? "checkmark.circle.fill" : "xmark.circle.fill")
-                            .resizable()
-                            .frame(width: 32, height: 32)
-                            .foregroundColor(goodAnswers[index] ? Color("CarnationPink") : Color ("LavenderBlush"))
+                        if goodAnswers[index] == true {
+                            Image(systemName: "checkmark.circle.fill")
+                                .resizable()
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(Color("OxfordBlue"), Color("CarnationPink"))
+                                .frame(width: 32, height: 32)
+                        } else {
+                            Image(systemName: "xmark.circle.fill")
+                                .resizable()
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(Color("OxfordBlue"), Color("LavenderBlush"))
+                                .frame(width: 32, height: 32)
+                        }
+                        
                     }
                 }
             }
