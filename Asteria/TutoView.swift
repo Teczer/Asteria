@@ -12,7 +12,7 @@ import Foundation   // needed for markdown formatting in text
 struct TutoView: View {
     
     // important data, do not remove!
-    
+    @Binding var endOnBoarding: Bool
     @State private var tutoIndex = 0
     let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...", "**Progresse** dans le mode Aventure sur la carte de l'Univers...", "**Répond** à des questions et améliore tes connaissances...", "...et **remporte** de magnifiques cartes à collectionner !"]
     
@@ -77,7 +77,11 @@ struct TutoView: View {
                                 .frame(height:140)
                                 
                                 if tutoIndex == 3 {
-                                    CustomButton(colorOfButton: "blue", textInButton: "Commencer")
+                                    Button {
+                                        endOnBoarding.toggle()
+                                    } label: {
+                                        CustomButton(colorOfButton: "blue", textInButton: "Commencer")
+                                    }
                                 } else {
                                     Spacer()
                                         .frame(height: 50)
@@ -107,7 +111,7 @@ struct TutoView: View {
 
 struct TutoView_Previews: PreviewProvider {
     static var previews: some View {
-        TutoView()
+        TutoView(endOnBoarding: .constant(false))
             .preferredColorScheme(.dark)
     }
 }
