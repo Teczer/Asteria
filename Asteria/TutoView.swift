@@ -11,6 +11,8 @@ import Foundation   // needed for markdown formatting in text
 
 struct TutoView: View {
     
+    // functional data, do not remove!
+    
     @State private var tutoIndex = 0
     let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...", "**Progresse** dans le mode Aventure sur la carte de l'Univers...", "**Répond** à des questions et améliore tes connaissances...", "...et **remporte** de magnifiques cartes à collectionner !"]
     
@@ -50,7 +52,7 @@ struct TutoView: View {
                                 Spacer()
                                 HStack {
                                     Image(systemName: tutoIndex<=0 ? "" : "chevron.compact.left")
-                                        .foregroundColor(Color("LavenderBlush"))
+                                        .foregroundColor(Color("LavenderBlush").opacity(0.5))
                                         .frame(width:25)
                                         .padding()
                                         .onTapGesture {
@@ -62,7 +64,7 @@ struct TutoView: View {
                                         .frame(width: 220)
                                     Spacer()
                                     Image(systemName: tutoIndex>=3 ? "" : "chevron.compact.right")
-                                        .foregroundColor(Color("LavenderBlush"))
+                                        .foregroundColor(Color("LavenderBlush").opacity(0.5))
                                         .frame(width:25)
                                         .padding()
                                         .onTapGesture {
@@ -70,9 +72,17 @@ struct TutoView: View {
                                         }
 
                                 }
-                                .frame(height: 230)
-                            }
+                                .frame(height:140)
+                                
+                                if tutoIndex == 3 {
+                                    CustomButton(colorOfButton: "blue", textInButton: "Commencer")
+                                } else {
+                                    Spacer()
+                                        .frame(height: 50)
+                                }
 
+
+                            }
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
