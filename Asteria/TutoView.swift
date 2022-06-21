@@ -39,7 +39,7 @@ struct TutoView: View {
                             ]), startPoint: .top, endPoint: .bottom)
                         )
                         .ignoresSafeArea()
-                        .frame(height:300)
+                        .frame(height:320)
                 }
                 
                 // carousel starts here
@@ -50,6 +50,8 @@ struct TutoView: View {
                             
                             VStack {
                                 Image("tutoscreen\(index)")
+                                    .resizable()
+                                    .scaledToFit()
                                     .ignoresSafeArea()
                                 Spacer()
                                 HStack {
@@ -74,9 +76,9 @@ struct TutoView: View {
                                         }
                                     
                                 }
-                                .frame(height:140)
+                                .frame(height:150)
                                 
-                                if tutoIndex == 3 {
+                                if tutoIndex >= 3 {
                                     Button {
                                         endOnBoarding.toggle()
                                     } label: {
