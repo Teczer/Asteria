@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ConnexionTitleItemView: View {
+    let objectText: String
     var body: some View {
-            Text("CONNEXION")
-                .foregroundColor(.white)
-                .font(.custom("Montserrat", size: 20))
+        Text(objectText)
+            .foregroundColor(.white)
+            .font(.custom("Montserrat", size: 16))
             .tracking(5)
         
     }
@@ -19,7 +20,7 @@ struct ConnexionTitleItemView: View {
 
 struct ConnexionTitleItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnexionTitleItemView()
+        ConnexionTitleItemView(objectText: "CONNEXION")
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 13")
     }
