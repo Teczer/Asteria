@@ -9,15 +9,11 @@ import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
 // sample values
-let questionValue = """
-La Lune est un satellite de la planète...
-"""
-let questionAnswer1 = "Jupiter"
-let questionAnswer2 = "Terre"
-let questionAnswer3 = "Mars"
-let questionAnswer4 = "Ce n'est pas un satellite"
+
+
 
 struct QACard: View {
+    let quizz: Questions
     var body: some View {
         ZStack {
             Rectangle()
@@ -28,13 +24,14 @@ struct QACard: View {
                 .cornerRadius(24)
                 .shadow(color: .white.opacity(0.8), radius: 32)
             
-            QACardContent()
+            QACardContent(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
                 .frame(width:300, height:600)
         }
     }
 }
 
 struct QACardContent: View {
+    let quizz: Questions
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
@@ -47,24 +44,24 @@ struct QACardContent: View {
             Rectangle()
                 .fill(.black)
                 .frame(height:200)
-            Text(questionValue)
+            Text(quizz.questionValue)
                 .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:145)
             VStack {
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: questionAnswer1)
+                    AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[0])
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: questionAnswer2)
+                    AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[1])
                 }
                 Spacer()
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: questionAnswer3)
+                    AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[2])
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: questionAnswer4)
+                    AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[3])
                 }
             }
             .frame(height:125)
@@ -75,7 +72,7 @@ struct QACardContent: View {
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
-        QACard()
+        QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
             .preferredColorScheme(.dark)
     }
 }
