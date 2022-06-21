@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0D02862860A8470012A6B2 /* Aventure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D02852860A8470012A6B2 /* Aventure.swift */; };
 		5F6C9DCD28606328002C38E1 /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C9DCC28606328002C38E1 /* struct.swift */; };
+		5FCF33B02861B6ED0045D004 /* AventureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF33AF2861B6ED0045D004 /* AventureDetailView.swift */; };
 		671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D57AC285CCC0C00307D20 /* ViewRouter.swift */; };
 		676C4CD628605E9E00FE8185 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CD528605E9E00FE8185 /* LoginView.swift */; };
 		676C4CDE286066E500FE8185 /* SignUpItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CDD286066E500FE8185 /* SignUpItemView.swift */; };
@@ -37,7 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F0D02852860A8470012A6B2 /* Aventure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aventure.swift; sourceTree = "<group>"; };
 		5F6C9DCC28606328002C38E1 /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
+		5FCF33AF2861B6ED0045D004 /* AventureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AventureDetailView.swift; sourceTree = "<group>"; };
 		671D57AC285CCC0C00307D20 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		676C4CD528605E9E00FE8185 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		676C4CDD286066E500FE8185 /* SignUpItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemView.swift; sourceTree = "<group>"; };
@@ -186,8 +190,10 @@
 				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
 				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
+				5F0D02852860A8470012A6B2 /* Aventure.swift */,
 				9F97835F285C8E3300B11604 /* QACard.swift */,
 				9F978367285CA33700B11604 /* QACardAnswer.swift */,
+				5FCF33AF2861B6ED0045D004 /* AventureDetailView.swift */,
 				9F949BF028605E080001DC72 /* ProgressionBar.swift */,
 				9F949BF22860621A0001DC72 /* ScoreBar.swift */,
 			);
@@ -279,12 +285,14 @@
 				676C4CE42860792200FE8185 /* NoSignItemView.swift in Sources */,
 				676C4CEC28607D6400FE8185 /* TextFieldItemView.swift in Sources */,
 				676C4CE028606C5000FE8185 /* SignWithItemView.swift in Sources */,
+				5FCF33B02861B6ED0045D004 /* AventureDetailView.swift in Sources */,
 				9F978368285CA33700B11604 /* QACardAnswer.swift in Sources */,
 				5F6C9DCD28606328002C38E1 /* struct.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
+				5F0D02862860A8470012A6B2 /* Aventure.swift in Sources */,
 				676C4CDE286066E500FE8185 /* SignUpItemView.swift in Sources */,
 				9F978360285C8E3300B11604 /* QACard.swift in Sources */,
 				676C4CD628605E9E00FE8185 /* LoginView.swift in Sources */,
