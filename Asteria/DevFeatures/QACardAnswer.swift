@@ -45,7 +45,7 @@ struct QACardAnswerContent: View {
             Image(quizz.photoAnswer)
                 .resizable()
                 .scaledToFill()
-                .frame(height:200)
+                .frame(width:300, height:200)
                 .clipped()
             Text(quizz.answerName.uppercased())
                 .font(.system(size: 24))
