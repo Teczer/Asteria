@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Foundation   // needed for markdown formatting in text
+import Foundation   // needed for markdown text formatting
 
 struct QACard: View {
     let quizz: Questions
@@ -20,7 +20,7 @@ struct QACard: View {
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
             
-            QACardContent(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
+            QACardContent(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
                 .frame(width:300, height:600)
         }
     }
@@ -52,16 +52,20 @@ struct QACardContent: View {
             VStack {
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[0])
+                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[1])
+                    NavigationLink(destination: {VeroWIP()}) {}
                 }
                 Spacer()
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[2])
+                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[3])
+                    NavigationLink(destination: {VeroWIP()}) {}
                 }
             }
             .frame(height:125)
@@ -72,7 +76,7 @@ struct QACardContent: View {
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
-        QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
+        QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
             .preferredColorScheme(.dark)
     }
 }
