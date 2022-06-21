@@ -53,10 +53,10 @@ struct QuizzView: View {
                 }
                 Spacer()
                 Button("Animate..!") {
-                    withAnimation(.linear(duration: 0.5)) {
+                    withAnimation(.linear(duration: 0.2)) {
                         rotationValue += 90
                     }
-                    withAnimation(.linear(duration: 0.5).delay(0.5)) {
+                    withAnimation(.linear(duration: 0.2).delay(0.2)) {
                         rotationAnswerValue += 90
                     }
                 }
