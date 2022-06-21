@@ -8,10 +8,6 @@
 import SwiftUI
 import Foundation   // needed for markdown formatting in text
 
-// sample values
-
-
-
 struct QACard: View {
     let quizz: Questions
     var body: some View {
