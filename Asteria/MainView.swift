@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct MainView: View {
+    @Binding var login: String
+    @State private var onBoardDone = false
     @StateObject var viewRouter: ViewRouter
     var body: some View {
         GeometryReader { geometry in
             Color("OxfordBlue")
             VStack {
-                Spacer()
                 switch viewRouter.currentPage {
                 case .collection:
                     MehdiWIP()
                 case .aventure:
-                    MehdiWIP()
+                    LoginView(username: $login)
                 case .profil:
                     MehdiWIP()
                 }
-                Spacer()
                 HStack {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .collection, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .collection ? "square.stack.fill" : "square.stack", tabName: "Collections")
                     ZStack {
@@ -51,20 +51,27 @@ struct MainView: View {
                     .onTapGesture {
                         viewRouter.currentPage = .aventure
                     }
-                    .offset(y: -geometry.size.height/8/2)
+                    .offset(y: -geometry.size.height/13/2)
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .profil, width:     geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .profil ? "person.fill" : "person", tabName: "Profil")
                 }
-                .frame(width: geometry.size.width, height: geometry.size.height/8)
+                .frame(width: geometry.size.width, height: geometry.size.height/12)
             }
-            
             .edgesIgnoringSafeArea(.bottom)
+            .zIndex(onBoardDone ? 10 : 0)
+            if onBoardDone == false {
+            TutoView(endOnBoarding: $onBoardDone).tag(0)
+                            .zIndex(onBoardDone ? 0 : 10)
+            } else {
+
+            }
         }
+        .ignoresSafeArea()
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewRouter: ViewRouter())
+        MainView(login: .constant(""), viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 13")
     }
