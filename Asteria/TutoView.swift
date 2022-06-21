@@ -44,18 +44,35 @@ struct TutoView: View {
                 TabView(selection: $tutoIndex) {
                     ForEach((0..<4), id: \.self) { index in
                         
-                        if index == 0 {
                             VStack {
                                 Image("tutoscreen\(index)")
+                                    .ignoresSafeArea()
                                 Spacer()
                                 HStack {
+                                    Image(systemName: tutoIndex<=0 ? "" : "chevron.compact.left")
+                                        .foregroundColor(Color("LavenderBlush"))
+                                        .frame(width:25)
+                                        .padding()
+                                        .onTapGesture {
+                                            tutoIndex -= 1
+                                        }
+                                    Spacer()
                                     Text(tutoText[index])
+                                        .multilineTextAlignment(.center)
                                         .frame(width: 220)
+                                    Spacer()
+                                    Image(systemName: tutoIndex>=3 ? "" : "chevron.compact.right")
+                                        .foregroundColor(Color("LavenderBlush"))
+                                        .frame(width:25)
+                                        .padding()
+                                        .onTapGesture {
+                                            tutoIndex += 1
+                                        }
+
                                 }
-                                .frame(height: 200)
+                                .frame(height: 230)
                             }
-                        }
-                        
+
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -70,6 +87,7 @@ struct TutoView: View {
                 .frame(width: 80)
                 .padding()
             }
+            .ignoresSafeArea()
         }
     }
 }
