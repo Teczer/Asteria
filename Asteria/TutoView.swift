@@ -11,41 +11,43 @@ import Foundation   // needed for markdown formatting in text
 
 struct TutoView: View {
     
-    // functional data, do not remove!
+    // important data, do not remove!
     
     @State private var tutoIndex = 0
     let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...", "**Progresse** dans le mode Aventure sur la carte de l'Univers...", "**Répond** à des questions et améliore tes connaissances...", "...et **remporte** de magnifiques cartes à collectionner !"]
     
+    
     var body: some View {
-        ZStack {
-            
-            // background starting from here
-            
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-            Color("OxfordBlue").opacity(0.3)
-                .ignoresSafeArea()
-            VStack {
-                Spacer()
-                Rectangle()
-                    .fill(
-                        LinearGradient(gradient: Gradient(stops: [
-                            Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
-                            Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
-                        ]), startPoint: .top, endPoint: .bottom)
-                    )
+        NavigationView {
+            ZStack {
+                
+                // background starts here
+                
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
                     .ignoresSafeArea()
-                    .frame(height:300)
-            }
-            
-            // carousel starting from here
-            
-            VStack {
-                TabView(selection: $tutoIndex) {
-                    ForEach((0..<4), id: \.self) { index in
-                        
+                Color("OxfordBlue").opacity(0.3)
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Rectangle()
+                        .fill(
+                            LinearGradient(gradient: Gradient(stops: [
+                                Gradient.Stop(color: Color("OxfordBlue").opacity(0), location: 0),
+                                Gradient.Stop(color: Color("OxfordBlue"), location: 0.22),
+                            ]), startPoint: .top, endPoint: .bottom)
+                        )
+                        .ignoresSafeArea()
+                        .frame(height:300)
+                }
+                
+                // carousel starts here
+                
+                VStack {
+                    TabView(selection: $tutoIndex) {
+                        ForEach((0..<4), id: \.self) { index in
+                            
                             VStack {
                                 Image("tutoscreen\(index)")
                                     .ignoresSafeArea()
@@ -70,7 +72,7 @@ struct TutoView: View {
                                         .onTapGesture {
                                             tutoIndex += 1
                                         }
-
+                                    
                                 }
                                 .frame(height:140)
                                 
@@ -80,24 +82,25 @@ struct TutoView: View {
                                     Spacer()
                                         .frame(height: 50)
                                 }
-
-
+                                
+                                
                             }
+                        }
                     }
-                }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                
-                HStack {
-                    ForEach((0..<4), id: \.self) { index in
-                        Circle()
-                            .fill(index == self.tutoIndex ? Color("LavenderBlush") : Color("LavenderBlush").opacity(0.5))
-                            .frame(height: 5)
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                    
+                    HStack {
+                        ForEach((0..<4), id: \.self) { index in
+                            Circle()
+                                .fill(index == self.tutoIndex ? Color("LavenderBlush") : Color("LavenderBlush").opacity(0.5))
+                                .frame(height: 5)
+                        }
                     }
+                    .frame(width: 80)
+                    .padding()
                 }
-                .frame(width: 80)
-                .padding()
+                .ignoresSafeArea()
             }
-            .ignoresSafeArea()
         }
     }
 }
