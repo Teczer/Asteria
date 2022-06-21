@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConnexionView: View {
-    @Binding var username: String
+    @Binding var objectfield: String
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -19,35 +19,28 @@ struct ConnexionView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             
-            // BOUTON BACK
-            
-            
             VStack(alignment: .center, spacing: 0) {
-                
-                // LOGO + ASTERIA
                 Spacer()
-                    .frame(height: 20)
+                    .frame(height: 50)
+                // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
-                    Image("logo")
+                    Image("logo") // LOGO
                         .resizable()
                         .scaledToFit()
                         .frame(width: 120, height: 100)
                         .padding(.vertical, UIScreen.main.bounds.size.height / 200)
-                    Image("logotitle")
+                    Image("logotitle") // ASTERIA
                         .resizable()
                         .scaledToFit()
                         .frame(width: 270, height: 90)
                         .padding(.bottom, UIScreen.main.bounds.size.height / 10)
-                
                     Spacer()
-                        .frame(height: 119)
-                    
+                        .frame(height: 90)
                     VStack {
-                        
                         // CONNEXION TITLE
-                        ConnexionTitleItemView()
+                        ConnexionTitleItemView(objectText: "CONNEXION")
                         // NOM D'UTILISATEUR
-                        TextEditorCustom(previewText: "")
+                        TextFieldUsername(previewText: "")
                             .padding(.bottom)
                         // MOT DE PASSE
                         SecureFieldCustom(previewText: "")
@@ -57,12 +50,7 @@ struct ConnexionView: View {
                     }
                     Spacer()
                 }
-                
-                
             } //: VSTACK
-            
-            
-            
             
             
         } //: ZSTACK
@@ -72,6 +60,6 @@ struct ConnexionView: View {
 
 struct ConnexionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnexionView(username: .constant(""))
+        ConnexionView(objectfield: .constant(""))
     }
 }

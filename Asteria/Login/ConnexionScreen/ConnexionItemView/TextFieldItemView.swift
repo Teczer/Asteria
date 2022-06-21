@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TextFieldItemView: View {
     var body: some View {
-        TextEditorCustom(previewText: "")
+        TextFieldUsername(previewText: "")
         SecureFieldCustom(previewText: "")
+        TextFieldEmail(previewText: "")
+        SecureFieldRepeatCustom(previewText: "")
     }
 }
 
@@ -20,12 +22,11 @@ struct TextFieldItemView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
             .padding()
             .previewDevice("iPhone 13")
-
     }
 }
 
 
-struct TextEditorCustom: View {
+struct TextFieldUsername: View {
     @State private var username: String = ""
     var previewText: String
     var body: some View {
@@ -35,7 +36,7 @@ struct TextEditorCustom: View {
                 .foregroundColor(Color("LavenderBlush"))
             if username.isEmpty {
                 Text("Nom d'utilisateur")
-                    .foregroundColor(Color.black.opacity(0.6))
+                    .foregroundColor(Color.black.opacity(1.0))
             }
             TextField("\(previewText)", text: $username)
                 .foregroundColor(Color.black)
@@ -54,13 +55,12 @@ struct SecureFieldCustom: View {
     var previewText: String
     var body: some View {
         ZStack {
-            
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 270, height: 50)
                 .foregroundColor(Color("LavenderBlush"))
             if password.isEmpty {
                 Text("Mot de passe")
-                    .foregroundColor(Color.black.opacity(0.6))
+                    .foregroundColor(Color.black.opacity(1.0))
             }
             SecureField("\(previewText)", text: $password)
                 .foregroundColor(Color.black)
@@ -70,7 +70,54 @@ struct SecureFieldCustom: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                     .stroke(Color("LavenderBlush")))
                 .frame(width: 270, height: 50)
-            
+        }
+    }
+}
+
+struct TextFieldEmail: View {
+    @State private var email: String = ""
+    var previewText: String
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 270, height: 50)
+                .foregroundColor(Color("LavenderBlush"))
+            if email.isEmpty {
+                Text("Adresse électronique")
+                    .foregroundColor(Color.black.opacity(1.0))
+            }
+            TextField("\(previewText)", text: $email)
+                .foregroundColor(Color.black)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 4)
+                .padding(10)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("LavenderBlush")))
+                .frame(width: 270, height: 50)
+        }
+    }
+}
+
+struct SecureFieldRepeatCustom: View {
+    @State private var password: String = ""
+    var previewText: String
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 270, height: 50)
+                .foregroundColor(Color("LavenderBlush"))
+            if password.isEmpty {
+                Text("Répéter le mot de passe")
+                    .foregroundColor(Color.black.opacity(1.0))
+            }
+            SecureField("\(previewText)", text: $password)
+                .foregroundColor(Color.black)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 4)
+                .padding(10)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("LavenderBlush")))
+                .frame(width: 270, height: 50)
         }
     }
 }
