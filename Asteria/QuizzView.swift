@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct QuizzView: View {
+    
+    @State private var rotationValue:Double = 0
+    @State private var rotationAnswerValue:Double = -90
+
+    
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -22,25 +27,39 @@ struct QuizzView: View {
                         ProgressionBar()
                             .padding()
                             .frame(height:35)
-                        HStack(alignment: .bottom, spacing:4) {
+                        HStack(alignment: .bottom, spacing:3) {
                             Text("Question")
-                                .font(.system(size: 16))
+                                .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
                             Text("\(questionNoCurrent)")
-                                .font(.system(size: 28))
+                                .font(.system(size: 22))
                                 .fontWeight(.black)
                                 .foregroundColor(Color("LavenderBlush"))
-                                .offset(y:3)
+                                .offset(y:2.2)
                             Text("sur \(questionNoTotal)")
-                                .font(.system(size: 16))
+                                .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
                         }
                         .padding(.horizontal)
+                        .offset(y:-5)
                     }
                 }
                 Spacer()
+                ZStack {
+                    QACardAnswer(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
+                        .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                 QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La Lune, aussi connue sous le nom de Terre, est le seul satellite de la planète Terre."))
+                    .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
+                }
                 Spacer()
+                Button("Animate..!") {
+                    withAnimation(.linear(duration: 0.5)) {
+                        rotationValue += 90
+                    }
+                    withAnimation(.linear(duration: 0.5).delay(0.5)) {
+                        rotationAnswerValue += 90
+                    }
+                }
             }
         }
     }
