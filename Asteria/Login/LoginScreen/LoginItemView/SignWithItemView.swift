@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SignWithItemView: View {
     var body: some View {
-            AppleItem()
-            GoogleItem()
+        AppleItem()
+        GoogleItem()
     }
 }
 
@@ -54,19 +54,20 @@ struct GoogleItem: View {
             .foregroundColor(Color("googlebackgroundcolor"))
             .frame(width: 280, height: 57)
             .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("socialstrokecolor"), lineWidth: 2))                    .overlay(
-                    HStack(alignment: .center, spacing: 5, content: {
-                        Image("googlelogo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                        Text("Continuer avec Google")
-                            .foregroundColor(Color("socialstrokecolor"))
-                            .fontWeight(.bold)
-                            .font(.custom("Montserrat", size: 14))
-                            .tracking(2)
-                            .frame(width: 207, height: 17)
-                    })
-                )
+                .stroke(Color("socialstrokecolor"), lineWidth: 2))
+            .overlay(
+                HStack(alignment: .center, spacing: 5, content: {
+                    Image("googlelogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                    Text("Continuer avec Google")
+                        .foregroundColor(Color("socialstrokecolor"))
+                        .fontWeight(.bold)
+                        .font(.custom("Montserrat", size: 14))
+                        .tracking(2)
+                        .frame(width: 207, height: 17)
+                })
+            )
     }
 }

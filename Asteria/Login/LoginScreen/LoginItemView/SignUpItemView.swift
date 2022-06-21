@@ -18,9 +18,7 @@ struct SignUpItemView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.black)
                 .frame(width: 255, height: 50)
-            
         }
-        
     }
 }
 
