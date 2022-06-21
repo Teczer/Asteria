@@ -22,7 +22,7 @@ struct MehdiWIP: View {
                     
                     Button {
                         self.changeA.toggle()
-                        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                             self.change.toggle()
                         }
                     } label: {
@@ -84,26 +84,3 @@ struct CustomButton: View {
         }
     }
 }
-
-struct AnswerButton: View {
-    @State var selectedButton : Bool = false
-    var textInButton : String
-    var body: some View {
-        Button {
-            self.selectedButton.toggle()
-        } label: {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 128, height: 50)
-                .foregroundColor(selectedButton ? Color("CarnationPink") : Color("OxfordBlue"))
-                .overlay(
-                    Text(textInButton)
-                        .font(.system(size: 12))
-                        .frame(width: 73, height: 50)
-                        .foregroundColor(selectedButton ? Color("SpaceCadet") : Color.white )
-                )
-        }
-    }
-}
-
-
-

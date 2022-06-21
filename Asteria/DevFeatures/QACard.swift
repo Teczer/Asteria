@@ -52,16 +52,20 @@ struct QACardContent: View {
             VStack {
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[0])
+                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[1])
+                    NavigationLink(destination: {VeroWIP()}) {}
                 }
                 Spacer()
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[2])
+                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: quizz.questionAnswer[3])
+                    NavigationLink(destination: {VeroWIP()}) {}
                 }
             }
             .frame(height:125)
