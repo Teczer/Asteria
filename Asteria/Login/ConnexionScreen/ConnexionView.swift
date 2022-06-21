@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConnexionView: View {
+    @Binding var username: String
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -37,18 +38,24 @@ struct ConnexionView: View {
                         .scaledToFit()
                         .frame(width: 270, height: 90)
                         .padding(.bottom, UIScreen.main.bounds.size.height / 10)
+                
+                    Spacer()
+                        .frame(height: 119)
                     
                     VStack {
                         
                         // CONNEXION TITLE
-                        
+                        ConnexionTitleItemView()
                         // NOM D'UTILISATEUR
-                        
+                        TextEditorCustom(previewText: "")
+                            .padding(.bottom)
                         // MOT DE PASSE
-                        
+                        SecureFieldCustom(previewText: "")
+                            .padding(.bottom, 60)
                         // VALIDER
-    
+                        CustomButton(colorOfButton: "blue", textInButton: "Valider")
                     }
+                    Spacer()
                 }
                 
                 
@@ -59,11 +66,12 @@ struct ConnexionView: View {
             
             
         } //: ZSTACK
+        
     }
 }
 
 struct ConnexionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnexionView()
+        ConnexionView(username: .constant(""))
     }
 }

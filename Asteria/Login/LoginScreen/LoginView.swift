@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var username: String
     var body: some View {
+        NavigationView {
         ZStack {
             Color("OxfordBlue")
                 .ignoresSafeArea()
@@ -18,28 +20,29 @@ struct LoginView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             VStack(alignment: .center, spacing: 0) {
-                
-                // LOGO + ASTERIA
                 Spacer()
-                    .frame(height: 20)
+                // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
                     Image("logo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 120, height: 100)
-                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
                     Image("logotitle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 270, height: 90)
-                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
                 }
                 
+                Spacer()
                 
                 VStack {
                     
                     // CONNEXION
-                    SignUpItemView(objectText: "Connexion")
+                    NavigationLink(destination: ConnexionView(username: $username)) {
+                        SignUpItemView(objectText: "Connexion")
+                    }
+                    .navigationBarBackButtonHidden(true)
+//                    .navigationBarTitle("")
                         .padding(.bottom)
                     // INSCRIPTION
                     SignUpItemView(objectText: "Inscription")
@@ -58,16 +61,19 @@ struct LoginView: View {
                 
             } //: VSTACK
             
-            
+            .ignoresSafeArea()
             
             
         } //: ZSTACK
+            
+        }
+        
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(username: .constant(""))
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 13")
     }
