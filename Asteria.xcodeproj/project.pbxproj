@@ -17,6 +17,7 @@
 		676C4CEC28607D6400FE8185 /* TextFieldItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CEB28607D6400FE8185 /* TextFieldItemView.swift */; };
 		6790B0CB2860F81B008F425A /* CoTitleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790B0CA2860F81B008F425A /* CoTitleItemView.swift */; };
 		67D5B3DA2861B3A4006C9228 /* InscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5B3D92861B3A4006C9228 /* InscriptionView.swift */; };
+		9F075FF72861BD090086D7BD /* QuizzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F075FF62861BD090086D7BD /* QuizzView.swift */; };
 		9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */; };
 		9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2084AA285C6EDC00EB8AC5 /* MainView.swift */; };
 		9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		676C4CEB28607D6400FE8185 /* TextFieldItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemView.swift; sourceTree = "<group>"; };
 		6790B0CA2860F81B008F425A /* CoTitleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoTitleItemView.swift; sourceTree = "<group>"; };
 		67D5B3D92861B3A4006C9228 /* InscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionView.swift; sourceTree = "<group>"; };
+		9F075FF62861BD090086D7BD /* QuizzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzView.swift; sourceTree = "<group>"; };
 		9F2084A5285C6EDC00EB8AC5 /* Asteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteriaApp.swift; sourceTree = "<group>"; };
 		9F2084AA285C6EDC00EB8AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F949BF428606F760001DC72 /* TutoView.swift */,
+				9F075FF62861BD090086D7BD /* QuizzView.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
 			);
@@ -280,6 +283,7 @@
 				676C4CEC28607D6400FE8185 /* TextFieldItemView.swift in Sources */,
 				676C4CE028606C5000FE8185 /* SignWithItemView.swift in Sources */,
 				9F978368285CA33700B11604 /* QACardAnswer.swift in Sources */,
+				9F075FF72861BD090086D7BD /* QuizzView.swift in Sources */,
 				5F6C9DCD28606328002C38E1 /* struct.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
