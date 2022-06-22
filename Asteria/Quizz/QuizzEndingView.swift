@@ -48,8 +48,8 @@ struct QuizzEndingView: View {
                 .frame(height:26)
                 Spacer()
                 
-CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "nebuleuse4", cardTitle: "Nébuleuse", cardNumber: "3", collectionName: "Voie lactée", miniCard: true))
-
+                CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "nebuleuse4", cardTitle: "Nébuleuse", cardNumber: "3", collectionName: "Voie lactée", miniCard: true))
+                
                 Spacer()
                 
                 CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")

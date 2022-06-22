@@ -85,8 +85,9 @@ struct CollectionCardFront: View {
                 
             } // fin Zstack
             
+            
+            // this is only for the miniCard
             if collectionCardFront.miniCard == true {
-                
                 Spacer()
                     .frame(height:24)
                 Text("Collection".uppercased())
@@ -97,7 +98,6 @@ struct CollectionCardFront: View {
                     .font(.custom("Montserrat", size: 18))
                     .fontWeight(.semibold)
                     .tracking(4)
-                
             }
         }
     }
@@ -105,7 +105,7 @@ struct CollectionCardFront: View {
 
 struct CollectionCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: true))
+        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: false))
             .preferredColorScheme(.dark)
     }
 }

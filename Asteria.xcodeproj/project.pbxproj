@@ -160,14 +160,13 @@
 			isa = PBXGroup;
 			children = (
 				9FD1F6D0285C8A4D00C26900 /* Info.plist */,
-				676C4CD428605DFF00FE8185 /* Login */,
 				9F76C3B6285C719A0095D087 /* DevFeatures */,
+				676C4CD428605DFF00FE8185 /* Login */,
+				9F94E5082863135000F6D6AD /* Quizz */,
+				9F94E5092863138000F6D6AD /* Tuto */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
 				5F6C9DCC28606328002C38E1 /* struct.swift */,
-				9F075FF62861BD090086D7BD /* QuizzView.swift */,
-				9F94E5042862FA4C00F6D6AD /* QuizzEndingView.swift */,
-				9F949BF428606F760001DC72 /* TutoView.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
@@ -201,6 +200,23 @@
 				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
 			);
 			path = DevFeatures;
+			sourceTree = "<group>";
+		};
+		9F94E5082863135000F6D6AD /* Quizz */ = {
+			isa = PBXGroup;
+			children = (
+				9F075FF62861BD090086D7BD /* QuizzView.swift */,
+				9F94E5042862FA4C00F6D6AD /* QuizzEndingView.swift */,
+			);
+			path = Quizz;
+			sourceTree = "<group>";
+		};
+		9F94E5092863138000F6D6AD /* Tuto */ = {
+			isa = PBXGroup;
+			children = (
+				9F949BF428606F760001DC72 /* TutoView.swift */,
+			);
+			path = Tuto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
