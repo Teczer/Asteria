@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct QuizzEndingView: View {
+    
+    // animation values
+    @State private var scoreBarOffsetAnim:Double = -200
+    @State private var scoreTextOffsetAnim:Double = 400
+    @State private var wellplayedTextOffsetAnim:Double = -400
+    @State private var wellplayedSubtextOffsetAnim:Double = -400
+    @State private var cardRotationAnim:Double = 80
+    @State private var cardOffsetAnim:Double = 400
+    @State private var buttonsOffsetAnim:Double = 200
+    
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -15,48 +25,84 @@ struct QuizzEndingView: View {
                     .resizable()
                     .scaledToFill()
                     .clipped()
-                    .blur(radius: 5)
+                    .blur(radius: 3)
             }
             .ignoresSafeArea()
-            Color("SpaceCadet").opacity(0.7)
+            Color("OxfordBlue").opacity(0.7)
                 .ignoresSafeArea()
             VStack(spacing:0) {
                 ScoreBar()
                     .padding()
+                    .offset(y:scoreBarOffsetAnim)
                 HStack(alignment:.bottom) {
                     VStack(alignment: .leading) {
                         Text("Bien joué".uppercased())
                             .font(.system(size: 22))
                             .fontWeight(.heavy)
                             .foregroundColor(Color("LavenderBlush"))
+                            .offset(x:wellplayedTextOffsetAnim)
                         Text("Tu remportes une carte")
                             .font(.system(size: 16))
                             .fontWeight(.light)
                             .foregroundColor(Color("LavenderBlush"))
+                            .offset(x:wellplayedSubtextOffsetAnim)
                     }
                     Spacer()
-                    Text("4")
-                        .font(.system(size: 60))
-                        .fontWeight(.black)
-                        .foregroundColor(Color("LavenderBlush").opacity(0.8))
-                        .offset(y:10)
-                    Text("sur \(questionNoTotal)")
-                        .font(.system(size: 20))
-                        .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                    HStack {
+                        Text("4")
+                            .font(.system(size: 60))
+                            .fontWeight(.black)
+                            .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                            .offset(y:10)
+                        Text("sur \(questionNoTotal)")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                    }
+                    .offset(x:scoreTextOffsetAnim)
+                    
                 }
                 .padding(.horizontal)
                 .frame(height:26)
                 Spacer()
                 
                 CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "nebuleuse4", cardTitle: "Nébuleuse", cardNumber: "3", collectionName: "Voie lactée", miniCard: true))
+                    .offset(x: cardOffsetAnim)
+                    .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
                 
                 Spacer()
                 
-                CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
-                    .padding(.bottom)
-                CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
+                VStack {
+                    CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
+                        .padding(.bottom)
+                    
+                    CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
+                }
+                .offset(y: buttonsOffsetAnim)
             }
+            
+            
             .frame(width:350)
+            
+            // animations proper come here
+            .onAppear {
+                withAnimation(.easeOut(duration: 0.3)) {
+                    scoreBarOffsetAnim = 0
+                    scoreTextOffsetAnim = 0
+                }
+                withAnimation(.easeOut(duration: 0.6).delay(0.2)) {
+                    wellplayedTextOffsetAnim = 0
+                }
+                withAnimation(.easeOut(duration: 0.6).delay(0.7)) {
+                    wellplayedSubtextOffsetAnim = 0
+                }
+                withAnimation(.easeOut(duration: 0.8).delay(1.5)) {
+                    cardRotationAnim = 0
+                    cardOffsetAnim = 0
+                }
+                withAnimation(.easeOut(duration: 0.1).delay(4)) {
+                    buttonsOffsetAnim = 0
+                }
+            }
         }
     }
 }
