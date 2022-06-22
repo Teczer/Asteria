@@ -13,8 +13,7 @@ struct AsteriaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView(viewRouter: ViewRouter())
+            MainView(login: .constant(""), viewRouter: ViewRouter())
         }
     }
 }
-
