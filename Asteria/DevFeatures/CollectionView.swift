@@ -8,7 +8,7 @@
 //
 //  Reste à faire sur cet écran :
 //  - ajouter le background
-//  - voir s'il est possible de personnaliser le navigation title
+//  - voir s'il est possible de personnaliser le navigation title (mettre le fond bleu ?)
 
 import SwiftUI
 
@@ -19,19 +19,29 @@ struct CollectionView: View {
         
         NavigationView {
         
-        VStack {
-            
-            ScrollView {
-            
-                CollectionDetail(collection: collection1)
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .opacity(0.5)
                 
-                CollectionDetail(collection: collection2)
+                VStack {
+                
+                ScrollView {
+                
+                    CollectionDetail(collection: collection1)
+                    
+                    CollectionDetail(collection: collection2)
+                    
+                }
+            
+                }
+                
+                .navigationTitle("COLLECTIONS")
+                .navigationBarTitleDisplayMode(.inline)
                 
             }
-        
-            }
-            
-        .navigationTitle("COLLECTIONS")
         }
     }
 }
