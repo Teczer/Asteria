@@ -6,7 +6,7 @@
 //
 //  Reste à faire sur cet élément :
 //  - dans la boucle ForEach, ajouter un navigation link vers la single card
-//  - ajouter le lien au bouton pour scroll (la meilleure solution semble être avec le ScrollViewReader, mais pas réussi pour l'instant)
+//  - créer le bouton pour scroll (la meilleure solution semble être avec le ScrollViewReader, mais pas réussi pour l'instant)
 
 import SwiftUI
 
@@ -51,7 +51,8 @@ struct CollectionDetail: View {
             // NOM DE LA COLLECTION
             HStack {
                 Text(collection.collectionName)
-                    .font(.title2)
+                    .font(.custom("Montserrat", size: 20))
+                    .fontWeight(.light)
                     .padding(.leading, 30)
                     .padding(.top, 30)
                 
