@@ -18,6 +18,7 @@ struct CardFront: Identifiable {
 
 struct CollectionCardFront: View {
     
+    @State private var shadowValue:Double = 0  // for miniCard shadow animation
     var collectionCardFront: CardFront
     
     var body: some View {
@@ -33,7 +34,12 @@ struct CollectionCardFront: View {
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20)
                         .stroke(collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.7) : Color("LavenderBlush").opacity(0.7), lineWidth: 1))
-                    .shadow(color: collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.9) : Color("LavenderBlush").opacity(0.9), radius: collectionCardFront.miniCard ? 32 : 10)
+                    .shadow(color: collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.9) : Color("LavenderBlush").opacity(0.9), radius: collectionCardFront.miniCard ? shadowValue : 10)
+                    .onAppear {
+                        withAnimation(.easeInOut(duration: 6).delay(2)) {
+                            shadowValue = 150
+                        }
+                    }
                 
                 VStack {
                     Spacer()
@@ -105,7 +111,7 @@ struct CollectionCardFront: View {
 
 struct CollectionCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: false))
+        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: true))
             .preferredColorScheme(.dark)
     }
 }
