@@ -14,10 +14,10 @@ struct QuizzEndingView: View {
                 Image("nebuleuse4")
                     .resizable()
                     .scaledToFill()
-                    .ignoresSafeArea()
                     .clipped()
                     .blur(radius: 5)
             }
+            .ignoresSafeArea()
             Color("SpaceCadet").opacity(0.7)
                 .ignoresSafeArea()
             VStack(spacing:0) {
@@ -47,20 +47,16 @@ struct QuizzEndingView: View {
                 .padding(.horizontal)
                 .frame(height:26)
                 Spacer()
-                Image("nebuleuse4")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width:188, height:376)
-                    .clipped()
-                    .cornerRadius(20)
-                    .overlay(RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color("CarnationPink").opacity(0.7), lineWidth: 1))
-                    .shadow(color: Color("CarnationPink").opacity(0.9), radius: 32)
+                
+CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "nebuleuse4", cardTitle: "Nébuleuse", cardNumber: "3", collectionName: "Voie lactée", miniCard: true))
+
                 Spacer()
+                
                 CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                     .padding(.bottom)
                 CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
             }
+            .frame(width:350)
         }
     }
 }
