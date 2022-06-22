@@ -57,8 +57,6 @@ struct SingleCardView: View {
                     }
                 }
                 .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
-            
-            
         }
         
         
