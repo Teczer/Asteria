@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F6C9DCD28606328002C38E1 /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C9DCC28606328002C38E1 /* struct.swift */; };
 		671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671D57AC285CCC0C00307D20 /* ViewRouter.swift */; };
+		6744B4DB286211F1001A6D4C /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6744B4DA286211F0001A6D4C /* SingleCardView.swift */; };
 		676C4CD628605E9E00FE8185 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CD528605E9E00FE8185 /* LoginView.swift */; };
 		676C4CDE286066E500FE8185 /* SignUpItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CDD286066E500FE8185 /* SignUpItemView.swift */; };
 		676C4CE028606C5000FE8185 /* SignWithItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676C4CDF28606C5000FE8185 /* SignWithItemView.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		5F6C9DCC28606328002C38E1 /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
 		671D57AC285CCC0C00307D20 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		6744B4DA286211F0001A6D4C /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
 		676C4CD528605E9E00FE8185 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		676C4CDD286066E500FE8185 /* SignUpItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemView.swift; sourceTree = "<group>"; };
 		676C4CDF28606C5000FE8185 /* SignWithItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignWithItemView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9F94E5092863138000F6D6AD /* Tuto */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
+				6744B4DA286211F0001A6D4C /* SingleCardView.swift */,
 				5F6C9DCC28606328002C38E1 /* struct.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
@@ -206,13 +209,13 @@
 				A7EACD632863254D00EEDD28 /* CollectionType.swift */,
 				9FFB868A2861FEBA0008601F /* AnswerButton.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
-				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
 				9F97835F285C8E3300B11604 /* QACard.swift */,
 				9F978367285CA33700B11604 /* QACardAnswer.swift */,
 				9F949BF028605E080001DC72 /* ProgressionBar.swift */,
 				9F949BF22860621A0001DC72 /* ScoreBar.swift */,
 				9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */,
 				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
+				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
 			);
 			path = DevFeatures;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				A7EACD542860607800EEDD28 /* CollectionView.swift in Sources */,
 				9F075FF72861BD090086D7BD /* QuizzView.swift in Sources */,
 				5F6C9DCD28606328002C38E1 /* struct.swift in Sources */,
+				6744B4DB286211F1001A6D4C /* SingleCardView.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
