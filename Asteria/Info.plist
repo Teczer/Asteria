@@ -7,5 +7,14 @@
 		<string>Montserrat.ttf</string>
 		<string>Montserrat-Italic.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>OxfordBlue</string>
+		<key>UIImageName</key>
+		<string>launchlogo</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<false/>
+	</dict>
 </dict>
 </plist>
