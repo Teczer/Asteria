@@ -13,6 +13,7 @@ struct CardFront: Identifiable {
     var cardTitle: String
     var cardNumber: String
     var collectionName: String
+    var miniCard: Bool
 }
 
 struct CollectionCardFront: View {
@@ -21,58 +22,90 @@ struct CollectionCardFront: View {
     
     var body: some View {
         
-        ZStack {
+        VStack {
+            ZStack {
+                
+                Image(collectionCardFront.cardFrontImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                    .clipped()
+                    .cornerRadius(20)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                        .stroke(collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.7) : Color("LavenderBlush").opacity(0.7), lineWidth: 1))
+                    .shadow(color: collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.9) : Color("LavenderBlush").opacity(0.9), radius: collectionCardFront.miniCard ? 32 : 10)
+                
+                VStack {
+                    Spacer()
+                        .frame(height:30)
                     
-            Image(collectionCardFront.cardFrontImage)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 299, height: 597)
-                .clipped()
-                .cornerRadius(20)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.white, lineWidth: 1))
-                .shadow(color: Color.white, radius: 10)
-
-            VStack {
-                Spacer()
-                
-                Text(collectionCardFront.cardTitle)
-                    .font(.custom("Montserrat", size: 30))
-                    .fontWeight(.light)
-                  
-                Spacer(minLength: 400)
-                
-                // ROND + NUMERO CARTE
-                ZStack {
-                    Circle()
-                        .fill(Color("OxfordBlue"))
-                        .frame(width: 40, height: 40)
-
-                    Text(collectionCardFront.cardNumber)
-                        .font(.custom("Montserrat", size: 24))
-                        .fontWeight(.semibold)
-                        } // fin
-                
-                    Text("C O L L E C T I O N")
-                        .font(.custom("Montserrat", size: 15))
-                        .fontWeight(.light)
-                        .padding(.vertical, 1)
+                    if collectionCardFront.miniCard == false {
+                        Text(collectionCardFront.cardTitle.uppercased())
+                            .font(.custom("Montserrat", size: 30))
+                            .fontWeight(.light)
+                            .tracking(5)
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(spacing:5) {
                         
-                    Text(collectionCardFront.collectionName)
-                        .font(.custom("Montserrat", size: 15))
-                        .fontWeight(.semibold)
+                        // ROND + NUMERO CARTE
+                        ZStack {
+                            Circle()
+                                .fill(Color("OxfordBlue"))
+                                .frame(height: collectionCardFront.miniCard ? 70 : 40)
+                            
+                            Text(collectionCardFront.cardNumber)
+                                .font(.custom("Montserrat", size: collectionCardFront.miniCard ? 50 : 24))
+                                .fontWeight(.semibold)
+                        } // fin
+                        
+                        if collectionCardFront.miniCard == false {
+                            Text("Collection".uppercased())
+                                .font(.custom("Montserrat", size: 15))
+                                .fontWeight(.light)
+                                .tracking(4)
+                            
+                            Text(collectionCardFront.collectionName.uppercased())
+                                .font(.custom("Montserrat", size: 15))
+                                .fontWeight(.semibold)
+                                .tracking(3)
+                        }
+                    }
+                    
+                    Spacer()
+                        .frame(height:30)
+                    
+                }
+                .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                .clipped()
                 
+                // fin Vstack
+                
+            } // fin Zstack
+            
+            
+            // this is only for the miniCard
+            if collectionCardFront.miniCard == true {
                 Spacer()
-                
-                    } // fin Vstack
-                
-                } // fin Zstack
+                    .frame(height:24)
+                Text("Collection".uppercased())
+                    .font(.custom("Montserrat", size: 18))
+                    .fontWeight(.light)
+                    .tracking(4)
+                Text(collectionCardFront.collectionName.uppercased())
+                    .font(.custom("Montserrat", size: 18))
+                    .fontWeight(.semibold)
+                    .tracking(4)
+            }
+        }
     }
 }
 
 struct CollectionCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "T I T R E", cardNumber: "1", collectionName: "NOM DE LA COLLECTION"))
+        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: false))
             .preferredColorScheme(.dark)
     }
 }
