@@ -110,7 +110,7 @@ struct SingleCardView: View {
 
 struct SingleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleCardView(image: "collection1-image-1", cardImage: "collection1-image-1", cardTitle: "SOLEIL", cardNumber: "1", collectionName: "SYSTEME SOLAIRE", miniCard: false)
+        SingleCardView(image: "collection1-image-1", cardImage: "collection1-image-1", cardTitle: "Soleil", cardNumber: "1", collectionName: "Système solaire", miniCard: false)
             .previewDevice("iPhone 12")
             .preferredColorScheme(.dark)
     }
