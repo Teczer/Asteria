@@ -15,11 +15,11 @@ let cardBacks = [cardBack1, cardBack2]
 
 // COLLECTIONS
 let collection1 = CollectionType(
-    collectionName: "Sytème solaire",
+    collectionName: "S Y S T È M E  S O L A I R E",
     collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2)])
 
 let collection2 = CollectionType(
-    collectionName: "Galaxies",
+    collectionName: "G A L A X I E S",
     collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2)])
 
 // CARDS
@@ -55,14 +55,14 @@ let cardBack1 = CardBackType(
 
 let cardFront2 = CardFrontType(
     cardTitle: "L U N E",
-    cardFrontImage: "collection1-image-2",
+    cardFrontImage: "collection1-image-7",
     collectionName: "S Y S T È M E  S O L A I R E",
     cardNumber: "2",
     miniCard: false)
 
 let cardBack2 = CardBackType(
     cardTitle: "LUNE",
-    cardBackImage: "collection1-image-2",
+    cardBackImage: "collection1-image-7",
     cardFunFactIcon1: "bolt.circle.fill",
     cardFunFactIcon2: "bolt.circle.fill",
     cardFunFactIcon3: "bolt.circle.fill",

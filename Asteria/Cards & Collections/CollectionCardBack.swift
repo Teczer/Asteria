@@ -35,7 +35,7 @@ struct CollectionCardBack: View {
                 Image(collectionCardBack.cardBackImage)
                     .resizable()
                     .scaledToFill()
-                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
                     .frame(width: 146, height: 146)
                     .clipShape(Circle())
                     .shadow(color: Color.white, radius: 5)

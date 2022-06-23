@@ -23,7 +23,8 @@ struct CollectionDetail: View {
             // NOM DE LA COLLECTION
             HStack {
                 Text(collection.collectionName)
-                    .font(.title2)
+                    .font(.custom("Montserrat", size: 20))
+                    .fontWeight(.light)
                     .padding(.leading, 30)
                     .padding(.top, 30)
                 
@@ -68,14 +69,14 @@ struct CollectionDetail: View {
             Rectangle()
                 .fill(.black)
                 .frame(width: 35, height: 250)
-                .blur(radius: 10)
+                .blur(radius: 15)
 
             Spacer(minLength: 350)
 
             Rectangle()
                 .fill(.black)
                 .frame(width: 35, height: 250)
-                .blur(radius: 10)
+                .blur(radius: 15)
                 }
             
             // BOUTON POUR SCROLL
