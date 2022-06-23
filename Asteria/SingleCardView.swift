@@ -19,11 +19,7 @@ struct SingleCardView: View {
     var miniCard: Bool
     var body: some View {
         ZStack {
-            Image(image)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 390, height: 766)
-                .opacity(0.5)
+            BlurredBackground(name: image)
             CollectionCardBack(collectionCardBack: CardBack(
                 cardBackImage: image,
                 cardTitle: cardTitle,
