@@ -200,7 +200,6 @@
 				9F94E5092863138000F6D6AD /* Tuto */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
-				6744B4DA286211F0001A6D4C /* SingleCardView.swift */,
 				5F6C9DCC28606328002C38E1 /* struct.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
@@ -277,6 +276,7 @@
 				A7EACD652863264400EEDD28 /* CardData.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
 				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
+				6744B4DA286211F0001A6D4C /* SingleCardView.swift */,
 				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
 				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 			);
