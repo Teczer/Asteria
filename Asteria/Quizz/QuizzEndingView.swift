@@ -56,7 +56,7 @@ struct QuizzEndingView: View {
                 .frame(height:26)
                 Spacer()
                 
-                CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "nebuleuse4", cardTitle: "Nébuleuse", cardNumber: "3", collectionName: "Voie lactée", miniCard: true))
+                CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Nébuleuse", cardFrontImage: "nebuleuse4", collectionName: "Voie Lactée", cardNumber: "3", miniCard: true))
                     .offset(x: cardOffsetAnim)
                     .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
                 

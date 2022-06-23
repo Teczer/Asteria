@@ -193,13 +193,13 @@
 			children = (
 				9FD1F6D0285C8A4D00C26900 /* Info.plist */,
 				9F76C3B6285C719A0095D087 /* DevFeatures */,
+				A7EACD7F2864DC3100EEDD28 /* Cards & Collections */,
 				9F2DBCCE286468FB00261870 /* Adventure */,
 				676C4CD428605DFF00FE8185 /* Login */,
 				9F94E5082863135000F6D6AD /* Quizz */,
 				9F94E5092863138000F6D6AD /* Tuto */,
 				9F2084A8285C6EDC00EB8AC5 /* AsteriaApp.swift */,
 				9F2084AA285C6EDC00EB8AC5 /* MainView.swift */,
-				6744B4DA286211F0001A6D4C /* SingleCardView.swift */,
 				5F6C9DCC28606328002C38E1 /* struct.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
@@ -236,32 +236,14 @@
 		9F76C3B6285C719A0095D087 /* DevFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				A7EACD792864D31800EEDD28 /* CardFrontType.swift */,
-				A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */,
-				A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */,
 				9F2DBCCC2864550300261870 /* BlurredBackground.swift */,
-				A7EACD532860607800EEDD28 /* CollectionView.swift */,
-				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
-				A7EACD652863264400EEDD28 /* CollectionData.swift */,
-				A7EACD632863254D00EEDD28 /* CollectionType.swift */,
-				A7EACD652863264400EEDD28 /* CardData.swift */,
-				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
-				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
-				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
-				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 				9FFB868A2861FEBA0008601F /* AnswerButton.swift */,
-				5FCF33D92864588E0045D004 /* AllLevelView.swift */,
-				5FCF33D1286363860045D004 /* level1View.swift */,
-				5FCF33D3286363980045D004 /* level2View.swift */,
-				5FCF33D5286363AA0045D004 /* level3View.swift */,
-				5FCF33D7286363BB0045D004 /* level4View.swift */,
 				9F97835F285C8E3300B11604 /* QACard.swift */,
 				9F978367285CA33700B11604 /* QACardAnswer.swift */,
 				9F949BF028605E080001DC72 /* ProgressionBar.swift */,
 				9F949BF22860621A0001DC72 /* ScoreBar.swift */,
 				9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */,
 				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
-				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
 				9F2DBCD12864729F00261870 /* LevelCircle.swift */,
 			);
 			path = DevFeatures;
@@ -282,6 +264,23 @@
 				9F949BF428606F760001DC72 /* TutoView.swift */,
 			);
 			path = Tuto;
+			sourceTree = "<group>";
+		};
+		A7EACD7F2864DC3100EEDD28 /* Cards & Collections */ = {
+			isa = PBXGroup;
+			children = (
+				A7EACD792864D31800EEDD28 /* CardFrontType.swift */,
+				A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */,
+				A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */,
+				A7EACD632863254D00EEDD28 /* CollectionType.swift */,
+				A7EACD652863264400EEDD28 /* CardData.swift */,
+				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
+				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
+				6744B4DA286211F0001A6D4C /* SingleCardView.swift */,
+				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
+				A7EACD532860607800EEDD28 /* CollectionView.swift */,
+			);
+			path = "Cards & Collections";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
