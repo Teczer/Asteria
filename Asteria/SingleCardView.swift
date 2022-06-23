@@ -23,7 +23,7 @@ struct SingleCardView: View {
     var body: some View {
         
         ZStack {
-            BlurredBackground(name: image)
+//            BlurredBackground(name: image)
             
             VStack {
                 HStack(alignment:.top) {
