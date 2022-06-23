@@ -7,25 +7,9 @@
 
 import SwiftUI
 
-struct CardBack: Identifiable {
-    var id = UUID()
-    var cardBackImage: String
-    var cardTitle: String
-    var cardFunFactIcon1: String
-    var cardFunFactIcon2: String
-    var cardFunFactIcon3: String
-    var cardFunFactName1: String
-    var cardFunFactName2: String
-    var cardFunFactName3: String
-    var cardFunFact1: String
-    var cardFunFact2: String
-    var cardFunFact3: String
-    var cardDescription: String
-}
-
 struct CollectionCardBack: View {
     
-    var collectionCardBack: CardBack
+    var collectionCardBack: CardBackType
     
     var body: some View {
         
@@ -141,28 +125,7 @@ struct CollectionCardBack: View {
 
 struct CollectionCardBack_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionCardBack(collectionCardBack: CardBack(
-            cardBackImage: "card-background-image",
-            cardTitle: "T I T R E",
-            cardFunFactIcon1: "bolt.circle.fill",
-            cardFunFactIcon2: "bolt.circle.fill",
-            cardFunFactIcon3: "bolt.circle.fill",
-            cardFunFactName1: "Spec 1 :",
-            cardFunFactName2: "Spec 2 :",
-            cardFunFactName3: "Spec 3 :",
-            cardFunFact1: """
-                        Chiffre
-                        ou fun fact
-                        """,
-            cardFunFact2: """
-                        Chiffre
-                        ou fun fact
-                        """,
-            cardFunFact3: """
-                        Chiffre
-                        ou fun fact
-                        """,
-            cardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue placerat quam id blandit. Cras maximus tempor efficitur. Curabitur leo metus, porta vel blandit vitae, suscipit et ex. Etiam ac rutrum mauris, sed euismod magna. Sed a porta urna. Nullam vehicula fermentum facilisis. Pellentesque gravida, nisl a consectetur mattis, magna urna pretium elit, eget euismod enim sapien quis orci. Proin quis tellus eros."))
+        CollectionCardBack(collectionCardBack: cardBack1)
             .preferredColorScheme(.dark)
     }
 }

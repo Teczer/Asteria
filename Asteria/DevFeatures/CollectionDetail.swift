@@ -11,38 +11,11 @@
 import SwiftUI
 
 struct CollectionDetail: View {
-    
-    //  A METTRE DANS UN FICHIER DATA (LIGNES 14 À 38)
-    
-//    let allCollections = [collection1, collection2]
-    
-    let collection1 = CollectionType (
-        collectionName: "S Y S T È M E  S O L A I R E",
-        collectionImages: ["collection1-image-1",
-                           "collection1-image-2",
-                           "collection1-image-3",
-                           "collection1-image-4",
-                           "collection1-image-5",
-                           "collection1-image-6",
-                           "collection1-image-7",
-                           "collection1-image-8",
-                           "collection1-image-9"])
-
-    let collection2 = CollectionType (
-        collectionName: "G A L A X I E S",
-        collectionImages: ["collection2-image-1",
-                           "collection2-image-2",
-                           "collection2-image-3",
-                           "collection2-image-4",
-                           "collection2-image-5",
-                           "collection2-image-6",
-                           "collection2-image-7",
-                           "collection2-image-8",
-                           "collection2-image-9"])
 
     var collection: CollectionType
     
     let rows = [GridItem(.flexible())]
+    @State private var currentIndex = 0
     
     var body: some View {
     
@@ -51,8 +24,7 @@ struct CollectionDetail: View {
             // NOM DE LA COLLECTION
             HStack {
                 Text(collection.collectionName)
-                    .font(.custom("Montserrat", size: 20))
-                    .fontWeight(.light)
+                    .font(.title2)
                     .padding(.leading, 30)
                     .padding(.top, 30)
                 
@@ -70,20 +42,22 @@ struct CollectionDetail: View {
         ScrollView(.horizontal) {
             
             LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
-                ForEach(collection.collectionImages, id: \.self) {
-                    img in Image(img)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 93, height: 186)
-                                .clipped()
-                                .cornerRadius(20)
-                                .overlay(RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color("CarnationPink"), lineWidth: 1))
-                                .shadow(color: Color.white, radius: 10)
-                                .id(img)
-                    
-                    // AJOUTER ICI LE NAVIGATION LINK VERS L'ÉCRAN SINGLE CARD
-                    
+                ForEach(collection.collectionImages) { card in
+                    NavigationLink {
+                        SingleCardView(turnCard: false, cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
+                    } label : {
+                        Image(card.cardFront.cardFrontImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 93, height: 186)
+                            .clipped()
+                            .cornerRadius(20)
+                            .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("CarnationPink"), lineWidth: 1))
+                            .shadow(color: Color.white, radius: 10)
+                        
+                    }
+                                        
                         } // fin for each
                     } // fin lazygrid
             
