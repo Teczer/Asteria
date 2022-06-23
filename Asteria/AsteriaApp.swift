@@ -24,7 +24,7 @@ struct AsteriaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            QuizzEndingView()
+            AdventureView()
         }
     }
 }
