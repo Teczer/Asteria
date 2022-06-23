@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct AllLevelView: View {
+struct AdventureView: View {
     var id = UUID()
     var body: some View {
         ScrollView{
             ScrollViewReader{ proxy in
-                VStack{
+                VStack(spacing:0){
                     level4View()
                     level3View()
                     level2View()
@@ -25,8 +25,8 @@ struct AllLevelView: View {
     }
 }
 
-struct AllLevelView_Previews: PreviewProvider {
+struct AdventureView_Previews: PreviewProvider {
     static var previews: some View {
-        AllLevelView()
+        AdventureView()
     }
 }
