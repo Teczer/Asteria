@@ -48,8 +48,11 @@
 		A7C48F38285CABB800D47D05 /* CollectionCardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */; };
 		A7EACD542860607800EEDD28 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD532860607800EEDD28 /* CollectionView.swift */; };
 		A7EACD642863254D00EEDD28 /* CollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD632863254D00EEDD28 /* CollectionType.swift */; };
-		A7EACD662863264400EEDD28 /* CollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD652863264400EEDD28 /* CollectionData.swift */; };
+		A7EACD662863264400EEDD28 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD652863264400EEDD28 /* CardData.swift */; };
 		A7EACD68286333CF00EEDD28 /* CollectionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */; };
+		A7EACD7A2864D31800EEDD28 /* CardFrontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD792864D31800EEDD28 /* CardFrontType.swift */; };
+		A7EACD7C2864D33D00EEDD28 /* CardBackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */; };
+		A7EACD7E2864D35500EEDD28 /* SingleCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,8 +99,11 @@
 		A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCardBack.swift; sourceTree = "<group>"; };
 		A7EACD532860607800EEDD28 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		A7EACD632863254D00EEDD28 /* CollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionType.swift; sourceTree = "<group>"; };
-		A7EACD652863264400EEDD28 /* CollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionData.swift; sourceTree = "<group>"; };
+		A7EACD652863264400EEDD28 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetail.swift; sourceTree = "<group>"; };
+		A7EACD792864D31800EEDD28 /* CardFrontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontType.swift; sourceTree = "<group>"; };
+		A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackType.swift; sourceTree = "<group>"; };
+		A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,13 +236,20 @@
 		9F76C3B6285C719A0095D087 /* DevFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				A7EACD792864D31800EEDD28 /* CardFrontType.swift */,
+				A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */,
+				A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */,
 				9F2DBCCC2864550300261870 /* BlurredBackground.swift */,
 				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
 				A7EACD652863264400EEDD28 /* CollectionData.swift */,
 				A7EACD632863254D00EEDD28 /* CollectionType.swift */,
-				9FFB868A2861FEBA0008601F /* AnswerButton.swift */,
+				A7EACD652863264400EEDD28 /* CardData.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
+				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
+				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
+				A7EACD532860607800EEDD28 /* CollectionView.swift */,
+				9FFB868A2861FEBA0008601F /* AnswerButton.swift */,
 				5FCF33D92864588E0045D004 /* AllLevelView.swift */,
 				5FCF33D1286363860045D004 /* level1View.swift */,
 				5FCF33D3286363980045D004 /* level2View.swift */,
@@ -351,6 +364,7 @@
 				67D5B3DA2861B3A4006C9228 /* InscriptionView.swift in Sources */,
 				9F949BF32860621A0001DC72 /* ScoreBar.swift in Sources */,
 				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
+				A7EACD7E2864D35500EEDD28 /* SingleCardType.swift in Sources */,
 				9FB6DEF02864A6F800F0E732 /* ProfileView.swift in Sources */,
 				676C4CE928607B4D00FE8185 /* ConnexionView.swift in Sources */,
 				671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */,
@@ -374,11 +388,13 @@
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
+				A7EACD7C2864D33D00EEDD28 /* CardBackType.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
-				A7EACD662863264400EEDD28 /* CollectionData.swift in Sources */,
+				A7EACD662863264400EEDD28 /* CardData.swift in Sources */,
 				9FFB868B2861FEBA0008601F /* AnswerButton.swift in Sources */,
 				676C4CDE286066E500FE8185 /* SignUpItemView.swift in Sources */,
 				9F978360285C8E3300B11604 /* QACard.swift in Sources */,
+				A7EACD7A2864D31800EEDD28 /* CardFrontType.swift in Sources */,
 				676C4CD628605E9E00FE8185 /* LoginView.swift in Sources */,
 				9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */,
 				A7EACD642863254D00EEDD28 /* CollectionType.swift in Sources */,

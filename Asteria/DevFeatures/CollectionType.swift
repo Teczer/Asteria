@@ -10,5 +10,5 @@ import SwiftUI
 struct CollectionType: Identifiable {
     var id = UUID()
     var collectionName: String
-    var collectionImages: [String]
+    var collectionImages: [SingleCardType]
 }

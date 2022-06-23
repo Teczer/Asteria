@@ -7,19 +7,10 @@
 
 import SwiftUI
 
-struct CardFront: Identifiable {
-    var id = UUID()
-    var cardFrontImage: String
-    var cardTitle: String
-    var cardNumber: String
-    var collectionName: String
-    var miniCard: Bool
-}
-
 struct CollectionCardFront: View {
     
-    @State private var shadowValue:Double = 0  // for miniCard shadow animation
-    var collectionCardFront: CardFront
+    @State private var shadowValue: Double = 0  // for miniCard shadow animation
+    var collectionCardFront: CardFrontType
     
     var body: some View {
         
@@ -46,7 +37,7 @@ struct CollectionCardFront: View {
                         .frame(height:30)
                     
                     if collectionCardFront.miniCard == false {
-                        Text(collectionCardFront.cardTitle.uppercased())
+                        Text(collectionCardFront.collectionName.uppercased())
                             .font(.custom("Montserrat", size: 30))
                             .fontWeight(.light)
                             .tracking(5)
@@ -111,7 +102,7 @@ struct CollectionCardFront: View {
 
 struct CollectionCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: "card-background-image", cardTitle: "Titre", cardNumber: "1", collectionName: "Nom de la collection", miniCard: true))
+        CollectionCardFront(collectionCardFront: cardFront1)
             .preferredColorScheme(.dark)
     }
 }
