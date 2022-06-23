@@ -24,6 +24,7 @@
 		9F2084AD285C6EDD00EB8AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */; };
 		9F2084B0285C6EDD00EB8AC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */; };
 		9F2084B7285C6F0600EB8AC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9F2084B6285C6F0600EB8AC5 /* .gitignore */; };
+		9F2DBCCD2864550300261870 /* BlurredBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DBCCC2864550300261870 /* BlurredBackground.swift */; };
 		9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */; };
 		9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BD285C71F60095D087 /* VeroWIP.swift */; };
 		9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */; };
@@ -63,6 +64,7 @@
 		9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F2084AF285C6EDD00EB8AC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F2084B6285C6F0600EB8AC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		9F2DBCCC2864550300261870 /* BlurredBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredBackground.swift; sourceTree = "<group>"; };
 		9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MehdiWIP.swift; sourceTree = "<group>"; };
 		9F76C3BD285C71F60095D087 /* VeroWIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeroWIP.swift; sourceTree = "<group>"; };
 		9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCardFront.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		9F76C3B6285C719A0095D087 /* DevFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				9F2DBCCC2864550300261870 /* BlurredBackground.swift */,
 				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
 				A7EACD652863264400EEDD28 /* CollectionData.swift */,
@@ -326,6 +329,7 @@
 				9F075FF72861BD090086D7BD /* QuizzView.swift in Sources */,
 				5F6C9DCD28606328002C38E1 /* struct.swift in Sources */,
 				6744B4DB286211F1001A6D4C /* SingleCardView.swift in Sources */,
+				9F2DBCCD2864550300261870 /* BlurredBackground.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,

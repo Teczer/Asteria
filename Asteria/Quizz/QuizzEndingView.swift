@@ -20,16 +20,7 @@ struct QuizzEndingView: View {
     
     var body: some View {
         ZStack {
-            GeometryReader { geometry in
-                Image("nebuleuse4")
-                    .resizable()
-                    .scaledToFill()
-                    .clipped()
-                    .blur(radius: 3)
-            }
-            .ignoresSafeArea()
-            Color("OxfordBlue").opacity(0.7)
-                .ignoresSafeArea()
+            BlurredBackground(name: "nebuleuse4")
             VStack(spacing:0) {
                 ScoreBar()
                     .padding()
