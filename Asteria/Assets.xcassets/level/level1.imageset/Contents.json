@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "level1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "level1.png",
+      "filename" : "level1@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "level1@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
