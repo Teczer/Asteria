@@ -200,9 +200,6 @@
 		9F76C3B6285C719A0095D087 /* DevFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				9F76C3B9285C71DD0095D087 /* EllanaWIP.swift */,
-				9F76C3BB285C71EA0095D087 /* MehdiWIP.swift */,
-				9F76C3BD285C71F60095D087 /* VeroWIP.swift */,
 				A7EACD532860607800EEDD28 /* CollectionView.swift */,
 				A7EACD67286333CF00EEDD28 /* CollectionDetail.swift */,
 				A7EACD652863264400EEDD28 /* CollectionData.swift */,
@@ -468,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Asteria/Preview Content\"";
-				DEVELOPMENT_TEAM = 3LU75T9498;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Asteria/Info.plist;
@@ -498,7 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Asteria/Preview Content\"";
-				DEVELOPMENT_TEAM = 3LU75T9498;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Asteria/Info.plist;
