@@ -22,6 +22,13 @@ let collection2 = CollectionType(
     collectionName: "G A L A X I E S",
     collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2)])
 
+let collection3 = CollectionType(
+    collectionName: """
+                    A s t r o n a u t e s
+                    c é l è b r e s
+                    """,
+    collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2)])
+
 // CARDS
 let cardFront1 = CardFrontType(
     cardTitle: "S O L E I L",

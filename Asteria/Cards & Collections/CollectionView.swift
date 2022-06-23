@@ -10,6 +10,7 @@
 //  - ajouter le background
 //  - voir s'il est possible de personnaliser le navigation title (mettre le fond bleu, changer la taille / le style du texte)
 
+
 import SwiftUI
 
 
@@ -35,6 +36,8 @@ struct CollectionView: View {
                     CollectionDetail(collection: collection1)
                     
                     CollectionDetail(collection: collection2)
+                    
+                    CollectionDetail(collection: collection3)
                     
                 }
             
