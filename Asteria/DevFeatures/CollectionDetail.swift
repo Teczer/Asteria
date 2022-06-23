@@ -5,7 +5,6 @@
 //  Created by Apprenant 87 on 22/06/2022.
 //
 //  Reste à faire sur cet élément :
-//  - dans la boucle ForEach, ajouter un navigation link vers la single card
 //  - créer le bouton pour scroll (la meilleure solution semble être avec le ScrollViewReader, mais pas réussi pour l'instant)
 
 import SwiftUI
@@ -44,7 +43,7 @@ struct CollectionDetail: View {
             LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
                 ForEach(collection.collectionImages) { card in
                     NavigationLink {
-                        SingleCardView(turnCard: false, cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
+                        SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
                     } label : {
                         Image(card.cardFront.cardFrontImage)
                             .resizable()

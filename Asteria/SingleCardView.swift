@@ -16,11 +16,8 @@ struct SingleCardView: View {
     @State private var displayBack = false
     
     // card data
-    let image: String
-    let cardImage : String
-    let cardTitle: String
-    let cardNumber: String
-    let collectionName: String
+    var cardFront: CardFrontType
+    var cardBack: CardBackType
     var miniCard: Bool
     
     var body: some View {
@@ -44,28 +41,7 @@ struct SingleCardView: View {
                     
                     if displayBack {
                         
-                        CollectionCardBack(collectionCardBack: CardBack(
-                            cardBackImage: image,
-                            cardTitle: cardTitle,
-                            cardFunFactIcon1: "bolt.circle.fill",
-                            cardFunFactIcon2: "bolt.circle.fill",
-                            cardFunFactIcon3: "bolt.circle.fill",
-                            cardFunFactName1: "Spec 1 :",
-                            cardFunFactName2: "Spec 2 :",
-                            cardFunFactName3: "Spec 3 :",
-                            cardFunFact1: """
-                                        Chiffre
-                                        ou fun fact
-                                        """,
-                            cardFunFact2: """
-                                        Chiffre
-                                        ou fun fact
-                                        """,
-                            cardFunFact3: """
-                                        Chiffre
-                                        ou fun fact
-                                        """,
-                            cardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue placerat quam id blandit. Cras maximus tempor efficitur. Curabitur leo metus, porta vel blandit vitae, suscipit et ex. Etiam ac rutrum mauris, sed euismod magna. Sed a porta urna. Nullam vehicula fermentum facilisis. Pellentesque gravida, nisl a consectetur mattis, magna urna pretium elit, eget euismod enim sapien quis orci. Proin quis tellus eros."))
+                        CollectionCardBack(collectionCardBack: cardBack)
                         .onTapGesture {
                             displayFront = true
                             withAnimation(.linear(duration: 0.2)) {
@@ -83,7 +59,7 @@ struct SingleCardView: View {
                     
                     
                     if displayFront {
-                        CollectionCardFront(collectionCardFront: CardFront(cardFrontImage: cardImage, cardTitle: cardTitle, cardNumber: cardNumber, collectionName: collectionName, miniCard: miniCard))
+                        CollectionCardFront(collectionCardFront: cardFront)
                             .onTapGesture {
                                 displayBack = true
                                 withAnimation(.linear(duration: 0.2)) {
@@ -110,8 +86,7 @@ struct SingleCardView: View {
 
 struct SingleCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleCardView(image: "collection1-image-1", cardImage: "collection1-image-1", cardTitle: "Soleil", cardNumber: "1", collectionName: "Système solaire", miniCard: false)
-            .previewDevice("iPhone 12")
+        SingleCardView(cardFront: cardFront1, cardBack: cardBack1, miniCard: false)
             .preferredColorScheme(.dark)
     }
 }
