@@ -77,13 +77,13 @@ let quizzGalaxies : [Questions] = [
     
     Questions(questionValue: "La Voie Lactée est une galaxie...", questionAnswer: ["... de type spirale", "... de type lenticulaire", "... de type rectangulaire", "... de type elliptique"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
     
-    Questions(questionValue: "", questionAnswer: ["", "", "", ""], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
+    Questions(questionValue: " Lequel de ces instruments ne sert pas à observer le ciel ?", questionAnswer: ["Le microscope", "La lunette", "Les jumelles", "Le télescope"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants très petits (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel"),
     
-    Questions(questionValue: "", questionAnswer: ["", "", "", ""], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
+    Questions(questionValue: " A quelle classe de galaxies appartient M31, la grande galaxie d'Andromède ?", questionAnswer: ["Les spirales barrées", "Les spirales", " Les elliptiques", "Les irrégulières"], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: "La galaxie d'Andromède est, comme la Voie lactée, une galaxie spirale. Elle est l'objet le plus lointain (plus de 2 millions d'années-lumière) visible à l'oeil nu depuis la Terre"),
     
-    Questions(questionValue: "", questionAnswer: ["", "", "", ""], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
+    Questions(questionValue: "Combien de temps dure une révolution du Soleil autour du centre de la Galaxie ?", questionAnswer: ["Environ 4 siècles", "Environ 175.000 ans", "Environ 250 millions d'années", "Environ 3,8 milliards d'années"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: "Le Soleil met environ 250 millions d'années pour accomplir une révolution complète autour du centre de notre Galaxie, situé à environ 26.000 années-lumière."),
     
-    Questions(questionValue: "", questionAnswer: ["", "", "", ""], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
+    Questions(questionValue: "Dans quelle constellation se trouve l'étoile Altaïr ?", questionAnswer: ["L'Aigle", "Hercule", "Le Cygne", "Orion"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: "L'étoile Altaïr appartient à la constellation de l'Aigle. Elle fait partie des 20 étoiles les plus brillantes du ciel et sa magnitude est de 0,8. Située à environ 17 années-lumière de la Terre, elle est aussi l'une des étoiles de première grandeur les plus proches de la Terre"),
     
     Questions(questionValue: "", questionAnswer: ["", "", "", ""], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: ""),
 ]
