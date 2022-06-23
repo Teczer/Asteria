@@ -40,6 +40,7 @@
 		9F978360285C8E3300B11604 /* QACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97835F285C8E3300B11604 /* QACard.swift */; };
 		9F978366285C953800B11604 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 9F978365285C953800B11604 /* .gitattributes */; };
 		9F978368285CA33700B11604 /* QACardAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F978367285CA33700B11604 /* QACardAnswer.swift */; };
+		9FB6DEF02864A6F800F0E732 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6DEEF2864A6F800F0E732 /* ProfileView.swift */; };
 		9FD1F6CE285C8A3C00C26900 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */; };
 		9FD1F6CF285C8A3C00C26900 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */; };
 		9FFB868B2861FEBA0008601F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB868A2861FEBA0008601F /* AnswerButton.swift */; };
@@ -85,6 +86,7 @@
 		9F97835F285C8E3300B11604 /* QACard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QACard.swift; sourceTree = "<group>"; };
 		9F978365285C953800B11604 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		9F978367285CA33700B11604 /* QACardAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QACardAnswer.swift; sourceTree = "<group>"; };
+		9FB6DEEF2864A6F800F0E732 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		9FD1F6D0285C8A4D00C26900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				5F6C9DCC28606328002C38E1 /* struct.swift */,
 				671D57AC285CCC0C00307D20 /* ViewRouter.swift */,
 				9F2084AC285C6EDD00EB8AC5 /* Assets.xcassets */,
+				9FB6DEEF2864A6F800F0E732 /* ProfileView.swift */,
 				9F2084AE285C6EDD00EB8AC5 /* Preview Content */,
 			);
 			path = Asteria;
@@ -219,7 +222,6 @@
 				A7EACD632863254D00EEDD28 /* CollectionType.swift */,
 				9FFB868A2861FEBA0008601F /* AnswerButton.swift */,
 				9F76C3BF285C71FF0095D087 /* CollectionCardFront.swift */,
-				A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */,
 				5FCF33D92864588E0045D004 /* AllLevelView.swift */,
 				5FCF33D1286363860045D004 /* level1View.swift */,
 				5FCF33D3286363980045D004 /* level2View.swift */,
@@ -333,6 +335,7 @@
 				67D5B3DA2861B3A4006C9228 /* InscriptionView.swift in Sources */,
 				9F949BF32860621A0001DC72 /* ScoreBar.swift in Sources */,
 				9F76C3BE285C71F60095D087 /* VeroWIP.swift in Sources */,
+				9FB6DEF02864A6F800F0E732 /* ProfileView.swift in Sources */,
 				676C4CE928607B4D00FE8185 /* ConnexionView.swift in Sources */,
 				671D57AD285CCC0C00307D20 /* ViewRouter.swift in Sources */,
 				6790B0CB2860F81B008F425A /* CoTitleItemView.swift in Sources */,
