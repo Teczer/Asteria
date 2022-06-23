@@ -12,7 +12,7 @@ struct AdventureView: View {
     var body: some View {
         ScrollView{
             ScrollViewReader{ proxy in
-                VStack(spacing:0){
+                VStack(alignment: .leading, spacing:0){
                     level4View()
                     level3View()
                     level2View()

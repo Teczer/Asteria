@@ -14,7 +14,7 @@ struct LevelCircle: View {
     ///      *"completed"*      niveaux déjà terminés
     ///      *"unavailable"*     niveaux à venir (pas encore débloqués)
     ///      *"new"*                prochain niveau à jouer (il ne doit y en avoir qu'un seul à tout moment)
-    ///  **circleSize** est une valeur Int entre 30 et 50 qui change la taille du point
+    ///  **circleSize** est une valeur entre 40 et 60 qui change la taille du point
 
     let levelStatus : String
     let circleSize : CGFloat
@@ -29,7 +29,7 @@ struct LevelCircle: View {
                     .frame(width: circleSize, height: circleSize)
                     .shadow(color: Color("CarnationPink"), radius: 5)
                 Image(systemName: "checkmark")
-                    .font(.system(size: 18))
+                    .font(.system(size: 22))
             }
         }
         
@@ -51,6 +51,7 @@ struct LevelCircle: View {
         
         else {
             Text("Erreur : LevelCircle a reçu une valeur inattendue")
+                .font(.system(size: 10))
         }
                 
     }
@@ -58,6 +59,6 @@ struct LevelCircle: View {
 
 struct LevelCircle_Previews: PreviewProvider {
     static var previews: some View {
-        LevelCircle(levelStatus: "unavailable", circleSize: 30)
+        LevelCircle(levelStatus: "completed", circleSize: 40)
     }
 }
