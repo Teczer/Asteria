@@ -89,14 +89,14 @@ struct ProfileView: View {
                                         message: Text("Êtes vous sûr de bien vouloir supprimer votre compte ? \r Cette action est iréversible !"),
                                         
                                         
-                                        primaryButton: .default(
+                                        primaryButton: .destructive(
                                             
                                             Text("OK"),
                                             action: {
                                                 
                                                 showDetails = true
                                             }),
-                                        secondaryButton: .destructive(
+                                        secondaryButton: .default(
                                             Text("Annuler"),
                                             action: {})
                                     )
