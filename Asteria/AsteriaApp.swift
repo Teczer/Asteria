@@ -7,24 +7,13 @@
 
 import SwiftUI
 
-//@main
-//struct AsteriaApp: App {
-//    @StateObject var viewRouter = ViewRouter()
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            MainView(login: .constant(""), viewRouter: ViewRouter())
-//        }
-//    }
-//}
-
 @main
 struct AsteriaApp: App {
     @StateObject var viewRouter = ViewRouter()
 
     var body: some Scene {
         WindowGroup {
-            AdventureView()
+            MainView(login: .constant(""), viewRouter: ViewRouter())
         }
     }
 }
