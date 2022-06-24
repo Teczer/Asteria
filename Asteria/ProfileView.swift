@@ -13,7 +13,8 @@ struct ProfileView: View {
         UITableView.appearance().separatorColor = .clear
     }
     
-    
+    @State private var showDetails = false
+    @State private var showAlert = false
     @State private var notification = false
     @State private var audio = false
     
@@ -80,7 +81,26 @@ struct ProfileView: View {
                             Text("Déconnecter le compte")
                         }
                         HStack {
-                            Text("Supprimer le compte")
+                            Button {
+                                self.showAlert.toggle()
+                            } label: {
+                                Text("Supprimer le compte")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .alert(isPresented: $showAlert) {
+                            Alert(
+                                title: Text("ATTENTION !"),
+                                message: Text("Êtes-vous sûr de bien vouloir supprimer votre compte ? \rCette action est iréversible"),
+                                primaryButton: .default(
+                                    Text("OK"),
+                                    action: {
+                                        showDetails = true
+                                    }),
+                                secondaryButton: .destructive(
+                                    Text("Annuler"),
+                                    action: {})
+                            )
                         }
                         .listRowBackground(Color.red)
                     } header: {
