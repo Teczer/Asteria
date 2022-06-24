@@ -33,10 +33,6 @@ struct SingleCardView: View {
                         .padding()
                     Spacer()
                 }
-                
-                Spacer()
-                    .frame(height:30)
-                
                 ZStack {
                     
                     if displayBack {
@@ -75,8 +71,8 @@ struct SingleCardView: View {
                             .rotation3DEffect(.degrees(rotationFrontValue), axis: (x: 0, y: 1, z: 0))
                     }
                 }
-                
                 Spacer()
+                    .frame(height: 110)
             }
         }
         

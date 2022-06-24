@@ -17,7 +17,7 @@ struct MainView: View {
             VStack {
                 switch viewRouter.currentPage {
                 case .collection:
-                    SingleCardView(cardFront: cardFront1, cardBack: cardBack1, miniCard: false)
+                    CollectionView()
                 case .aventure:
                     LoginView(username: $login)
                 case .profil:

@@ -39,7 +39,7 @@ struct CollectionCardFront: View {
                         .frame(height:30)
                     
                     if collectionCardFront.miniCard == false {
-                        Text(collectionCardFront.collectionName.uppercased())
+                        Text(collectionCardFront.cardTitle.uppercased())
                             .font(.custom("Montserrat", size: 30))
                             .fontWeight(.light)
                             .tracking(5)
