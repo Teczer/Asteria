@@ -20,7 +20,7 @@ struct CollectionCardFront: View {
                 Image(collectionCardFront.cardFrontImage)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                    .frame(width: collectionCardFront.miniCard ? 172 : 300, height: collectionCardFront.miniCard ? 344 : 600)
                     .clipped()
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20)
@@ -76,7 +76,7 @@ struct CollectionCardFront: View {
                         .frame(height:30)
                     
                 }
-                .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                .frame(width: collectionCardFront.miniCard ? 172 : 300, height: collectionCardFront.miniCard ? 344 : 600)
                 .clipped()
                 
                 // fin Vstack

@@ -9,6 +9,7 @@
 //  Reste à faire sur cet écran :
 //  - ajouter le background
 //  - voir s'il est possible de personnaliser le navigation title (mettre le fond bleu, changer la taille / le style du texte)
+//  - penser à ce qu'il se passe / ce qu'on affiche avant de gagner les cartes ? 
 
 
 import SwiftUI
