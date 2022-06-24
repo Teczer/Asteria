@@ -27,18 +27,12 @@ struct ProfileView: View {
                     
                     Form {
                         Section {
-                            HStack (spacing: 20) {
+                            HStack (spacing: 15) {
                                 Image("jeanneDupont")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width:95, height: 95)
                                     .cornerRadius(50)
-                                    .overlay(
-                                        Circle()
-                                            .stroke()
-                                            .foregroundColor(Color("LavenderBlush"))
-                                            .shadow(color: .white, radius: 3, x: 0, y: 0)
-                                    )
                                 VStack (alignment:.leading) {
                                     Text("Jeanne DUPONT")
                                         .font(.system(size: 20))
@@ -77,56 +71,10 @@ struct ProfileView: View {
                         }
                         Section {
                             HStack {
-                                Button {
-                                    self.showAlert.toggle()
-                                } label: {
-                                    Text("Réinitialiser les données")
-                                        .foregroundColor(.white)
-                                }
-                                .alert(isPresented: $showAlert) {
-                                    Alert(
-                                        title: Text("ATTENTION !"),
-                                        message: Text("Êtes vous sûr de bien vouloir réinitialiser vos données ? \r Cette action est iréversible !"),
-                                        
-                                        
-                                        primaryButton: .destructive(
-                                            
-                                            Text("OK"),
-                                            action: {
-                                                
-                                                showDetails = true
-                                            }),
-                                        secondaryButton: .default(
-                                            Text("Annuler"),
-                                            action: {})
-                                    )
-                                }
+                                Text("Réinitialiser les données")
                             }
                             HStack {
-                                Button {
-                                    self.showAlert.toggle()
-                                } label: {
-                                    Text("Déconnecter le compte")
-                                        .foregroundColor(.white)
-                                }
-                                .alert(isPresented: $showAlert) {
-                                    Alert(
-                                        title: Text("Confirmation"),
-                                        message: Text("Êtes vous sûr de bien vouloir vous déconnecter du compte ?"),
-                                        
-                                        
-                                        primaryButton: .destructive(
-                                            
-                                            Text("OK"),
-                                            action: {
-                                                
-                                                showDetails = true
-                                            }),
-                                        secondaryButton: .default(
-                                            Text("Annuler"),
-                                            action: {})
-                                    )
-                                }
+                                Text("Déconnecter le compte")
                             }
                             HStack {
                                 Button {
