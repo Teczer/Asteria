@@ -33,6 +33,8 @@ struct SingleCardView: View {
                         .padding()
                     Spacer()
                 }
+                
+                Spacer()
                 ZStack {
                     
                     if displayBack {
@@ -72,7 +74,6 @@ struct SingleCardView: View {
                     }
                 }
                 Spacer()
-                    .frame(height: 110)
             }
         }
         
