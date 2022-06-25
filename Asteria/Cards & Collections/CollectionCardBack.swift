@@ -76,7 +76,7 @@ struct CollectionCardBack: View {
                                 .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 1
+                            }.frame(width: 90) // fin fun fact 1
                         
                         Spacer()
                         
@@ -94,7 +94,7 @@ struct CollectionCardBack: View {
                                 .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 2
+                            }.frame(width: 90) // fin fun fact 2
                         
                         Spacer()
                         
@@ -112,7 +112,7 @@ struct CollectionCardBack: View {
                                 .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 3
+                            }.frame(width: 90) // fin fun fact 3
                         
                         Spacer()
                     
@@ -133,6 +133,8 @@ struct CollectionCardBack: View {
                     .padding(.top, 3)
                 
             } // fin Vstack
+
+
 
         } // fin Zstack
         
