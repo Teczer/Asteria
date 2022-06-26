@@ -5,10 +5,10 @@
 //  Created by Apprenant 87 on 22/06/2022.
 //
 //  POUR RETROUVER LES CARTES :
-//  Système solaire : LIGNE X
-//  Galaxies : LIGNE X
-//  Phénomènes observables : LIGNE X
-//  Astronautes : LIGNE X
+//  Système solaire : ligne 42
+//  Galaxies : ligne 214
+//  Phénomènes observables : ligne 376
+//  Astronautes : ligne 530
 //
 
 import SwiftUI
