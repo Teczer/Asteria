@@ -24,11 +24,13 @@ struct CollectionCardFront: View {
                     .clipped()
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20)
-                        .stroke(collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.7) : Color("LavenderBlush").opacity(0.7), lineWidth: 1))
+                    .stroke(collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.7) : Color("LavenderBlush").opacity(0.7), lineWidth: 1))
                     .shadow(color: collectionCardFront.miniCard ? Color("CarnationPink").opacity(0.9) : Color("LavenderBlush").opacity(0.9), radius: collectionCardFront.miniCard ? shadowValue : 10)
                     .onAppear {
-                        withAnimation(.easeInOut(duration: 6).delay(2)) {
-                            shadowValue = 150
+                        if collectionCardFront.miniCard {
+                            withAnimation(.easeInOut(duration: 6).delay(2)) {
+                                shadowValue = 150
+                            }
                         }
                     }
                 
@@ -39,6 +41,7 @@ struct CollectionCardFront: View {
                     if collectionCardFront.miniCard == false {
                         Text(collectionCardFront.cardTitle
                             .uppercased())
+                        Text(collectionCardFront.cardTitle.uppercased())
                             .font(.custom("Montserrat", size: 30))
                             .fontWeight(.light)
                             .tracking(5)

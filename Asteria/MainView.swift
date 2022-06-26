@@ -17,11 +17,11 @@ struct MainView: View {
             VStack {
                 switch viewRouter.currentPage {
                 case .collection:
-                    SingleCardView(cardFront: cardFront1, cardBack: cardBack1, miniCard: false)
+                    CollectionView()
                 case .aventure:
-                    LoginView(username: $login)
+                    AdventureView()
                 case .profil:
-                    MehdiWIP()
+                    ProfileView()
                 }
                 HStack {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .collection, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .collection ? "square.stack.fill" : "square.stack", tabName: "Collections")
