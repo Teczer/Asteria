@@ -5,10 +5,10 @@
 //  Created by Apprenant 87 on 22/06/2022.
 //
 //  POUR RETROUVER LES CARTES :
-//  Système solaire : LIGNES X À X
-//  Galaxies : LIGNES X À X
-//  Phénomènes observables : LIGNES X À X
-//  Astronautes : LIGNES X À X
+//  Système solaire : LIGNE X
+//  Galaxies : LIGNE X
+//  Phénomènes observables : LIGNE X
+//  Astronautes : LIGNE X
 //
 
 import SwiftUI
@@ -25,10 +25,17 @@ let collection2 = CollectionType(
 
 let collection3 = CollectionType(
     collectionName: """
+                    P h é n o m è n e s
+                    o b s e r v a b l e s
+                    """,
+    collectionImages: [SingleCardType(cardFront: cardFront11, cardBack: cardBack11), SingleCardType(cardFront: cardFront12, cardBack: cardBack12), SingleCardType(cardFront: cardFront13, cardBack: cardBack13), SingleCardType(cardFront: cardFront14, cardBack: cardBack14), SingleCardType(cardFront: cardFront15, cardBack: cardBack15)])
+
+let collection4 = CollectionType(
+    collectionName: """
                     A s t r o n a u t e s
                     c é l è b r e s
                     """,
-    collectionImages: [SingleCardType(cardFront: cardFront3, cardBack: cardBack3)])
+    collectionImages: [SingleCardType(cardFront: cardFront16, cardBack: cardBack16), SingleCardType(cardFront: cardFront17, cardBack: cardBack17), SingleCardType(cardFront: cardFront18, cardBack: cardBack18), SingleCardType(cardFront: cardFront19, cardBack: cardBack19), SingleCardType(cardFront: cardFront20, cardBack: cardBack20)])
 
 
 
@@ -218,7 +225,7 @@ let cardBack6 = CardBackType(
     cardBackImage: "collec2-cardBackImage-6-voielactee",
     cardFunFactIcon1: "hurricane",
     cardFunFactIcon2: "circle.slash.fill",
-    cardFunFactIcon3: "aqi.low",
+    cardFunFactIcon3: "sparkles",
     cardFunFactName1: "Forme",
     cardFunFactName2: "Diamètre",
     cardFunFactName3: "Nombre d'étoiles",
@@ -282,7 +289,7 @@ let cardBack8 = CardBackType(
     cardBackImage: "collec2-cardBackImage-8-andromede",
     cardFunFactIcon1: "hurricane",
     cardFunFactIcon2: "circle.slash.fill",
-    cardFunFactIcon3: "aqi.low",
+    cardFunFactIcon3: "sparkles",
     cardFunFactName1: "Forme",
     cardFunFactName2: "Diamètre",
     cardFunFactName3: "Nombre d'étoiles",
@@ -363,3 +370,306 @@ let cardBack10 = CardBackType(
                     années-lumières
                     """,
     cardDescription: "La nébuleuse à la tête de cheval est une nébuleuse obscure dans la constellation d’Orion. Elle est facilement reconnaissable par la forme en tête de cheval qui lui a donné son nom et qui se découpe dans la nébuleuse. L’obscurité de la tête de cheval est causée par la présence d’un nuage dense de gaz et de poussière.")
+
+
+
+//  PHÉNOMÈNES //////////////////////////////////////////////////////
+
+let cardFront11 = CardFrontType(
+    cardTitle: "E C L I P S E",
+    cardFrontImage: "collec3-cardFrontImage-11-eclipse",
+    collectionName: "PHÉNOMÈNES OBSERVABLES",
+    cardNumber: "1",
+    miniCard: false)
+
+let cardBack11 = CardBackType(
+    cardTitle: "E C L I P S E",
+    cardBackImage: "collec3-cardBackImage-11-eclipse",
+    cardFunFactIcon1: "moon.fill",
+    cardFunFactIcon2: "stopwatch.fill",
+    cardFunFactIcon3: "binoculars.fill",
+    cardFunFactName1: "Nombre par an",
+    cardFunFactName2: "Durée moyenne",
+    cardFunFactName3: "Première observation",
+    cardFunFact1: """
+                    4 à 7
+                    """,
+    cardFunFact2: """
+                    7 minutes
+                    """,
+    cardFunFact3: """
+                    1312
+                    av. J.-C.
+                    """,
+    cardDescription: "Une éclipse est la disparition apparente et temporaire, pour un observateur, de tout ou partie d'un astre résultant de l'interposition d'un autre objet céleste soit entre cet astre et la source de lumière qui l'éclaire, soit entre cet astre et l'œil de l'observateur. La disparition de l'astre éclipsé, ou occulté, est son immersion; sa réapparition, son émersion. Il existe plusieurs sortes d'éclipses notamment les éclipses de Lune et celles de Soleil, ces dernières étant plus rares.")
+
+let cardFront12 = CardFrontType(
+    cardTitle: "S U P E R  L U N E",
+    cardFrontImage: "collec3-cardFrontImage-12-moon",
+    collectionName: "PHÉNOMÈNES OBSERVABLES",
+    cardNumber: "2",
+    miniCard: false)
+
+let cardBack12 = CardBackType(
+    cardTitle: "S U P E R  L U N E",
+    cardBackImage: "collec3-cardBackImage-12-moon",
+    cardFunFactIcon1: "arrow.down.right.and.arrow.up.left.circle.fill",
+    cardFunFactIcon2: "circle.circle.fill",
+    cardFunFactIcon3: "signature",
+    cardFunFactName1: "Plus proche distance",
+    cardFunFactName2: "Nombre par an",
+    cardFunFactName3: "Nom officiel",
+    cardFunFact1: """
+                    356 511 km
+                    en 2016
+                    """,
+    cardFunFact2: """
+                    3 à 4
+                    """,
+    cardFunFact3: """
+                    périgée-
+                    syzygie
+                    """,
+    cardDescription: "Une super lune désigne une pleine ou nouvelle lune qui se produit lorsque la Lune est à sa plus courte distance de la Terre. Visuellement, il est difficile de percevoir une différence avec les autres pleines lunes de l'année. En effet, la taille apparente de notre satellite dans le ciel varie entre 0,48 et 0,56 degré selon sa position sur son orbite. Une vraie « superlune » peut apparaître 14 % plus grande qu'une Pleine Lune qui coïncide avec l'apogée.")
+
+let cardFront13 = CardFrontType(
+    cardTitle: """
+                É T O I L E S
+                F I L A N T E S
+                """,
+    cardFrontImage: "collec3-cardFrontImage-13-etoile",
+    collectionName: "PHÉNOMÈNES OBSERVABLES",
+    cardNumber: "3",
+    miniCard: false)
+
+let cardBack13 = CardBackType(
+    cardTitle: "ÉTOILES FILANTES",
+    cardBackImage: "collec3-cardBackImage-13-etoile",
+    cardFunFactIcon1: "arrow.up.to.line.circle.fill",
+    cardFunFactIcon2: "hare.fill",
+    cardFunFactIcon3: "line.diagonal",
+    cardFunFactName1: "Altitude moyenne",
+    cardFunFactName2: "Vitesse moyenne",
+    cardFunFactName3: "Plus grosse tempête",
+    cardFunFact1: """
+                    Entre 65
+                    et 135 km
+                    """,
+    cardFunFact2: """
+                    40 km/s
+                    """,
+    cardFunFact3: """
+                    200 000 étoiles
+                    par heure (1966)
+                    """,
+    cardDescription: "Une étoile filante est le phénomène lumineux qui accompagne l'entrée dans l'atmosphère d'un corps appelé météoroïde. Cette traînée lumineuse est causée par la vaporisation du corps et l'ionisation de l'air sur sa trajectoire, le météoroïde laissant derrière lui un sillage de gaz très chaud, ionisé et lumineux que l'on nomme un plasma. L'échauffement à l'origine du plasma est principalement dû à la compression de l'atmosphère en avant du corps supersonique et non à la friction.")
+
+let cardFront14 = CardFrontType(
+    cardTitle: """
+                L U M I È R E
+                Z O D I A C A L E
+                """,
+    cardFrontImage: "collec3-cardFrontImage-14-zod-light",
+    collectionName: "PHÉNOMÈNES OBSERVABLES",
+    cardNumber: "4",
+    miniCard: false)
+
+let cardBack14 = CardBackType(
+    cardTitle: "LUMIÈRE ZODIACALE",
+    cardBackImage: "collec3-cardBackImage-14-zod-light",
+    cardFunFactIcon1: "rays",
+    cardFunFactIcon2: "arrow.left.and.right.circle.fill",
+    cardFunFactIcon3: "aqi.low",
+    cardFunFactName1: "Luminosité",
+    cardFunFactName2: "Dimensions",
+    cardFunFactName3: "Composition",
+    cardFunFact1: """
+                    Faible
+                    """,
+    cardFunFact2: """
+                    5 à 10 degrés
+                    de large
+                    """,
+    cardFunFact3: """
+                    poussière
+                    cosmique
+                    """,
+    cardDescription: "La lumière zodiacale est une faible lueur de forme vaguement triangulaire visible sur le ciel nocturne et qui s'étend le long de l'axe du Soleil sur le plan du zodiaque, qui lui a donné son nom. Ce phénomène apparaît après le coucher du Soleil au printemps, ou avant son lever à l'automne, quand le zodiaque est perpendiculaire à l'horizon. Il est dû à la réflexion de la lumière solaire sur la poussière cosmique orbitant proche de la Terre.")
+
+let cardFront15 = CardFrontType(
+    cardTitle: "M É T É O R I T E",
+    cardFrontImage: "collec3-cardFrontImage-15-meteorite",
+    collectionName: "PHÉNOMÈNES OBSERVABLES",
+    cardNumber: "5",
+    miniCard: false)
+
+let cardBack15 = CardBackType(
+    cardTitle: "MÉTÉORITE",
+    cardBackImage: "collec3-cardBackImage-15-meteorite",
+    cardFunFactIcon1: "binoculars.fill",
+    cardFunFactIcon2: "line.diagonal",
+    cardFunFactIcon3: "hare.fill",
+    cardFunFactName1: "Première découverte",
+    cardFunFactName2: "Nombre de chutes par an",
+    cardFunFactName3: "Vitesse de chute",
+    cardFunFact1: """
+                    an 861
+                    """,
+    cardFunFact2: """
+                    2000 à 5000
+                    (plus d'1kg)
+                    """,
+    cardFunFact3: """
+                    de 11 à
+                    72 km/s
+                    """,
+    cardDescription: "Une météorite est un objet solide d'origine extraterrestre qui en traversant l'atmosphère terrestre n'a pas perdu toute sa masse, et qui en a atteint la surface solide sans y être entièrement volatilisé lors de l'impact avec cette surface. Les météorites portent le nom d'un lieu près duquel elles sont tombées ou ont été trouvées, généralement celui d'une municipalité ou d'une entité géographique.")
+
+
+
+// ASTRONAUTES //////////////////////////////////////////////////////
+
+let cardFront16 = CardFrontType(
+    cardTitle: "G A G A R I N E",
+    cardFrontImage: "collec4-cardFrontImage-16-gagarine",
+    collectionName: "ASTRONAUTES CÉLÈBRES",
+    cardNumber: "1",
+    miniCard: false)
+
+let cardBack16 = CardBackType(
+    cardTitle: "GAGARINE",
+    cardBackImage: "collec4-cardBackImage-16-gagarine",
+    cardFunFactIcon1: "globe.europe.africa.fill",
+    cardFunFactIcon2: "case.fill",
+    cardFunFactIcon3: "star.fill",
+    cardFunFactName1: "Nationalité",
+    cardFunFactName2: "Profession",
+    cardFunFactName3: "Particularité",
+    cardFunFact1: """
+                    Soviétique
+                    """,
+    cardFunFact2: """
+                    Pilote
+                    de chasse
+                    """,
+    cardFunFact3: """
+                    Premier homme
+                    dans l'espace
+                    """,
+    cardDescription: "Youri Gagarine est le tout premier être humain à avoir effectué un vol dans l’espace, au cours de la mission Vostok 1 le 12 avril 1961. Les chances de réussite de la mission étaient estimées à 50%. Une fois lancé, le vaisseau est resté 1h48 en orbite autour de la Terre, à une altitude moyenne de 250 km. Aucune expérience n’était prévue, les spécialistes n’étant pas sûrs des capacités de l’être humain soumis à l’apesanteur.")
+
+let cardFront17 = CardFrontType(
+    cardTitle: "A R M S T R O N G",
+    cardFrontImage: "collec4-cardFrontImage-17-armstrong",
+    collectionName: "ASTRONAUTES CÉLÈBRES",
+    cardNumber: "2",
+    miniCard: false)
+
+let cardBack17 = CardBackType(
+    cardTitle: "ARMSTRONG",
+    cardBackImage: "collec4-cardBackImage-17-armstrong",
+    cardFunFactIcon1: "globe.europe.africa.fill",
+    cardFunFactIcon2: "case.fill",
+    cardFunFactIcon3: "star.fill",
+    cardFunFactName1: "Nationalité",
+    cardFunFactName2: "Profession",
+    cardFunFactName3: "Particularité",
+    cardFunFact1: """
+                    Américaine
+                    """,
+    cardFunFact2: """
+                    Pilote
+                    de chasse
+                    """,
+    cardFunFact3: """
+                    Premier homme
+                    sur la Lune
+                    """,
+    cardDescription: "Neil Armstrong est le premier homme à avoir posé le pied sur la Lune, le 21 juillet 1969 au cours de la mission Apollo 11. Il a prononcé la désormais célèbre phrase : « C’est un petit pas pour l’homme, mais un bond de géant pour l’humanité ». Les échanges radio sont diffusés en direct dans le monde entier, et on estime que 13% de la population mondiale à suivi la sortie d’Armstrong. Au total, l’équipage est resté plus de 21h sur la Lune, dont 2h30 en sortie extravéhiculaire.")
+
+let cardFront18 = CardFrontType(
+    cardTitle: "L E O N O V",
+    cardFrontImage: "collec4-cardFrontImage-18-leonov",
+    collectionName: "ASTRONAUTES CÉLÈBRES",
+    cardNumber: "3",
+    miniCard: false)
+
+let cardBack18 = CardBackType(
+    cardTitle: "LEONOV",
+    cardBackImage: "collec4-cardBackImage-18-leonov",
+    cardFunFactIcon1: "globe.europe.africa.fill",
+    cardFunFactIcon2: "case.fill",
+    cardFunFactIcon3: "star.fill",
+    cardFunFactName1: "Nationalité",
+    cardFunFactName2: "Profession",
+    cardFunFactName3: "Particularité",
+    cardFunFact1: """
+                    Soviétique
+                    """,
+    cardFunFact2: """
+                    Pilote
+                    de chasse
+                    """,
+    cardFunFact3: """
+                    Première sortie
+                    extravéhiculaire
+                    """,
+    cardDescription: "Alexei Leonov est le premier homme à avoir réalisé une sortie extravéhiculaire dans l’espace, le 18 mars 1965. Relié par un filin de 4,5m, Leonov est frappé par le silence qui règne, au point qu’il entend le bruit de son propre corps. La sortie extravéhiculaire aura duré en tout 12 minutes. Après ses différentes missions, Leonov devient responsable de l’entrainement des cosmonautes soviétiques.")
+
+let cardFront19 = CardFrontType(
+    cardTitle: "C H R É T I E N",
+    cardFrontImage: "collec4-cardFrontImage-19-chretien",
+    collectionName: "ASTRONAUTES CÉLÈBRES",
+    cardNumber: "4",
+    miniCard: false)
+
+let cardBack19 = CardBackType(
+    cardTitle: "CHRÉTIEN",
+    cardBackImage: "collec4-cardBackImage-19-chretien",
+    cardFunFactIcon1: "globe.europe.africa.fill",
+    cardFunFactIcon2: "case.fill",
+    cardFunFactIcon3: "star.fill",
+    cardFunFactName1: "Nationalité",
+    cardFunFactName2: "Profession",
+    cardFunFactName3: "Particularité",
+    cardFunFact1: """
+                    Française
+                    """,
+    cardFunFact2: """
+                    Pilote
+                    de chasse
+                    """,
+    cardFunFact3: """
+                    Premier français
+                    dans l'espace
+                    """,
+    cardDescription: "Jean-Loup Chrétien est le premier français et premier européen à effectuer un vol habité, du 25 juin au 2 juillet 1982. Plusieurs expériences ont été réalisées lors de cette mission, notamment l’étude des réactions de l’homme en impesanteur, le comportement de certains matériaux en impesanteur ou encore l’étude de galaxies.")
+
+let cardFront20 = CardFrontType(
+    cardTitle: "T E R E C H K O V A",
+    cardFrontImage: "collec4-cardFrontImage-20-terechkova",
+    collectionName: "ASTRONAUTES CÉLÈBRES",
+    cardNumber: "4",
+    miniCard: false)
+
+let cardBack20 = CardBackType(
+    cardTitle: "TERECHKOVA",
+    cardBackImage: "collec4-cardBackImage-20-terechkova",
+    cardFunFactIcon1: "globe.europe.africa.fill",
+    cardFunFactIcon2: "case.fill",
+    cardFunFactIcon3: "star.fill",
+    cardFunFactName1: "Nationalité",
+    cardFunFactName2: "Profession",
+    cardFunFactName3: "Particularité",
+    cardFunFact1: """
+                    Soviétique
+                    """,
+    cardFunFact2: """
+                    Instructrice
+                    de parachutisme
+                    """,
+    cardFunFact3: """
+                    Première femme
+                    dans l'espace
+                    """,
+    cardDescription: "Valentina Terechkova est la première femme à être allée dans l’espace. Elle a effectué seule un vol de près de 3 jours, du 16 au 19 juin 1963. Une caméra installée à bord du vaisseau a diffusé les images de la cosmonaute dans le monde entier. Elle reste à ce jour la seule femme ayant voyagé en solitaire dans l’espace, ainsi que la plus jeune cosmonaute (elle avait 26 ans au moment du vol).")

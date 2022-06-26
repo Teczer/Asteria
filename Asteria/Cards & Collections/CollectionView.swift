@@ -40,6 +40,8 @@ struct CollectionView: View {
                     
                     CollectionDetail(collection: collection3)
                     
+                    CollectionDetail(collection: collection4)
+                    
                 }
             
                 }
