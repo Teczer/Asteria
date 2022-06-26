@@ -19,7 +19,7 @@ struct CollectionCardBack: View {
                 .cornerRadius(20)
                 .background(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 2))
                 .foregroundColor(Color("OxfordBlue"))
-                .frame(width: 299, height: 597)
+                .frame(width: 300, height: 600)
                 .shadow(color: Color.white, radius: 10)
             
             VStack {
@@ -28,22 +28,34 @@ struct CollectionCardBack: View {
                     .font(.custom("Montserrat", size: 30))
                     .fontWeight(.light)
                 
-                Divider()
-                    .background(Color.white)
-                    .frame(width: 299)
+                Spacer()
+                    .frame(height: 30)
+                
+//                Divider()
+//                    .background(Color.white)
+//                    .frame(width: 300)
                 
                 Image(collectionCardBack.cardBackImage)
                     .resizable()
                     .scaledToFill()
-                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                    .frame(width: 146, height: 146)
-                    .clipShape(Circle())
-                    .shadow(color: Color.white, radius: 5)
-                    .padding(.vertical, 20)
+                    .frame(width:300, height:200)
+                    .clipped()
+                    .overlay(Rectangle().stroke(Color.white, lineWidth: 1))
+//                    .shadow(color: Color.white, radius: 5)
+//                    .position(x: 195, y: 200)
+//                    .padding(.top, 20)
                 
-                Divider()
-                    .background(Color.white)
-                    .frame(width: 299)
+//                    .resizable()
+//                    .scaledToFill()
+//                    .overlay(Rectangle().stroke(Color.white, lineWidth: 1))
+//                    .frame(width: 146, height: 146)
+//                    .clipShape(Circle())
+//                    .shadow(color: Color.white, radius: 5)
+//                    .padding(.vertical, 20)
+                
+//                Divider()
+//                    .background(Color.white)
+//                    .frame(width: 300)
                 
                 
                     // HSTACK FUN FACTS
@@ -58,12 +70,13 @@ struct CollectionCardBack: View {
                             Text(collectionCardBack.cardFunFactName1)
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
                                 .padding(.vertical, 1)
                             Text(collectionCardBack.cardFunFact1)
-                                .font(.custom("Montserrat", size: 8))
+                                .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 1
+                            }.frame(width: 90) // fin fun fact 1
                         
                         Spacer()
                         
@@ -75,12 +88,13 @@ struct CollectionCardBack: View {
                             Text(collectionCardBack.cardFunFactName2)
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
                                 .padding(.vertical, 1)
                             Text(collectionCardBack.cardFunFact2)
-                                .font(.custom("Montserrat", size: 8))
+                                .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 2
+                            }.frame(width: 90) // fin fun fact 2
                         
                         Spacer()
                         
@@ -92,20 +106,22 @@ struct CollectionCardBack: View {
                             Text(collectionCardBack.cardFunFactName3)
                                 .font(.custom("Montserrat", size: 8))
                                 .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
                                 .padding(.vertical, 1)
                             Text(collectionCardBack.cardFunFact3)
-                                .font(.custom("Montserrat", size: 8))
+                                .font(.custom("Montserrat", size: 9))
                                 .fontWeight(.light)
                                 .multilineTextAlignment(.center)
-                            } // fin fun fact 3
+                            }.frame(width: 90) // fin fun fact 3
                         
                         Spacer()
                     
-                    }.padding(.vertical, 2) // fin Hstack fun facts
+                    }.padding(.vertical, 5)
+                    .frame(width: 300)// fin Hstack fun facts
                 
                 Divider()
                     .background(Color.white)
-                    .frame(width: 299)
+                    .frame(width: 300)
                 
                 
                 // TEXTE DESCRIPTIF
@@ -117,6 +133,8 @@ struct CollectionCardBack: View {
                     .padding(.top, 3)
                 
             } // fin Vstack
+
+
 
         } // fin Zstack
         

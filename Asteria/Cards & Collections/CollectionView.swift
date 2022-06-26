@@ -9,6 +9,8 @@
 //  Reste à faire sur cet écran :
 //  - ajouter le background
 //  - voir s'il est possible de personnaliser le navigation title (mettre le fond bleu, changer la taille / le style du texte)
+//  - penser à ce qu'il se passe / ce qu'on affiche avant de gagner les cartes ? 
+
 
 import SwiftUI
 
@@ -35,6 +37,10 @@ struct CollectionView: View {
                     CollectionDetail(collection: collection1)
                     
                     CollectionDetail(collection: collection2)
+                    
+                    CollectionDetail(collection: collection3)
+                    
+                    CollectionDetail(collection: collection4)
                     
                 }
             

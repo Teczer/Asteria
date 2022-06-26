@@ -20,7 +20,7 @@ struct CollectionCardFront: View {
                 Image(collectionCardFront.cardFrontImage)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                    .frame(width: collectionCardFront.miniCard ? 172 : 300, height: collectionCardFront.miniCard ? 344 : 600)
                     .clipped()
                     .cornerRadius(20)
                     .overlay(RoundedRectangle(cornerRadius: 20)
@@ -39,6 +39,8 @@ struct CollectionCardFront: View {
                         .frame(height:30)
                     
                     if collectionCardFront.miniCard == false {
+                        Text(collectionCardFront.cardTitle
+                            .uppercased())
                         Text(collectionCardFront.cardTitle.uppercased())
                             .font(.custom("Montserrat", size: 30))
                             .fontWeight(.light)
@@ -67,7 +69,7 @@ struct CollectionCardFront: View {
                                 .tracking(4)
                             
                             Text(collectionCardFront.collectionName.uppercased())
-                                .font(.custom("Montserrat", size: 15))
+                                .font(.custom("Montserrat", size: 12))
                                 .fontWeight(.semibold)
                                 .tracking(3)
                         }
@@ -77,7 +79,7 @@ struct CollectionCardFront: View {
                         .frame(height:30)
                     
                 }
-                .frame(width: collectionCardFront.miniCard ? 172 : 299, height: collectionCardFront.miniCard ? 344 : 597)
+                .frame(width: collectionCardFront.miniCard ? 172 : 300, height: collectionCardFront.miniCard ? 344 : 600)
                 .clipped()
                 
                 // fin Vstack

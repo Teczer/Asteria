@@ -6,6 +6,7 @@
 //
 //  Reste à faire sur cet élément :
 //  - créer le bouton pour scroll (la meilleure solution semble être avec le ScrollViewReader, mais pas réussi pour l'instant)
+//  - trouver le moyen de passer les noms trop longs sur 2 lignes sans couper les mots
 
 import SwiftUI
 
@@ -22,8 +23,9 @@ struct CollectionDetail: View {
             
             // NOM DE LA COLLECTION
             HStack {
-                Text(collection.collectionName)
-                    .font(.title2)
+                Text(collection.collectionName.uppercased())
+                    .font(.custom("Montserrat", size: 20))
+                    .fontWeight(.light)
                     .padding(.leading, 30)
                     .padding(.top, 30)
                 
@@ -68,14 +70,14 @@ struct CollectionDetail: View {
             Rectangle()
                 .fill(.black)
                 .frame(width: 35, height: 250)
-                .blur(radius: 10)
+                .blur(radius: 15)
 
             Spacer(minLength: 350)
 
             Rectangle()
                 .fill(.black)
                 .frame(width: 35, height: 250)
-                .blur(radius: 10)
+                .blur(radius: 15)
                 }
             
             // BOUTON POUR SCROLL
