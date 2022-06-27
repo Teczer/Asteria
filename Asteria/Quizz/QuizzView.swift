@@ -10,10 +10,16 @@ import Foundation   // needed for markdown text formatting
 
 struct QuizzView: View {
     
+    // animation
     @State private var rotationValue:Double = 0
     @State private var rotationAnswerValue:Double = 90
     @State private var displayAnswer:Bool = false
+    
+    // data
     var questionSerieCurrent : [Questions]
+    var questionNoCurrent : Int = 1
+    var questionNoTotal : Int = 3
+
     
     var body: some View {
         ZStack {
@@ -26,7 +32,7 @@ struct QuizzView: View {
                         .font(.system(size: 32))
                         .padding()
                     VStack(alignment: .trailing, spacing:0) {
-                        ProgressionBar()
+                        ProgressionBar(questionNoCurrent: questionNoCurrent, questionNoTotal: questionNoTotal)
                             .padding()
                             .frame(height:35)
                         HStack(alignment: .bottom, spacing:3) {

@@ -72,7 +72,6 @@ struct level1View: View {
                     LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzSystemesolaire03)
                         .position(x: 290, y: 135)
                     
-                    
                     LevelCircle(levelStatus: "new", circleSize: 48, questionSerieCurrent: quizzSystemesolaire03)
                         .position(x: 245, y: 220)
                     

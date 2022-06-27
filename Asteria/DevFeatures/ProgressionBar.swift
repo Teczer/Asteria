@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-//sample values
-let questionNoCurrent = 3
-let questionNoTotal = 3
-
 //unmutable values
-let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)
 
 struct ProgressionBar: View {
+    
+    var questionNoCurrent : Int
+    var questionNoTotal : Int
+//    let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -22,7 +22,7 @@ struct ProgressionBar: View {
                     Spacer()
                         .frame(width:5)
                     Color("CarnationPink").opacity(0.8)
-                        .frame(width: geometry.size.width*CGFloat(questionProgression), height: 5)
+                        .frame(width: geometry.size.width*CGFloat(Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)), height: 5)
                     Color("LavenderBlush").opacity(0.8)
                         .frame(height: 5)
                     Spacer()
@@ -55,7 +55,7 @@ struct ProgressionBar: View {
 
 struct ProgressionBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressionBar()
+        ProgressionBar(questionNoCurrent: 1, questionNoTotal: 3)
             .preferredColorScheme(.dark)
     }
 }
