@@ -11,6 +11,9 @@ import SwiftUI
 let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, true, true]
 
 struct ScoreBar: View {
+    
+    var questionNoTotal : Int
+    
     var body: some View {
         ZStack {
             HStack (spacing:0) {
@@ -50,7 +53,7 @@ struct ScoreBar: View {
 
 struct ScoreBar_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreBar()
+        ScoreBar(questionNoTotal: 3)
             .preferredColorScheme(.dark)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation   // needed for markdown text formatting
 
 struct QACardAnswer: View {
-    let quizz: Questions
+    var questionSerieCurrent: [Questions]
     var body: some View {
         ZStack {
             Rectangle()
@@ -20,37 +20,37 @@ struct QACardAnswer: View {
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
 
-            QACardAnswerContent(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent)
                 .frame(width:300, height:600)
         }
     }
 }
 
 struct QACardAnswerContent: View {
-    let quizz: Questions
+    var questionSerieCurrent: [Questions]
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
                 .frame(height:15)
-            Text("RÉPONSE")
+            Text("Réponse".uppercased())
                 .font(.custom("Montserrat", size: 15))
                 .fontWeight(.light)
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .frame(height:30)
-            Image(quizz.photoAnswer)
+            Image(questionSerieCurrent[0].photoAnswer)
                 .resizable()
                 .scaledToFill()
                 .frame(width:300, height:200)
                 .clipped()
-            Text(quizz.answerName.uppercased())
+            Text(questionSerieCurrent[0].answerName.uppercased())
                 .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:65)
-            Text(quizz.answerExplanation)
+            Text(questionSerieCurrent[0].answerExplanation)
                 .font(.system(size: 16))
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)
@@ -63,7 +63,7 @@ struct QACardAnswerContent: View {
 
 struct QACardAnswer_Previews: PreviewProvider {
     static var previews: some View {
-        QACardAnswer(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01)
             .preferredColorScheme(.dark)
     }
 }

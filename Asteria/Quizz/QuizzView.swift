@@ -10,10 +10,16 @@ import Foundation   // needed for markdown text formatting
 
 struct QuizzView: View {
     
+    // animation
     @State private var rotationValue:Double = 0
     @State private var rotationAnswerValue:Double = 90
     @State private var displayAnswer:Bool = false
     
+    // data
+    var questionSerieCurrent : [Questions]
+    var questionNoCurrent : Int = 1
+    var questionNoTotal : Int = 3
+
     
     var body: some View {
         ZStack {
@@ -26,7 +32,7 @@ struct QuizzView: View {
                         .font(.system(size: 32))
                         .padding()
                     VStack(alignment: .trailing, spacing:0) {
-                        ProgressionBar()
+                        ProgressionBar(questionNoCurrent: questionNoCurrent, questionNoTotal: questionNoTotal)
                             .padding()
                             .frame(height:35)
                         HStack(alignment: .bottom, spacing:3) {
@@ -49,30 +55,32 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
-                    QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+                    QACard(questionSerieCurrent: questionSerieCurrent)
                         .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
-                Button("Animate..!") {
-                    displayAnswer = true
-                    withAnimation(.easeIn(duration: 0.2)) {
-                        rotationValue = -90
-                    }
-                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
-                        rotationAnswerValue = 0
-                    }
-                }
+                
+                //                Button("Animate..!") {
+                //                    displayAnswer = true
+                //                    withAnimation(.easeIn(duration: 0.2)) {
+                //                        rotationValue = -90
+                //                    }
+                //                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+                //                        rotationAnswerValue = 0
+                //                    }
+                //                }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView()
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01)
             .preferredColorScheme(.dark)
     }
 }
