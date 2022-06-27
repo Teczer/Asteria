@@ -49,10 +49,10 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
-                    QACard(quizz: Questions(questionValue: "La Lune est un satellite de la planète...", questionAnswer: ["Jupiter", "Terre", "Mars", "Ce n'est pas un satellite"], goodAnswerNo: 1, photoQuestion: "lune", photoAnswer: "terre", answerName: "Terre", answerExplanation: "La **Lune**, aussi connue sous le nom de **Terre I**, est le seul satellite de la planète Terre."))
+                    QACard(questionSerieCurrent: questionSerieCurrent)
                         .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
