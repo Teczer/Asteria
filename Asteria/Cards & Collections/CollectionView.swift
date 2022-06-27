@@ -46,8 +46,9 @@ struct CollectionView: View {
             
                 }
                 
-                .navigationTitle("C O L L E C T I O N S")
+                .navigationTitle("Collections".uppercased())
                 .navigationBarTitleDisplayMode(.inline)
+
                 
             }
         }
