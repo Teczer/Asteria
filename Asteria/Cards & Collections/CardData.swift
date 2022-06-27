@@ -57,7 +57,10 @@ let cardBack1 = CardBackType(
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
     cardFunFactIcon3: "thermometer",
     cardFunFactName1: "Diamètre",
-    cardFunFactName2: "Distance de la terre",
+    cardFunFactName2: """
+                        Distance
+                        de la terre
+                        """,
     cardFunFactName3: "Température",
     cardFunFact1: """
                     1,4 millions de km
@@ -104,7 +107,7 @@ let cardBack2 = CardBackType(
                     """,
     cardFunFact2: """
                     4 352
-                    au 14 janvier 2020
+                    à ce jour
                     """,
     cardFunFact3: """
                     580 millions
@@ -126,7 +129,10 @@ let cardBack3 = CardBackType(
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
     cardFunFactIcon3: "thermometer",
     cardFunFactName1: "Diamètre",
-    cardFunFactName2: "Distance de la terre",
+    cardFunFactName2: """
+                        Distance
+                        de la terre
+                        """,
     cardFunFactName3: "Température",
     cardFunFact1: """
                     49 244 km
@@ -195,7 +201,10 @@ let cardBack5 = CardBackType(
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
     cardFunFactIcon3: "thermometer",
     cardFunFactName1: "Diamètre",
-    cardFunFactName2: "Distance de la terre",
+    cardFunFactName2: """
+                        Distance
+                        de la terre
+                        """,
     cardFunFactName3: "Température",
     cardFunFact1: """
                     116 464 km
@@ -233,10 +242,11 @@ let cardBack6 = CardBackType(
     cardFunFactName3: "Nombre d'étoiles",
     cardFunFact1: """
                     Spirale
+                    
                     """,
     cardFunFact2: """
-                    entre 100 000 et
-                    200 000 années-lumières
+                    entre 100K et 200K
+                    années-lumières
                     """,
     cardFunFact3: """
                     entre 200 et
@@ -257,17 +267,12 @@ let cardBack7 = CardBackType(
     cardFunFactIcon1: "hurricane",
     cardFunFactIcon2: "circle.slash.fill",
     cardFunFactIcon3: "arrow.left.and.right.circle.fill",
-    cardFunFactName1: """
-                        Forme
-                        """,
-    cardFunFactName2: """
-                        Diamètre
-                        """,
-    cardFunFactName3: """
-                        Distance
-                        """,
+    cardFunFactName1: "Forme",
+    cardFunFactName2: "Diamètre",
+    cardFunFactName3: "Distance",
     cardFunFact1: """
                     Spirale
+                    
                     """,
     cardFunFact2: """
                     76 000
@@ -297,6 +302,7 @@ let cardBack8 = CardBackType(
     cardFunFactName3: "Nombre d'étoiles",
     cardFunFact1: """
                     Spirale
+                    
                     """,
     cardFunFact2: """
                     220 000
@@ -321,17 +327,12 @@ let cardBack9 = CardBackType(
     cardFunFactIcon1: "hurricane",
     cardFunFactIcon2: "circle.slash.fill",
     cardFunFactIcon3: "arrow.left.and.right.circle.fill",
-    cardFunFactName1: """
-                        Forme
-                        """,
-    cardFunFactName2: """
-                        Diamètre
-                        """,
-    cardFunFactName3: """
-                        Distance
-                        """,
+    cardFunFactName1: "Forme",
+    cardFunFactName2: "Diamètre",
+    cardFunFactName3: "Distance",
     cardFunFact1: """
                     Spirale
+                    
                     """,
     cardFunFact2: """
                     14 000
@@ -351,14 +352,20 @@ let cardFront10 = CardFrontType(
     miniCard: false)
 
 let cardBack10 = CardBackType(
-    cardTitle: "HORSEHEAD NEBULA",
+    cardTitle: """
+                HORSEHEAD
+                NEBULA
+                """,
     cardBackImage: "collec2-cardBackImage-10-horsehead",
     cardFunFactIcon1: "cloud.fill",
     cardFunFactIcon2: "binoculars.fill",
     cardFunFactIcon3: "arrow.left.and.right.circle.fill",
     cardFunFactName1: "Forme",
     cardFunFactName2: "Découverte",
-    cardFunFactName3: "Distance de la terre",
+    cardFunFactName3: """
+                        Distance
+                        de la terre
+                        """,
     cardFunFact1: """
                     Nébuleuse
                     nuageuse
@@ -378,26 +385,37 @@ let cardBack10 = CardBackType(
 //  PHÉNOMÈNES //////////////////////////////////////////////////////
 
 let cardFront11 = CardFrontType(
-    cardTitle: "ECLIPSE",
+    cardTitle: "ÉCLIPSE",
     cardFrontImage: "collec3-cardFrontImage-11-eclipse",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
     cardNumber: "1",
     miniCard: false)
 
 let cardBack11 = CardBackType(
-    cardTitle: "ECLIPSE",
+    cardTitle: "ÉCLIPSE",
     cardBackImage: "collec3-cardBackImage-11-eclipse",
     cardFunFactIcon1: "moon.fill",
     cardFunFactIcon2: "stopwatch.fill",
     cardFunFactIcon3: "binoculars.fill",
-    cardFunFactName1: "Nombre par an",
-    cardFunFactName2: "Durée moyenne",
-    cardFunFactName3: "Première observation",
+    cardFunFactName1: """
+                        Éclipes
+                        par an
+                        """,
+    cardFunFactName2: """
+                        Durée
+                        moyenne
+                        """,
+    cardFunFactName3: """
+                        Première
+                        observation
+                        """,
     cardFunFact1: """
                     4 à 7
+                    
                     """,
     cardFunFact2: """
                     7 minutes
+                    
                     """,
     cardFunFact3: """
                     1312
@@ -418,15 +436,25 @@ let cardBack12 = CardBackType(
     cardFunFactIcon1: "arrow.down.right.and.arrow.up.left.circle.fill",
     cardFunFactIcon2: "circle.circle.fill",
     cardFunFactIcon3: "signature",
-    cardFunFactName1: "Plus proche distance",
-    cardFunFactName2: "Nombre par an",
-    cardFunFactName3: "Nom officiel",
+    cardFunFactName1: """
+                        Distance la
+                        plus courte
+                        """,
+    cardFunFactName2: """
+                        Super lunes
+                        par an
+                        """,
+    cardFunFactName3: """
+                        Nom
+                        officiel
+                        """,
     cardFunFact1: """
                     356 511 km
                     en 2016
                     """,
     cardFunFact2: """
                     3 à 4
+                    
                     """,
     cardFunFact3: """
                     périgée-
@@ -450,9 +478,18 @@ let cardBack13 = CardBackType(
     cardFunFactIcon1: "arrow.up.to.line.circle.fill",
     cardFunFactIcon2: "hare.fill",
     cardFunFactIcon3: "line.diagonal",
-    cardFunFactName1: "Altitude moyenne",
-    cardFunFactName2: "Vitesse moyenne",
-    cardFunFactName3: "Plus grosse tempête",
+    cardFunFactName1: """
+                        Altitude
+                        moyenne
+                        """,
+    cardFunFactName2: """
+                        Vitesse
+                        moyenne
+                        """,
+    cardFunFactName3: """
+                        Plus grosse
+                        tempête
+                        """,
     cardFunFact1: """
                     Entre 65
                     et 135 km
@@ -477,7 +514,10 @@ let cardFront14 = CardFrontType(
     miniCard: false)
 
 let cardBack14 = CardBackType(
-    cardTitle: "LUMIÈRE ZODIACALE",
+    cardTitle: """
+                LUMIÈRE
+                ZODIACALE
+                """,
     cardBackImage: "collec3-cardBackImage-14-zod-light",
     cardFunFactIcon1: "rays",
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
@@ -487,6 +527,7 @@ let cardBack14 = CardBackType(
     cardFunFactName3: "Composition",
     cardFunFact1: """
                     Faible
+                    
                     """,
     cardFunFact2: """
                     5 à 10 degrés
@@ -511,11 +552,21 @@ let cardBack15 = CardBackType(
     cardFunFactIcon1: "binoculars.fill",
     cardFunFactIcon2: "line.diagonal",
     cardFunFactIcon3: "hare.fill",
-    cardFunFactName1: "Première découverte",
-    cardFunFactName2: "Nombre de chutes par an",
-    cardFunFactName3: "Vitesse de chute",
+    cardFunFactName1: """
+                        Première
+                        découverte
+                        """,
+    cardFunFactName2: """
+                        Chutes
+                        par an
+                        """,
+    cardFunFactName3: """
+                        Vitesse
+                        de chute
+                        """,
     cardFunFact1: """
                     an 861
+                    
                     """,
     cardFunFact2: """
                     2000 à 5000
@@ -549,6 +600,7 @@ let cardBack16 = CardBackType(
     cardFunFactName3: "Particularité",
     cardFunFact1: """
                     Soviétique
+                    
                     """,
     cardFunFact2: """
                     Pilote
@@ -578,6 +630,7 @@ let cardBack17 = CardBackType(
     cardFunFactName3: "Particularité",
     cardFunFact1: """
                     Américaine
+                    
                     """,
     cardFunFact2: """
                     Pilote
@@ -607,6 +660,7 @@ let cardBack18 = CardBackType(
     cardFunFactName3: "Particularité",
     cardFunFact1: """
                     Soviétique
+                    
                     """,
     cardFunFact2: """
                     Pilote
@@ -636,6 +690,7 @@ let cardBack19 = CardBackType(
     cardFunFactName3: "Particularité",
     cardFunFact1: """
                     Française
+                    
                     """,
     cardFunFact2: """
                     Pilote
@@ -665,6 +720,7 @@ let cardBack20 = CardBackType(
     cardFunFactName3: "Particularité",
     cardFunFact1: """
                     Soviétique
+                    
                     """,
     cardFunFact2: """
                     Instructrice

@@ -46,7 +46,7 @@ struct CollectionDetail: View {
                 ForEach(collection.collectionImages) { card in
                     NavigationLink {
                         SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
-                            
+//                            .navigationBarHidden(true)
                     } label : {
                         Image(card.cardFront.cardFrontImage)
                             .resizable()

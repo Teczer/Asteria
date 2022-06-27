@@ -43,6 +43,7 @@ struct CollectionCardFront: View {
                             .font(.custom("Montserrat", size: 30))
                             .fontWeight(.light)
                             .tracking(5)
+                            .multilineTextAlignment(.center)
                     }
                     
                     Spacer()
