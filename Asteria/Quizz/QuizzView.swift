@@ -13,7 +13,7 @@ struct QuizzView: View {
     @State private var rotationValue:Double = 0
     @State private var rotationAnswerValue:Double = 90
     @State private var displayAnswer:Bool = false
-    
+    var questionSerieCurrent : [Questions]
     
     var body: some View {
         ZStack {
@@ -72,7 +72,7 @@ struct QuizzView: View {
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView()
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01)
             .preferredColorScheme(.dark)
     }
 }

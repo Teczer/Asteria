@@ -75,8 +75,10 @@ struct level1View: View {
                     LevelCircle(levelStatus: "completed", circleSize: 40)
                         .position(x: 210, y: 285)
                     
+                    NavigationLink (destination: QuizzView(questionSerieCurrent: quizzSystemesolaire01)) {
                     LevelCircle(levelStatus: "completed", circleSize: 50)
                         .position(x: 110, y: 380)
+                    }
                     
                 }
             }
