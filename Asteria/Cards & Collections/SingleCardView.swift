@@ -77,6 +77,9 @@ struct SingleCardView: View {
                 Spacer()
             }
         }
+        .toolbar {
+            Image(systemName: "square.and.arrow.down")
+        }
         
     }
 }

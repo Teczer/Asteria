@@ -18,24 +18,24 @@ import SwiftUI
 // COLLECTIONS
 
 let collection1 = CollectionType(
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "Système solaire",
     collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2), SingleCardType(cardFront: cardFront3, cardBack: cardBack3), SingleCardType(cardFront: cardFront4, cardBack: cardBack4), SingleCardType(cardFront: cardFront5, cardBack: cardBack5)])
 
 let collection2 = CollectionType(
-    collectionName: "G A L A X I E S",
+    collectionName: "Galaxies",
     collectionImages: [SingleCardType(cardFront: cardFront6, cardBack: cardBack6), SingleCardType(cardFront: cardFront7, cardBack: cardBack7), SingleCardType(cardFront: cardFront8, cardBack: cardBack8), SingleCardType(cardFront: cardFront9, cardBack: cardBack9), SingleCardType(cardFront: cardFront10, cardBack: cardBack10)])
 
 let collection3 = CollectionType(
     collectionName: """
-                    P h é n o m è n e s
-                    o b s e r v a b l e s
+                    Phénomènes
+                    observables
                     """,
     collectionImages: [SingleCardType(cardFront: cardFront11, cardBack: cardBack11), SingleCardType(cardFront: cardFront12, cardBack: cardBack12), SingleCardType(cardFront: cardFront13, cardBack: cardBack13), SingleCardType(cardFront: cardFront14, cardBack: cardBack14), SingleCardType(cardFront: cardFront15, cardBack: cardBack15)])
 
 let collection4 = CollectionType(
     collectionName: """
-                    A s t r o n a u t e s
-                    c é l è b r e s
+                    Astronautes
+                    célèbres
                     """,
     collectionImages: [SingleCardType(cardFront: cardFront16, cardBack: cardBack16), SingleCardType(cardFront: cardFront17, cardBack: cardBack17), SingleCardType(cardFront: cardFront18, cardBack: cardBack18), SingleCardType(cardFront: cardFront19, cardBack: cardBack19), SingleCardType(cardFront: cardFront20, cardBack: cardBack20)])
 
@@ -44,14 +44,14 @@ let collection4 = CollectionType(
 // SYSTEME SOLAIRE //////////////////////////////////////////////////////
 
 let cardFront1 = CardFrontType(
-    cardTitle: "S O L E I L",
+    cardTitle: "SOLEIL",
     cardFrontImage: "collec1-cardFrontImage-1-soleil",
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "SYSTÈME SOLAIRE",
     cardNumber: "1",
     miniCard: false)
 
 let cardBack1 = CardBackType(
-    cardTitle: "S O L E I L",
+    cardTitle: "SOLEIL",
     cardBackImage: "collec1-cardBackImage-1-soleil",
     cardFunFactIcon1: "circle.slash.fill",
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
@@ -74,14 +74,14 @@ let cardBack1 = CardBackType(
     cardDescription: "Le Soleil est une étoile de type naine jaune, principalement composée d’hydrogène (74%) et d’hélium (25%), et âgée de 4,5 millards d’années. Le nom Soleil vient du latin classique « sol », qui désigne l’astre, et « solis » renvoyant au Soleil en tant que divinité. Sa surface n’est pas solide mais constituée de gaz, qu’on appelle photosphère et qui émet sa lumière la plus visible. Son noyau peut atteindre 15 millions de degrés Celsius.")
 
 let cardFront2 = CardFrontType(
-    cardTitle: "C O M È T E",
+    cardTitle: "COMÈTE",
     cardFrontImage: "collec1-cardFrontImage-2-comet",
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "SYSTÈME SOLAIRE",
     cardNumber: "2",
     miniCard: false)
 
 let cardBack2 = CardBackType(
-    cardTitle: "C O M È T E",
+    cardTitle: "COMÈTE",
     cardBackImage: "collec1-cardBackImage-2-comet",
     cardFunFactIcon1: "binoculars.fill",
     cardFunFactIcon2: "bonjour",
@@ -113,14 +113,14 @@ let cardBack2 = CardBackType(
     cardDescription: "Une comète est un petit corps céleste constitué d’un noyau de glace et de poussière en orbite autour d’une étoile. Lorsqu’elle s’approche de cette étoile, le noyau s’entoure d’une sorte de fine atmosphère brillante constituée de gaz et de poussières, appelée chevelure, souvent prolongée de deux traînées lumineuses, qu’on appelle les queues, et qui peuvent s’étendre sur plusieurs centaines de millions de km. Le mot « comète » vient du grec ancien et signifie « astre chevelu ».")
 
 let cardFront3 = CardFrontType(
-    cardTitle: "N E P T U N E",
+    cardTitle: "NEPTUNE",
     cardFrontImage: "collec1-cardFrontImage-3-neptune",
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "SYSTEME SOLAIRE",
     cardNumber: "3",
     miniCard: false)
 
 let cardBack3 = CardBackType(
-    cardTitle: "N E P T U N E",
+    cardTitle: "NEPTUNE",
     cardBackImage: "collec1-cardBackImage-3-neptune",
     cardFunFactIcon1: "circle.slash.fill",
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
@@ -143,14 +143,14 @@ let cardBack3 = CardBackType(
     cardDescription: "Neptune est la planète la plus éloignée du système solaire. Les conditions particulières de Neptune transformeraient le carbone présent en diamant. Ces diamants tomberaient ensuite vers le noyau, donnant naissance à une pluie de nanodiamants. Invisible à l'œil nu, Neptune est la première planète du système solaire à avoir été découverte par déduction plutôt que par observation.")
 
 let cardFront4 = CardFrontType(
-    cardTitle: "A S T É R O Ï D E",
+    cardTitle: "ASTÉROÏDE",
     cardFrontImage: "collec1-cardFrontImage-4-asteroid",
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "SYSTEME SOLAIRE",
     cardNumber: "4",
     miniCard: false)
 
 let cardBack4 = CardBackType(
-    cardTitle: "A S T É R O Ï D E",
+    cardTitle: "ASTÉROÏDE",
     cardBackImage: "collec1-cardBackImage-4-asteroid",
     cardFunFactIcon1: "binoculars.fill",
     cardFunFactIcon2: "bonjour",
@@ -182,14 +182,14 @@ let cardBack4 = CardBackType(
     cardDescription: "Un astéroïde est un corps céleste composé de roches et de métaux, dont la taille peut aller de quelques centimètres à plusieurs kilomètres. La majorité se situe dans la zone comprise entre Mars et Jupiter, appelée la ceinture d’astéroïdes. Les astéroïdes dits géocroiseurs évoluent proches de la Terre, et sont étroitement surveillés afin de prévenir toute collision avec la Terre. On en dénombre plus de 20 000.")
 
 let cardFront5 = CardFrontType(
-    cardTitle: "S A T U R N E",
+    cardTitle: "SATURNE",
     cardFrontImage: "collec1-cardFrontImage-5-saturn",
-    collectionName: "S Y S T È M E  S O L A I R E",
+    collectionName: "SYSTÈME SOLAIRE",
     cardNumber: "5",
     miniCard: false)
 
 let cardBack5 = CardBackType(
-    cardTitle: "S A T U R N E",
+    cardTitle: "SATURNE",
     cardBackImage: "collec1-cardBackImage-5-saturn",
     cardFunFactIcon1: "circle.slash.fill",
     cardFunFactIcon2: "arrow.left.and.right.circle.fill",
@@ -218,7 +218,7 @@ let cardBack5 = CardBackType(
 let cardFront6 = CardFrontType(
     cardTitle: "VOIE LACTÉE",
     cardFrontImage: "collec2-cardFrontImage-6-voielactee",
-    collectionName: "G A L A X I E S",
+    collectionName: "GALAXIES",
     cardNumber: "1",
     miniCard: false)
 
@@ -247,7 +247,7 @@ let cardBack6 = CardBackType(
 let cardFront7 = CardFrontType(
     cardTitle: "WHIRLPOOL",
     cardFrontImage: "collec2-cardFrontImage-7-whirlpool",
-    collectionName: "G A L A X I E S",
+    collectionName: "GALAXIES",
     cardNumber: "2",
     miniCard: false)
 
@@ -282,7 +282,7 @@ let cardBack7 = CardBackType(
 let cardFront8 = CardFrontType(
     cardTitle: "ANDROMÈDE",
     cardFrontImage: "collec2-cardFrontImage-8-andromede",
-    collectionName: "G A L A X I E S",
+    collectionName: "GALAXIES",
     cardNumber: "3",
     miniCard: false)
 
@@ -309,14 +309,14 @@ let cardBack8 = CardBackType(
     cardDescription: "Appelée grande nébuleuse d’Andromède jusqu'à ce que sa vraie nature ait été reconnue dans les années 1920, la galaxie d'Andromède est la galaxie spirale la plus proche de la Voie lactée. Elle contiendrait environ mille milliards d'étoiles, soit deux à cinq fois plus que notre galaxie. La galaxie d’Andromède est l’une des rares galaxies observables à l’oeil nu depuis la Terre dans l’hémisphère nord. C’est également l’un des objets les plus étendus de la voûte céleste.")
 
 let cardFront9 = CardFrontType(
-    cardTitle: "M A G E L L A N",
+    cardTitle: "MAGELLAN",
     cardFrontImage: "collec2-cardFrontImage-9-magellan",
-    collectionName: "G A L A X I E S",
+    collectionName: "GALAXIES",
     cardNumber: "4",
     miniCard: false)
 
 let cardBack9 = CardBackType(
-    cardTitle: "M A G E L L A N",
+    cardTitle: "MAGELLAN",
     cardBackImage: "collec2-cardBackImage-9-magellan",
     cardFunFactIcon1: "hurricane",
     cardFunFactIcon2: "circle.slash.fill",
@@ -346,7 +346,7 @@ let cardBack9 = CardBackType(
 let cardFront10 = CardFrontType(
     cardTitle: "HORSEHEAD NEBULA",
     cardFrontImage: "collec2-cardFrontImage-10-horsehead",
-    collectionName: "G A L A X I E S",
+    collectionName: "GALAXIES",
     cardNumber: "5",
     miniCard: false)
 
@@ -378,14 +378,14 @@ let cardBack10 = CardBackType(
 //  PHÉNOMÈNES //////////////////////////////////////////////////////
 
 let cardFront11 = CardFrontType(
-    cardTitle: "E C L I P S E",
+    cardTitle: "ECLIPSE",
     cardFrontImage: "collec3-cardFrontImage-11-eclipse",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
     cardNumber: "1",
     miniCard: false)
 
 let cardBack11 = CardBackType(
-    cardTitle: "E C L I P S E",
+    cardTitle: "ECLIPSE",
     cardBackImage: "collec3-cardBackImage-11-eclipse",
     cardFunFactIcon1: "moon.fill",
     cardFunFactIcon2: "stopwatch.fill",
@@ -406,14 +406,14 @@ let cardBack11 = CardBackType(
     cardDescription: "Une éclipse est la disparition apparente et temporaire, pour un observateur, de tout ou partie d'un astre résultant de l'interposition d'un autre objet céleste soit entre cet astre et la source de lumière qui l'éclaire, soit entre cet astre et l'œil de l'observateur. La disparition de l'astre éclipsé, ou occulté, est son immersion; sa réapparition, son émersion. Il existe plusieurs sortes d'éclipses notamment les éclipses de Lune et celles de Soleil, ces dernières étant plus rares.")
 
 let cardFront12 = CardFrontType(
-    cardTitle: "S U P E R  L U N E",
+    cardTitle: "SUPER LUNE",
     cardFrontImage: "collec3-cardFrontImage-12-moon",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
     cardNumber: "2",
     miniCard: false)
 
 let cardBack12 = CardBackType(
-    cardTitle: "S U P E R  L U N E",
+    cardTitle: "SUPER LUNE",
     cardBackImage: "collec3-cardBackImage-12-moon",
     cardFunFactIcon1: "arrow.down.right.and.arrow.up.left.circle.fill",
     cardFunFactIcon2: "circle.circle.fill",
@@ -436,8 +436,8 @@ let cardBack12 = CardBackType(
 
 let cardFront13 = CardFrontType(
     cardTitle: """
-                É T O I L E S
-                F I L A N T E S
+                ÉTOILES
+                FILANTES
                 """,
     cardFrontImage: "collec3-cardFrontImage-13-etoile",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
@@ -468,8 +468,8 @@ let cardBack13 = CardBackType(
 
 let cardFront14 = CardFrontType(
     cardTitle: """
-                L U M I È R E
-                Z O D I A C A L E
+                LUMIÈRE
+                ZODIACALE
                 """,
     cardFrontImage: "collec3-cardFrontImage-14-zod-light",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
@@ -499,7 +499,7 @@ let cardBack14 = CardBackType(
     cardDescription: "La lumière zodiacale est une faible lueur de forme vaguement triangulaire visible sur le ciel nocturne et qui s'étend le long de l'axe du Soleil sur le plan du zodiaque, qui lui a donné son nom. Ce phénomène apparaît après le coucher du Soleil au printemps, ou avant son lever à l'automne, quand le zodiaque est perpendiculaire à l'horizon. Il est dû à la réflexion de la lumière solaire sur la poussière cosmique orbitant proche de la Terre.")
 
 let cardFront15 = CardFrontType(
-    cardTitle: "M É T É O R I T E",
+    cardTitle: "MÉTÉORITE",
     cardFrontImage: "collec3-cardFrontImage-15-meteorite",
     collectionName: "PHÉNOMÈNES OBSERVABLES",
     cardNumber: "5",
@@ -532,7 +532,7 @@ let cardBack15 = CardBackType(
 // ASTRONAUTES //////////////////////////////////////////////////////
 
 let cardFront16 = CardFrontType(
-    cardTitle: "G A G A R I N E",
+    cardTitle: "GAGARINE",
     cardFrontImage: "collec4-cardFrontImage-16-gagarine",
     collectionName: "ASTRONAUTES CÉLÈBRES",
     cardNumber: "1",
@@ -561,7 +561,7 @@ let cardBack16 = CardBackType(
     cardDescription: "Youri Gagarine est le tout premier être humain à avoir effectué un vol dans l’espace, au cours de la mission Vostok 1 le 12 avril 1961. Les chances de réussite de la mission étaient estimées à 50%. Une fois lancé, le vaisseau est resté 1h48 en orbite autour de la Terre, à une altitude moyenne de 250 km. Aucune expérience n’était prévue, les spécialistes n’étant pas sûrs des capacités de l’être humain soumis à l’apesanteur.")
 
 let cardFront17 = CardFrontType(
-    cardTitle: "A R M S T R O N G",
+    cardTitle: "ARMSTRONG",
     cardFrontImage: "collec4-cardFrontImage-17-armstrong",
     collectionName: "ASTRONAUTES CÉLÈBRES",
     cardNumber: "2",
@@ -590,7 +590,7 @@ let cardBack17 = CardBackType(
     cardDescription: "Neil Armstrong est le premier homme à avoir posé le pied sur la Lune, le 21 juillet 1969 au cours de la mission Apollo 11. Il a prononcé la désormais célèbre phrase : « C’est un petit pas pour l’homme, mais un bond de géant pour l’humanité ». Les échanges radio sont diffusés en direct dans le monde entier, et on estime que 13% de la population mondiale à suivi la sortie d’Armstrong. Au total, l’équipage est resté plus de 21h sur la Lune, dont 2h30 en sortie extravéhiculaire.")
 
 let cardFront18 = CardFrontType(
-    cardTitle: "L E O N O V",
+    cardTitle: "LEONOV",
     cardFrontImage: "collec4-cardFrontImage-18-leonov",
     collectionName: "ASTRONAUTES CÉLÈBRES",
     cardNumber: "3",
@@ -619,7 +619,7 @@ let cardBack18 = CardBackType(
     cardDescription: "Alexei Leonov est le premier homme à avoir réalisé une sortie extravéhiculaire dans l’espace, le 18 mars 1965. Relié par un filin de 4,5m, Leonov est frappé par le silence qui règne, au point qu’il entend le bruit de son propre corps. La sortie extravéhiculaire aura duré en tout 12 minutes. Après ses différentes missions, Leonov devient responsable de l’entrainement des cosmonautes soviétiques.")
 
 let cardFront19 = CardFrontType(
-    cardTitle: "C H R É T I E N",
+    cardTitle: "CHRÉTIEN",
     cardFrontImage: "collec4-cardFrontImage-19-chretien",
     collectionName: "ASTRONAUTES CÉLÈBRES",
     cardNumber: "4",
@@ -648,7 +648,7 @@ let cardBack19 = CardBackType(
     cardDescription: "Jean-Loup Chrétien est le premier français et premier européen à effectuer un vol habité, du 25 juin au 2 juillet 1982. Plusieurs expériences ont été réalisées lors de cette mission, notamment l’étude des réactions de l’homme en impesanteur, le comportement de certains matériaux en impesanteur ou encore l’étude de galaxies.")
 
 let cardFront20 = CardFrontType(
-    cardTitle: "T E R E C H K O V A",
+    cardTitle: "TERECHKOVA",
     cardFrontImage: "collec4-cardFrontImage-20-terechkova",
     collectionName: "ASTRONAUTES CÉLÈBRES",
     cardNumber: "4",
