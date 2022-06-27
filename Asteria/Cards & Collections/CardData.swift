@@ -5,10 +5,12 @@
 //  Created by Apprenant 87 on 22/06/2022.
 //
 //  POUR RETROUVER LES CARTES :
-//  Système solaire : ligne 42
-//  Galaxies : ligne 214
-//  Phénomènes observables : ligne 376
-//  Astronautes : ligne 530
+//  command+L pour jump à la ligne choisie
+//
+//  Système solaire : ligne 44
+//  Galaxies : ligne 216
+//  Phénomènes observables : ligne 378
+//  Astronautes : ligne 532
 //
 
 import SwiftUI
