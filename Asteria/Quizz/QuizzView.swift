@@ -56,17 +56,19 @@ struct QuizzView: View {
                         .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
-                Button("Animate..!") {
-                    displayAnswer = true
-                    withAnimation(.easeIn(duration: 0.2)) {
-                        rotationValue = -90
-                    }
-                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
-                        rotationAnswerValue = 0
-                    }
-                }
+                
+                //                Button("Animate..!") {
+                //                    displayAnswer = true
+                //                    withAnimation(.easeIn(duration: 0.2)) {
+                //                        rotationValue = -90
+                //                    }
+                //                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+                //                        rotationAnswerValue = 0
+                //                    }
+                //                }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 

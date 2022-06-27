@@ -9,7 +9,7 @@ import SwiftUI
 
 //sample values
 let questionNoCurrent = 3
-let questionNoTotal = 5
+let questionNoTotal = 3
 
 //unmutable values
 let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)

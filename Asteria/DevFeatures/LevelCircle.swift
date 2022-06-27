@@ -15,14 +15,17 @@ struct LevelCircle: View {
     ///      *"unavailable"*     niveaux à venir (pas encore débloqués)
     ///      *"new"*                prochain niveau à jouer (il ne doit y en avoir qu'un seul à tout moment)
     ///  **circleSize** est une valeur entre 40 et 60 qui change la taille du point
+    ///  **questionSerieCurrent: quizzTheme01** pour le thème et la série du quizz
 
     let levelStatus : String
     let circleSize : CGFloat
+    let questionSerieCurrent : [Questions]
     
     var body: some View {
         
         if levelStatus == "completed" {
-            ZStack {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
+                ZStack {
                 Circle()
                     .fill(Color("CarnationPink").opacity(0.9))
                     .overlay(Circle().stroke(Color("CarnationPink"), lineWidth: 2))
@@ -30,6 +33,7 @@ struct LevelCircle: View {
                     .shadow(color: Color("CarnationPink"), radius: 5)
                 Image(systemName: "checkmark")
                     .font(.system(size: 22))
+                }
             }
         }
         
@@ -42,12 +46,14 @@ struct LevelCircle: View {
         }
         
         else if levelStatus == "new" {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
             Circle()
                 .fill(Color("LavenderBlush").opacity(0.9))
                 .overlay(Circle().stroke(Color("LavenderBlush"), lineWidth: 2))
                 .frame(width: circleSize, height: circleSize)
                 .shadow(color: Color("LavenderBlush"), radius: 10)
-        }
+            }
+                            }
         
         else {
             Text("Erreur : LevelCircle a reçu une valeur inattendue")
@@ -59,6 +65,6 @@ struct LevelCircle: View {
 
 struct LevelCircle_Previews: PreviewProvider {
     static var previews: some View {
-        LevelCircle(levelStatus: "completed", circleSize: 40)
+        LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire01)
     }
 }

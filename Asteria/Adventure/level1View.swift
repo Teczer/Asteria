@@ -62,23 +62,25 @@ struct level1View: View {
                     ///      *"unavailable"*     niveaux à venir (pas encore débloqués)
                     ///      *"new"*                prochain niveau à jouer (il ne doit y en avoir qu'un seul à tout moment)
                     ///  **circleSize** est une valeur entre 40 et 60 qui change la taille du point
-                    
+                    ///  **questionSerieCurrent: quizzTheme01** pour le thème et la série du quizz
                     
                     // cercles, de haut en bas
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 60)
-                        .position(x: 310, y: 65)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzSystemesolaire05)
+                        .position(x: 310, y: 45)
                     
-                    LevelCircle(levelStatus: "new", circleSize: 40)
-                        .position(x: 270, y: 185)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzSystemesolaire03)
+                        .position(x: 290, y: 135)
                     
-                    LevelCircle(levelStatus: "completed", circleSize: 40)
-                        .position(x: 210, y: 285)
                     
-                    NavigationLink (destination: QuizzView(questionSerieCurrent: quizzSystemesolaire01)) {
-                    LevelCircle(levelStatus: "completed", circleSize: 50)
+                    LevelCircle(levelStatus: "new", circleSize: 48, questionSerieCurrent: quizzSystemesolaire03)
+                        .position(x: 245, y: 220)
+                    
+                    LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire02)
+                        .position(x: 190, y: 300)
+                    
+                    LevelCircle(levelStatus: "completed", circleSize: 60, questionSerieCurrent: quizzSystemesolaire01)
                         .position(x: 110, y: 380)
-                    }
                     
                 }
             }

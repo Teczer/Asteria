@@ -62,19 +62,19 @@ struct level4View: View {
                     
                     // cercles, de haut en bas
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 60)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 60, questionSerieCurrent: quizzAstronautes05)
                         .position(x: 85, y: 55)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes04)
                         .position(x: 132, y: 170)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzAstronautes03)
                         .position(x: 140, y: 272)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes02)
                         .position(x: 90, y: 370)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes01)
                         .position(x: 60, y: 480)
                     
                 }

@@ -58,23 +58,24 @@ struct level2View: View {
                     ///      *"unavailable"*     niveaux à venir (pas encore débloqués)
                     ///      *"new"*                prochain niveau à jouer (il ne doit y en avoir qu'un seul à tout moment)
                     ///  **circleSize** est une valeur entre 40 et 60 qui change la taille du point
-                    
+                    ///  **questionSerieCurrent: quizzTheme01** pour le thème et la série du quizz
+
                     
                     // cercles, de haut en bas
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 60)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 60, questionSerieCurrent: quizzPhenomenesObservables05)
                         .position(x: 100, y: 55)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables04)
                         .position(x: 185, y: 155)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables03)
                         .position(x: 265, y: 250)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables02)
                         .position(x: 320, y: 360)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables01)
                         .position(x: 335, y: 480)
                     
                 }

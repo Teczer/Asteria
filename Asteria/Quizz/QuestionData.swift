@@ -27,7 +27,7 @@ let answerExplanation : LocalizedStringKey
 let quizzSystemesolaire01: [Questions] = [
     
     Questions(
-        questionValue: "La Lune est un satellite de la planète...",
+        questionValue: "La Lune 🌙 est un satellite de la planète...",
         questionAnswer: [
             "Jupiter",
             "Terre",

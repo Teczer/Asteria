@@ -10,15 +10,17 @@ import SwiftUI
 struct AdventureView: View {
     var id = UUID()
     var body: some View {
-        ScrollView{
-            ScrollViewReader{ proxy in
-                VStack(alignment: .leading, spacing:0){
-                    level4View()
-                    level3View()
-                    level2View()
-                    level1View().id(id)
-                }.onAppear{
-                    proxy.scrollTo(id)
+        NavigationView {
+            ScrollView {
+                ScrollViewReader{ proxy in
+                    VStack(alignment: .leading, spacing:0){
+                        level4View()
+                        level3View()
+                        level2View()
+                        level1View().id(id)
+                    }.onAppear{
+                        proxy.scrollTo(id)
+                    }
                 }
             }
         }
