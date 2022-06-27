@@ -27,6 +27,7 @@ struct CollectionCardBack: View {
                 Text(collectionCardBack.cardTitle)
                     .font(.custom("Montserrat", size: 30))
                     .fontWeight(.light)
+                    .multilineTextAlignment(.center)
                 
                 Spacer()
                     .frame(height: 30)

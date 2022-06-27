@@ -16,7 +16,7 @@ import SwiftUI
 
 
 struct CollectionView: View {
-    
+        
     var body: some View {
         
         NavigationView {
@@ -24,11 +24,9 @@ struct CollectionView: View {
             ZStack {
                 Image("background")
                     .resizable()
+                    .ignoresSafeArea()
                     .scaledToFill()
-                    .ignoresSafeArea()
-                    .opacity(0.5)
-                Color("OxfordBlue").opacity(0.3)
-                    .ignoresSafeArea()
+                    .opacity(0.3)
                 
                 VStack {
                 
@@ -46,7 +44,7 @@ struct CollectionView: View {
             
                 }
                 
-                .navigationTitle("C O L L E C T I O N S")
+                .navigationTitle("Collections".uppercased())
                 .navigationBarTitleDisplayMode(.inline)
                 
             }

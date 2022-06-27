@@ -27,6 +27,7 @@ struct SingleCardView: View {
             
             VStack {
                 HStack(alignment:.top) {
+                    
                     Image(systemName: "chevron.backward.square.fill")
                         .foregroundColor(Color("LavenderBlush").opacity(0.8))
                         .font(.system(size: 32))
@@ -75,6 +76,10 @@ struct SingleCardView: View {
                 }
                 Spacer()
             }
+        }
+        .toolbar {
+            Image(systemName: "square.and.arrow.down")
+        
         }
         
     }

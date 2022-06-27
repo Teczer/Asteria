@@ -46,6 +46,7 @@ struct CollectionDetail: View {
                 ForEach(collection.collectionImages) { card in
                     NavigationLink {
                         SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
+//                            .navigationBarHidden(true)
                     } label : {
                         Image(card.cardFront.cardFrontImage)
                             .resizable()
@@ -85,12 +86,10 @@ struct CollectionDetail: View {
                 
                 Spacer()
                 
-                Image(systemName: "chevron.right.circle.fill")
-                    .resizable()
-                    .foregroundStyle(.white, Color("CarnationPink"))
-                    .frame(width: 40, height: 40)
+                Image(systemName: "chevron.compact.right")
+                    .font(.system(size: 30))
                     .shadow(color: Color.white, radius: 5)
-                    .padding(.trailing, 30)
+                    .padding(.trailing, 20)
             }
              
         } // fin zstack
