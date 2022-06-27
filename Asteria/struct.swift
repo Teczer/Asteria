@@ -58,35 +58,229 @@ let quizzSystemesolaire: [Questions] = [
 
 let quizzGalaxies : [Questions] = [
 
-    Questions(questionValue: "Combien y a-t-il d'étoiles dans notre galaxie ?", questionAnswer: ["1 million", "100 000", "entre 200 et 400 milliards", "1 milliard"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "entre 200 et 400 milliards", answerExplanation: " La Voie Lactée : c’est un gigantesque disque de 100 000 années-lumière de diamètre qui contient entre 200 et 400 milliards d’étoiles. Et notre Soleil est en fait l’une de ces étoiles."),
+    Questions(
+        questionValue: "Combien y a-t-il d'étoiles dans notre galaxie ?",
+        questionAnswer: [
+            "1 million",
+            "100 000",
+            "entre 200 et 400 milliards",
+            "1 milliard"
+        ],
+        goodAnswerNo: 2,
+        photoQuestion: "milky-way-1",
+        photoAnswer: "milky-way-2",
+        answerName: "Entre 200 et 400 milliards",
+        answerExplanation: "La Voie Lactée est un gigantesque disque de **100 000 années-lumière de diamètre** qui contient entre 200 et 400 milliards d’étoiles. Et notre Soleil est en fait l’une de ces étoiles."
+    ),
     
-    Questions(questionValue: "Quel est le surnom de notre galaxie ?", questionAnswer: ["La Voie Lactée", "La Bande Blanche", "Le Nuage Galactique", "La Salsa Blanche"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "LA VOIE LACTEE", answerExplanation: "La Voie Lactée: **Galaxie** dans laquelle se trouve le Soleil avec son cortège de planètes (dont la Terre) ; **la Voie lactée, également appelée Galaxie** – avec une majuscule –, se présente comme une bande blanchâtre, floue, irrégulière, qui ceinture tout le ciel étoilé."),
+    Questions(
+        questionValue: "Quel est le surnom de notre galaxie ?",
+        questionAnswer: [
+            "La Voie Lactée",
+            "La Bande Blanche",
+            "Le Nuage Galactique",
+            "La Salsa Blanche"
+        ],
+        goodAnswerNo: 0,
+        photoQuestion: "milky-way-3",
+        photoAnswer: "milky-way-4",
+        answerName: "La Voie lactée",
+        answerExplanation: "La Voie lactée, également appelée **Galaxie** — avec une majuscule — se présente comme une bande blanchâtre, floue, irrégulière, qui ceinture tout le ciel étoilé."
+    ),
     
-    Questions(questionValue: "Qu'est-ce qu'une exoplanète ?", questionAnswer: ["Une planète naine", "Une planète morte", "Une planète riche", "Une planète située dans un autre système solaire"], goodAnswerNo: 3, photoQuestion: "", photoAnswer: "", answerName: "Une planète située dans un autre système solaire", answerExplanation: "Une **exoplanète**, ou **planète extrasolaire**, est une planète située **en dehors du Système solaire**."),
+    Questions(
+        questionValue: "Qu'est-ce qu'une exoplanète ?",
+        questionAnswer: [
+            "Une planète naine",
+            "Une planète morte",
+            "Une planète riche",
+            "Une planète située dans un autre système solaire"
+        ],
+        goodAnswerNo: 3,
+        photoQuestion: "exoplanete-1",
+        photoAnswer: "exoplanete-2",
+        answerName: "Une planète située dans un autre système solaire",
+        answerExplanation: "Une exoplanète, ou **planète extrasolaire**, est une planète située en dehors du Système solaire."
+    ),
     
-    Questions(questionValue: "A quelle vitesse notre système solaire avance-t-il dans la galaxie ?", questionAnswer: ["1 000 km/h", "300 000 km/s", "820 000 km/h", "1 km/s"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "820 000 km/h", answerExplanation: "Au-delà de la rotation de la Terre sur elle-même, la Terre subit de nombreux mouvements ! Elle tourne autour du Soleil à une vitesse de 30 km/s, soit plus de 100 000 km/h. Le **système solaire** est entraîné autour du centre de la Galaxie à une **vitesse de 820 000 km/h**."),
+    Questions(
+        questionValue: "À quelle vitesse notre système solaire avance-t-il dans la galaxie ?",
+        questionAnswer: [
+            "1 000 km/h",
+            "300 000 km/s",
+            "820 000 km/h",
+            "1 km/s"
+        ],
+        goodAnswerNo: 2,
+        photoQuestion: "systeme-solaire-1",
+        photoAnswer: "systeme-solaire-2",
+        answerName: "820 000 km/h",
+        answerExplanation: "Au-delà de la rotation de la Terre sur elle-même, la Terre subit de nombreux mouvements ! Elle tourne autour du Soleil à une vitesse de 30 km/s, soit plus de 100 000 km/h. Le **système solaire** est entraîné autour du centre de la Galaxie à une vitesse de 820 000 km/h."
+    ),
     
-    Questions(questionValue: "Vers quelle constellation notre système solaire se dirige-t-il ?", questionAnswer: ["Hercule", "Orion", "La Lyre", "La Grande Ourse"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "HERCULE", answerExplanation: "En 1783, **Herschel** découvre que **le Soleil possède un mouvement propre** et qu'il entraîne tout son cortège de planètes **en direction d'un point situé dans la constellation d'Hercule** : l'Apex."),
+    Questions(
+        questionValue: "Vers quelle constellation notre système solaire se dirige-t-il ?",
+        questionAnswer: [
+            "Hercule",
+            "Orion",
+            "La Lyre",
+            "La Grande Ourse"
+        ],
+        goodAnswerNo: 0,
+        photoQuestion: "hercules-1",
+        photoAnswer: "hercules-2",
+        answerName: "Hercule",
+        answerExplanation: "En 1783, **Herschel** découvre que le Soleil possède un **mouvement propre** et qu'il entraîne tout son cortège de planètes en direction d'un point situé dans la constellation d'Hercule : **l'Apex**."
+    ),
     
-    Questions(questionValue: "Où naissent les étoiles ?", questionAnswer: ["Dans les trous noirs", "N'importe où", "Dans les nébuleuses", "Du Big Bang"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "DANS LES NEBULEUSES", answerExplanation: "Comme les humains, **les étoiles naissent, grandissent et meurent**. **Leurs berceaux** sont d'immenses nuages froids de gaz et de poussière que l'on appelle des « **nébuleuses** ». La plus célèbre d'entre elles est la nébuleuse d'Orion, qui est visible à l'œil nu."),
+    Questions(
+        questionValue: "Où naissent les étoiles ?",
+        questionAnswer: [
+            "Dans les trous noirs",
+            "N'importe où",
+            "Dans les nébuleuses",
+            "Du Big Bang"
+        ],
+        goodAnswerNo: 2,
+        photoQuestion: "stars-hubble",
+        photoAnswer: "pillars-of-creation",
+        answerName: "Dans les nébuleuses",
+        answerExplanation: "Comme les humains, les étoiles **naissent, grandissent et meurent**. Leurs berceaux sont d'immenses nuages froids de gaz et de poussière que l'on appelle des *nébuleuses*. La plus célèbre d'entre elles est la nébuleuse d'Orion, qui est visible à l'œil nu."
+    ),
     
-    Questions(questionValue: "Quelle est la galaxie la plus proche de la Voie Lactée ?", questionAnswer: ["La Galaxie du Sombrero", "La Galaxie d'Andromède", "La Galaxie des Chiens de Chasse", "La Galaxie du Cigare"], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "LA GALAXIE D'ANDROMEDE", answerExplanation: "**La galaxie d'Andromède (M31)** est la **plus proche** et la plus grande voisine **de notre Voie lactée**. Les astronomes estiment que toutes les deux entreront en collision d'ici quatre milliards d'années."),
+    Questions(
+        questionValue: "Quelle est la galaxie la plus proche de la Voie Lactée ?",
+        questionAnswer: [
+            "La Galaxie du Sombrero",
+            "La Galaxie d'Andromède",
+            "La Galaxie des Chiens de Chasse",
+            "La Galaxie du Cigare"
+        ],
+        goodAnswerNo: 1,
+        photoQuestion: "galaxies-1",
+        photoAnswer: "andromeda",
+        answerName: "La Galaxie d'Andromède",
+        answerExplanation: "La Galaxie d'Andromède (M31) est la **plus proche** et la **plus grande** voisine de notre Voie lactée. Les astronomes estiment que toutes les deux entreront en collision d'ici quatre milliards d'années."
+    ),
     
-    Questions(questionValue: "Comment surnomme-t-on le bras galactique dans lequel se trouve notre système solaire ?", questionAnswer: ["Le bras droit", "Le bras de Persée", "Le bras d'Orion", "Le bras de La Lyre"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "LE BRAS D'ORION", answerExplanation: "**Le bras spiral d'Orion** ou, simplement, le **bras d'Orion** (également appelé bras local ou avec son nom complet bras d'Orion-Cygne) est un bras spiral mineur de notre galaxie, la Voie lactée. **C'est dans ce bras que se situe le Système solaire**."),
+    Questions(
+        questionValue: "Comment surnomme-t-on le bras galactique dans lequel se trouve notre système solaire ?",
+        questionAnswer: [
+            "Le bras droit",
+            "Le bras de Persée",
+            "Le bras d'Orion",
+            "Le bras de La Lyre"
+        ],
+        goodAnswerNo: 2,
+        photoQuestion: "milky-way-5",
+        photoAnswer: "milky-way-6",
+        answerName: "Le bras d'Orion",
+        answerExplanation: "Le bras spiral d'Orion ou, simplement, le bras d'Orion (également appelé bras local ou avec son nom complet bras d'Orion-Cygne) est un bras spiral mineur de notre galaxie, la Voie lactée. C'est **dans ce bras** que se situe le Système solaire."
+    ),
     
-    Questions(questionValue: "Quels objets célestes servent de repères géographiques pour les GPS ?", questionAnswer: ["Les quasars", "Les étoiles filantes", "Les planètes", "Les Satellites"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "LES QUASARS", answerExplanation: "**Les quasars** sont des **astres distants**, qui apparaissent comme des étoiles très brillantes lorsqu'on les observe au télescope, mais dont on sait aujourd'hui que ce **sont des exemples de ce que l'on appelle des noyaux actifs de galaxies**"),
+    Questions(
+        questionValue: "Quels objets célestes servent de repères géographiques pour les GPS ?",
+        questionAnswer: [
+            "Les quasars",
+            "Les étoiles filantes",
+            "Les planètes",
+            "Les satellites"
+        ],
+        goodAnswerNo: 0,
+        photoQuestion: "gps",
+        photoAnswer: "quasar",
+        answerName: "Les quasars",
+        answerExplanation: "Les quasars sont des **astres distants**, qui apparaissent comme des étoiles très brillantes lorsqu'on les observe au télescope, mais dont on sait aujourd'hui que ce sont des exemples de ce que l'on appelle des **noyaux actifs de galaxies**."
+    ),
     
-    Questions(questionValue: "La Voie Lactée est une galaxie...", questionAnswer: ["... de type spirale", "... de type lenticulaire", "... de type rectangulaire", "... de type elliptique"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "... DE TYPE SPIRALE", answerExplanation: "**Une galaxie spirale** est un type de galaxie contenant jusqu'à plusieurs centaines de milliards d'étoiles et qui **adopte la forme aplatie d'un disque**, avec un **renflement central sphérique lumineux** appelé le **bulbe**. Les galaxies spirales contiennent également, et de façon variable, des quantités importantes de gaz et de poussières. Autour du disque, il existe également un halo moins dense et plus discret, aux étoiles fréquemment regroupées en amas globulaires."),
+    Questions(
+        questionValue: "La Voie Lactée est une galaxie...",
+        questionAnswer: [
+            "de type spirale",
+            "de type lenticulaire",
+            "de type rectangulaire",
+            "de type elliptique"
+        ],
+        goodAnswerNo: 0,
+        photoQuestion: "milky-way-7",
+        photoAnswer: "milky-way-8",
+        answerName: "de type spirale",
+        answerExplanation: "Une *galaxie spirale* est un type de galaxie contenant jusqu'à plusieurs centaines de milliards d'étoiles et qui adopte la **forme aplatie d'un disque**, avec un renflement central sphérique lumineux appelé le *bulbe*. Les galaxies spirales contiennent également, et de façon variable, des quantités importantes de gaz et de poussières. Autour du disque, il existe également un halo moins dense et plus discret, aux étoiles fréquemment regroupées en amas globulaires."
+    ),
     
-    Questions(questionValue: " Lequel de ces instruments ne sert pas à observer le ciel ?", questionAnswer: ["Le microscope", "La lunette", "Les jumelles", "Le télescope"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "LE MICROSCOPE", answerExplanation: "**Le microscope** est utilisé pour **observer des objets ou des êtres vivants très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel"),
+    Questions(
+        questionValue: "Lequel de ces instruments ne sert pas à observer le ciel ?",
+        questionAnswer: [
+            "Le microscope",
+            "La lunette",
+            "Les jumelles",
+            "Le télescope"
+        ],
+        goodAnswerNo: 0,
+        photoQuestion: "observation",
+        photoAnswer: "pollen",
+        answerName: "Le microscope",
+        answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants **très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel"
+    ),
     
-    Questions(questionValue: " A quelle classe de galaxies appartient M31, la grande galaxie d'Andromède ?", questionAnswer: ["Les spirales barrées", "Les spirales", " Les elliptiques", "Les irrégulières"], goodAnswerNo: 1, photoQuestion: "", photoAnswer: "", answerName: "LES SPIRALES", answerExplanation: "**La galaxie d'Andromède** est, comme la Voie lactée, une **galaxie spirale**. Elle est l'objet le plus lointain (plus de 2 millions d'années-lumière) visible à l'oeil nu depuis la Terre"),
+    Questions(
+        questionValue: "À quelle classe de galaxies appartient M31, la grande galaxie d'Andromède ?",
+        questionAnswer: [
+            "Les spirales barrées",
+            "Les spirales",
+            "Les elliptiques",
+            "Les irrégulières"
+        ],
+        goodAnswerNo: 1,
+        photoQuestion: "andromeda-2",
+        photoAnswer: "andromeda-3",
+        answerName: "Les spirales",
+        answerExplanation: "La galaxie d'Andromède est, comme la Voie lactée, une galaxie spirale. Elle est l'objet le plus lointain (plus de **2 millions d'années-lumière**) visible à l'oeil nu depuis la Terre."
+    ),
     
-    Questions(questionValue: "Combien de temps dure une révolution du Soleil autour du centre de la Galaxie ?", questionAnswer: ["Environ 4 siècles", "Environ 175.000 ans", "Environ 250 millions d'années", "Environ 3,8 milliards d'années"], goodAnswerNo: 2, photoQuestion: "", photoAnswer: "", answerName: "Environ 250 millions d'années", answerExplanation: "**Le Soleil met environ 250 millions d'années** pour accomplir une **révolution complète** autour du centre de **notre Galaxie**, situé à environ 26.000 années-lumière."),
+    Questions(
+        questionValue: "Combien de temps dure une révolution du Soleil autour du centre de la Galaxie ?",
+        questionAnswer: [
+            "Environ 4 siècles",
+            "Environ 175.000 ans",
+            "Environ 250 millions d'années",
+            "Environ 3,8 milliards d'années"
+        ],
+        goodAnswerNo: 2,
+        photoQuestion: "solar-fury",
+        photoAnswer: "systeme-solaire-3",
+        answerName: "Environ 250 millions d'années",
+        answerExplanation: "Le Soleil met environ 250 millions d'années pour accomplir une révolution complète autour du centre de notre Galaxie, située à environ **26.000 années-lumière**."
+    ),
     
-    Questions(questionValue: "Dans quelle constellation se trouve l'étoile Altaïr ?", questionAnswer: ["L'Aigle", "Hercule", "Le Cygne", "Orion"], goodAnswerNo: 0, photoQuestion: "", photoAnswer: "", answerName: "L'AIGLE", answerExplanation: "**L'étoile Altaïr** appartient à la constellation de **l'Aigle**. Elle fait partie des 20 étoiles les plus brillantes du ciel et sa magnitude est de 0,8. Située à environ 17 années-lumière de la Terre, elle est aussi l'une des étoiles de première grandeur les plus proches de la Terre"),
+    Questions(
+        questionValue: "Dans quelle constellation se trouve l'étoile Altaïr ?",
+        questionAnswer: [
+            "L'Aigle",
+            "Hercule",
+            "Le Cygne",
+            "Orion"],
+        goodAnswerNo: 0,
+        photoQuestion: "altair",
+        photoAnswer: "aigle",
+        answerName: "L'Aigle",
+        answerExplanation: "L'étoile **Altaïr** appartient à la constellation de l'Aigle. Elle fait partie des **20 étoiles** les plus brillantes du ciel et sa magnitude est de 0,8. Située à environ **17 années-lumière** de la Terre, elle est aussi l'une des étoiles de première grandeur les plus proches de la Terre."
+    ),
     
-    Questions(questionValue: "Dans quelle constellation se situe la célèbre nébuleuse de la Tête de Cheval ?", questionAnswer: ["Le Sagittaire", "Pégase", "Le Scorpion", "Orion"], goodAnswerNo: 3, photoQuestion: "", photoAnswer: "", answerName: "", answerExplanation: "**La nébuleuse de la Tête de Cheval**, qui doit son nom à sa forme caractéristique rappelant celle d'un cavalier de jeu d'échecs, est **situé dans la constellation d'Orion**. Elle n'est cependant visible qu'avec un grand télescope."),
+    Questions(
+        questionValue: "Dans quelle constellation se situe la célèbre nébuleuse de la Tête de Cheval ?",
+        questionAnswer: [
+            "Le Sagittaire",
+            "Pégase",
+            "Le Scorpion",
+            "Orion"
+        ],
+        goodAnswerNo: 3,
+        photoQuestion: "tete-de-cheval",
+        photoAnswer: "orion-constellation",
+        answerName: "Orion",
+        answerExplanation: "La nébuleuse de la Tête de Cheval, qui doit son nom à sa forme caractéristique rappelant celle d'un cavalier de jeu d'échecs, est située dans la **constellation d'Orion**. Elle n'est cependant visible qu'avec un grand télescope."
+    ),
 ]
 
 let quizzPhenomeneObservable : [Questions] = [
