@@ -10,13 +10,24 @@ import SwiftUI
 struct AnswerButton: View {
     @State var selectedButton : Bool = false
     var textInButton : String
+    var goodAnswer : Int
+    var clicAnswer : Int
+    
+    
     var body: some View {
         Button {
+            if hasAnswer==false{
             self.selectedButton.toggle()
+                hasAnswer=true
+                if goodAnswer==clicAnswer{
+                    scoreCurrent+=1
+                }
+                    
+            }
         } label: {
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 128, height: 50)
-                .foregroundColor(selectedButton ? Color("CarnationPink") : Color("OxfordBlue"))
+                .foregroundColor(selectedButton ? (goodAnswer == clicAnswer ? Color(.green) : Color(.red) ) : Color("OxfordBlue"))
                 .overlay(
                     Text(textInButton)
                         .font(.system(size: 12))
@@ -29,6 +40,6 @@ struct AnswerButton: View {
 
 struct AnswerButton_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerButton(textInButton: "Test")
+        AnswerButton(textInButton: "Test", goodAnswer: 0, clicAnswer: 0)
     }
 }

@@ -16,8 +16,8 @@ struct MehdiWIP: View {
                 Color("CarnationPink")
                     .ignoresSafeArea()
                 VStack {
-                    AnswerButton(textInButton: "ce n’est pas un satellite")
-                        .padding(.bottom)
+                    //AnswerButton(textInButton: "ce n’est pas un satellite")
+                     //   .padding(.bottom)
                     NavigationLink(isActive: $change, destination: {VeroWIP()}) {}
                     
                     Button {
