@@ -30,7 +30,7 @@ struct QuizzView: View {
                         .font(.system(size: 32))
                         .padding()
                     VStack(alignment: .trailing, spacing:0) {
-                        ProgressionBar(quizzController: QuizzController())
+                        ProgressionBar(quizzController: quizzController)
                             .padding()
                             .frame(height:35)
                         HStack(alignment: .bottom, spacing:3) {
@@ -53,7 +53,7 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
                     QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)

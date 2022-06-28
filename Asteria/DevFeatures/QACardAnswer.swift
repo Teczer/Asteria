@@ -21,7 +21,7 @@ struct QACardAnswer: View {
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
             
-            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())
+            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                 .frame(width:300, height:600)
         }
     }
@@ -57,11 +57,6 @@ struct QACardAnswerContent: View {
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
-            Text("\(quizzController.questionNoCurrent)")
-                .font(.system(size: 22))
-                .fontWeight(.black)
-                .foregroundColor(Color("LavenderBlush"))
-                .offset(y:2.2)
             Button(action: {
                 if quizzController.questionNoCurrent < 3 {
                 quizzController.nextQuestion = true
