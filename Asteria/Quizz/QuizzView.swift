@@ -83,15 +83,17 @@ struct QuizzView: View {
                             offsetQuestionValue = -500
                             rotationQuestionValue = 0
                             withAnimation(.easeIn(duration: 0.2)) {
-                                offsetQuestionValue = 0
                                 offsetAnswerValue = 500
                             }
+                            withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+                                offsetQuestionValue = 0
+                            }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            quizzController.hasAnswer = false
-                            quizzController.nextQuestion = false
-                            displayAnswer = false
-                            offsetAnswerValue = 0
-                            rotationAnswerValue = 90
+                                quizzController.hasAnswer = false
+                                quizzController.nextQuestion = false
+                                displayAnswer = false
+                                offsetAnswerValue = 0
+                                rotationAnswerValue = 90
                             }
                         }
                     }
