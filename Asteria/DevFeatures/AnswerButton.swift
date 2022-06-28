@@ -12,15 +12,15 @@ struct AnswerButton: View {
     var textInButton : String
     var goodAnswer : Int
     var clicAnswer : Int
-    
+    @StateObject var quizzController : QuizzController
     
     var body: some View {
         Button {
-            if hasAnswer==false{
+            if quizzController.hasAnswer==false{
             self.selectedButton.toggle()
-                hasAnswer=true
+                quizzController.hasAnswer=true
                 if goodAnswer==clicAnswer{
-                    scoreCurrent+=1
+                    quizzController.scoreCurrent+=1
                 }
                     
             }
@@ -40,6 +40,6 @@ struct AnswerButton: View {
 
 struct AnswerButton_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerButton(textInButton: "Test", goodAnswer: 0, clicAnswer: 0)
+        AnswerButton(textInButton: "Test", goodAnswer: 0, clicAnswer: 0, quizzController: QuizzController())
     }
 }

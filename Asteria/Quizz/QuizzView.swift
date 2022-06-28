@@ -17,11 +17,8 @@ struct QuizzView: View {
     
     // data
     var questionSerieCurrent : [Questions]
-    var questionNoCurrent : Int = 1
-    var questionNoTotal : Int = 3
-    var scoreQuizz : Int = 0
-    
-    
+    @StateObject var quizzController = QuizzController()
+
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -33,19 +30,19 @@ struct QuizzView: View {
                         .font(.system(size: 32))
                         .padding()
                     VStack(alignment: .trailing, spacing:0) {
-                        ProgressionBar(questionNoCurrent: questionNoCurrent, questionNoTotal: questionNoTotal)
+                        ProgressionBar(quizzController: QuizzController())
                             .padding()
                             .frame(height:35)
                         HStack(alignment: .bottom, spacing:3) {
                             Text("Question")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
-                            Text("\(questionNoCurrent)")
+                            Text("\(quizzController.questionNoCurrent)")
                                 .font(.system(size: 22))
                                 .fontWeight(.black)
                                 .foregroundColor(Color("LavenderBlush"))
                                 .offset(y:2.2)
-                            Text("sur \(questionNoTotal)")
+                            Text("sur \(quizzController.questionNoTotal)")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
                         }
@@ -56,23 +53,32 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(questionSerieCurrent: questionSerieCurrent)
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
-                    QACard(questionSerieCurrent: questionSerieCurrent)
+                    QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                         .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
                 
-                    .onChange(of: hasAnswer) { index in
-                                displayAnswer = true
-                                   withAnimation(.easeIn(duration: 0.2)) {
-                                       rotationValue = -90
-                                   }
-                                  withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
-                                       rotationAnswerValue = 0
-                                   }
-                               }
+                
+                    .onChange(of: quizzController.hasAnswer) { _ in
+                        displayAnswer = true
+                        withAnimation(.easeIn(duration: 0.2).delay(1)) {
+                            rotationValue = -90
+                        }
+                        withAnimation(.easeOut(duration: 0.2).delay(1.2)) {
+                            rotationAnswerValue = 0
+                        }
+                    }
+                    .onChange(of: quizzController.nextQuestion) { _ in
+                        if quizzController.nextQuestion == true {
+                            displayAnswer = false
+//                            quizzController.questionNoCurrent += 1
+//                            rotationValue = 0
+//                            rotationAnswerValue = 90
+                        }
+                    }
             }
         }
         .navigationBarHidden(true)
