@@ -19,7 +19,8 @@ struct QuizzView: View {
     var questionSerieCurrent : [Questions]
     var questionNoCurrent : Int = 1
     var questionNoTotal : Int = 3
-
+    var scoreQuizz : Int = 0
+    
     
     var body: some View {
         ZStack {
@@ -63,15 +64,15 @@ struct QuizzView: View {
                 }
                 Spacer()
                 
-                //                Button("Animate..!") {
-                //                    displayAnswer = true
-                //                    withAnimation(.easeIn(duration: 0.2)) {
-                //                        rotationValue = -90
-                //                    }
-                //                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
-                //                        rotationAnswerValue = 0
-                //                    }
-                //                }
+                    .onChange(of: hasAnswer) { index in
+                                displayAnswer = true
+                                   withAnimation(.easeIn(duration: 0.2)) {
+                                       rotationValue = -90
+                                   }
+                                  withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+                                       rotationAnswerValue = 0
+                                   }
+                               }
             }
         }
         .navigationBarHidden(true)
