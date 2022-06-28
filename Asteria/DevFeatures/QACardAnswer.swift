@@ -10,6 +10,9 @@ import Foundation   // needed for markdown text formatting
 
 struct QACardAnswer: View {
     var questionSerieCurrent: [Questions]
+    @StateObject var quizzController : QuizzController
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -19,15 +22,20 @@ struct QACardAnswer: View {
                 .frame(width:300, height:600)
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
-
-            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent)
+            
+            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
                 .frame(width:300, height:600)
         }
     }
 }
 
 struct QACardAnswerContent: View {
+    
     var questionSerieCurrent: [Questions]
+    @State var change: Bool = false
+    @StateObject var quizzController : QuizzController
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
@@ -38,24 +46,39 @@ struct QACardAnswerContent: View {
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .frame(height:30)
-            Image(questionSerieCurrent[0].photoAnswer)
+            Image(questionSerieCurrent[quizzController.questionNoCurrent-1].photoAnswer)
                 .resizable()
                 .scaledToFill()
                 .frame(width:300, height:200)
                 .clipped()
-            Text(questionSerieCurrent[0].answerName.uppercased())
+            Text(questionSerieCurrent[quizzController.questionNoCurrent-1].answerName.uppercased())
                 .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:65)
-            Text(questionSerieCurrent[0].answerExplanation)
+            Text(questionSerieCurrent[quizzController.questionNoCurrent-1].answerExplanation)
                 .font(.system(size: 16))
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
-            CustomButton(colorOfButton: "blue", textInButton: "Continuer")
+            
+            if quizzController.questionNoCurrent >= 3 {
+                NavigationLink (isActive: $change, destination: {QuizzEndingView(viewRouter: viewRouter, quizzController: quizzController)}) {}
+            }
+            Button(action: {
+                if quizzController.questionNoCurrent >= 3 {
+                    self.change = true
+                }
+                if quizzController.questionNoCurrent < 3 {
+                    quizzController.nextQuestion = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        quizzController.questionNoCurrent += 1
+                    }
+                }
+                print("\(quizzController.questionNoCurrent)")}, label: {                 CustomButton(colorOfButton: "blue", textInButton: "Continuer")}
+            )
             Spacer()
         }
     }
@@ -63,7 +86,7 @@ struct QACardAnswerContent: View {
 
 struct QACardAnswer_Previews: PreviewProvider {
     static var previews: some View {
-        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01)
+        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01, quizzController: QuizzController(), viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }

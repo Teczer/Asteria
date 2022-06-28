@@ -11,6 +11,7 @@ struct MainView: View {
     @Binding var login: String
     @State private var onBoardDone = false
     @StateObject var viewRouter: ViewRouter
+    
     var body: some View {
         GeometryReader { geometry in
             Color("OxfordBlue")
@@ -19,7 +20,7 @@ struct MainView: View {
                 case .collection:
                     CollectionView()
                 case .aventure:
-                    AdventureView()
+                    AdventureView(viewRouter: viewRouter)
                 case .profil:
                     ProfileView()
                 }

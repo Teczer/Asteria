@@ -16,23 +16,24 @@ struct LevelCircle: View {
     ///      *"new"*                prochain niveau à jouer (il ne doit y en avoir qu'un seul à tout moment)
     ///  **circleSize** est une valeur entre 40 et 60 qui change la taille du point
     ///  **questionSerieCurrent: quizzTheme01** pour le thème et la série du quizz
-
+    
     let levelStatus : String
     let circleSize : CGFloat
     let questionSerieCurrent : [Questions]
-    
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         
         if levelStatus == "completed" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)) {
                 ZStack {
-                Circle()
-                    .fill(Color("CarnationPink").opacity(0.9))
-                    .overlay(Circle().stroke(Color("CarnationPink"), lineWidth: 2))
-                    .frame(width: circleSize, height: circleSize)
-                    .shadow(color: Color("CarnationPink"), radius: 5)
-                Image(systemName: "checkmark")
-                    .font(.system(size: 22))
+                    Circle()
+                        .fill(Color("CarnationPink").opacity(0.9))
+                        .overlay(Circle().stroke(Color("CarnationPink"), lineWidth: 2))
+                        .frame(width: circleSize, height: circleSize)
+                        .shadow(color: Color("CarnationPink"), radius: 5)
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 22))
                 }
             }
         }
@@ -46,25 +47,25 @@ struct LevelCircle: View {
         }
         
         else if levelStatus == "new" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
-            Circle()
-                .fill(Color("LavenderBlush").opacity(0.9))
-                .overlay(Circle().stroke(Color("LavenderBlush"), lineWidth: 2))
-                .frame(width: circleSize, height: circleSize)
-                .shadow(color: Color("LavenderBlush"), radius: 10)
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)) {
+                Circle()
+                    .fill(Color("LavenderBlush").opacity(0.9))
+                    .overlay(Circle().stroke(Color("LavenderBlush"), lineWidth: 2))
+                    .frame(width: circleSize, height: circleSize)
+                    .shadow(color: Color("LavenderBlush"), radius: 10)
             }
-                            }
+        }
         
         else {
             Text("Erreur : LevelCircle a reçu une valeur inattendue")
                 .font(.system(size: 10))
         }
-                
+        
     }
 }
 
 struct LevelCircle_Previews: PreviewProvider {
     static var previews: some View {
-        LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire01)
+        LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
     }
 }

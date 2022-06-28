@@ -12,17 +12,28 @@ struct AnswerButton: View {
     var textInButton : String
     var goodAnswer : Int
     var clicAnswer : Int
-    
+    @StateObject var quizzController : QuizzController
     
     var body: some View {
         Button {
-            if hasAnswer==false{
-            self.selectedButton.toggle()
-                hasAnswer=true
-                if goodAnswer==clicAnswer{
-                    scoreCurrent+=1
+            if quizzController.hasAnswer == false {
+                
+                self.selectedButton = true   // sélectionne le bouton
+                quizzController.hasAnswer = true   // empêche de répondre 2 fois
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                    // désélectionne le bouton après x secondes
+                    self.selectedButton = false
                 }
-                    
+                
+                if goodAnswer == clicAnswer {
+                    // incrémente le score si bonne réponse
+                    quizzController.scoreCurrent += 1
+                    // append une valeur si bonne ou mauvaise réponse
+                    quizzController.goodAnswers += [true]
+                } else {
+                    quizzController.goodAnswers += [false]
+                }
             }
         } label: {
             RoundedRectangle(cornerRadius: 10)
@@ -40,6 +51,6 @@ struct AnswerButton: View {
 
 struct AnswerButton_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerButton(textInButton: "Test", goodAnswer: 0, clicAnswer: 0)
+        AnswerButton(textInButton: "Test", goodAnswer: 0, clicAnswer: 0, quizzController: QuizzController())
     }
 }

@@ -11,8 +11,7 @@ import SwiftUI
 
 struct ProgressionBar: View {
     
-    var questionNoCurrent : Int
-    var questionNoTotal : Int
+    @StateObject var quizzController : QuizzController
 //    let questionProgression:Double = Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)
     
     var body: some View {
@@ -22,26 +21,26 @@ struct ProgressionBar: View {
                     Spacer()
                         .frame(width:5)
                     Color("CarnationPink").opacity(0.8)
-                        .frame(width: geometry.size.width*CGFloat(Double(questionNoCurrent-1)/(Double(questionNoTotal)-1)), height: 5)
+                        .frame(width: geometry.size.width*CGFloat(Double(quizzController.questionNoCurrent-1)/(Double(quizzController.questionNoTotal)-1)), height: 5)
                     Color("LavenderBlush").opacity(0.8)
                         .frame(height: 5)
                     Spacer()
                         .frame(width:5)
                 }
                 HStack (spacing:0) {
-                    ForEach(0..<questionNoTotal) { index in
+                    ForEach(0..<quizzController.questionNoTotal) { index in
                         if index > 0 {
                             Spacer()
                         }
-                        if index == questionNoCurrent-1 {
+                        if index == quizzController.questionNoCurrent-1 {
                             Circle()
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(Color("CarnationPink"))
-                        } else if index < questionNoCurrent-1 {
+                        } else if index < quizzController.questionNoCurrent-1 {
                             Circle()
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(Color("OrchidCrayola"))
-                        } else if index > questionNoCurrent-1 {
+                        } else if index > quizzController.questionNoCurrent-1 {
                             Circle()
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(Color("LavenderBlush"))
@@ -55,7 +54,7 @@ struct ProgressionBar: View {
 
 struct ProgressionBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressionBar(questionNoCurrent: 1, questionNoTotal: 3)
+        ProgressionBar(quizzController: QuizzController())
             .preferredColorScheme(.dark)
     }
 }

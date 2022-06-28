@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UIKit
+
 
 struct SingleCardView: View {
     
@@ -20,6 +22,10 @@ struct SingleCardView: View {
     var cardBack: CardBackType
     var miniCard: Bool
     
+    // bouton retour
+    @Environment(\.dismiss) private var dismiss
+    
+    
     var body: some View {
         
         ZStack {
@@ -28,12 +34,29 @@ struct SingleCardView: View {
             VStack {
                 HStack(alignment:.top) {
                     
+                    // bouton retour
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
                     Image(systemName: "chevron.backward.square.fill")
                         .foregroundColor(Color("LavenderBlush").opacity(0.8))
                         .font(.system(size: 32))
                         .padding()
+                    })
                     Spacer()
-                }
+                    
+                    // bouton download
+                    Button(action:
+                            save
+                           , label: {
+                            Image(systemName: "square.and.arrow.down")
+                                .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                                .font(.system(size: 35))
+                                .padding(.top, 8)
+                                .padding(.trailing)
+                        })
+                    
+                } // hstack
                 
                 Spacer()
                 ZStack {
@@ -77,11 +100,15 @@ struct SingleCardView: View {
                 Spacer()
             }
         }
-        .toolbar {
-            Image(systemName: "square.and.arrow.down")
         
-        }
-        
+    }
+    
+    func save() {
+        let savedImage = UIImage(named: cardFront.cardFrontImage)
+
+        let imageSaver = ImageSaver()
+        if let savedImage = savedImage {
+            imageSaver.writeToPhotoAlbum(image: savedImage)}
     }
 }
 

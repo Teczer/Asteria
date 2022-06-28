@@ -12,6 +12,8 @@ struct level2View: View {
     // Level height here!!
     private let levelHeight : CGFloat = 550
     
+    @StateObject var viewRouter: ViewRouter
+    
     var body: some View {
         ZStack {
             
@@ -63,19 +65,19 @@ struct level2View: View {
                     
                     // cercles, de haut en bas
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 60, questionSerieCurrent: quizzPhenomenesObservables05)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 60, questionSerieCurrent: quizzPhenomenesObservables05, viewRouter: viewRouter)
                         .position(x: 100, y: 55)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables04)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables04, viewRouter: viewRouter)
                         .position(x: 185, y: 155)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables03)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables03, viewRouter: viewRouter)
                         .position(x: 265, y: 250)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables02)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzPhenomenesObservables02, viewRouter: viewRouter)
                         .position(x: 320, y: 360)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables01)
+                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzPhenomenesObservables01, viewRouter: viewRouter)
                         .position(x: 335, y: 480)
                     
                 }
@@ -89,6 +91,6 @@ struct level2View: View {
 
 struct level2View_Previews: PreviewProvider {
     static var previews: some View {
-        level2View()
+        level2View(viewRouter: ViewRouter())
     }
 }
