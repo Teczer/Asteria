@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 
 struct SingleCardView: View {
@@ -43,9 +44,28 @@ struct SingleCardView: View {
                     })
                     Spacer()
                     
-                    Image(systemName: "square.and.arrow.down")
-                        .font(.system(size: 32))
-                }
+//                    Button("Save Image") {
+//                        let savedImage = UIImage(named: cardFront.cardFrontImage)
+//
+//                        let imageSaver = ImageSaver()
+//                        if let savedImage = savedImage {
+//                            imageSaver.writeToPhotoAlbum(image: savedImage)}
+//
+//                    } // bouton
+                    
+                    
+                    
+                    Button(action:
+                            save
+                           , label: {
+                            Image(systemName: "square.and.arrow.down")
+                                .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                                .font(.system(size: 35))
+                                .padding(.top, 8)
+                                .padding(.trailing)
+                        })
+                    
+                } // hstack
                 
                 Spacer()
                 ZStack {
@@ -90,6 +110,14 @@ struct SingleCardView: View {
             }
         }
         
+    }
+    
+    func save() {
+        let savedImage = UIImage(named: cardFront.cardFrontImage)
+
+        let imageSaver = ImageSaver()
+        if let savedImage = savedImage {
+            imageSaver.writeToPhotoAlbum(image: savedImage)}
     }
 }
 

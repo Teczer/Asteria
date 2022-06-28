@@ -45,6 +45,7 @@
 		9FD1F6CE285C8A3C00C26900 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CC285C8A3C00C26900 /* Montserrat-Italic.ttf */; };
 		9FD1F6CF285C8A3C00C26900 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */; };
 		9FFB868B2861FEBA0008601F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB868A2861FEBA0008601F /* AnswerButton.swift */; };
+		A7423DE0286B2C440027C5D1 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7423DDF286B2C440027C5D1 /* ImageSaver.swift */; };
 		A7C48F38285CABB800D47D05 /* CollectionCardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */; };
 		A7EACD542860607800EEDD28 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD532860607800EEDD28 /* CollectionView.swift */; };
 		A7EACD642863254D00EEDD28 /* CollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD632863254D00EEDD28 /* CollectionType.swift */; };
@@ -96,6 +97,7 @@
 		9FD1F6CD285C8A3C00C26900 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		9FD1F6D0285C8A4D00C26900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9FFB868A2861FEBA0008601F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		A7423DDF286B2C440027C5D1 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		A7C48F37285CABB800D47D05 /* CollectionCardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCardBack.swift; sourceTree = "<group>"; };
 		A7EACD532860607800EEDD28 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		A7EACD632863254D00EEDD28 /* CollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionType.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		A7EACD7F2864DC3100EEDD28 /* Cards & Collections */ = {
 			isa = PBXGroup;
 			children = (
+				A7423DDF286B2C440027C5D1 /* ImageSaver.swift */,
 				A7EACD792864D31800EEDD28 /* CardFrontType.swift */,
 				A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */,
 				A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */,
@@ -403,6 +406,7 @@
 				9F978360285C8E3300B11604 /* QACard.swift in Sources */,
 				A7EACD7A2864D31800EEDD28 /* CardFrontType.swift in Sources */,
 				676C4CD628605E9E00FE8185 /* LoginView.swift in Sources */,
+				A7423DE0286B2C440027C5D1 /* ImageSaver.swift in Sources */,
 				9F76C3BC285C71EA0095D087 /* MehdiWIP.swift in Sources */,
 				A7EACD642863254D00EEDD28 /* CollectionType.swift in Sources */,
 			);
@@ -537,6 +541,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Asteria/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save image to library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -567,6 +572,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Asteria/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save image to library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
