@@ -19,7 +19,8 @@ struct QuizzView: View {
     var questionSerieCurrent : [Questions]
     var questionNoCurrent : Int = 1
     var questionNoTotal : Int = 3
-
+    var scoreQuizz : Int = 0
+    
     
     var body: some View {
         ZStack {
