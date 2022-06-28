@@ -12,7 +12,7 @@ let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, tr
 
 struct ScoreBar: View {
     
-    var questionNoTotal : Int
+    @StateObject var quizzController : QuizzController
     
     var body: some View {
         ZStack {
@@ -25,7 +25,7 @@ struct ScoreBar: View {
                     .frame(width:16)
             }
             HStack (spacing:0) {
-                ForEach(0..<questionNoTotal) { index in
+                ForEach(0..<quizzController.questionNoTotal) { index in
                     if index > 0 {
                         Spacer()
                     }
@@ -53,7 +53,7 @@ struct ScoreBar: View {
 
 struct ScoreBar_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreBar(questionNoTotal: 3)
+        ScoreBar(quizzController: QuizzController())
             .preferredColorScheme(.dark)
     }
 }

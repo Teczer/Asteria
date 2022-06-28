@@ -17,14 +17,13 @@ struct QuizzEndingView: View {
     @State private var cardRotationAnim:Double = 80
     @State private var cardOffsetAnim:Double = 400
     @State private var buttonsOffsetAnim:Double = 200
-    
-    var questionNoTotal : Int
-    
+    @StateObject var quizzController : QuizzController
+        
     var body: some View {
         ZStack {
             BlurredBackground(name: "nebuleuse4")
             VStack(spacing:0) {
-                ScoreBar(questionNoTotal: questionNoTotal)
+                ScoreBar(quizzController: quizzController)
                     .padding()
                     .offset(y:scoreBarOffsetAnim)
                 HStack(alignment:.bottom) {
@@ -47,7 +46,7 @@ struct QuizzEndingView: View {
                             .fontWeight(.black)
                             .foregroundColor(Color("LavenderBlush").opacity(0.8))
                             .offset(y:10)
-                        Text("sur \(questionNoTotal)")
+                        Text("sur \(quizzController.questionNoTotal)")
                             .font(.system(size: 20))
                             .foregroundColor(Color("LavenderBlush").opacity(0.8))
                     }
@@ -102,6 +101,6 @@ struct QuizzEndingView: View {
 
 struct QuizzEndingView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzEndingView(questionNoTotal: 3)
+        QuizzEndingView(quizzController: QuizzController())
     }
 }
