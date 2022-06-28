@@ -8,7 +8,7 @@
 import SwiftUI
 
 //sample values
-let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, true, true]
+//let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, true, true]
 
 struct ScoreBar: View {
     
@@ -30,7 +30,7 @@ struct ScoreBar: View {
                         Spacer()
                     }
                     ZStack {
-                        if goodAnswers[index] == true {
+                        if quizzController.goodAnswers[index] == true {
                             Image(systemName: "checkmark.circle.fill")
                                 .resizable()
                                 .symbolRenderingMode(.palette)

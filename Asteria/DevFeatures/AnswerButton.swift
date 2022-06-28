@@ -29,6 +29,10 @@ struct AnswerButton: View {
                 if goodAnswer == clicAnswer {
                     // incrémente le score si bonne réponse
                     quizzController.scoreCurrent += 1
+                    // append une valeur si bonne ou mauvaise réponse
+                    quizzController.goodAnswers += [true]
+                } else {
+                    quizzController.goodAnswers += [false]
                 }
                 
             }

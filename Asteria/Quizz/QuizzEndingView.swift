@@ -41,7 +41,7 @@ struct QuizzEndingView: View {
                     }
                     Spacer()
                     HStack {
-                        Text("2")
+                        Text("\(quizzController.scoreCurrent)")
                             .font(.system(size: 60))
                             .fontWeight(.black)
                             .foregroundColor(Color("LavenderBlush").opacity(0.8))
@@ -96,6 +96,7 @@ struct QuizzEndingView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
