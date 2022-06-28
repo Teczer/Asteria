@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct SingleCardView: View {
     
     // animation data
@@ -20,6 +21,10 @@ struct SingleCardView: View {
     var cardBack: CardBackType
     var miniCard: Bool
     
+    // bouton retour
+    @Environment(\.dismiss) private var dismiss
+    
+    
     var body: some View {
         
         ZStack {
@@ -28,11 +33,18 @@ struct SingleCardView: View {
             VStack {
                 HStack(alignment:.top) {
                     
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
                     Image(systemName: "chevron.backward.square.fill")
                         .foregroundColor(Color("LavenderBlush").opacity(0.8))
                         .font(.system(size: 32))
                         .padding()
+                    })
                     Spacer()
+                    
+                    Image(systemName: "square.and.arrow.down")
+                        .font(.system(size: 32))
                 }
                 
                 Spacer()
@@ -76,10 +88,6 @@ struct SingleCardView: View {
                 }
                 Spacer()
             }
-        }
-        .toolbar {
-            Image(systemName: "square.and.arrow.down")
-        
         }
         
     }
