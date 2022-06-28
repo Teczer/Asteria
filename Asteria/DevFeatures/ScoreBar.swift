@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-//sample values
-//let goodAnswers : [Bool] = [true, true, false, true, true, true, false, true, true, true]
-
 struct ScoreBar: View {
     
     @StateObject var quizzController : QuizzController
@@ -50,10 +47,11 @@ struct ScoreBar: View {
         }
     }
 }
-
-struct ScoreBar_Previews: PreviewProvider {
-    static var previews: some View {
-        ScoreBar(quizzController: QuizzController())
-            .preferredColorScheme(.dark)
-    }
-}
+//
+//struct ScoreBar_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        ScoreBar(quizzController: QuizzController())
+//            .preferredColorScheme(.dark)
+//    }
+//}

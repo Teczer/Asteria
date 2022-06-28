@@ -8,27 +8,31 @@
 import SwiftUI
 
 struct AdventureView: View {
+    
     var id = UUID()
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         NavigationView {
             ScrollView {
                 ScrollViewReader{ proxy in
                     VStack(alignment: .leading, spacing:0){
-                        level4View()
-                        level3View()
-                        level2View()
-                        level1View().id(id)
+                        level4View(viewRouter: viewRouter)
+                        level3View(viewRouter: viewRouter)
+                        level2View(viewRouter: viewRouter)
+                        level1View(viewRouter: viewRouter).id(id)
                     }.onAppear{
                         proxy.scrollTo(id)
                     }
                 }
             }
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct AdventureView_Previews: PreviewProvider {
     static var previews: some View {
-        AdventureView()
+        AdventureView(viewRouter: ViewRouter())
     }
 }

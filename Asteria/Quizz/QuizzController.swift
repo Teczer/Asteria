@@ -15,3 +15,12 @@ class QuizzController: ObservableObject {
     @Published var questionNoTotal : Int = 3
     @Published var nextQuestion: Bool = false
 }
+//
+//class QuizzControllerDemo: ObservableObject {
+//    @Published var hasAnswer: Bool = false
+//    @Published var scoreCurrent: Int = 0
+//    @Published var goodAnswers: [Bool] = [true, true, false]
+//    @Published var questionNoCurrent : Int = 3
+//    @Published var questionNoTotal : Int = 3
+//    @Published var nextQuestion: Bool = false
+//}

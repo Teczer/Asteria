@@ -20,6 +20,7 @@ struct QuizzView: View {
     // data
     var questionSerieCurrent : [Questions]
     @StateObject var quizzController = QuizzController()
+    @StateObject var viewRouter: ViewRouter
     
     var body: some View {
         ZStack {
@@ -55,7 +56,7 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
                             .offset(x:offsetAnswerValue)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
@@ -105,7 +106,7 @@ struct QuizzView: View {
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView(questionSerieCurrent: quizzSystemesolaire01)
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }
