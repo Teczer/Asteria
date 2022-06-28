@@ -11,14 +11,16 @@ import Foundation   // needed for markdown text formatting
 struct QuizzView: View {
     
     // animation
-    @State private var rotationValue:Double = 0
+    @State private var rotationQuestionValue:Double = 0
     @State private var rotationAnswerValue:Double = 90
+    @State private var offsetQuestionValue:Double = 0
+    @State private var offsetAnswerValue:Double = 0
     @State private var displayAnswer:Bool = false
     
     // data
     var questionSerieCurrent : [Questions]
     @StateObject var quizzController = QuizzController()
-
+    
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -54,29 +56,43 @@ struct QuizzView: View {
                 ZStack {
                     if displayAnswer == true {
                         QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
+                            .offset(x:offsetAnswerValue)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
                     QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
-                        .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
+                        .offset(x:offsetQuestionValue)
+                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
                 
                 
                     .onChange(of: quizzController.hasAnswer) { _ in
-                        displayAnswer = true
-                        withAnimation(.easeIn(duration: 0.2).delay(1)) {
-                            rotationValue = -90
-                        }
-                        withAnimation(.easeOut(duration: 0.2).delay(1.2)) {
-                            rotationAnswerValue = 0
+                        if quizzController.hasAnswer {
+                            displayAnswer = true
+                            withAnimation(.easeIn(duration: 0.2).delay(1)) {
+                                rotationQuestionValue = -90
+                            }
+                            withAnimation(.easeOut(duration: 0.2).delay(1.2)) {
+                                rotationAnswerValue = 0
+                            }
                         }
                     }
+                
                     .onChange(of: quizzController.nextQuestion) { _ in
-                        if quizzController.nextQuestion == true {
+                        if quizzController.nextQuestion {
+                            offsetQuestionValue = -500
+                            rotationQuestionValue = 0
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                offsetQuestionValue = 0
+                                offsetAnswerValue = 500
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            quizzController.hasAnswer = false
+                            quizzController.nextQuestion = false
                             displayAnswer = false
-//                            quizzController.questionNoCurrent += 1
-//                            rotationValue = 0
-//                            rotationAnswerValue = 90
+                            offsetAnswerValue = 0
+                            rotationAnswerValue = 90
+                            }
                         }
                     }
             }
