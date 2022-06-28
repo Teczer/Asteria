@@ -11,6 +11,8 @@ import Foundation   // needed for markdown text formatting
 struct QACardAnswer: View {
     var questionSerieCurrent: [Questions]
     @StateObject var quizzController : QuizzController
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -21,16 +23,19 @@ struct QACardAnswer: View {
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
             
-            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
+            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
                 .frame(width:300, height:600)
         }
     }
 }
 
 struct QACardAnswerContent: View {
+    
     var questionSerieCurrent: [Questions]
     @State var change: Bool = false
     @StateObject var quizzController : QuizzController
+    @StateObject var viewRouter: ViewRouter
+
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
@@ -60,7 +65,7 @@ struct QACardAnswerContent: View {
                 .frame(width:270, height:150)
             
             if quizzController.questionNoCurrent >= 3 {
-                NavigationLink (isActive: $change, destination: {QuizzEndingView(quizzController: quizzController)}) {}
+                NavigationLink (isActive: $change, destination: {QuizzEndingView(viewRouter: viewRouter, quizzController: quizzController)}) {}
             }
             Button(action: {
                 if quizzController.questionNoCurrent >= 3 {
@@ -81,7 +86,7 @@ struct QACardAnswerContent: View {
 
 struct QACardAnswer_Previews: PreviewProvider {
     static var previews: some View {
-        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01, quizzController: QuizzController())
+        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01, quizzController: QuizzController(), viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }

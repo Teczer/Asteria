@@ -17,7 +17,11 @@ struct QuizzEndingView: View {
     @State private var cardRotationAnim:Double = 80
     @State private var cardOffsetAnim:Double = 400
     @State private var buttonsOffsetAnim:Double = 200
+    
+    
+    @StateObject var viewRouter: ViewRouter
     @StateObject var quizzController : QuizzController
+    
         
     var body: some View {
         ZStack {
@@ -66,8 +70,16 @@ struct QuizzEndingView: View {
                 VStack {
                     CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                         .padding(.bottom)
+                        .onTapGesture {
+                            viewRouter.currentPage = .aventure
+                        }
+
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
+                        .onTapGesture {
+                            viewRouter.currentPage = .collection
+                        }
+
                 }
                 .offset(y: buttonsOffsetAnim)
             }
@@ -100,8 +112,8 @@ struct QuizzEndingView: View {
     }
 }
 
-struct QuizzEndingView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizzEndingView(quizzController: QuizzController())
-    }
-}
+//struct QuizzEndingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuizzEndingView(quizzController: QuizzController())
+//    }
+//}
