@@ -10,6 +10,7 @@ import Foundation   // needed for markdown text formatting
 
 struct QACardAnswer: View {
     var questionSerieCurrent: [Questions]
+    @StateObject var quizzController : QuizzController
     var body: some View {
         ZStack {
             Rectangle()
@@ -19,8 +20,8 @@ struct QACardAnswer: View {
                 .frame(width:300, height:600)
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
-
-            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent)
+            
+            QACardAnswerContent(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())
                 .frame(width:300, height:600)
         }
     }
@@ -28,6 +29,7 @@ struct QACardAnswer: View {
 
 struct QACardAnswerContent: View {
     var questionSerieCurrent: [Questions]
+    @StateObject var quizzController : QuizzController
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
@@ -55,7 +57,30 @@ struct QACardAnswerContent: View {
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
-            CustomButton(colorOfButton: "blue", textInButton: "Continuer")
+            Text("\(quizzController.questionNoCurrent)")
+                .font(.system(size: 22))
+                .fontWeight(.black)
+                .foregroundColor(Color("LavenderBlush"))
+                .offset(y:2.2)
+            Button(action: {
+                if quizzController.questionNoCurrent < 3 {
+                quizzController.nextQuestion = true
+                quizzController.questionNoCurrent += 1
+            }
+                print("\(quizzController.questionNoCurrent)")}, label: {                 CustomButton(colorOfButton: "blue", textInButton: "Continuer")}
+            )
+//            Button {
+//
+//            } label: {
+//                CustomButton(colorOfButton: "blue", textInButton: "Continuer")
+//            }
+//            .onTapGesture {
+//                if quizzController.questionNoCurrent > 3 {
+//                    quizzController.nextQuestion = true
+//                    quizzController.questionNoCurrent += 1
+//                }
+//                print("tu marches ou pas")
+//            }
             Spacer()
         }
     }
@@ -63,7 +88,7 @@ struct QACardAnswerContent: View {
 
 struct QACardAnswer_Previews: PreviewProvider {
     static var previews: some View {
-        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01)
+        QACardAnswer(questionSerieCurrent: quizzSystemesolaire01, quizzController: QuizzController())
             .preferredColorScheme(.dark)
     }
 }

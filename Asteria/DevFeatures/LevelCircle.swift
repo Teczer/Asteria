@@ -24,7 +24,7 @@ struct LevelCircle: View {
     var body: some View {
         
         if levelStatus == "completed" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())) {
                 ZStack {
                 Circle()
                     .fill(Color("CarnationPink").opacity(0.9))
@@ -46,7 +46,7 @@ struct LevelCircle: View {
         }
         
         else if levelStatus == "new" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent)) {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, quizzController: QuizzController())) {
             Circle()
                 .fill(Color("LavenderBlush").opacity(0.9))
                 .overlay(Circle().stroke(Color("LavenderBlush"), lineWidth: 2))

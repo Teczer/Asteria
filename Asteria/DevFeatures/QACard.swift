@@ -8,12 +8,10 @@
 import SwiftUI
 import Foundation   // needed for markdown text formatting
 
-var hasAnswer: Bool = false
-var scoreCurrent: Int = 0
-
-
 struct QACard: View {
     var questionSerieCurrent: [Questions]
+    @StateObject var quizzController : QuizzController
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -24,7 +22,7 @@ struct QACard: View {
                 .cornerRadius(24)
                 .shadow(color: Color("LavenderBlush").opacity(0.5), radius: 16)
             
-            QACardContent(questionSerieCurrent: questionSerieCurrent)
+            QACardContent(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                 .frame(width:300, height:600)
         }
     }
@@ -32,6 +30,7 @@ struct QACard: View {
 
 struct QACardContent: View {
     var questionSerieCurrent: [Questions]
+    @StateObject var quizzController : QuizzController
     var body: some View {
         VStack(alignment:.center) {
             Spacer()
@@ -55,20 +54,20 @@ struct QACardContent: View {
                 .frame(width:270, height:145)
             VStack {
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[0], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 0)
+                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[0], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 0, quizzController: quizzController)
                     NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[1], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 1)
+                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[1], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 1, quizzController: quizzController)
                     NavigationLink(destination: {VeroWIP()}) {}
                 }
                 Spacer()
                 HStack {
-                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[2], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 2)
+                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[2], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 2, quizzController: quizzController)
                     NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
-                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[3], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 3)
+                    AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[0].questionAnswer[3], goodAnswer: questionSerieCurrent[0].goodAnswerNo,clicAnswer: 3, quizzController: quizzController)
                     NavigationLink(destination: {VeroWIP()}) {}
                 }
             }
@@ -80,7 +79,7 @@ struct QACardContent: View {
 
 struct QACard_Previews: PreviewProvider {
     static var previews: some View {
-        QACard(questionSerieCurrent: quizzSystemesolaire01)
+        QACard(questionSerieCurrent: quizzSystemesolaire01, quizzController: QuizzController())
             .preferredColorScheme(.dark)
     }
 }
