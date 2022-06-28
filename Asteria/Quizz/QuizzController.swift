@@ -13,5 +13,4 @@ class QuizzController: ObservableObject {
     @Published var questionNoCurrent : Int = 1
     @Published var questionNoTotal : Int = 3
     @Published var nextQuestion: Bool = false
-    
 }

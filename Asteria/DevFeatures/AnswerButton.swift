@@ -16,13 +16,21 @@ struct AnswerButton: View {
     
     var body: some View {
         Button {
-            if quizzController.hasAnswer==false{
-            self.selectedButton.toggle()
-                quizzController.hasAnswer=true
-                if goodAnswer==clicAnswer{
-                    quizzController.scoreCurrent+=1
+            if quizzController.hasAnswer == false {
+                
+                self.selectedButton = true   // sélectionne le bouton
+                quizzController.hasAnswer = true   // empêche de répondre 2 fois
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                    // désélectionne le bouton après x secondes
+                    self.selectedButton = false
                 }
-                    
+                
+                if goodAnswer == clicAnswer {
+                    // incrémente le score si bonne réponse
+                    quizzController.scoreCurrent += 1
+                }
+                
             }
         } label: {
             RoundedRectangle(cornerRadius: 10)
