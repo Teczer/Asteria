@@ -34,6 +34,7 @@ struct SingleCardView: View {
             VStack {
                 HStack(alignment:.top) {
                     
+                    // bouton retour
                     Button(action:
                             dismiss.callAsFunction
                            , label: {
@@ -44,17 +45,7 @@ struct SingleCardView: View {
                     })
                     Spacer()
                     
-//                    Button("Save Image") {
-//                        let savedImage = UIImage(named: cardFront.cardFrontImage)
-//
-//                        let imageSaver = ImageSaver()
-//                        if let savedImage = savedImage {
-//                            imageSaver.writeToPhotoAlbum(image: savedImage)}
-//
-//                    } // bouton
-                    
-                    
-                    
+                    // bouton download
                     Button(action:
                             save
                            , label: {
