@@ -8,6 +8,10 @@
 import SwiftUI
 import Foundation   // needed for markdown text formatting
 
+var hasAnswer: Bool = false
+var scoreCurrent: Int = 0
+
+
 struct QACard: View {
     var questionSerieCurrent: [Questions]
     @StateObject var quizzController : QuizzController

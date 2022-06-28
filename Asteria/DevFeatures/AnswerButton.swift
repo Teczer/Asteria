@@ -34,7 +34,6 @@ struct AnswerButton: View {
                 } else {
                     quizzController.goodAnswers += [false]
                 }
-                
             }
         } label: {
             RoundedRectangle(cornerRadius: 10)

@@ -66,7 +66,6 @@ struct QuizzView: View {
                 }
                 Spacer()
                 
-                
                     .onChange(of: quizzController.hasAnswer) { _ in
                         if quizzController.hasAnswer {
                             displayAnswer = true
