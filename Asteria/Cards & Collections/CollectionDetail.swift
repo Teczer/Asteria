@@ -15,6 +15,10 @@ struct CollectionDetail: View {
     let rows = [GridItem(.flexible())]
     @State private var currentIndex = 0
     
+    @AppStorage("levelProgression") var levelProgression:Int = 0
+    
+    var cardWon: [SingleCardType] = []
+    
     var body: some View {
     
         VStack {
@@ -41,6 +45,7 @@ struct CollectionDetail: View {
         ScrollView(.horizontal) {
             
             LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
+                ForEach(cardWon) { card in
                 Spacer()
                     .frame(width:10)
                 ForEach(collection.collectionImages) { card in
@@ -68,6 +73,7 @@ struct CollectionDetail: View {
             
                 } // fin scroll view
             .frame(width: 390, height: 230)
+
             
             // OMBRES
             HStack {
