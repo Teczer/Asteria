@@ -11,7 +11,9 @@ struct level4View: View {
     
     // Level height here!!
     private let levelHeight : CGFloat = 550
+    
     @StateObject var viewRouter: ViewRouter
+    @AppStorage("levelProgression") var levelProgression:Int = 0
     
     var body: some View {
         ZStack {
@@ -63,19 +65,49 @@ struct level4View: View {
                     
                     // cercles, de haut en bas
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 60, questionSerieCurrent: quizzAstronautes05, viewRouter: viewRouter)
+                    LevelCircle(
+                        levelStatus: levelProgression < 19 ? "unavailable" : (levelProgression > 19 ? "completed" : "new"),
+                        circleSize: 40,
+                        questionSerieCurrent: quizzSystemesolaire02,
+                        levelId: 20,
+                        viewRouter: viewRouter
+                    )
                         .position(x: 85, y: 55)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes04, viewRouter: viewRouter)
+                    LevelCircle(
+                        levelStatus: levelProgression < 18 ? "unavailable" : (levelProgression > 18 ? "completed" : "new"),
+                        circleSize: 40,
+                        questionSerieCurrent: quizzSystemesolaire02,
+                        levelId: 19,
+                        viewRouter: viewRouter
+                    )
                         .position(x: 132, y: 170)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 45, questionSerieCurrent: quizzAstronautes03, viewRouter: viewRouter)
+                    LevelCircle(
+                        levelStatus: levelProgression < 17 ? "unavailable" : (levelProgression > 17 ? "completed" : "new"),
+                        circleSize: 40,
+                        questionSerieCurrent: quizzSystemesolaire02,
+                        levelId: 18,
+                        viewRouter: viewRouter
+                    )
                         .position(x: 140, y: 272)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes02, viewRouter: viewRouter)
+                    LevelCircle(
+                        levelStatus: levelProgression < 16 ? "unavailable" : (levelProgression > 16 ? "completed" : "new"),
+                        circleSize: 40,
+                        questionSerieCurrent: quizzSystemesolaire02,
+                        levelId: 17,
+                        viewRouter: viewRouter
+                    )
                         .position(x: 90, y: 370)
                     
-                    LevelCircle(levelStatus: "unavailable", circleSize: 40, questionSerieCurrent: quizzAstronautes01, viewRouter: viewRouter)
+                    LevelCircle(
+                        levelStatus: levelProgression < 15 ? "unavailable" : (levelProgression > 15 ? "completed" : "new"),
+                        circleSize: 40,
+                        questionSerieCurrent: quizzSystemesolaire02,
+                        levelId: 16,
+                        viewRouter: viewRouter
+                    )
                         .position(x: 60, y: 480)
                     
                 }

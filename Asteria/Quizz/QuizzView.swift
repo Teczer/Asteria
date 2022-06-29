@@ -21,6 +21,7 @@ struct QuizzView: View {
     var questionSerieCurrent : [Questions]
     var questionNoCurrent : Int = 1
     var questionNoTotal : Int = 3
+    var levelId : Int
 
     // bouton retour
     @Environment(\.dismiss) private var dismiss
@@ -112,12 +113,15 @@ struct QuizzView: View {
             }
         }
         .navigationBarHidden(true)
+        .onAppear() {
+            quizzController.levelId = levelId
+        }
     }
 }
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView(questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01, levelId: 1, viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }

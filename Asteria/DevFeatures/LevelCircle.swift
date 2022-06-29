@@ -20,12 +20,14 @@ struct LevelCircle: View {
     let levelStatus : String
     let circleSize : CGFloat
     let questionSerieCurrent : [Questions]
+    let levelId : Int
+    
     @StateObject var viewRouter: ViewRouter
 
     var body: some View {
         
         if levelStatus == "completed" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)) {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, levelId: levelId, viewRouter: viewRouter)) {
                 ZStack {
                     Circle()
                         .fill(Color("CarnationPink").opacity(0.9))
@@ -47,7 +49,7 @@ struct LevelCircle: View {
         }
         
         else if levelStatus == "new" {
-            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)) {
+            NavigationLink (destination: QuizzView(questionSerieCurrent: questionSerieCurrent, levelId: levelId, viewRouter: viewRouter)) {
                 Circle()
                     .fill(Color("LavenderBlush").opacity(0.9))
                     .overlay(Circle().stroke(Color("LavenderBlush"), lineWidth: 2))
@@ -66,6 +68,6 @@ struct LevelCircle: View {
 
 struct LevelCircle_Previews: PreviewProvider {
     static var previews: some View {
-        LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
+        LevelCircle(levelStatus: "completed", circleSize: 40, questionSerieCurrent: quizzSystemesolaire01, levelId: 1, viewRouter: ViewRouter())
     }
 }
