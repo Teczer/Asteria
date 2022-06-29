@@ -24,6 +24,7 @@ struct AdventureView: View {
                         level1View(viewRouter: viewRouter).id(id)
                     }.onAppear{
                         proxy.scrollTo(id)
+                        viewRouter.hideInAventure = false
                     }
                 }
             }

@@ -10,7 +10,7 @@ import SwiftUI
 class ViewRouter: ObservableObject {
     
     @Published var currentPage: Page = .aventure
-   
+    @Published var hideInAventure: Bool = false
 }
 
 enum Page {

@@ -75,6 +75,10 @@ struct QuizzEndingView: View {
                                 levelProgression = quizzController.levelId
                             }
                             viewRouter.currentPage = .aventure
+                            NavigationUtil.popToRootView()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                viewRouter.hideInAventure = false
+                            }
                         }
 
                     
