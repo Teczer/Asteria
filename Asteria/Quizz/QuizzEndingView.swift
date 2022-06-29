@@ -32,8 +32,7 @@ struct QuizzEndingView: View {
                     .offset(y:scoreBarOffsetAnim)
                 HStack(alignment:.bottom) {
                     VStack(alignment: .leading) {
-//                        Text("Bien joué".uppercased())
-                        Text("niveau \(quizzController.levelId)".uppercased())
+                        Text("Bien joué".uppercased())
                             .font(.system(size: 22))
                             .fontWeight(.heavy)
                             .foregroundColor(Color("LavenderBlush"))
@@ -72,6 +71,10 @@ struct QuizzEndingView: View {
                     CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                         .padding(.bottom)
                         .onTapGesture {
+                            if quizzController.levelId > levelProgression {
+                                levelProgression = quizzController.levelId
+                            }
+                            viewRouter.currentPage = .aventure
                             NavigationUtil.popToRootView()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 viewRouter.hideInAventure = false
@@ -81,6 +84,9 @@ struct QuizzEndingView: View {
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
                         .onTapGesture {
+                            if quizzController.levelId > levelProgression {
+                                levelProgression = quizzController.levelId
+                            }
                             viewRouter.currentPage = .collection
                         }
 
@@ -92,11 +98,6 @@ struct QuizzEndingView: View {
             .frame(width:350)
             
             .onAppear {
-                
-                if quizzController.levelId > levelProgression {
-                    levelProgression = quizzController.levelId
-                }
-                                
                 // animations proper come here
                 withAnimation(.easeOut(duration: 0.3)) {
                     scoreBarOffsetAnim = 0

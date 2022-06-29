@@ -69,7 +69,7 @@ struct level2View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 9 ? "unavailable" : (levelProgression > 9 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzPhenomenesObservables05,
                         levelId: 10,
                         viewRouter: viewRouter
                     )
@@ -78,7 +78,7 @@ struct level2View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 8 ? "unavailable" : (levelProgression > 8 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzPhenomenesObservables04,
                         levelId: 9,
                         viewRouter: viewRouter
                     )
@@ -87,7 +87,7 @@ struct level2View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 7 ? "unavailable" : (levelProgression > 7 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzPhenomenesObservables03,
                         levelId: 8,
                         viewRouter: viewRouter
                     )
@@ -96,7 +96,7 @@ struct level2View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 6 ? "unavailable" : (levelProgression > 6 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzPhenomenesObservables02,
                         levelId: 7,
                         viewRouter: viewRouter
                     )
@@ -105,7 +105,7 @@ struct level2View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 5 ? "unavailable" : (levelProgression > 5 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzPhenomenesObservables01,
                         levelId: 6,
                         viewRouter: viewRouter
                     )

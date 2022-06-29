@@ -22,9 +22,6 @@ struct AdventureView: View {
                         level3View(viewRouter: viewRouter)
                         level2View(viewRouter: viewRouter)
                         level1View(viewRouter: viewRouter).id(id)
-                        Text("[DEBUG]\rlevelProgression : \(levelProgression)")
-                            .font(.caption2)
-                            .padding(.horizontal)
                     }.onAppear{
                         proxy.scrollTo(id)
                         viewRouter.hideInAventure = false
