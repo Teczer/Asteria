@@ -72,7 +72,7 @@ struct level1View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 4 ? "unavailable" : (levelProgression > 4 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzSystemesolaire05,
                         levelId: 5,
                         viewRouter: viewRouter
                     )
@@ -81,7 +81,7 @@ struct level1View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 3 ? "unavailable" : (levelProgression > 3 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzSystemesolaire04,
                         levelId: 4,
                         viewRouter: viewRouter
                     )
@@ -90,7 +90,7 @@ struct level1View: View {
                     LevelCircle(
                         levelStatus: levelProgression < 2 ? "unavailable" : (levelProgression > 2 ? "completed" : "new"),
                         circleSize: 40,
-                        questionSerieCurrent: quizzSystemesolaire02,
+                        questionSerieCurrent: quizzSystemesolaire03,
                         levelId: 3,
                         viewRouter: viewRouter
                     )

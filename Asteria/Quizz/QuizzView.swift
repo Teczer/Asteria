@@ -19,8 +19,6 @@ struct QuizzView: View {
     
     // data
     var questionSerieCurrent : [Questions]
-    var questionNoCurrent : Int = 1
-    var questionNoTotal : Int = 3
     var levelId : Int
 
     // bouton retour
