@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F6C9DCD28606328002C38E1 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C9DCC28606328002C38E1 /* QuestionData.swift */; };
+		5F9F1E1E286C4A1F00F21369 /* ProfilData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F1E1D286C4A1F00F21369 /* ProfilData.swift */; };
 		5FCF33D2286363860045D004 /* level1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF33D1286363860045D004 /* level1View.swift */; };
 		5FCF33D4286363980045D004 /* level2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF33D3286363980045D004 /* level2View.swift */; };
 		5FCF33D6286363AA0045D004 /* level3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF33D5286363AA0045D004 /* level3View.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		5F6C9DCC28606328002C38E1 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		5F9F1E1D286C4A1F00F21369 /* ProfilData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilData.swift; sourceTree = "<group>"; };
 		5FCF33D1286363860045D004 /* level1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level1View.swift; sourceTree = "<group>"; };
 		5FCF33D3286363980045D004 /* level2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level2View.swift; sourceTree = "<group>"; };
 		5FCF33D5286363AA0045D004 /* level3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level3View.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB6DEEF2864A6F800F0E732 /* ProfileView.swift */,
+				5F9F1E1D286C4A1F00F21369 /* ProfilData.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				9F2DBCCD2864550300261870 /* BlurredBackground.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
+				5F9F1E1E286C4A1F00F21369 /* ProfilData.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
 				A7EACD7C2864D33D00EEDD28 /* CardBackType.swift in Sources */,
 				9F2084A9285C6EDC00EB8AC5 /* AsteriaApp.swift in Sources */,
