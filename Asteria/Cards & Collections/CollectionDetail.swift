@@ -24,9 +24,9 @@ struct CollectionDetail: View {
                 Text(collection.collectionName.uppercased())
                     .font(.custom("Montserrat", size: 20))
                     .fontWeight(.light)
+                    .tracking(7)
                     .padding(.leading, 30)
                     .padding(.top, 30)
-                
             Spacer()
             }
             
