@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @Binding var endOnBoarding: Bool
     @Binding var username: String
+    
     var body: some View {
         NavigationView {
             ZStack {

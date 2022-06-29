@@ -18,6 +18,8 @@ struct TutoView: View {
     @State private var tutoIndex = 0
     let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...", "**Progresse** dans le mode Aventure sur la carte de l'Univers...", "**Répond** à des questions et améliore tes connaissances...", "...et **remporte** de magnifiques cartes à collectionner !"]
     
+    @AppStorage("hasSeenTuto") var hasSeenTuto = false
+    
     
     var body: some View {
         NavigationView {
@@ -87,6 +89,7 @@ struct TutoView: View {
                                     
                                     Button {
                                         loginPhase.toggle()
+                                        hasSeenTuto = true
                                     } label: {
                                         CustomButton(colorOfButton: "blue", textInButton: "Commencer")
                                     }
