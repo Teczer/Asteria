@@ -24,7 +24,7 @@ struct CollectionCardBack: View {
             
             VStack {
                 
-                Text(collectionCardBack.cardTitle)
+                Text(collectionCardBack.cardTitle.uppercased())
                     .font(.custom("Montserrat", size: 30))
                     .fontWeight(.light)
                     .multilineTextAlignment(.center)
