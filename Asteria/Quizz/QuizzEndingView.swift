@@ -18,13 +18,16 @@ struct QuizzEndingView: View {
     @State private var cardOffsetAnim:Double = 400
     @State private var buttonsOffsetAnim:Double = 200
     
-    var questionNoTotal : Int
     
+    @StateObject var viewRouter: ViewRouter
+    @StateObject var quizzController : QuizzController
+    
+        
     var body: some View {
         ZStack {
             BlurredBackground(name: "nebuleuse4")
             VStack(spacing:0) {
-                ScoreBar(questionNoTotal: questionNoTotal)
+                ScoreBar(quizzController: quizzController)
                     .padding()
                     .offset(y:scoreBarOffsetAnim)
                 HStack(alignment:.bottom) {
@@ -42,12 +45,12 @@ struct QuizzEndingView: View {
                     }
                     Spacer()
                     HStack {
-                        Text("2")
+                        Text("\(quizzController.scoreCurrent)")
                             .font(.system(size: 60))
                             .fontWeight(.black)
                             .foregroundColor(Color("LavenderBlush").opacity(0.8))
                             .offset(y:10)
-                        Text("sur \(questionNoTotal)")
+                        Text("sur \(quizzController.questionNoTotal)")
                             .font(.system(size: 20))
                             .foregroundColor(Color("LavenderBlush").opacity(0.8))
                     }
@@ -67,8 +70,16 @@ struct QuizzEndingView: View {
                 VStack {
                     CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                         .padding(.bottom)
+                        .onTapGesture {
+                            viewRouter.currentPage = .aventure
+                        }
+
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
+                        .onTapGesture {
+                            viewRouter.currentPage = .collection
+                        }
+
                 }
                 .offset(y: buttonsOffsetAnim)
             }
@@ -97,11 +108,12 @@ struct QuizzEndingView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
-struct QuizzEndingView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizzEndingView(questionNoTotal: 3)
-    }
-}
+//struct QuizzEndingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuizzEndingView(quizzController: QuizzController())
+//    }
+//}

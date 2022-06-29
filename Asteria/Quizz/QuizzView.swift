@@ -11,8 +11,10 @@ import Foundation   // needed for markdown text formatting
 struct QuizzView: View {
     
     // animation
-    @State private var rotationValue:Double = 0
+    @State private var rotationQuestionValue:Double = 0
     @State private var rotationAnswerValue:Double = 90
+    @State private var offsetQuestionValue:Double = 0
+    @State private var offsetAnswerValue:Double = 0
     @State private var displayAnswer:Bool = false
     
     // data
@@ -22,6 +24,8 @@ struct QuizzView: View {
 
     // bouton retour
     @Environment(\.dismiss) private var dismiss
+    @StateObject var quizzController = QuizzController()
+    @StateObject var viewRouter: ViewRouter
     
     var body: some View {
         ZStack {
@@ -41,19 +45,19 @@ struct QuizzView: View {
                     
                     
                     VStack(alignment: .trailing, spacing:0) {
-                        ProgressionBar(questionNoCurrent: questionNoCurrent, questionNoTotal: questionNoTotal)
+                        ProgressionBar(quizzController: quizzController)
                             .padding()
                             .frame(height:35)
                         HStack(alignment: .bottom, spacing:3) {
                             Text("Question")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
-                            Text("\(questionNoCurrent)")
+                            Text("\(quizzController.questionNoCurrent)")
                                 .font(.system(size: 22))
                                 .fontWeight(.black)
                                 .foregroundColor(Color("LavenderBlush"))
                                 .offset(y:2.2)
-                            Text("sur \(questionNoTotal)")
+                            Text("sur \(quizzController.questionNoTotal)")
                                 .font(.system(size: 12))
                                 .foregroundColor(Color("LavenderBlush"))
                         }
@@ -64,23 +68,47 @@ struct QuizzView: View {
                 Spacer()
                 ZStack {
                     if displayAnswer == true {
-                        QACardAnswer(questionSerieCurrent: questionSerieCurrent)
+                        QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
+                            .offset(x:offsetAnswerValue)
                             .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
                     }
-                    QACard(questionSerieCurrent: questionSerieCurrent)
-                        .rotation3DEffect(.degrees(rotationValue), axis: (x: 0, y: 1, z: 0))
+                    QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
+                        .offset(x:offsetQuestionValue)
+                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0))
                 }
                 Spacer()
                 
-                //                Button("Animate..!") {
-                //                    displayAnswer = true
-                //                    withAnimation(.easeIn(duration: 0.2)) {
-                //                        rotationValue = -90
-                //                    }
-                //                    withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
-                //                        rotationAnswerValue = 0
-                //                    }
-                //                }
+                    .onChange(of: quizzController.hasAnswer) { _ in
+                        if quizzController.hasAnswer {
+                            displayAnswer = true
+                            withAnimation(.easeIn(duration: 0.2).delay(1)) {
+                                rotationQuestionValue = -90
+                            }
+                            withAnimation(.easeOut(duration: 0.2).delay(1.2)) {
+                                rotationAnswerValue = 0
+                            }
+                        }
+                    }
+                
+                    .onChange(of: quizzController.nextQuestion) { _ in
+                        if quizzController.nextQuestion {
+                            offsetQuestionValue = -500
+                            rotationQuestionValue = 0
+                            withAnimation(.easeIn(duration: 0.2)) {
+                                offsetAnswerValue = 500
+                            }
+                            withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+                                offsetQuestionValue = 0
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                quizzController.hasAnswer = false
+                                quizzController.nextQuestion = false
+                                displayAnswer = false
+                                offsetAnswerValue = 0
+                                rotationAnswerValue = 90
+                            }
+                        }
+                    }
             }
         }
         .navigationBarHidden(true)
@@ -89,7 +117,7 @@ struct QuizzView: View {
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView(questionSerieCurrent: quizzSystemesolaire01)
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }

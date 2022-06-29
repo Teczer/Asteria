@@ -26,7 +26,7 @@ struct CollectionView: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                     .opacity(0.3)
-                
+                    
                 VStack {
                 
                 ScrollView {
