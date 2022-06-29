@@ -13,6 +13,14 @@ struct ProfileView: View {
     @State private var audio = false
     @State private var showAlert = false
     @State private var showDetails = false
+    
+    @EnvironmentObject var userVM: UserViewModel
+    @State var mail = ""
+    @State var mdp = ""
+    @State var nom = ""
+    @State var prenom = ""
+    @State var age = 18
+    
     var body: some View {
         
         NavigationView {
@@ -34,10 +42,10 @@ struct ProfileView: View {
                                     .frame(width:95, height: 95)
                                     .cornerRadius(50)
                                 VStack (alignment:.leading) {
-                                    Text("Jeanne DUPONT")
+                                    Text("\(prenom) \(nom)")
                                         .font(.system(size: 20))
                                         .fontWeight(.black)
-                                    Text("30 ans")
+                                    Text("\(age) ans")
                                         .font(.system(size: 12))
                                         .fontWeight(.thin)
                                     Spacer()

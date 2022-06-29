@@ -8,8 +8,7 @@
 import Foundation
 
 
-var CurrentUser = User(nom: "user", prenom: "Invité", email: "none", age: 18, isUser: true)
-var IbouUser = User(nom: "Traore", prenom: "Rayan", email: "rayan.traore@gmail.com", age: 20)
+var CurrentUser = User(nom: "user", prenom: "Invité", email: "none", age: 18, level: "Niveau Or", isUser: true)
 var users: [User] = []
 
 
@@ -17,6 +16,7 @@ struct User{
     var nom, prenom, email: String
     var age: Int
     var image: String
+    var level: String
     let isUser: Bool
     
     
@@ -27,29 +27,32 @@ struct User{
         self.email = ""
         self.age = 0
         self.image = "person.circle"
+        self.level = ""
         self.isUser = true
        }
     
     
-    init(nom: String, prenom: String,  email: String, age: Int)
+    init(nom: String, prenom: String, email: String, age: Int, level: String)
     {
         self.nom = nom
         self.prenom = nom
         self.email = email
         self.age = age
         self.image = "person.circle"
+        self.level = level
         self.isUser =  false
         
     }
     
     
-    init(nom: String, prenom: String,  email: String,age: Int, isUser: Bool)
+    init(nom: String, prenom: String,  email: String,age: Int, level: String, isUser: Bool)
     {
         self.nom = nom
         self.prenom = nom
         self.email = email
         self.age = age
         self.image = "person.circle"
+        self.level = level
         self.isUser =  isUser
         
     }

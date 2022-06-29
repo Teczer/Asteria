@@ -9,6 +9,14 @@ import SwiftUI
 
 struct InscriptionView: View {
     @Binding var objectfield: String
+    
+    @EnvironmentObject var userVM: UserViewModel
+    @State var mail = ""
+    @State var mdp = ""
+    @State var nom = ""
+    @State var prenom = ""
+    @State var age = 18
+    
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -26,16 +34,16 @@ struct InscriptionView: View {
                     // CONNEXION TITLE
                     ConnexionTitleItemView(objectText: "INSCRIPTION")
                     // NOM D'UTILISATEUR
-                    TextFieldUsername(previewText: "")
+                    TextFieldUsername(previewText: prenom)
                         .padding(.bottom)
                     // ADRESSE ELECTRONIQUE
-                    TextFieldEmail(previewText: "")
+                    TextFieldEmail(previewText: mail)
                         .padding(.bottom)
                     // MOT DE PASSE
-                    SecureFieldCustom(previewText: "")
+                    SecureFieldCustom(previewText: mdp)
                         .padding(.bottom)
                     // REPETER LE MOT DE PASSE
-                    SecureFieldRepeatCustom(previewText: "")
+                    SecureFieldRepeatCustom(previewText: mdp)
                         .padding(.bottom, 60)
                     // VALIDER
                     CustomButton(colorOfButton: "blue", textInButton: "Valider")

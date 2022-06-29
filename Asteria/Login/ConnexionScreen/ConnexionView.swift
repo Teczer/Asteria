@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ConnexionView: View {
     @Binding var objectfield: String
+    
+    @EnvironmentObject var userVM: UserViewModel
+    @State var mail = ""
+    @State var mdp = ""
+    
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -40,10 +45,10 @@ struct ConnexionView: View {
                         // CONNEXION TITLE
                         ConnexionTitleItemView(objectText: "CONNEXION")
                         // NOM D'UTILISATEUR
-                        TextFieldUsername(previewText: "")
+                        TextFieldUsername(previewText: mail)
                             .padding(.bottom)
                         // MOT DE PASSE
-                        SecureFieldCustom(previewText: "")
+                        SecureFieldCustom(previewText: mdp)
                             .padding(.bottom, 60)
                         // VALIDER
                         CustomButton(colorOfButton: "blue", textInButton: "Valider")
