@@ -71,8 +71,10 @@ struct QuizzEndingView: View {
                     CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                         .padding(.bottom)
                         .onTapGesture {
-                            viewRouter.currentPage = .aventure
+                            viewRouter.hideAventure = false
+                            viewRouter.isQuizzActive = true
                         }
+                    
 
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")

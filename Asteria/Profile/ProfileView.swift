@@ -13,6 +13,7 @@ struct ProfileView: View {
     @State private var audio = false
     @State private var showAlert = false
     @State private var showDetails = false
+    @StateObject var viewRouter: ViewRouter
     var body: some View {
         
         NavigationView {
@@ -112,6 +113,7 @@ struct ProfileView: View {
                 }
             }
             .onAppear() {
+                viewRouter.hideAventure = false
                 UITableView.appearance().backgroundColor = UIColor.clear
                 UITableViewCell.appearance().backgroundColor = UIColor.clear
             }
@@ -122,6 +124,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewRouter: ViewRouter())
     }
 }

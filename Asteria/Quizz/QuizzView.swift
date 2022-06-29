@@ -58,11 +58,11 @@ struct QuizzView: View {
                     if displayAnswer == true {
                         QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
                             .offset(x:offsetAnswerValue)
-                            .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
+                            .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0.01))
                     }
                     QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                         .offset(x:offsetQuestionValue)
-                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0))
+                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0.01))
                 }
                 Spacer()
                 
@@ -101,6 +101,10 @@ struct QuizzView: View {
             }
         }
         .navigationBarHidden(true)
+        .onAppear() {
+            viewRouter.hideAventure = true
+        }
+        
     }
 }
 
