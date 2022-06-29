@@ -112,8 +112,8 @@ struct QuizzEndingView: View {
     }
 }
 
-//struct QuizzEndingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuizzEndingView(quizzController: QuizzController())
-//    }
-//}
+struct QuizzEndingView_Previews: PreviewProvider {
+    static var previews: some View {
+        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController())
+    }
+}
