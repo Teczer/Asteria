@@ -4,9 +4,7 @@
 //
 //  Created by Apprenant 87 on 22/06/2022.
 //
-//  Reste à faire sur cet élément :
-//  - créer le bouton pour scroll (la meilleure solution semble être avec le ScrollViewReader, mais pas réussi pour l'instant)
-//  - trouver le moyen de passer les noms trop longs sur 2 lignes sans couper les mots
+
 
 import SwiftUI
 
