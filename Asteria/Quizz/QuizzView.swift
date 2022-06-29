@@ -23,6 +23,8 @@ struct QuizzView: View {
 
     // bouton retour
     @Environment(\.dismiss) private var dismiss
+    @State private var showAlert = false
+
     @StateObject var quizzController = QuizzController()
     @StateObject var viewRouter: ViewRouter
     
@@ -33,14 +35,30 @@ struct QuizzView: View {
             VStack {
                 HStack(alignment:.top) {
                     
-                    Button(action:
-                            dismiss.callAsFunction
-                           , label: {
+                    Button(action: {
+                        self.showAlert.toggle()
+                    }, label: {
                     Image(systemName: "xmark.square.fill")
                         .foregroundColor(Color("LavenderBlush").opacity(0.8))
                         .font(.system(size: 32))
                         .padding()
                     })
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                        title: Text("Attention !"),
+                            message: Text("Êtes-vous sûr de vouloir revenir à l'aventure ?\rVotre progression dans ce niveau sera perdue !"),
+                        primaryButton: .cancel(
+                                Text("Annuler"),
+                                action: {
+                                }
+                            ),
+                            secondaryButton: .destructive(
+                                Text("Confirmer"),
+                                action: {
+                                    dismiss.callAsFunction()
+                                })
+                        )
+                    }
                     
                     
                     VStack(alignment: .trailing, spacing:0) {

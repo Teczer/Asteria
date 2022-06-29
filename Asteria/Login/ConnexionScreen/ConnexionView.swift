@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ConnexionView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var endOnBoarding: Bool
     @Binding var objectfield: String
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -19,23 +23,39 @@ struct ConnexionView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             
+            VStack {
+                HStack {
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
+                    Image(systemName: "chevron.backward.square.fill")
+                        .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                        .font(.system(size: 32))
+                        .padding()
+                        Spacer()
+                            .frame(width: 300)
+                    })
+                }
+                Spacer()
+            }
+            
             VStack(alignment: .center, spacing: 0) {
                 Spacer()
-                    .frame(height: 50)
                 // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
-                    Image("logo") // LOGO
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 120, height: 100)
-                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
-                    Image("logotitle") // ASTERIA
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 270, height: 90)
-                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
                     Spacer()
-                        .frame(height: 90)
+//                    Image("logo") // LOGO
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 120, height: 100)
+//                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
+//                    Image("logotitle") // ASTERIA
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 270, height: 90)
+//                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
+//                    Spacer()
+//                        .frame(height: 90)
                     VStack {
                         // CONNEXION TITLE
                         ConnexionTitleItemView(objectText: "CONNEXION")
@@ -46,20 +66,23 @@ struct ConnexionView: View {
                         SecureFieldCustom(previewText: "")
                             .padding(.bottom, 60)
                         // VALIDER
-                        CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                        Button {
+                            isLoggedIn = true
+                            endOnBoarding.toggle()
+                        } label: {
+                            CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                        }
                     }
                     Spacer()
                 }
             } //: VSTACK
-            
-            
         } //: ZSTACK
-        
+        .navigationBarHidden(true)
     }
 }
 
 struct ConnexionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnexionView(objectfield: .constant(""))
+        ConnexionView(endOnBoarding: .constant(false), objectfield: .constant(""))
     }
 }

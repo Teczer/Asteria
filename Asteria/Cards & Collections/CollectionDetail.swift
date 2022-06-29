@@ -28,9 +28,9 @@ struct CollectionDetail: View {
                 Text(collection.collectionName.uppercased())
                     .font(.custom("Montserrat", size: 20))
                     .fontWeight(.light)
-                    .padding(.leading, 30)
+                    .tracking(7)
+                    .padding(.leading, 40)
                     .padding(.top, 30)
-                
             Spacer()
             }
             
@@ -46,6 +46,9 @@ struct CollectionDetail: View {
             
             LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
                 ForEach(cardWon) { card in
+                Spacer()
+                    .frame(width:10)
+                ForEach(collection.collectionImages) { card in
                     NavigationLink {
                         SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
                             .navigationBarHidden(true)
@@ -62,7 +65,10 @@ struct CollectionDetail: View {
                         
                     }
                                         
-                        } // fin for each
+                        }
+                Spacer()
+                    .frame(width:10)
+                        // fin for each
                     } // fin lazygrid
             
                 } // fin scroll view

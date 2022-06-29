@@ -16,7 +16,7 @@ struct ScoreBar: View {
             HStack (spacing:0) {
                 Spacer()
                     .frame(width:16)
-                Color("LavenderBlush").opacity(0.8)
+                Color("LavenderBlush").opacity(0.5)
                     .frame(height: 12)
                 Spacer()
                     .frame(width:16)
