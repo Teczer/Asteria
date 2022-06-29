@@ -18,11 +18,11 @@ struct QuizzEndingView: View {
     @State private var cardOffsetAnim:Double = 400
     @State private var buttonsOffsetAnim:Double = 200
     
-    
     @StateObject var viewRouter: ViewRouter
     @StateObject var quizzController : QuizzController
     
-        
+    @AppStorage("levelProgression") var levelProgression:Int = 0
+
     var body: some View {
         ZStack {
             BlurredBackground(name: "nebuleuse4")
@@ -32,7 +32,8 @@ struct QuizzEndingView: View {
                     .offset(y:scoreBarOffsetAnim)
                 HStack(alignment:.bottom) {
                     VStack(alignment: .leading) {
-                        Text("Bien joué".uppercased())
+//                        Text("Bien joué".uppercased())
+                        Text("niveau \(quizzController.levelId)".uppercased())
                             .font(.system(size: 22))
                             .fontWeight(.heavy)
                             .foregroundColor(Color("LavenderBlush"))
@@ -87,8 +88,13 @@ struct QuizzEndingView: View {
             
             .frame(width:350)
             
-            // animations proper come here
             .onAppear {
+                
+                if quizzController.levelId > levelProgression {
+                    levelProgression = quizzController.levelId
+                }
+                                
+                // animations proper come here
                 withAnimation(.easeOut(duration: 0.3)) {
                     scoreBarOffsetAnim = 0
                     scoreTextOffsetAnim = 0
@@ -112,8 +118,8 @@ struct QuizzEndingView: View {
     }
 }
 
-struct QuizzEndingView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController())
-    }
-}
+//struct QuizzEndingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController(), questionSerieCurrent: quizzSystemesolaire01)
+//    }
+//}
