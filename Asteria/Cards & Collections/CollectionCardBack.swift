@@ -32,31 +32,12 @@ struct CollectionCardBack: View {
                 Spacer()
                     .frame(height: 30)
                 
-//                Divider()
-//                    .background(Color.white)
-//                    .frame(width: 300)
-                
                 Image(collectionCardBack.cardBackImage)
                     .resizable()
                     .scaledToFill()
                     .frame(width:300, height:200)
                     .clipped()
                     .overlay(Rectangle().stroke(Color.white, lineWidth: 1))
-//                    .shadow(color: Color.white, radius: 5)
-//                    .position(x: 195, y: 200)
-//                    .padding(.top, 20)
-                
-//                    .resizable()
-//                    .scaledToFill()
-//                    .overlay(Rectangle().stroke(Color.white, lineWidth: 1))
-//                    .frame(width: 146, height: 146)
-//                    .clipShape(Circle())
-//                    .shadow(color: Color.white, radius: 5)
-//                    .padding(.vertical, 20)
-                
-//                Divider()
-//                    .background(Color.white)
-//                    .frame(width: 300)
                 
                 
                     // HSTACK FUN FACTS
