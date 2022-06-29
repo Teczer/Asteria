@@ -39,7 +39,7 @@ struct CollectionView: View {
             
                 }
                 
-                .navigationTitle("Collections".uppercased())
+                .navigationTitle("Collections")
                 .navigationBarTitleDisplayMode(.inline)
                 
             }
