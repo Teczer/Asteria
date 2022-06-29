@@ -706,7 +706,7 @@ let cardFront20 = CardFrontType(
     cardTitle: "Terechkova",
     cardFrontImage: "collec4-cardFrontImage-20-terechkova",
     collectionName: "Astronautes célèbres",
-    cardNumber: "4",
+    cardNumber: "5",
     miniCard: false)
 
 let cardBack20 = CardBackType(
