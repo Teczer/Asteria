@@ -20,6 +20,8 @@ struct QuizzView: View {
     var questionNoCurrent : Int = 1
     var questionNoTotal : Int = 3
 
+    // bouton retour
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -27,10 +29,17 @@ struct QuizzView: View {
                 .ignoresSafeArea()
             VStack {
                 HStack(alignment:.top) {
+                    
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
                     Image(systemName: "xmark.square.fill")
                         .foregroundColor(Color("LavenderBlush").opacity(0.8))
                         .font(.system(size: 32))
                         .padding()
+                    })
+                    
+                    
                     VStack(alignment: .trailing, spacing:0) {
                         ProgressionBar(questionNoCurrent: questionNoCurrent, questionNoTotal: questionNoTotal)
                             .padding()
