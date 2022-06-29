@@ -13,6 +13,10 @@ struct MainView: View {
     @State private var onBoardLogin = false
     @StateObject var viewRouter: ViewRouter
     
+    @AppStorage("hasSeenTuto") var hasSeenTuto = false
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+
+    
     var body: some View {
         GeometryReader { geometry in
             Color("OxfordBlue")
@@ -64,10 +68,23 @@ struct MainView: View {
             .edgesIgnoringSafeArea(.bottom)
             
             .zIndex(onBoardDone ? 10 : 0)
+            
             if onBoardDone == false {
+                
+                if hasSeenTuto == false {
                 TutoView(endOnBoarding: $onBoardDone, login: $login).tag(0)
                     .zIndex(onBoardDone ? 0 : 10)
-            } else {
+                }
+                else if isLoggedIn == false {
+                LoginView(endOnBoarding: $onBoardDone, username: .constant("")).tag(0)
+                        .zIndex(onBoardDone ? 0 : 10)
+                }
+                else {
+                    Rectangle()
+                        .onAppear { onBoardDone = true }
+                    LoginView(endOnBoarding: $onBoardDone, username: .constant("")).tag(0)
+                        .zIndex(onBoardDone ? 0 : 10)
+                }
                 
             }
             

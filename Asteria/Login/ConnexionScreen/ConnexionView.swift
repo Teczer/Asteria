@@ -11,6 +11,8 @@ struct ConnexionView: View {
     @Environment(\.dismiss) private var dismiss
     @Binding var endOnBoarding: Bool
     @Binding var objectfield: String
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+
     var body: some View {
         ZStack {
             Color("OxfordBlue")
@@ -65,6 +67,7 @@ struct ConnexionView: View {
                             .padding(.bottom, 60)
                         // VALIDER
                         Button {
+                            isLoggedIn = true
                             endOnBoarding.toggle()
                         } label: {
                             CustomButton(colorOfButton: "blue", textInButton: "Valider")

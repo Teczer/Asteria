@@ -11,13 +11,17 @@ struct ProfileView: View {
     
     @State private var notification = false
     @State private var audio = false
+    @State private var showAlertTuto = false
     @State private var showAlertReinit = false
-    @State private var showAlertSuppr = false
+    @State private var showAlertDeco = false
     @State private var cheatCode : Int = 0
     
     @StateObject var viewRouter: ViewRouter
     
     @AppStorage("levelProgression") var levelProgression:Int = 0
+    @AppStorage("hasSeenTuto") var hasSeenTuto = false
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+
     
     var body: some View {
         
@@ -107,9 +111,16 @@ struct ProfileView: View {
                         }
                         Section {
                             HStack {
+                                Button {
+                                    hasSeenTuto = false
+                                    self.showAlertTuto.toggle()
+                                } label: {
                                 Text("Revoir l'introduction")
                                     .foregroundColor(Color("LavenderBlush"))
-                            }
+                                }
+                                .alert("L'introduction s'affichera à nouveau au prochain lancement du jeu.", isPresented: $showAlertTuto) {
+                                    Button("OK", role: .cancel) { }
+                                }                            }
                         } header: {
                             Text("Jeu")
                                 .foregroundColor(Color("OrchidCrayola"))
@@ -124,12 +135,9 @@ struct ProfileView: View {
                                 }
                                 .alert(isPresented: $showAlertReinit) {
                                     Alert(
-                                        title: Text("ATTENTION !"),
-                                        message: Text("Êtes vous sûr de bien vouloir supprimer votre progression ? \r Cette action est iréversible !"),
-                                        
-                                        
+                                        title: Text("Attention !"),
+                                        message: Text("Êtes vous sûr de bien vouloir supprimer votre progression dans le jeu ? Cette action est iréversible !"),
                                         primaryButton: .destructive(
-                                            
                                             Text("OK"),
                                             action: {
                                                 levelProgression = 0
@@ -141,32 +149,31 @@ struct ProfileView: View {
                                 }
                             }
                             HStack {
+                                Button {
+                                    self.showAlertDeco.toggle()
+                                } label: {
                                 Text("Déconnecter le compte")
                                     .foregroundColor(Color("LavenderBlush"))
-                            }
-                            HStack {
-                                Button {
-                                    self.showAlertSuppr.toggle()
-                                } label: {
-                                    Text("Supprimer le compte")
-                                        .foregroundColor(Color("LavenderBlush"))
                                 }
-                                .alert(isPresented: $showAlertSuppr) {
+                                .alert(isPresented: $showAlertDeco) {
                                     Alert(
-                                        title: Text("ATTENTION !"),
-                                        message: Text("Êtes vous sûr de bien vouloir supprimer votre compte ? \r Cette action est iréversible !"),
-                                        
-                                        
+                                        title: Text("Attention !"),
+                                        message: Text("Êtes vous sûr de vouloir vous déconnecter de votre compte ?"),
                                         primaryButton: .destructive(
-                                            
                                             Text("OK"),
                                             action: {
+                                                isLoggedIn = false
                                             }),
                                         secondaryButton: .default(
                                             Text("Annuler"),
                                             action: {})
                                     )
                                 }
+
+                            }
+                            HStack {
+                                    Text("Supprimer le compte")
+                                        .foregroundColor(Color("LavenderBlush"))
                             }
                             .listRowBackground(Color.red)
                         } header: {
