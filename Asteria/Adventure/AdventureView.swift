@@ -27,6 +27,7 @@ struct AdventureView: View {
                             .padding(.horizontal)
                     }.onAppear{
                         proxy.scrollTo(id)
+                        viewRouter.hideInAventure = false
                     }
                 }
             }
