@@ -36,6 +36,7 @@ struct ProfileView: View {
                                     .scaledToFill()
                                     .frame(width:95, height: 95)
                                     .cornerRadius(50)
+                                    .shadow(color: Color("OrchidCrayola").opacity(0.8), radius: 10)
                                 VStack (alignment:.leading) {
                                     Text("Jeanne DUPONT")
                                         .font(.system(size: 20))
@@ -48,29 +49,36 @@ struct ProfileView: View {
                                         .font(.system(size: 13))
                                         .fontWeight(.light)
                                 }
+                                .foregroundColor(Color("LavenderBlush"))
                                 .frame(height:60)
                             }
+                            .frame(height:120)
                             .listRowBackground(Color.clear)
                         }
                         
                         Section {
                             HStack {
                                 Text("Notification")
+                                    .foregroundColor(Color("LavenderBlush"))
                                 Toggle("", isOn: $notification)
                             }
                             HStack {
                                 Text("Audio")
+                                    .foregroundColor(Color("LavenderBlush"))
                                 Toggle("", isOn: $audio)
                             }
                         } header: {
                             Text("Préférences")
+                                .foregroundColor(Color("OrchidCrayola"))
                         }
                         Section {
                             HStack {
                                 Text("Revoir l'introduction")
+                                    .foregroundColor(Color("LavenderBlush"))
                             }
                         } header: {
                             Text("Jeu")
+                                .foregroundColor(Color("OrchidCrayola"))
                         }
                         Section {
                             HStack {
@@ -78,6 +86,7 @@ struct ProfileView: View {
                                     self.showAlert.toggle()
                                 } label: {
                                     Text("Réinitialiser les données")
+                                        .foregroundColor(Color("LavenderBlush"))
                                 }
                                 .alert(isPresented: $showAlert) {
                                     Alert(
@@ -100,13 +109,14 @@ struct ProfileView: View {
                             }
                             HStack {
                                 Text("Déconnecter le compte")
+                                    .foregroundColor(Color("LavenderBlush"))
                             }
                             HStack {
                                 Button {
                                     self.showAlert.toggle()
                                 } label: {
                                     Text("Supprimer le compte")
-                                        .foregroundColor(.white)
+                                        .foregroundColor(Color("LavenderBlush"))
                                 }
                                 .alert(isPresented: $showAlert) {
                                     Alert(
@@ -130,6 +140,7 @@ struct ProfileView: View {
                             .listRowBackground(Color.red)
                         } header: {
                             Text("Données & compte")
+                                .foregroundColor(Color("OrchidCrayola"))
                         }
                         
                     }
