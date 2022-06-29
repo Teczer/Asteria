@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var endOnBoarding: Bool
     @Binding var username: String
     var body: some View {
         NavigationView {
@@ -38,14 +39,14 @@ struct LoginView: View {
                     VStack {
                         
                         // CONNEXION
-                        NavigationLink(destination: ConnexionView(objectfield: $username)) {
+                        NavigationLink(destination: ConnexionView(endOnBoarding: $endOnBoarding, objectfield: $username)) {
                             SignUpItemView(objectText: "Connexion")
                         }
                         .navigationBarBackButtonHidden(true)
                         //                    .navigationBarTitle("")
                         .padding(.bottom)
                         // INSCRIPTION
-                        NavigationLink(destination: InscriptionView(objectfield: $username))
+                        NavigationLink(destination: InscriptionView(endOnBoarding: $endOnBoarding, objectfield: $username))
                         {
                             SignUpItemView(objectText: "Inscription")
                                 .padding(.bottom, 60)
@@ -57,7 +58,11 @@ struct LoginView: View {
                         GoogleItem()
                             .padding(.bottom, 60)
                         // CONTINUER SANS S'IDENTIFIER
-                        NoSignItemView(objectText: "Continuer sans s'identifier")
+                        Button {
+                            endOnBoarding.toggle()
+                        } label: {
+                            NoSignItemView(objectText: "Continuer sans s'identifier")
+                        }
                     }
                     
                     Spacer()
@@ -76,7 +81,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(username: .constant(""))
+        LoginView(endOnBoarding: .constant(false), username: .constant(""))
             .preferredColorScheme(.dark)
             .previewDevice("iPhone 13")
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @Binding var login: String
     @State private var onBoardDone = false
+    @State private var onBoardLogin = false
     @StateObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -25,48 +26,51 @@ struct MainView: View {
                     ProfileView(viewRouter: viewRouter)
                 }
                 if viewRouter.hideInAventure == false {
-                HStack {
-                    TabBarIcon(viewRouter: viewRouter, assignedPage: .collection, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .collection ? "square.stack.fill" : "square.stack", tabName: "Collections")
-                    ZStack {
-                        VStack {
-                            Circle()
-                                .fill(
-                                    LinearGradient(gradient: Gradient(colors: [Color("CarnationPink"), Color("CyberGrape")]), startPoint: .top, endPoint: .bottom)
-                                )
-                                .frame(width: geometry.size.width/3, height: geometry.size.width/5)
-                                .shadow(radius: 4)
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color("OxfordBlue"), lineWidth: 7)
-                                )
-                                .overlay(
-                                    Image(viewRouter.currentPage == .aventure ? "rocket.fill" : "rocket")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: geometry.size.width/7.5-10, height: geometry.size.width/7.5-10)
-                                )
-                            Text("Aventure")
-                                .font(.footnote)
-                                .fontWeight(.bold)
+                    HStack {
+                        TabBarIcon(viewRouter: viewRouter, assignedPage: .collection, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .collection ? "square.stack.fill" : "square.stack", tabName: "Collections")
+                        ZStack {
+                            VStack {
+                                Circle()
+                                    .fill(
+                                        LinearGradient(gradient: Gradient(colors: [Color("CarnationPink"), Color("CyberGrape")]), startPoint: .top, endPoint: .bottom)
+                                    )
+                                    .frame(width: geometry.size.width/3, height: geometry.size.width/5)
+                                    .shadow(radius: 4)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(Color("OxfordBlue"), lineWidth: 7)
+                                    )
+                                    .overlay(
+                                        Image(viewRouter.currentPage == .aventure ? "rocket.fill" : "rocket")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: geometry.size.width/7.5-10, height: geometry.size.width/7.5-10)
+                                    )
+                                Text("Aventure")
+                                    .font(.footnote)
+                                    .fontWeight(.bold)
+                            }
                         }
+                        .onTapGesture {
+                            viewRouter.currentPage = .aventure
+                        }
+                        .offset(y: -geometry.size.height/13/2)
+                        TabBarIcon(viewRouter: viewRouter, assignedPage: .profil, width:     geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .profil ? "person.fill" : "person", tabName: "Profil")
                     }
-                    .onTapGesture {
-                        viewRouter.currentPage = .aventure
-                    }
-                    .offset(y: -geometry.size.height/13/2)
-                    TabBarIcon(viewRouter: viewRouter, assignedPage: .profil, width:     geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .profil ? "person.fill" : "person", tabName: "Profil")
-                }
-                .frame(width: geometry.size.width, height: geometry.size.height/12)
+                    .frame(width: geometry.size.width, height: geometry.size.height/12)
                 }
             }
+            
             .edgesIgnoringSafeArea(.bottom)
+            
             .zIndex(onBoardDone ? 10 : 0)
             if onBoardDone == false {
-            TutoView(endOnBoarding: $onBoardDone).tag(0)
-                            .zIndex(onBoardDone ? 0 : 10)
+                TutoView(endOnBoarding: $onBoardDone, login: $login).tag(0)
+                    .zIndex(onBoardDone ? 0 : 10)
             } else {
-
+                
             }
+            
         }
         .ignoresSafeArea()
     }

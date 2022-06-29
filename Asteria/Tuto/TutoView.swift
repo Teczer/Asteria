@@ -13,6 +13,8 @@ struct TutoView: View {
     
     // important data, do not remove!
     @Binding var endOnBoarding: Bool
+    @Binding var login: String
+    @State private var loginPhase: Bool = false
     @State private var tutoIndex = 0
     let tutoText : [LocalizedStringKey] = ["Bienvenue sur Asteria !\r\rIci, le but est d’en apprendre plus sur l’Univers, ce monde **lointain et mystérieux** qui nous entoure...", "**Progresse** dans le mode Aventure sur la carte de l'Univers...", "**Répond** à des questions et améliore tes connaissances...", "...et **remporte** de magnifiques cartes à collectionner !"]
     
@@ -29,6 +31,9 @@ struct TutoView: View {
                     .ignoresSafeArea()
                 Color("OxfordBlue").opacity(0.3)
                     .ignoresSafeArea()
+                if loginPhase == true {
+                    LoginView(endOnBoarding: $endOnBoarding, username: $login)
+                } else {
                 VStack {
                     Spacer()
                     Rectangle()
@@ -79,11 +84,14 @@ struct TutoView: View {
                                 .frame(height:150)
                                 
                                 if tutoIndex >= 3 {
+                                    
                                     Button {
-                                        endOnBoarding.toggle()
+                                        loginPhase.toggle()
                                     } label: {
                                         CustomButton(colorOfButton: "blue", textInButton: "Commencer")
                                     }
+                                
+                                    
                                 } else {
                                     Spacer()
                                         .frame(height: 50)
@@ -107,13 +115,14 @@ struct TutoView: View {
                 }
                 .ignoresSafeArea()
             }
+            }
         }
     }
 }
 
 struct TutoView_Previews: PreviewProvider {
     static var previews: some View {
-        TutoView(endOnBoarding: .constant(false))
+        TutoView(endOnBoarding: .constant(false), login: .constant(""))
             .preferredColorScheme(.dark)
     }
 }
