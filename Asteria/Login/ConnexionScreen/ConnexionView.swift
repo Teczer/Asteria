@@ -21,7 +21,7 @@ struct ConnexionView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             
-            VStack(alignment: .center, spacing: 0) {
+            VStack {
                 HStack {
                     Button(action:
                             dismiss.callAsFunction
@@ -34,22 +34,26 @@ struct ConnexionView: View {
                             .frame(width: 300)
                     })
                 }
-//                Spacer()
-//                    .frame(height: 50)
+                Spacer()
+            }
+            
+            VStack(alignment: .center, spacing: 0) {
+                Spacer()
                 // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
-                    Image("logo") // LOGO
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 120, height: 100)
-                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
-                    Image("logotitle") // ASTERIA
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 270, height: 90)
-                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
                     Spacer()
-                        .frame(height: 90)
+//                    Image("logo") // LOGO
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 120, height: 100)
+//                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
+//                    Image("logotitle") // ASTERIA
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 270, height: 90)
+//                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
+//                    Spacer()
+//                        .frame(height: 90)
                     VStack {
                         // CONNEXION TITLE
                         ConnexionTitleItemView(objectText: "CONNEXION")
@@ -69,8 +73,6 @@ struct ConnexionView: View {
                     Spacer()
                 }
             } //: VSTACK
-            
-            
         } //: ZSTACK
         .navigationBarHidden(true)
     }

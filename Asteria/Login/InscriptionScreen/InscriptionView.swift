@@ -21,10 +21,7 @@ struct InscriptionView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             
-            
-            
-            VStack(alignment: .center, spacing: 0) {
-                
+            VStack {
                 HStack {
                     Button(action:
                             dismiss.callAsFunction
@@ -36,8 +33,14 @@ struct InscriptionView: View {
                         Spacer()
                     })
                 }
-                
+                Spacer()
+            }
+            
+            VStack(alignment: .center, spacing: 0) {
+                Spacer()
+                    
                 VStack {
+                    Spacer()
                     
                     // CONNEXION TITLE
                     ConnexionTitleItemView(objectText: "INSCRIPTION")
@@ -59,9 +62,11 @@ struct InscriptionView: View {
                     } label: {
                         CustomButton(colorOfButton: "blue", textInButton: "Valider")
                     }
+                    Spacer()
                 }
                 Spacer()
             } //: VSTACK
+            .ignoresSafeArea()
             .navigationBarHidden(true)
         } //: ZSTACK
     }
