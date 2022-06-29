@@ -179,7 +179,6 @@
 		9F20849C285C6EDC00EB8AC5 = {
 			isa = PBXGroup;
 			children = (
-				B836867B286C4A4E0033233F /* NavigationUtil.swift */,
 				9F2084A7285C6EDC00EB8AC5 /* Asteria */,
 				9F2084A6285C6EDC00EB8AC5 /* Products */,
 			);
@@ -260,6 +259,7 @@
 				9F94E5042862FA4C00F6D6AD /* QuizzEndingView.swift */,
 				5F6C9DCC28606328002C38E1 /* QuestionData.swift */,
 				678503E0286AFFC9002C875E /* QuizzController.swift */,
+				B836867B286C4A4E0033233F /* NavigationUtil.swift */,
 			);
 			path = Quizz;
 			sourceTree = "<group>";

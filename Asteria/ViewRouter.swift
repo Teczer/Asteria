@@ -11,7 +11,6 @@ class ViewRouter: ObservableObject {
     
     @Published var currentPage: Page = .aventure
     @Published var hideAventure: Bool = false
-    @Published var isQuizzActive: Bool = false
 }
 
 enum Page {
