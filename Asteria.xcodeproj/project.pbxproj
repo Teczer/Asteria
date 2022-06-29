@@ -54,6 +54,7 @@
 		A7EACD7A2864D31800EEDD28 /* CardFrontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD792864D31800EEDD28 /* CardFrontType.swift */; };
 		A7EACD7C2864D33D00EEDD28 /* CardBackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */; };
 		A7EACD7E2864D35500EEDD28 /* SingleCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */; };
+		B836867C286C4A4E0033233F /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836867B286C4A4E0033233F /* NavigationUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		A7EACD792864D31800EEDD28 /* CardFrontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontType.swift; sourceTree = "<group>"; };
 		A7EACD7B2864D33D00EEDD28 /* CardBackType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackType.swift; sourceTree = "<group>"; };
 		A7EACD7D2864D35500EEDD28 /* SingleCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardType.swift; sourceTree = "<group>"; };
+		B836867B286C4A4E0033233F /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		9F20849C285C6EDC00EB8AC5 = {
 			isa = PBXGroup;
 			children = (
+				B836867B286C4A4E0033233F /* NavigationUtil.swift */,
 				9F2084A7285C6EDC00EB8AC5 /* Asteria */,
 				9F2084A6285C6EDC00EB8AC5 /* Products */,
 			);
@@ -397,6 +400,7 @@
 				6744B4DB286211F1001A6D4C /* SingleCardView.swift in Sources */,
 				9F2DBCCD2864550300261870 /* BlurredBackground.swift in Sources */,
 				9F2084AB285C6EDC00EB8AC5 /* MainView.swift in Sources */,
+				B836867C286C4A4E0033233F /* NavigationUtil.swift in Sources */,
 				9F949BF128605E080001DC72 /* ProgressionBar.swift in Sources */,
 				9F76C3C0285C71FF0095D087 /* CollectionCardFront.swift in Sources */,
 				A7EACD7C2864D33D00EEDD28 /* CardBackType.swift in Sources */,

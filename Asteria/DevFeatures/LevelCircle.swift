@@ -25,10 +25,8 @@ struct LevelCircle: View {
     var body: some View {
         
         if levelStatus == "completed" {
-            NavigationLink(isActive: self.$viewRouter.isQuizzActive, destination: {QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)}) {}
-                .isDetailLink(viewRouter.isQuizzActive)
-            Button {
-                viewRouter.isQuizzActive = true
+            NavigationLink {
+                QuizzView(questionSerieCurrent: questionSerieCurrent, viewRouter: viewRouter)
             } label: {
                 ZStack {
                     Circle()
@@ -39,11 +37,8 @@ struct LevelCircle: View {
                     Image(systemName: "checkmark")
                         .font(.system(size: 22))
                 }
-                
             }
-            
         }
-        
         else if levelStatus == "unavailable" {
             Circle()
                 .fill(Color("OrchidCrayola").opacity(0.5))
