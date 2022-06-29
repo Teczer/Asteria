@@ -35,7 +35,8 @@ struct LevelCircle: View {
                         .frame(width: circleSize, height: circleSize)
                         .shadow(color: Color("CarnationPink"), radius: 5)
                     Image(systemName: "checkmark")
-                        .font(.system(size: 22))
+                        .font(.system(size: 30, weight: .medium))
+                        .foregroundColor(Color("LavenderBlush"))
                 }
             }
         }
