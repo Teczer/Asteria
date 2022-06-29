@@ -21,8 +21,10 @@ struct AdventureView: View {
                         level4View(viewRouter: viewRouter)
                         level3View(viewRouter: viewRouter)
                         level2View(viewRouter: viewRouter)
-                        Text("\(levelProgression)")
                         level1View(viewRouter: viewRouter).id(id)
+                        Text("[DEBUG]\rlevelProgression : \(levelProgression)")
+                            .font(.caption2)
+                            .padding(.horizontal)
                     }.onAppear{
                         proxy.scrollTo(id)
                     }
