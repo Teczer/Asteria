@@ -75,7 +75,8 @@ struct QuizzEndingView: View {
                             NavigationUtil.popToRootView()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 viewRouter.hideInAventure = false
-                            }                        }
+                            }
+                        }
 
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
