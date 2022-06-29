@@ -45,7 +45,7 @@ struct QACardContent: View {
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .frame(height:30)
-            Image(questionSerieCurrent[0].photoQuestion)
+            Image(questionSerieCurrent[quizzController.questionNoCurrent-1].photoQuestion)
                 .resizable()
                 .scaledToFill()
                 .frame(width:300, height:200)
@@ -59,20 +59,20 @@ struct QACardContent: View {
             VStack {
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[quizzController.questionNoCurrent-1].questionAnswer[0], goodAnswer: questionSerieCurrent[quizzController.questionNoCurrent-1].goodAnswerNo,clicAnswer: 0, quizzController: quizzController)
-                    NavigationLink(destination: {VeroWIP()}) {}
+//                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[quizzController.questionNoCurrent-1].questionAnswer[1], goodAnswer: questionSerieCurrent[quizzController.questionNoCurrent-1].goodAnswerNo,clicAnswer: 1, quizzController: quizzController)
-                    NavigationLink(destination: {VeroWIP()}) {}
+//                    NavigationLink(destination: {VeroWIP()}) {}
                 }
                 Spacer()
                 HStack {
                     AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[quizzController.questionNoCurrent-1].questionAnswer[2], goodAnswer: questionSerieCurrent[quizzController.questionNoCurrent-1].goodAnswerNo,clicAnswer: 2, quizzController: quizzController)
-                    NavigationLink(destination: {VeroWIP()}) {}
+//                    NavigationLink(destination: {VeroWIP()}) {}
                     Spacer()
                         .frame(width:15)
                     AnswerButton(selectedButton: false, textInButton: questionSerieCurrent[quizzController.questionNoCurrent-1].questionAnswer[3], goodAnswer: questionSerieCurrent[quizzController.questionNoCurrent-1].goodAnswerNo,clicAnswer: 3, quizzController: quizzController)
-                    NavigationLink(destination: {VeroWIP()}) {}
+//                    NavigationLink(destination: {VeroWIP()}) {}
                 }
             }
             .frame(height:125)

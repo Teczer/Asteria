@@ -11,7 +11,8 @@ struct AdventureView: View {
     
     var id = UUID()
     @StateObject var viewRouter: ViewRouter
-
+    @AppStorage("levelProgression") var levelProgression:Int = 0
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -23,6 +24,7 @@ struct AdventureView: View {
                         level1View(viewRouter: viewRouter).id(id)
                     }.onAppear{
                         proxy.scrollTo(id)
+                        viewRouter.hideInAventure = false
                     }
                 }
             }

@@ -18,11 +18,11 @@ struct QuizzEndingView: View {
     @State private var cardOffsetAnim:Double = 400
     @State private var buttonsOffsetAnim:Double = 200
     
-    
     @StateObject var viewRouter: ViewRouter
     @StateObject var quizzController : QuizzController
     
-        
+    @AppStorage("levelProgression") var levelProgression:Int = 0
+
     var body: some View {
         ZStack {
             BlurredBackground(name: "nebuleuse4")
@@ -71,12 +71,22 @@ struct QuizzEndingView: View {
                     CustomButton(colorOfButton: "pink", textInButton: "Retour à l'Aventure")
                         .padding(.bottom)
                         .onTapGesture {
+                            if quizzController.levelId > levelProgression {
+                                levelProgression = quizzController.levelId
+                            }
                             viewRouter.currentPage = .aventure
+                            NavigationUtil.popToRootView()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                viewRouter.hideInAventure = false
+                            }
                         }
 
                     
                     CustomButton(colorOfButton: "blue", textInButton: "Voir la collection")
                         .onTapGesture {
+                            if quizzController.levelId > levelProgression {
+                                levelProgression = quizzController.levelId
+                            }
                             viewRouter.currentPage = .collection
                         }
 
@@ -87,8 +97,8 @@ struct QuizzEndingView: View {
             
             .frame(width:350)
             
-            // animations proper come here
             .onAppear {
+                // animations proper come here
                 withAnimation(.easeOut(duration: 0.3)) {
                     scoreBarOffsetAnim = 0
                     scoreTextOffsetAnim = 0
@@ -115,5 +125,6 @@ struct QuizzEndingView: View {
 //struct QuizzEndingView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController())
+//        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController(), questionSerieCurrent: quizzSystemesolaire01)
 //    }
 //}

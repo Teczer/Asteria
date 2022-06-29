@@ -11,7 +11,7 @@ import SwiftUI
 
 
 struct CollectionView: View {
-        
+    @StateObject var viewRouter: ViewRouter
     var body: some View {
         
         NavigationView {
@@ -43,13 +43,16 @@ struct CollectionView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 
             }
+            .onAppear() {
+                viewRouter.hideInAventure = false
+            }
         }
     }
 }
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionView()
+        CollectionView(viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
             
     }

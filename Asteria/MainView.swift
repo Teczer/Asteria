@@ -18,12 +18,13 @@ struct MainView: View {
             VStack {
                 switch viewRouter.currentPage {
                 case .collection:
-                    CollectionView()
+                    CollectionView(viewRouter: viewRouter)
                 case .aventure:
                     AdventureView(viewRouter: viewRouter)
                 case .profil:
-                    ProfileView()
+                    ProfileView(viewRouter: viewRouter)
                 }
+                if viewRouter.hideInAventure == false {
                 HStack {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .collection, width: geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .collection ? "square.stack.fill" : "square.stack", tabName: "Collections")
                     ZStack {
@@ -56,6 +57,7 @@ struct MainView: View {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .profil, width:     geometry.size.width/3, height: geometry.size.height/28, systemIconName: viewRouter.currentPage == .profil ? "person.fill" : "person", tabName: "Profil")
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height/12)
+                }
             }
             .edgesIgnoringSafeArea(.bottom)
             .zIndex(onBoardDone ? 10 : 0)

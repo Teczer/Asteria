@@ -64,14 +64,14 @@ struct QACardAnswerContent: View {
                 .multilineTextAlignment(.center)
                 .frame(width:270, height:150)
             
-            if quizzController.questionNoCurrent >= 3 {
+            if quizzController.questionNoCurrent >= quizzController.questionNoTotal {
                 NavigationLink (isActive: $change, destination: {QuizzEndingView(viewRouter: viewRouter, quizzController: quizzController)}) {}
             }
             Button(action: {
-                if quizzController.questionNoCurrent >= 3 {
+                if quizzController.questionNoCurrent >= quizzController.questionNoTotal {
                     self.change = true
                 }
-                if quizzController.questionNoCurrent < 3 {
+                if quizzController.questionNoCurrent < quizzController.questionNoTotal {
                     quizzController.nextQuestion = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         quizzController.questionNoCurrent += 1

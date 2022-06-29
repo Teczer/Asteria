@@ -19,8 +19,7 @@ struct QuizzView: View {
     
     // data
     var questionSerieCurrent : [Questions]
-    var questionNoCurrent : Int = 1
-    var questionNoTotal : Int = 3
+    var levelId : Int
 
     // bouton retour
     @Environment(\.dismiss) private var dismiss
@@ -70,11 +69,11 @@ struct QuizzView: View {
                     if displayAnswer == true {
                         QACardAnswer(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController, viewRouter: viewRouter)
                             .offset(x:offsetAnswerValue)
-                            .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0))
+                            .rotation3DEffect(.degrees(rotationAnswerValue), axis: (x: 0, y: 1, z: 0.01))
                     }
                     QACard(questionSerieCurrent: questionSerieCurrent, quizzController: quizzController)
                         .offset(x:offsetQuestionValue)
-                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0))
+                        .rotation3DEffect(.degrees(rotationQuestionValue), axis: (x: 0, y: 1, z: 0.01))
                 }
                 Spacer()
                 
@@ -112,12 +111,16 @@ struct QuizzView: View {
             }
         }
         .navigationBarHidden(true)
+        .onAppear() {
+            viewRouter.hideInAventure = true
+            quizzController.levelId = levelId
+        }
     }
 }
 
 struct QuizzView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizzView(questionSerieCurrent: quizzSystemesolaire01, viewRouter: ViewRouter())
+        QuizzView(questionSerieCurrent: quizzSystemesolaire01, levelId: 1, viewRouter: ViewRouter())
             .preferredColorScheme(.dark)
     }
 }

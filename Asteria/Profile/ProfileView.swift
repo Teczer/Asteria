@@ -13,6 +13,9 @@ struct ProfileView: View {
     @State private var audio = false
     @State private var showAlert = false
     @State private var showDetails = false
+    @StateObject var viewRouter: ViewRouter
+    @AppStorage("levelProgression") var levelProgression:Int = 0
+    
     var body: some View {
         
         NavigationView {
@@ -71,7 +74,29 @@ struct ProfileView: View {
                         }
                         Section {
                             HStack {
-                                Text("Réinitialiser les données")
+                                Button {
+                                    self.showAlert.toggle()
+                                } label: {
+                                    Text("Réinitialiser les données")
+                                }
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("ATTENTION !"),
+                                        message: Text("Êtes vous sûr de bien vouloir supprimer votre progression ? \r Cette action est iréversible !"),
+                                        
+                                        
+                                        primaryButton: .destructive(
+                                            
+                                            Text("OK"),
+                                            action: {
+                                                levelProgression = 0
+                                                showDetails = true
+                                            }),
+                                        secondaryButton: .default(
+                                            Text("Annuler"),
+                                            action: {})
+                                    )
+                                }
                             }
                             HStack {
                                 Text("Déconnecter le compte")
@@ -112,6 +137,7 @@ struct ProfileView: View {
                 }
             }
             .onAppear() {
+                viewRouter.hideInAventure = false
                 UITableView.appearance().backgroundColor = UIColor.clear
                 UITableViewCell.appearance().backgroundColor = UIColor.clear
             }
@@ -122,6 +148,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewRouter: ViewRouter())
     }
 }
