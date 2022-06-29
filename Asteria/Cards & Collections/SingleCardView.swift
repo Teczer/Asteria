@@ -25,7 +25,6 @@ struct SingleCardView: View {
     // bouton retour
     @Environment(\.dismiss) private var dismiss
     
-    
     var body: some View {
         
         ZStack {
@@ -55,7 +54,6 @@ struct SingleCardView: View {
                                 .padding(.top, 8)
                                 .padding(.trailing)
                         })
-                    
                 } // hstack
                 
                 Spacer()
