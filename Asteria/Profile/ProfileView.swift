@@ -11,9 +11,12 @@ struct ProfileView: View {
     
     @State private var notification = false
     @State private var audio = false
-    @State private var showAlert = false
-    @State private var showDetails = false
+    @State private var showAlertReinit = false
+    @State private var showAlertSuppr = false
+    @State private var cheatCode : Int = 0
+    
     @StateObject var viewRouter: ViewRouter
+    
     @AppStorage("levelProgression") var levelProgression:Int = 0
     
     var body: some View {
@@ -37,6 +40,11 @@ struct ProfileView: View {
                                     .frame(width:95, height: 95)
                                     .cornerRadius(50)
                                     .shadow(color: Color("OrchidCrayola").opacity(0.8), radius: 10)
+                                    .onTapGesture {
+                                        if cheatCode <= 10 {
+                                            cheatCode += 1
+                                        }
+                                    }
                                 VStack (alignment:.leading) {
                                     Text("Jeanne DUPONT")
                                         .font(.system(size: 20))
@@ -52,9 +60,35 @@ struct ProfileView: View {
                                 .foregroundColor(Color("LavenderBlush"))
                                 .frame(height:60)
                             }
-                            .frame(height:120)
+                            .frame(height:110)
                             .listRowBackground(Color.clear)
                         }
+                        
+                        
+                        if cheatCode >= 10 {
+                            Section {
+                                HStack{
+                                    Spacer()
+                                    VStack {
+                                        Text("Cheat code activé !")
+                                            .font(.system(size: 20))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color("LavenderBlush"))
+                                            .multilineTextAlignment(.center)
+                                        Text("Toutes les cartes et tous les niveaux\rsont désormais disponibles.")
+                                            .font(.system(size: 14))
+                                            .foregroundColor(Color("LavenderBlush"))
+                                            .multilineTextAlignment(.center)
+                                    }
+                                    Spacer()
+                                }
+                                    .listRowBackground(Color.clear)
+                            }
+                            .onAppear() {
+                                levelProgression = 20
+                            }
+                        }
+
                         
                         Section {
                             HStack {
@@ -83,12 +117,12 @@ struct ProfileView: View {
                         Section {
                             HStack {
                                 Button {
-                                    self.showAlert.toggle()
+                                    self.showAlertReinit.toggle()
                                 } label: {
                                     Text("Réinitialiser les données")
                                         .foregroundColor(Color("LavenderBlush"))
                                 }
-                                .alert(isPresented: $showAlert) {
+                                .alert(isPresented: $showAlertReinit) {
                                     Alert(
                                         title: Text("ATTENTION !"),
                                         message: Text("Êtes vous sûr de bien vouloir supprimer votre progression ? \r Cette action est iréversible !"),
@@ -99,7 +133,6 @@ struct ProfileView: View {
                                             Text("OK"),
                                             action: {
                                                 levelProgression = 0
-                                                showDetails = true
                                             }),
                                         secondaryButton: .default(
                                             Text("Annuler"),
@@ -113,12 +146,12 @@ struct ProfileView: View {
                             }
                             HStack {
                                 Button {
-                                    self.showAlert.toggle()
+                                    self.showAlertSuppr.toggle()
                                 } label: {
                                     Text("Supprimer le compte")
                                         .foregroundColor(Color("LavenderBlush"))
                                 }
-                                .alert(isPresented: $showAlert) {
+                                .alert(isPresented: $showAlertSuppr) {
                                     Alert(
                                         title: Text("ATTENTION !"),
                                         message: Text("Êtes vous sûr de bien vouloir supprimer votre compte ? \r Cette action est iréversible !"),
@@ -128,8 +161,6 @@ struct ProfileView: View {
                                             
                                             Text("OK"),
                                             action: {
-                                                
-                                                showDetails = true
                                             }),
                                         secondaryButton: .default(
                                             Text("Annuler"),
@@ -142,7 +173,7 @@ struct ProfileView: View {
                             Text("Données & compte")
                                 .foregroundColor(Color("OrchidCrayola"))
                         }
-                        
+                                                
                     }
                     .navigationBarTitle(Text("Profil"), displayMode: .inline)
                 }
