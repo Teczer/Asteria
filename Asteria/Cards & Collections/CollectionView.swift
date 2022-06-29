@@ -12,13 +12,7 @@ import SwiftUI
 
 struct CollectionView: View {
     @StateObject var viewRouter: ViewRouter
-    @State private var cardWonCollection1: [SingleCardType] = []
-    @State private var cardWonCollection2: [SingleCardType] = []
-    @State private var cardWonCollection3: [SingleCardType] = []
-    @State private var cardWonCollection4: [SingleCardType] = []
-    
-    @AppStorage("levelProgression") var levelProgression:Int = 0
-    
+        
     var body: some View {
         
         NavigationView {
@@ -49,19 +43,6 @@ struct CollectionView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 
             }
-            .onAppear() {
-                viewRouter.hideInAventure = false
-                if levelProgression >= 1 {
-                    cardWonCollection1.append(SingleCardType(cardFront: cardFront1, cardBack: cardBack1))
-                }
-                if levelProgression >= 2 {
-                    cardWonCollection1.append(SingleCardType(cardFront: cardFront2, cardBack: cardBack2))
-                }
-                if levelProgression >= 3 {
-                    cardWonCollection2.append(SingleCardType(cardFront: cardFront3, cardBack: cardBack3))
-                }
-            }
-            
         }
     }
 }
