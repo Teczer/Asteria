@@ -15,8 +15,29 @@ struct CollectionDetail: View {
     let rows = [GridItem(.flexible())]
     @State private var currentIndex = 0
     @State private var cardWon1: [SingleCardType] = []
-
+    
+//    init(cardWon1: Array<SingleCardType>) {
+//        self.cardWon1 = cardWon1
+//    }
+    
     @AppStorage("levelProgression") var levelProgression:Int = 0
+    
+    func isANewCard(card: CardFrontType) -> Bool {
+   var result: Bool = true
+        if (cardWon1.contains(where: { $0.cardFront.cardFrontImage == card
+            .cardFrontImage }) ) {
+            result = false
+        }
+        return result
+    }
+    
+    func filterCardsArray(collectionName: String) -> [SingleCardType] {
+        return self.cardWon1.filter { card in
+            return card.cardFront.collectionName == collectionName
+        }
+    }
+    
+//    var systemeSolaireArray: [SingleCardType] = filterCardsArray(collectionName: "Système solaire")
         
     var body: some View {
         
@@ -44,9 +65,6 @@ struct CollectionDetail: View {
                 ScrollView(.horizontal) {
                     
                     LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
-                        ForEach(cardWon1) { card in
-                            Spacer()
-                                .frame(width:10)
                             ForEach(cardWon1) { card in
                                 NavigationLink {
                                     SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
@@ -75,13 +93,19 @@ struct CollectionDetail: View {
                     .frame(width: 390, height: 230)
                     .onAppear {
                         if levelProgression >= 1 {
-                            cardWon1.append(SingleCardType(cardFront: cardFront1, cardBack: cardBack1))
+                            if isANewCard(card: cardFront1) {
+                                cardWon1.append(SingleCardType(cardFront: cardFront1, cardBack: cardBack1))
+                            }
                         }
                         if levelProgression >= 2 {
-                            cardWon1.append(SingleCardType(cardFront: cardFront2, cardBack: cardBack2))
+                            if isANewCard(card: cardFront2) {
+                                cardWon1.append(SingleCardType(cardFront: cardFront2, cardBack: cardBack2))
+                            }
                         }
                         if levelProgression >= 3 {
-                            cardWon1.append(SingleCardType(cardFront: cardFront3, cardBack: cardBack3))
+                            if isANewCard(card: cardFront3) {
+                                cardWon1.append(SingleCardType(cardFront: cardFront3, cardBack: cardBack3))
+                            }
                         }
                     }
                     
@@ -115,7 +139,7 @@ struct CollectionDetail: View {
             }
         }
     }
-}
+
 
 struct CollectionDetail_Previews: PreviewProvider {
     static var previews: some View {

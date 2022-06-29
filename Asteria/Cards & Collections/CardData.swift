@@ -19,25 +19,25 @@ import SwiftUI
 
 let collection1 = CollectionType(
     collectionName: "Système solaire",
-    collectionImages: [SingleCardType(cardFront: cardFront1, cardBack: cardBack1), SingleCardType(cardFront: cardFront2, cardBack: cardBack2), SingleCardType(cardFront: cardFront3, cardBack: cardBack3), SingleCardType(cardFront: cardFront4, cardBack: cardBack4), SingleCardType(cardFront: cardFront5, cardBack: cardBack5)])
+    collectionImages: [])
 
 let collection2 = CollectionType(
     collectionName: "Galaxies",
-    collectionImages: [SingleCardType(cardFront: cardFront6, cardBack: cardBack6), SingleCardType(cardFront: cardFront7, cardBack: cardBack7), SingleCardType(cardFront: cardFront8, cardBack: cardBack8), SingleCardType(cardFront: cardFront9, cardBack: cardBack9), SingleCardType(cardFront: cardFront10, cardBack: cardBack10)])
+    collectionImages: [])
 
 let collection3 = CollectionType(
     collectionName: """
                     Phénomènes
                     observables
                     """,
-    collectionImages: [SingleCardType(cardFront: cardFront11, cardBack: cardBack11), SingleCardType(cardFront: cardFront12, cardBack: cardBack12), SingleCardType(cardFront: cardFront13, cardBack: cardBack13), SingleCardType(cardFront: cardFront14, cardBack: cardBack14), SingleCardType(cardFront: cardFront15, cardBack: cardBack15)])
+    collectionImages: [])
 
 let collection4 = CollectionType(
     collectionName: """
                     Astronautes
                     célèbres
                     """,
-    collectionImages: [SingleCardType(cardFront: cardFront16, cardBack: cardBack16), SingleCardType(cardFront: cardFront17, cardBack: cardBack17), SingleCardType(cardFront: cardFront18, cardBack: cardBack18), SingleCardType(cardFront: cardFront19, cardBack: cardBack19), SingleCardType(cardFront: cardFront20, cardBack: cardBack20)])
+    collectionImages: [])
 
 
 
