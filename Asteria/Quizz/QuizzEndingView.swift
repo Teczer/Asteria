@@ -124,6 +124,7 @@ struct QuizzEndingView: View {
 
 //struct QuizzEndingView_Previews: PreviewProvider {
 //    static var previews: some View {
+//        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController())
 //        QuizzEndingView(viewRouter:  ViewRouter(), quizzController: QuizzController(), questionSerieCurrent: quizzSystemesolaire01)
 //    }
 //}

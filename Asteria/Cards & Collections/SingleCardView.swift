@@ -16,6 +16,7 @@ struct SingleCardView: View {
     @State private var rotationBackValue:Double = 90
     @State private var displayFront = true
     @State private var displayBack = false
+    @State private var showingAlert = false
     
     // card data
     var cardFront: CardFrontType
@@ -43,10 +44,11 @@ struct SingleCardView: View {
                         .padding()
                     })
                     Spacer()
-                    
+                                        
                     // bouton download
-                    Button(action:
-                            save
+                    Button(action: {
+                        save()
+                        showingAlert = true }
                            , label: {
                             Image(systemName: "square.and.arrow.down")
                                 .foregroundColor(Color("LavenderBlush").opacity(0.8))
@@ -54,6 +56,9 @@ struct SingleCardView: View {
                                 .padding(.top, 8)
                                 .padding(.trailing)
                         })
+                        .alert("Image ajoutée à Photos", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
                 } // hstack
                 
                 Spacer()
