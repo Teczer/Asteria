@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ConnexionView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var endOnBoarding: Bool
     @Binding var objectfield: String
     var body: some View {
         ZStack {
@@ -20,8 +22,20 @@ struct ConnexionView: View {
                 .opacity(0.5)
             
             VStack(alignment: .center, spacing: 0) {
-                Spacer()
-                    .frame(height: 50)
+                HStack {
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
+                    Image(systemName: "chevron.backward.square.fill")
+                        .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                        .font(.system(size: 32))
+                        .padding()
+                        Spacer()
+                            .frame(width: 300)
+                    })
+                }
+//                Spacer()
+//                    .frame(height: 50)
                 // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
                     Image("logo") // LOGO
@@ -46,7 +60,11 @@ struct ConnexionView: View {
                         SecureFieldCustom(previewText: "")
                             .padding(.bottom, 60)
                         // VALIDER
-                        CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                        Button {
+                            endOnBoarding.toggle()
+                        } label: {
+                            CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                        }
                     }
                     Spacer()
                 }
@@ -54,12 +72,12 @@ struct ConnexionView: View {
             
             
         } //: ZSTACK
-        
+        .navigationBarHidden(true)
     }
 }
 
 struct ConnexionView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnexionView(objectfield: .constant(""))
+        ConnexionView(endOnBoarding: .constant(false), objectfield: .constant(""))
     }
 }

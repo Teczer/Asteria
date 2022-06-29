@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InscriptionView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var endOnBoarding: Bool
     @Binding var objectfield: String
     var body: some View {
         ZStack {
@@ -19,7 +21,21 @@ struct InscriptionView: View {
                 .ignoresSafeArea()
                 .opacity(0.5)
             
+            
+            
             VStack(alignment: .center, spacing: 0) {
+                
+                HStack {
+                    Button(action:
+                            dismiss.callAsFunction
+                           , label: {
+                    Image(systemName: "chevron.backward.square.fill")
+                        .foregroundColor(Color("LavenderBlush").opacity(0.8))
+                        .font(.system(size: 32))
+                        .padding()
+                        Spacer()
+                    })
+                }
                 
                 VStack {
                     
@@ -38,19 +54,21 @@ struct InscriptionView: View {
                     SecureFieldRepeatCustom(previewText: "")
                         .padding(.bottom, 60)
                     // VALIDER
-                    CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                    Button {
+                        endOnBoarding.toggle()
+                    } label: {
+                        CustomButton(colorOfButton: "blue", textInButton: "Valider")
+                    }
                 }
-                .padding(.bottom, 200)
-                
+                Spacer()
             } //: VSTACK
-            
-            
+            .navigationBarHidden(true)
         } //: ZSTACK
     }
 }
 
 struct InscriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        InscriptionView(objectfield: .constant(""))
+        InscriptionView(endOnBoarding: .constant(false), objectfield: .constant(""))
     }
 }
