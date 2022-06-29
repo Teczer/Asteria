@@ -17,12 +17,8 @@ struct CollectionView: View {
         NavigationView {
         
             ZStack {
-                Image("background")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .scaledToFill()
-                    .opacity(0.3)
-                    
+                BlurredBackground(name: "background")
+                
                 VStack {
                 
                 ScrollView {
@@ -34,6 +30,9 @@ struct CollectionView: View {
                     CollectionDetail(collection: collection3)
                     
                     CollectionDetail(collection: collection4)
+                    
+                    Spacer()
+                        .frame(height:60)
                     
                 }
             
