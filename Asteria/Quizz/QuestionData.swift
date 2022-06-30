@@ -162,7 +162,7 @@ let quizzSystemesolaire03: [Questions] = [
         photoQuestion: "quizz-1-question-9",
         photoAnswer: "quizz-1-answer-9",
         answerName: "Neil Armstrong",
-        answerExplanation: "Le 16 juillet 1969, les trois astronautes américains de la mission Apollo 11, Neil Armstrong, Buzz Aldrin et Michael Collins, décollaient pour la Lune depuis la Floride, **Neil Armstrong est le premier homme a avoir posé son pied sur la lune**"
+        answerExplanation: "Le 16 juillet 1969, les trois astronautes américains de la mission Apollo 11, Neil Armstrong, Buzz Aldrin et Michael Collins, décollaient pour la Lune depuis la Floride, **Neil Armstrong est le premier homme a avoir posé son pied sur la lune**."
     )]
 
 let quizzSystemesolaire04: [Questions] = [
@@ -218,14 +218,14 @@ let quizzSystemesolaire05: [Questions] = [
         questionValue: "Quelle est la distance Terre-Soleil ?",
         questionAnswer: [
             "1 année lumière",
-            "150 million de km",
-            "300 million de km",
+            "150 millions de km",
+            "300 millions de km",
             "5 années lumières"
         ],
         goodAnswerNo: 1,
         photoQuestion: "quizz-1-question-13",
         photoAnswer: "quizz-1-answer-13",
-        answerName: "150 million de km",
+        answerName: "150 millions de km",
         answerExplanation: "L'unité astronomique (au) est l'unité de mesure correspondant à la distance moyenne qui sépare la Terre du Soleil, soit **environ 150 millions de km** (exactement 149 597 870,7 km)."
     ),
     
@@ -241,7 +241,7 @@ let quizzSystemesolaire05: [Questions] = [
         photoQuestion: "quizz-1-question-14",
         photoAnswer: "quizz-1-answer-14",
         answerName: "4",
-        answerExplanation: "Les planètes telluriques sont **rocheuses et riches en éléments chimiques divers et variés**. Elles ont une surface solide sur laquelle nous pouvons marcher ou encore y déposer des sondes pour les étudier. Dans notre système planétaire, ce sont les planètes **les plus proches du Soleil**."
+        answerExplanation: "Les planètes telluriques sont **rocheuses et riches en éléments chimiques divers et variés**. Elles ont une surface solide sur laquelle nous pouvons marcher. Dans notre système planétaire, ce sont les planètes **les plus proches du Soleil**."
     ),
     
     Questions(
@@ -297,7 +297,7 @@ let quizzGalaxies01 : [Questions] = [
             "naine",
             "morte",
             "riche",
-            "située dans un autre système solaire"
+            "sur un autre système solaire"
         ],
         goodAnswerNo: 3,
         photoQuestion: "exoplanete-1",
@@ -429,7 +429,7 @@ let quizzGalaxies04 : [Questions] = [
         photoQuestion: "observation",
         photoAnswer: "pollen",
         answerName: "Le microscope",
-        answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants **très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel"
+        answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants **très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel."
     ),
     
     Questions(
@@ -460,7 +460,7 @@ let quizzGalaxies05 : [Questions] = [
         goodAnswerNo: 2,
         photoQuestion: "solar-fury",
         photoAnswer: "systeme-solaire-3",
-        answerName: "Environ 250 millions d'années",
+        answerName: "250 millions d'années",
         answerExplanation: "Le Soleil met environ 250 millions d'années pour accomplir une révolution complète autour du centre de notre Galaxie, située à environ **26.000 années-lumière**."
     ),
     
@@ -475,7 +475,7 @@ let quizzGalaxies05 : [Questions] = [
         photoQuestion: "altair",
         photoAnswer: "aigle",
         answerName: "L'Aigle",
-        answerExplanation: "L'étoile **Altaïr** appartient à la constellation de l'Aigle. Elle fait partie des **20 étoiles** les plus brillantes du ciel et sa magnitude est de 0,8. Située à environ **17 années-lumière** de la Terre, elle est aussi l'une des étoiles de première grandeur les plus proches de la Terre."
+        answerExplanation: "L'étoile **Altaïr** fait partie des **20 étoiles** les plus brillantes du ciel et sa magnitude est de 0,8. Située à environ **17 années-lumière** de la Terre, elle est aussi l'une des étoiles de première grandeur les plus proches de la Terre."
     ),
     
     Questions(
@@ -508,7 +508,7 @@ let quizzPhenomenesObservables01 : [Questions] = [
         photoQuestion: "eclipse",
         photoAnswer: "soleil",
         answerName: "Le Soleil",
-        answerExplanation: "Une éclipse de Lune ou de Soleil se produit lorsque les **trois corps sont alignés**. L’orbite de la Lune étant inclinée de **5,1 degrés** par rapport au plan de révolution de la Terre autour du Soleil, la Lune va donc la plupart du temps se trouver hors de ce plan et **les éclipses sont par conséquent rares**."),
+        answerExplanation: "Une éclipse de Lune ou de Soleil se produit lorsque les **trois corps sont alignés**. L’orbite de la Lune étant inclinée de **5,1 degrés** par rapport au plan de révolution de la Terre autour du Soleil, ce qui rend rare **les éclipses**."),
     
     Questions(
         questionValue: "Comment nomme-t-on un nuage de gaz et de poussières répandu dans l’espace interstellaire ?",
@@ -537,7 +537,7 @@ let quizzPhenomenesObservables01 : [Questions] = [
         photoQuestion: "jupiter-red-dot-1",
         photoAnswer: "jupiter-red-dot-2",
         answerName: "Jupiter",
-        answerExplanation: "La **Grande Tache rouge** est un gigantesque anticyclone de l'atmosphère de Jupiter situé à 22° sud de latitude. Longue d'environ **15 000 kilomètres** et large de près de **12 000 kilomètres** (en 2015), elle est actuellement **un peu plus grosse que la Terre**."
+        answerExplanation: "La **Grande Tache rouge** est un gigantesque anticyclone de l'atmosphère de Jupiter longue d'environ **15 000 kilomètres** et large de près de **12 000 kilomètres** (en 2015), elle est actuellement **un peu plus grosse que la Terre**."
     )]
 
 let quizzPhenomenesObservables02 : [Questions] = [
@@ -554,7 +554,7 @@ let quizzPhenomenesObservables02 : [Questions] = [
         photoQuestion: "valles-marineris-1",
         photoAnswer: "valles-marineris-2",
         answerName: "Mars",
-        answerExplanation: "Le **Valles Marineris** sur Mars s'étire sur plus de 4000 km de long et 200 km de large avec une vertigineuse profondeur de **10 km**. Il est environ dix fois plus long et cinq fois plus profond que le Grand Canyon de la Terre, une taille qui lui vaut le statut du plus grand canyon du système solaire."
+        answerExplanation: "Le **Valles Marineris** sur Mars s'étire sur plus de 4000 km de long et 200 km de large avec une profondeur de **10 km**. Il est plus long et plus profond que le Grand Canyon de la Terre, ce qui fait de lui le plus grand canyon du système solaire."
     ),
     
     Questions(
@@ -569,7 +569,7 @@ let quizzPhenomenesObservables02 : [Questions] = [
         photoQuestion: "cydonia-mensae-1",
         photoAnswer: "cydonia-mensae-2",
         answerName: "Mars",
-        answerExplanation: "**Cydonia Mensae** est un relief martien (Mensa) situé dans le quadrangle de Mare Acidalium. Il est à l'origine d'un exemple de paréidolie. Le 25 juillet 1976, l'orbiteur Viking 1 survole Mars autour du 41° de latitude nord. C'est lors de ce passage qu'est pris le fameux cliché du *visage de Mars*."
+        answerExplanation: "**Cydonia Mensae** est un relief martien (Mensa) situé dans le quadrangle de Mare Acidalium. Le 25 juillet 1976, l'orbiteur Viking 1 survole Mars autour du 41° de latitude nord. C'est lors de ce passage qu'est pris le fameux cliché du *visage de Mars*."
     ),
     
     Questions(
@@ -601,7 +601,7 @@ let quizzPhenomenesObservables03 : [Questions] = [
         photoQuestion: "oumuamua",
         photoAnswer: "oumuamua-orbit",
         answerName: "'Oumuamua",
-        answerExplanation: "Cet objet rocheux, nommé **'Oumuamua**, qui signifie en hawaïen *premier messager d'une contrée lointaine*, a livré des informations venues tout droit des confins de la galaxie. Bien que remarquable, 'Oumuamua n'est qu'un astéroïde parmi des milliers de milliards d'autres dans l'univers."
+        answerExplanation: "Cet objet rocheux, nommé **'Oumuamua**, qui signifie en hawaïen *premier messager d'une contrée lointaine*, a livré des informations venues tout droit des confins de la galaxie."
     ),
     
     Questions(
@@ -631,7 +631,7 @@ let quizzPhenomenesObservables03 : [Questions] = [
         photoQuestion: "equinox-1",
         photoAnswer: "equinox-2",
         answerName: "au moment de l'équinoxe",
-        answerExplanation: "Un **équinoxe** est un instant de l'année où le Soleil traverse le **plan équatorial terrestre**, changeant ainsi d'hémisphère céleste. Cette définition astronomique précise la conception préscientifique selon laquelle l'équinoxe est le moment où la durée du jour est égale à celle de la nuit."
+        answerExplanation: "Un **équinoxe** est un instant de l'année où le Soleil traverse le **plan équatorial terrestre**, changeant ainsi d'hémisphère céleste. Cette définition précise que l'équinoxe est le moment où la durée du jour est égale à celle de la nuit."
     )]
 
 let quizzPhenomenesObservables04 : [Questions] = [
@@ -669,8 +669,8 @@ let quizzPhenomenesObservables04 : [Questions] = [
     Questions(
         questionValue: "Comment appelle-t-on une 2ème nouvelle Lune au cours d'un même mois calendaire ?",
         questionAnswer: [
-            "lune noire",
-            "lune pare",
+            "Lune noire",
+            "Lune pare",
             "Eclipse lunaire",
             "ça n'existe pas !"
         ],
@@ -684,7 +684,7 @@ let quizzPhenomenesObservables04 : [Questions] = [
 let quizzPhenomenesObservables05 : [Questions] = [
     
     Questions(
-        questionValue: "La plupart des pluies d'étoiles filantes sont dû à...",
+        questionValue: "La plupart des pluies d'étoiles filantes sont dues à...",
         questionAnswer: [
             "des éruptions volcaniques",
             "des étoiles qui tombent du ciel",
@@ -695,7 +695,7 @@ let quizzPhenomenesObservables05 : [Questions] = [
         photoQuestion: "etoiles-filantes-1",
         photoAnswer: "etoiles-filantes-2",
         answerName: "A des débris de comètes",
-        answerExplanation: "**Les étoiles filantes** (ou météores) sont causées par des débris de comètes qui brûlent dans notre atmosphère. Ces particules s'échauffent presque **instantanément** en plongeant à très grande vitesse dans la haute atmosphère terrestre faisant briller l'air sur leur passage."
+        answerExplanation: "**Les étoiles filantes** sont causées par des débris de comètes qui brûlent dans notre atmosphère. Ces particules s'échauffent presque **instantanément** en plongeant à très grande vitesse dans la haute atmosphère terrestre faisant briller l'air sur leur passage."
     ),
     
     Questions(
@@ -742,7 +742,8 @@ let quizzAstronautes01 : [Questions] = [
         photoQuestion: "Astronaute-Question-1",
         photoAnswer: "Astronaute-1",
         answerName: "Laïka",
-        answerExplanation: "Laïka (en russe : Лайка, \"petit aboyeur\" ; 1954 – 3 novembre 1957) est une chienne du programme spatial soviétique et le premier être vivant mis en orbite autour de la Terre. Elle est lancée par l'URSS à bord de l'engin spatial Spoutnik 2 le 3 novembre 1957."),
+        answerExplanation: "Laïka (en russe : Лайка, \"petit aboyeur\" ; 1954 – 3 novembre 1957) est une chienne du programme spatial soviétique et le premier être vivant mis en orbite autour de la Terre. Elle est lancée par l'URSS à bord de l'engin spatial Spoutnik 2 le 3 novembre 1957."
+    ),
     
     Questions(
         questionValue: "Il est le 1er Français à avoir voyagé dans l'espace, en 1982. Quel est son nom ?",
@@ -756,7 +757,7 @@ let quizzAstronautes01 : [Questions] = [
         photoQuestion: "Astronaute-Question-2",
         photoAnswer: "Astronaute-2",
         answerName: "Jean-Loup Chrétien",
-        answerExplanation: "Jean-Loup Jacques Marie Chrétien, né le 20 août 1938 à La Rochelle, est un général de brigade aérienne français. Il devient le premier Français, le premier francophone et le premier Européen de l'Ouest spationaute en 1982 lors de la mission franco-soviétique PVH à bord de la station Saliout 7."
+        answerExplanation: "Jean-Loup Chrétien, est un général de brigade aérienne français. Il devient le premier Français, le premier francophone et le premier Européen de l'Ouest spationaute en 1982 lors de la mission franco-soviétique PVH à bord de la station Saliout 7."
     ),
     
     Questions(
@@ -771,7 +772,7 @@ let quizzAstronautes01 : [Questions] = [
         photoQuestion: "Astronaute-Question-3",
         photoAnswer: "Astronaute-3",
         answerName: "Youri Gagarine",
-        answerExplanation: "Youri Gagarine, né le 9 mars 1934 et mort le 27 mars 1968, est un pilote et cosmonaute soviétique, premier être humain à avoir effectué un vol dans l'espace au cours de la mission Vostok 1, le 12 avril 1961, dans le cadre du programme spatial soviétique."
+        answerExplanation: "Youri Gagarine, est un pilote et cosmonaute soviétique, premier être humain à avoir effectué un vol dans l'espace au cours de la mission Vostok 1, le 12 avril 1961, dans le cadre du programme spatial soviétique."
     )]
 
 let quizzAstronautes02 : [Questions] = [
@@ -849,8 +850,8 @@ let quizzAstronautes03 : [Questions] = [
         goodAnswerNo: 0,
         photoQuestion: "Astronaute-Question-8",
         photoAnswer: "Astronaute-8",
-        answerName: "Franck Borman, James Lovell et William Anders",
-        answerExplanation: "Apollo 8 est le premier vaisseau spatial avec équipage à quitter l'orbite terrestre basse et le premier à atteindre la Lune, s'y mettre en orbite et en revenir. Ils sont les premiers à se rendre à proximité de la Lune, à assister à un lever de Terre, à le photographier et à échapper à la gravité d'un corps céleste."
+        answerName: "Borman,Lovell et Anders",
+        answerExplanation: "Apollo 8 est le premier vaisseau spatial avec équipage à quitter l'orbite terrestre basse et le premier à atteindre la Lune, s'y mettre en orbite et en revenir. Ils sont les premiers à se rendre à proximité de la Lune, à assister à un lever de Terre, à le photographier."
     ),
     
     Questions(
@@ -865,13 +866,13 @@ let quizzAstronautes03 : [Questions] = [
         photoQuestion: "Astronaute-Question-9",
         photoAnswer: "Astronaute-9",
         answerName: "Buzz Aldrin et Michael Collins",
-        answerExplanation: "Leur exploit les a rendus immortels. Neil Armstrong, Buzz Aldrin et Michael Collins, les premiers hommes à s'être posés sur la Lune, puis à y avoir marché (sauf Collins, resté dans le module lunaire) sont connus internationalement. Leurs personnalités, très différentes, le sont moins."
+        answerExplanation: "Neil Armstrong, Buzz Aldrin et Michael Collins, les premiers hommes à s'être posés sur la Lune, puis à y avoir marché (sauf Collins, resté dans le module lunaire) sont connus internationalement. Leurs personnalités, très différentes, le sont moins."
     )]
 
 let quizzAstronautes04 : [Questions] = [
 
         Questions(
-            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon:",
+            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon...",
             questionAnswer: [
                 "Robert Crippen et John Young",
                 "Guennadi Padalka",
@@ -882,7 +883,7 @@ let quizzAstronautes04 : [Questions] = [
             photoQuestion: "Astronaute-Question-10",
             photoAnswer: "Astronaute-10",
             answerName: "David Scott et Jim Irwin",
-            answerExplanation: "David Scott, est un militaire, pilote d'essai, astronaute et homme d'affaires américain. Il est le septième des douze hommes ayant foulé le sol lunaire à ce jour. James Benson Irwin, est un astronaute américain. Il est le huitième des douze hommes ayant foulé le sol lunaire à ce jour."
+            answerExplanation: "David Scott, est un militaire, pilote d'essai, astronaute et homme d'affaires américain. Il est le septième des douze hommes ayant foulé le sol lunaire à ce jour. James Benson Irwin, est un astronaute américain. Il est le huitième homme ayant foulé le sol lunaire."
         ),
     
     Questions(
@@ -897,7 +898,7 @@ let quizzAstronautes04 : [Questions] = [
         photoQuestion: "Astronaute-Question-11",
         photoAnswer: "Astronaute-11",
         answerName: "Robert Crippen et John Young",
-        answerExplanation: "Imaginez l'exploit : à la rentrée, les pilotes ont déclaré avoir eu l'impression \"de voler à l'intérieur d'un tube néon\". Pour une 1ère fois, ils avaient un pare-brise et étaient aux loges, aux commandes, sans savoir que 14 tuiles de protection thermique manquaient et 148 étaient endommagées."
+        answerExplanation: "A la rentrée, les pilotes ont déclaré avoir eu l'impression \"de voler à l'intérieur d'un tube néon\". Pour une 1ère fois, ils avaient un pare-brise et étaient aux loges, aux commandes, sans savoir que 14 tuiles de protection thermique manquaient et 148 étaient endommagées."
     ),
     
     Questions(
@@ -912,7 +913,7 @@ let quizzAstronautes04 : [Questions] = [
         photoQuestion: "Astronaute-Question-12",
         photoAnswer: "Astronaute-12",
         answerName: "Guennadi Padalka",
-        answerExplanation: "Guennadi Ivanovitch Padalka est un cosmonaute russe. Il effectue un premier séjour de longue durée dans l'espace à bord de la station spatiale Mir en 1998-1999 puis fait partie de l'équipage de la Station spatiale internationale à quatre reprises entre 2002 et 2015, en tant que commandant."
+        answerExplanation: "Guennadi Ivanovitch Padalka est un cosmonaute russe. Il effectue un premier séjour de longue durée dans l'espace à bord de la station spatiale Mir en 1998-1999 puis fait partie de l'équipage de la Station spatiale internationale à quatre reprises entre 2002 et 2015."
     )]
 
 let quizzAstronautes05 : [Questions] = [
@@ -929,7 +930,7 @@ let quizzAstronautes05 : [Questions] = [
         photoQuestion: "Astronaute-Question-13",
         photoAnswer: "Astronaute-13",
         answerName: "Story Musgrave et Jeff Hoffman",
-        answerExplanation: "Il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Story Musgrave et Jeff Hoffman ont fait 5 (6 à 8 heures fois) sorties dans l'espace"
+        answerExplanation: "Il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Story Musgrave et Jeff Hoffman ont fait 5 (6 à 8 heures fois) sorties dans l'espace."
     ),
     
     Questions(
@@ -958,6 +959,6 @@ let quizzAstronautes05 : [Questions] = [
         goodAnswerNo: 3,
         photoQuestion: "Astronaute-Question-15",
         photoAnswer: "Astronaute-15",
-        answerName: "Valentina Vladimirovna Terechkova",
+        answerName: "Valentina Terechkova",
         answerExplanation: "La première femme dans l'espace fut la soviétique Valentina Terechkova. Du 16 au 19 juin 1963, aux commandes du vaisseau Vostok 6, elle effectua 48 tours de la Terre."
     )]
