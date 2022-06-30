@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "aigle.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "aigle.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

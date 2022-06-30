@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "orion-constellation.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "orion-constellation.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

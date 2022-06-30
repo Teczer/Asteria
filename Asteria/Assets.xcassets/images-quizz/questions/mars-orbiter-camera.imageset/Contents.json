@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "mars-orbiter-camera.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "mars-orbiter-camera.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
