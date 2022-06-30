@@ -292,17 +292,17 @@ let quizzGalaxies01 : [Questions] = [
     ),
     
     Questions(
-        questionValue: "Qu'est-ce qu'une exoplanète ?",
+        questionValue: "une exoplanète est une planète...",
         questionAnswer: [
-            "Une planète naine",
-            "Une planète morte",
-            "Une planète riche",
-            "Une planète située dans un autre système solaire"
+            "naine",
+            "morte",
+            "riche",
+            "située dans un autre système solaire"
         ],
         goodAnswerNo: 3,
         photoQuestion: "exoplanete-1",
         photoAnswer: "exoplanete-2",
-        answerName: "Une planète située dans un autre système solaire",
+        answerName: "située dans un autre système solaire",
         answerExplanation: "Une exoplanète, ou **planète extrasolaire**, est une planète située en dehors du Système solaire."
     )]
 
@@ -637,17 +637,17 @@ let quizzPhenomenesObservables03 : [Questions] = [
 let quizzPhenomenesObservables04 : [Questions] = [
     
     Questions(
-        questionValue: "Pendant la phase croissante de la Lune, une mystérieuse \"lueur cendrée\" apparaît. Le reste du disque est alors illuminé par...",
+        questionValue: "Pendant la phase croissante de la Lune, une mystérieuse \"lueur cendrée\" apparaît. Le reste du disque est alors illuminé par la lumière...",
         questionAnswer: [
-            "la lumière propre de la Terre",
-            "la lumière propre de la Lune",
-            "la lumière du soleil réflechie par la Terre",
-            "la lumière propre de la Lune cendrée"
+            "propre de la Terre",
+            "propre de la Lune",
+            "du soleil réflechie par la Terre",
+            "propre de la Lune cendrée"
         ],
         goodAnswerNo: 2,
         photoQuestion: "ashen-glow-1",
         photoAnswer: "ashen-glow-2",
-        answerName: "La lumière du soleil réflechie par la Terre",
+        answerName: "du soleil réflechie par la Terre",
         answerExplanation: "S’il est techniquement possible d’assister à ce phénomène plusieurs fois par an, en réalité il s’agit d’un fait plutôt **rare**, en particulier pour l’hémisphère Nord. Il faut que les bonnes conditions soient réunies, notamment météorologiques. Le mauvais temps et les nuages empêchent souvent de percevoir pleinement la *\"lumière cendrée\"*. Il est plus facile à constater en plein été lorsque la Terre renvoie **plus de soleil sur la Lune**."
     ),
     
