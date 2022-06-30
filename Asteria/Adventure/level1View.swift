@@ -13,9 +13,10 @@ struct level1View: View {
     private let levelHeight : CGFloat = 640
     
     @StateObject var viewRouter: ViewRouter
-    @AppStorage("levelProgression") var levelProgression:Int = 0
-    
+    @EnvironmentObject var signUpVM: SignUpViewModel
+
     var body: some View {
+        if let user = signUpVM.user {
         ZStack {
             
             // Level background
@@ -70,7 +71,7 @@ struct level1View: View {
                     // cercles, de haut en bas
                     
                     LevelCircle(
-                        levelStatus: levelProgression < 4 ? "unavailable" : (levelProgression > 4 ? "completed" : "new"),
+                        levelStatus: user.levelprogression < 4 ? "unavailable" : (user.levelprogression > 4 ? "completed" : "new"),
                         circleSize: 40,
                         questionSerieCurrent: quizzSystemesolaire05,
                         levelId: 5,
@@ -79,7 +80,7 @@ struct level1View: View {
                         .position(x: 310, y: 45)
                     
                     LevelCircle(
-                        levelStatus: levelProgression < 3 ? "unavailable" : (levelProgression > 3 ? "completed" : "new"),
+                        levelStatus: user.levelprogression < 3 ? "unavailable" : (user.levelprogression > 3 ? "completed" : "new"),
                         circleSize: 40,
                         questionSerieCurrent: quizzSystemesolaire04,
                         levelId: 4,
@@ -88,7 +89,7 @@ struct level1View: View {
                         .position(x: 290, y: 135)
                     
                     LevelCircle(
-                        levelStatus: levelProgression < 2 ? "unavailable" : (levelProgression > 2 ? "completed" : "new"),
+                        levelStatus: user.levelprogression < 2 ? "unavailable" : (user.levelprogression > 2 ? "completed" : "new"),
                         circleSize: 40,
                         questionSerieCurrent: quizzSystemesolaire03,
                         levelId: 3,
@@ -97,7 +98,7 @@ struct level1View: View {
                         .position(x: 245, y: 220)
                     
                     LevelCircle(
-                        levelStatus: levelProgression < 1 ? "unavailable" : (levelProgression > 1 ? "completed" : "new"),
+                        levelStatus: user.levelprogression < 1 ? "unavailable" : (user.levelprogression > 1 ? "completed" : "new"),
                         circleSize: 40,
                         questionSerieCurrent: quizzSystemesolaire02,
                         levelId: 2,
@@ -106,7 +107,7 @@ struct level1View: View {
                         .position(x: 190, y: 300)
                     
                     LevelCircle(
-                        levelStatus: levelProgression == 0 ? "new" : "completed",
+                        levelStatus: user.levelprogression == 0 ? "new" : "completed",
                         circleSize: 60,
                         questionSerieCurrent: quizzSystemesolaire01,
                         levelId: 1,
@@ -119,6 +120,7 @@ struct level1View: View {
         }
         .frame(height:levelHeight)
         .clipped()
+        }
         
     }
 }

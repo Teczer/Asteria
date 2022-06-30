@@ -12,9 +12,9 @@ struct MainView: View {
     @State private var onBoardDone = false
     @State private var onBoardLogin = false
     @StateObject var viewRouter: ViewRouter
-    
+    @EnvironmentObject var signUpVM: SignUpViewModel
+
     @AppStorage("hasSeenTuto") var hasSeenTuto = false
-    @AppStorage("isLoggedIn") var isLoggedIn = false
 
     
     var body: some View {
@@ -75,16 +75,11 @@ struct MainView: View {
                 TutoView(endOnBoarding: $onBoardDone, login: $login).tag(0)
                     .zIndex(onBoardDone ? 0 : 10)
                 }
-                else if isLoggedIn == false {
+                else if signUpVM.isLogin == false {
                 LoginView(endOnBoarding: $onBoardDone, username: .constant("")).tag(0)
                         .zIndex(onBoardDone ? 0 : 10)
                 }
-                else {
-                    Rectangle()
-                        .onAppear { onBoardDone = true }
-                    LoginView(endOnBoarding: $onBoardDone, username: .constant("")).tag(0)
-                        .zIndex(onBoardDone ? 0 : 10)
-                }
+                
                 
             }
             
