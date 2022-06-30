@@ -33,6 +33,7 @@ struct InscriptionView: View {
                         .font(.system(size: 32))
                         .padding()
                         Spacer()
+                            .frame(width: 300)
                     })
                 }
                 Spacer()
