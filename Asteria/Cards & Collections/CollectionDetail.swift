@@ -27,7 +27,7 @@ struct CollectionDetail: View {
         return result
     }
         func filterCardsArray(collectionName: String) -> [SingleCardType] {
-        return self.cardWon1.filter { card in
+        return cardWon1.filter { card in
             return card.cardFront.collectionName == collectionName
         }
     }
