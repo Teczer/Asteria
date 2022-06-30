@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "etoiles-filantes-3.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "etoiles-filantes-3.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

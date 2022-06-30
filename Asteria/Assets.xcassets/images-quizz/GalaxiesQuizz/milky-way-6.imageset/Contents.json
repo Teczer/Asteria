@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "milky-way-6.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "milky-way-6.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

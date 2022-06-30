@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "neptune2@3x.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "neptune2@3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
