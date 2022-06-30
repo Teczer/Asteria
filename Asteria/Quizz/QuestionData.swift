@@ -297,7 +297,7 @@ let quizzGalaxies01 : [Questions] = [
             "naine",
             "morte",
             "riche",
-            "située dans un autre système solaire"
+            "sur un autre système solaire"
         ],
         goodAnswerNo: 3,
         photoQuestion: "exoplanete-1",
@@ -429,7 +429,7 @@ let quizzGalaxies04 : [Questions] = [
         photoQuestion: "observation",
         photoAnswer: "pollen",
         answerName: "Le microscope",
-        answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants **très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel"
+        answerExplanation: "Le microscope est utilisé pour observer des objets ou des êtres vivants **très petits** (bactéries, cellules, etc.) et n'est donc pas destiné à l'observation du ciel."
     ),
     
     Questions(
@@ -460,7 +460,7 @@ let quizzGalaxies05 : [Questions] = [
         goodAnswerNo: 2,
         photoQuestion: "solar-fury",
         photoAnswer: "systeme-solaire-3",
-        answerName: "Environ 250 millions d'années",
+        answerName: "250 millions d'années",
         answerExplanation: "Le Soleil met environ 250 millions d'années pour accomplir une révolution complète autour du centre de notre Galaxie, située à environ **26.000 années-lumière**."
     ),
     
@@ -669,8 +669,8 @@ let quizzPhenomenesObservables04 : [Questions] = [
     Questions(
         questionValue: "Comment appelle-t-on une 2ème nouvelle Lune au cours d'un même mois calendaire ?",
         questionAnswer: [
-            "lune noire",
-            "lune pare",
+            "Lune noire",
+            "Lune pare",
             "Eclipse lunaire",
             "ça n'existe pas !"
         ],
@@ -684,7 +684,7 @@ let quizzPhenomenesObservables04 : [Questions] = [
 let quizzPhenomenesObservables05 : [Questions] = [
     
     Questions(
-        questionValue: "La plupart des pluies d'étoiles filantes sont dû à...",
+        questionValue: "La plupart des pluies d'étoiles filantes sont dues à...",
         questionAnswer: [
             "des éruptions volcaniques",
             "des étoiles qui tombent du ciel",
@@ -850,7 +850,7 @@ let quizzAstronautes03 : [Questions] = [
         goodAnswerNo: 0,
         photoQuestion: "Astronaute-Question-8",
         photoAnswer: "Astronaute-8",
-        answerName: "Franck Borman, James Lovell et William Anders",
+        answerName: "Borman,Lovell et Anders",
         answerExplanation: "Apollo 8 est le premier vaisseau spatial avec équipage à quitter l'orbite terrestre basse et le premier à atteindre la Lune, s'y mettre en orbite et en revenir. Ils sont les premiers à se rendre à proximité de la Lune, à assister à un lever de Terre, à le photographier."
     ),
     
@@ -872,7 +872,7 @@ let quizzAstronautes03 : [Questions] = [
 let quizzAstronautes04 : [Questions] = [
 
         Questions(
-            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon:",
+            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon...",
             questionAnswer: [
                 "Robert Crippen et John Young",
                 "Guennadi Padalka",
@@ -930,7 +930,7 @@ let quizzAstronautes05 : [Questions] = [
         photoQuestion: "Astronaute-Question-13",
         photoAnswer: "Astronaute-13",
         answerName: "Story Musgrave et Jeff Hoffman",
-        answerExplanation: "Il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Story Musgrave et Jeff Hoffman ont fait 5 (6 à 8 heures fois) sorties dans l'espace"
+        answerExplanation: "Il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Story Musgrave et Jeff Hoffman ont fait 5 (6 à 8 heures fois) sorties dans l'espace."
     ),
     
     Questions(
@@ -959,6 +959,6 @@ let quizzAstronautes05 : [Questions] = [
         goodAnswerNo: 3,
         photoQuestion: "Astronaute-Question-15",
         photoAnswer: "Astronaute-15",
-        answerName: "Valentina Vladimirovna Terechkova",
+        answerName: "Valentina Terechkova",
         answerExplanation: "La première femme dans l'espace fut la soviétique Valentina Terechkova. Du 16 au 19 juin 1963, aux commandes du vaisseau Vostok 6, elle effectua 48 tours de la Terre."
     )]
