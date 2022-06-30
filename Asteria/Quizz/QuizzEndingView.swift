@@ -156,7 +156,7 @@ struct QuizzEndingView: View {
                                 if quizzController.levelId > user.levelprogression {
                                     signUpVM.saveProgression(progression: quizzController.levelId)
                                 }
-                                viewRouter.currentPage = .aventure
+//                                viewRouter.currentPage = .aventure
                                 NavigationUtil.popToRootView()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     viewRouter.hideInAventure = false
