@@ -57,6 +57,8 @@ struct CollectionDetail: View {
                 ScrollView(.horizontal) {
                     
                     LazyHGrid(rows : rows, alignment: .center, spacing: 40) {
+                        Spacer()
+                            .frame(width:10)
                         ForEach(filterCardsArray(collectionName: collection.collectionName)) { card in
                             NavigationLink {
                                 SingleCardView(cardFront: card.cardFront, cardBack: card.cardBack, miniCard: false)
