@@ -44,6 +44,18 @@ struct ConnexionView: View {
                 // LOGO + ASTERIA
                 VStack(alignment: .center, spacing: -40) {
                     Spacer()
+//                    Image("logo") // LOGO
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 120, height: 100)
+//                        .padding(.vertical, UIScreen.main.bounds.size.height / 200)
+//                    Image("logotitle") // ASTERIA
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 270, height: 90)
+//                        .padding(.bottom, UIScreen.main.bounds.size.height / 10)
+//                    Spacer()
+//                        .frame(height: 90)
                     VStack {
                         // CONNEXION TITLE
                         ConnexionTitleItemView(objectText: "CONNEXION")

@@ -11,26 +11,24 @@ struct AdventureView: View {
     
     var id = UUID()
     @StateObject var viewRouter: ViewRouter
-    @EnvironmentObject var signUpVM: SignUpViewModel
+    @AppStorage("levelProgression") var levelProgression:Int = 0
     
     var body: some View {
-        if let user = signUpVM.user {
-            NavigationView {
-                ScrollView {
-                    ScrollViewReader{ proxy in
-                        VStack(alignment: .leading, spacing:0){
-                            level4View(viewRouter: viewRouter)
-                            level3View(viewRouter: viewRouter)
-                            level2View(viewRouter: viewRouter)
-                            level1View(viewRouter: viewRouter).id(id)
-                        }.onAppear{
-                            proxy.scrollTo(id)
-                            viewRouter.hideInAventure = false
-                        }
+        NavigationView {
+            ScrollView {
+                ScrollViewReader{ proxy in
+                    VStack(alignment: .leading, spacing:0){
+                        level4View(viewRouter: viewRouter)
+                        level3View(viewRouter: viewRouter)
+                        level2View(viewRouter: viewRouter)
+                        level1View(viewRouter: viewRouter).id(id)
+                    }.onAppear{
+                        proxy.scrollTo(id)
+                        viewRouter.hideInAventure = false
                     }
                 }
-                .navigationBarHidden(true)
             }
+            .navigationBarHidden(true)
         }
     }
 }

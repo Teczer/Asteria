@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginView: View {
     @Binding var endOnBoarding: Bool
     @Binding var username: String
-    @EnvironmentObject var signUpVM: SignUpViewModel
     
     var body: some View {
         NavigationView {
@@ -57,14 +56,8 @@ struct LoginView: View {
                         AppleItem()
                             .padding(.bottom)
                         // CONTINUER AVEC GOOGLE
-                        Button {
-                            signUpVM.signUpWithGoogle()
-                        } label: {
-                            GoogleItem()
-                                .padding(.bottom, 60)
-                        }
-
-                        
+                        GoogleItem()
+                            .padding(.bottom, 60)
                         // CONTINUER SANS S'IDENTIFIER
                         Button {
                             endOnBoarding.toggle()
