@@ -111,53 +111,53 @@ struct CollectionDetail: View {
                         }
                     }
                     if levelProgression >= 6 {
-                        if isANewCard(card: cardFront6) {
-                            cardWon1.append(SingleCardType(cardFront: cardFront6, cardBack: cardBack6))
-                        }
-                    }
-                    if levelProgression >= 7 {
-                        if isANewCard(card: cardFront7) {
-                            cardWon1.append(SingleCardType(cardFront: cardFront7, cardBack: cardBack7))
-                        }
-                    }
-                    if levelProgression >= 8 {
-                        if isANewCard(card: cardFront8) {
-                            cardWon1.append(SingleCardType(cardFront: cardFront8, cardBack: cardBack8))
-                        }
-                    }
-                    if levelProgression >= 9 {
-                        if isANewCard(card: cardFront9) {
-                            cardWon1.append(SingleCardType(cardFront: cardFront9, cardBack: cardBack9))
-                        }
-                    }
-                    if levelProgression >= 10 {
-                        if isANewCard(card: cardFront10) {
-                            cardWon1.append(SingleCardType(cardFront: cardFront10, cardBack: cardBack10))
-                        }
-                    }
-                    if levelProgression >= 11 {
                         if isANewCard(card: cardFront11) {
                             cardWon1.append(SingleCardType(cardFront: cardFront11, cardBack: cardBack11))
                         }
                     }
-                    if levelProgression >= 12 {
+                    if levelProgression >= 7 {
                         if isANewCard(card: cardFront12) {
                             cardWon1.append(SingleCardType(cardFront: cardFront12, cardBack: cardBack12))
                         }
                     }
-                    if levelProgression >= 13 {
+                    if levelProgression >= 8 {
                         if isANewCard(card: cardFront13) {
                             cardWon1.append(SingleCardType(cardFront: cardFront13, cardBack: cardBack13))
                         }
                     }
-                    if levelProgression >= 14 {
+                    if levelProgression >= 9 {
                         if isANewCard(card: cardFront14) {
                             cardWon1.append(SingleCardType(cardFront: cardFront14, cardBack: cardBack14))
                         }
                     }
-                    if levelProgression >= 15 {
+                    if levelProgression >= 10 {
                         if isANewCard(card: cardFront15) {
                             cardWon1.append(SingleCardType(cardFront: cardFront15, cardBack: cardBack15))
+                        }
+                    }
+                    if levelProgression >= 11 {
+                        if isANewCard(card: cardFront6) {
+                            cardWon1.append(SingleCardType(cardFront: cardFront6, cardBack: cardBack6))
+                        }
+                    }
+                    if levelProgression >= 12 {
+                        if isANewCard(card: cardFront7) {
+                            cardWon1.append(SingleCardType(cardFront: cardFront7, cardBack: cardBack7))
+                        }
+                    }
+                    if levelProgression >= 13 {
+                        if isANewCard(card: cardFront8) {
+                            cardWon1.append(SingleCardType(cardFront: cardFront8, cardBack: cardBack8))
+                        }
+                    }
+                    if levelProgression >= 14 {
+                        if isANewCard(card: cardFront9) {
+                            cardWon1.append(SingleCardType(cardFront: cardFront9, cardBack: cardBack9))
+                        }
+                    }
+                    if levelProgression >= 15 {
+                        if isANewCard(card: cardFront10) {
+                            cardWon1.append(SingleCardType(cardFront: cardFront10, cardBack: cardBack10))
                         }
                     }
                     if levelProgression >= 16 {

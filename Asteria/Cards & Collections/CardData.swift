@@ -26,17 +26,11 @@ let collection2 = CollectionType(
     collectionImages: [])
 
 let collection3 = CollectionType(
-    collectionName: """
-                    Phénomènes
-                    observables
-                    """,
+    collectionName: "Phénomènes observables",
     collectionImages: [])
 
 let collection4 = CollectionType(
-    collectionName: """
-                    Astronautes
-                    célèbres
-                    """,
+    collectionName: "Astronautes célèbres",
     collectionImages: [])
 
 
