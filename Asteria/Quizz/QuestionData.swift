@@ -302,7 +302,7 @@ let quizzGalaxies01 : [Questions] = [
         goodAnswerNo: 3,
         photoQuestion: "exoplanete-1",
         photoAnswer: "exoplanete-2",
-        answerName: "située dans un autre système solaire",
+        answerName: "sur un autre système solaire",
         answerExplanation: "Une exoplanète, ou **planète extrasolaire**, est une planète située en dehors du Système solaire."
     )]
 
@@ -639,16 +639,16 @@ let quizzPhenomenesObservables04 : [Questions] = [
     Questions(
         questionValue: "Pendant la phase croissante de la Lune, une mystérieuse \"lueur cendrée\" apparaît. Le reste du disque est alors illuminé par la lumière...",
         questionAnswer: [
-            "propre de la Terre",
-            "propre de la Lune",
-            "du soleil réflechie par la Terre",
-            "propre de la Lune cendrée"
+            "de la Terre",
+            "de la Lune",
+            "du soleil",
+            "de la Lune cendrée"
         ],
         goodAnswerNo: 2,
         photoQuestion: "ashen-glow-1",
         photoAnswer: "ashen-glow-2",
-        answerName: "du soleil réflechie par la Terre",
-        answerExplanation: "S’il est techniquement possible d’assister à ce phénomène plusieurs fois par an, en réalité il s’agit d’un fait plutôt **rare**, en particulier pour l’hémisphère Nord. Il faut que les bonnes conditions soient réunies, notamment météorologiques."
+        answerName: "du soleil",
+        answerExplanation: "Plus exactement, la lumière du Soleil **réfléchie par la Terre** ! S’il est possible d’assister à ce phénomène plusieurs fois par an, en réalité il s’agit d’un fait plutôt rare. Il faut que les bonnes conditions soient réunies, notamment météorologiques."
     ),
     
     Questions(
@@ -954,7 +954,7 @@ let quizzAstronautes05 : [Questions] = [
             "Claudie Haigneré",
             "Sally Ride",
             "Kathy Sullivan",
-            "Valentina Vladimirovna Terechkova"
+            "Valentina Terechkova"
         ],
         goodAnswerNo: 3,
         photoQuestion: "Astronaute-Question-15",
