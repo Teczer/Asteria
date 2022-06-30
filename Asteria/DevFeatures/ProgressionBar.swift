@@ -12,7 +12,7 @@ struct ProgressionBar: View {
     @StateObject var quizzController : QuizzController
     
     // animation data
-    @State var animBarOffset:Double = -150
+    @State var animBarOffset:Double = -220
     
     var body: some View {
         GeometryReader { geometry in
@@ -22,16 +22,15 @@ struct ProgressionBar: View {
                         Color("CarnationPink").opacity(0.8)
                         Rectangle()
                             .fill(
-                                LinearGradient(gradient: Gradient(colors: [Color("CarnationPink").opacity(0), Color("LavenderBlush").opacity(0.6)]), startPoint: .leading, endPoint: .trailing)
+                                LinearGradient(gradient: Gradient(colors: [Color("CarnationPink").opacity(0), Color("LavenderBlush").opacity(0.5), Color("CarnationPink").opacity(0)]), startPoint: .leading, endPoint: .trailing)
                             )
                             .frame(width:100)
                             .offset(x:animBarOffset)
                             .onChange(of: quizzController.questionNoCurrent) { _ in
-                                let baseAnimation = Animation.easeOut(duration: 10)
+                                let baseAnimation = Animation.easeInOut(duration: 15)
                                 let repeated = baseAnimation.repeatForever(autoreverses: false)
-
                                 withAnimation(repeated) {
-                                    animBarOffset = 150
+                                    animBarOffset = 220
                                 }
                             }
                     }
