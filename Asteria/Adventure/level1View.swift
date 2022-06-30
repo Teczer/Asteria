@@ -10,7 +10,7 @@ import SwiftUI
 struct level1View: View {
     
     // Level height here!!
-    private let levelHeight : CGFloat = 550
+    private let levelHeight : CGFloat = 640
     
     @StateObject var viewRouter: ViewRouter
     @AppStorage("levelProgression") var levelProgression:Int = 0
