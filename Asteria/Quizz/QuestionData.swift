@@ -53,7 +53,7 @@ let quizzSystemesolaire01: [Questions] = [
         photoQuestion: "quizz-1-question-2",
         photoAnswer: "quizz-1-answer-2",
         answerName: "Spoutnik",
-        answerExplanation: "Le premier satellite artificiel, **Spoutnik**, a été envoyé par l'URSS en 1957. **Apollo** est le nom des vols habités américains vers la Lune. **Ariane** est le nom d'une série de fusées européennes. Enfin, **Mir** était une station spatiale russe."
+        answerExplanation: "Le premier satellite artificiel, **Spoutnik**, a été envoyé par l'URSS en 1957. **Apollo** est le nom des vols habités américains, **Ariane** est le nom d'une série de fusées européennes et **Mir** était une station spatiale russe."
     ),
     
     Questions(
@@ -194,7 +194,7 @@ let quizzSystemesolaire04: [Questions] = [
         photoQuestion: "quizz-1-question-11",
         photoAnswer: "quizz-1-answer-11",
         answerName: "Vénus",
-        answerExplanation: "L'expression *étoile du Berger* est très ancienne. Autrefois, les gardiens de troupeaux qui vivaient au rythme des jours et des nuits, tout au long de l'année, guettaient l'apparition de la première étoile dans le ciel, le soir, pour rentrer à la bergerie. En réalité, celle que l'on désigne \"étoile du Berger\" n'est pas une étoile mais une planète. Il s'agit de **Vénus**."
+        answerExplanation: "L'expression *étoile du Berger* est très ancienne. Autrefois, les gardiens de troupeaux qui vivaient au rythme des jours et des nuits, tout au long de l'année, guettaient l'apparition de la première étoile dans le ciel, le soir, pour rentrer à la bergerie."
     ),
     
     Questions(
@@ -292,7 +292,7 @@ let quizzGalaxies01 : [Questions] = [
     ),
     
     Questions(
-        questionValue: "une exoplanète est une planète...",
+        questionValue: "Une exoplanète est une planète...",
         questionAnswer: [
             "naine",
             "morte",
@@ -356,12 +356,12 @@ let quizzGalaxies02 : [Questions] = [
 let quizzGalaxies03 : [Questions] = [
     
     Questions(
-        questionValue: "Quelle est la galaxie la plus proche de la Voie Lactée ?",
+        questionValue: "La galaxie la plus proche de la Voie Lactée est la Galaxie...",
         questionAnswer: [
-            "La Galaxie du Sombrero",
-            "La Galaxie d'Andromède",
-            "La Galaxie des Chiens de Chasse",
-            "La Galaxie du Cigare"
+            "du Sombrero",
+            "d'Andromède",
+            "des Chiens de Chasse",
+            "du Cigare"
         ],
         goodAnswerNo: 1,
         photoQuestion: "galaxies-1",
@@ -403,18 +403,18 @@ let quizzGalaxies03 : [Questions] = [
 let quizzGalaxies04 : [Questions] = [
     
     Questions(
-        questionValue: "La Voie Lactée est une galaxie...",
+        questionValue: "La Voie Lactée est une galaxie de type...",
         questionAnswer: [
-            "de type spirale",
-            "de type lenticulaire",
-            "de type rectangulaire",
-            "de type elliptique"
+            "spirale",
+            "lenticulaire",
+            "rectangulaire",
+            "elliptique"
         ],
         goodAnswerNo: 0,
         photoQuestion: "milky-way-7",
         photoAnswer: "milky-way-8",
         answerName: "de type spirale",
-        answerExplanation: "Une *galaxie spirale* est un type de galaxie contenant jusqu'à plusieurs centaines de milliards d'étoiles et qui adopte la **forme aplatie d'un disque**, avec un renflement central sphérique lumineux appelé le *bulbe*. Les galaxies spirales contiennent également, et de façon variable, des quantités importantes de gaz et de poussières. Autour du disque, il existe également un halo moins dense et plus discret, aux étoiles fréquemment regroupées en amas globulaires."
+        answerExplanation: "Une *galaxie spirale* est un type de galaxie contenant jusqu'à plusieurs centaines de milliards d'étoiles et qui adopte la **forme aplatie d'un disque**, avec un renflement central sphérique lumineux appelé le *bulbe*."
     ),
     
     Questions(
@@ -450,12 +450,12 @@ let quizzGalaxies04 : [Questions] = [
 let quizzGalaxies05 : [Questions] = [
     
     Questions(
-        questionValue: "Combien de temps dure une révolution du Soleil autour du centre de la Galaxie ?",
+        questionValue: "Une révolution du Soleil autour du centre de la Galaxie dure environ...?",
         questionAnswer: [
-            "Environ 4 siècles",
-            "Environ 175.000 ans",
-            "Environ 250 millions d'années",
-            "Environ 3,8 milliards d'années"
+            "4 siècles",
+            "175.000 ans",
+            "250 millions d'années",
+            "3,8 milliards d'années"
         ],
         goodAnswerNo: 2,
         photoQuestion: "solar-fury",
@@ -508,7 +508,7 @@ let quizzPhenomenesObservables01 : [Questions] = [
         photoQuestion: "eclipse",
         photoAnswer: "soleil",
         answerName: "Le Soleil",
-        answerExplanation: "Une éclipse de Lune ou de Soleil se produit lorsque les **trois corps sont alignés**. Si l’orbite de la Lune autour de la Terre et celle de notre planète autour du Soleil étaient dans le même plan, il se produirait une éclipse de Soleil et une éclipse de Lune chaque mois. Mais l’orbite de la Lune est inclinée de **5,1 degrés** par rapport au plan de révolution de la Terre autour du Soleil, la Lune va donc la plupart du temps se trouver hors de ce plan et **les éclipses sont par conséquent rares**."),
+        answerExplanation: "Une éclipse de Lune ou de Soleil se produit lorsque les **trois corps sont alignés**. L’orbite de la Lune étant inclinée de **5,1 degrés** par rapport au plan de révolution de la Terre autour du Soleil, la Lune va donc la plupart du temps se trouver hors de ce plan et **les éclipses sont par conséquent rares**."),
     
     Questions(
         questionValue: "Comment nomme-t-on un nuage de gaz et de poussières répandu dans l’espace interstellaire ?",
@@ -537,7 +537,7 @@ let quizzPhenomenesObservables01 : [Questions] = [
         photoQuestion: "jupiter-red-dot-1",
         photoAnswer: "jupiter-red-dot-2",
         answerName: "Jupiter",
-        answerExplanation: "La **Grande Tache rouge** est un gigantesque anticyclone de l'atmosphère de Jupiter situé à 22° sud de latitude. Longue d'environ **15 000 kilomètres** et large de près de **12 000 kilomètres** (en 2015), elle est actuellement **un peu plus grosse que la Terre**, même si elle a atteint des dimensions bien supérieures par le passé."
+        answerExplanation: "La **Grande Tache rouge** est un gigantesque anticyclone de l'atmosphère de Jupiter situé à 22° sud de latitude. Longue d'environ **15 000 kilomètres** et large de près de **12 000 kilomètres** (en 2015), elle est actuellement **un peu plus grosse que la Terre**."
     )]
 
 let quizzPhenomenesObservables02 : [Questions] = [
@@ -569,7 +569,7 @@ let quizzPhenomenesObservables02 : [Questions] = [
         photoQuestion: "cydonia-mensae-1",
         photoAnswer: "cydonia-mensae-2",
         answerName: "Mars",
-        answerExplanation: "**Cydonia Mensae** est un relief martien (Mensa) situé dans le quadrangle de Mare Acidalium. Il est à l'origine d'un exemple de paréidolie. Le 25 juillet 1976, au cours de sa 35e orbite, l'orbiteur Viking 1 survole Mars autour du 41° de latitude nord. C'est lors de ce passage qu'est pris le fameux cliché du *visage de Mars*. Si les scientifiques y voient un banal jeu d'ombres et lumière sur le relief, à l'époque, certains passionnés de vie extraterrestre ont cru y déceler une structure artificielle."
+        answerExplanation: "**Cydonia Mensae** est un relief martien (Mensa) situé dans le quadrangle de Mare Acidalium. Il est à l'origine d'un exemple de paréidolie. Le 25 juillet 1976, l'orbiteur Viking 1 survole Mars autour du 41° de latitude nord. C'est lors de ce passage qu'est pris le fameux cliché du *visage de Mars*."
     ),
     
     Questions(
@@ -648,7 +648,7 @@ let quizzPhenomenesObservables04 : [Questions] = [
         photoQuestion: "ashen-glow-1",
         photoAnswer: "ashen-glow-2",
         answerName: "du soleil réflechie par la Terre",
-        answerExplanation: "S’il est techniquement possible d’assister à ce phénomène plusieurs fois par an, en réalité il s’agit d’un fait plutôt **rare**, en particulier pour l’hémisphère Nord. Il faut que les bonnes conditions soient réunies, notamment météorologiques. Le mauvais temps et les nuages empêchent souvent de percevoir pleinement la *\"lumière cendrée\"*. Il est plus facile à constater en plein été lorsque la Terre renvoie **plus de soleil sur la Lune**."
+        answerExplanation: "S’il est techniquement possible d’assister à ce phénomène plusieurs fois par an, en réalité il s’agit d’un fait plutôt **rare**, en particulier pour l’hémisphère Nord. Il faut que les bonnes conditions soient réunies, notamment météorologiques."
     ),
     
     Questions(
@@ -667,35 +667,35 @@ let quizzPhenomenesObservables04 : [Questions] = [
     ),
     
     Questions(
-        questionValue: "Quel phénomène appelle-t-on \"Lune noire\" ?",
+        questionValue: "Comment appelle-t-on une 2ème nouvelle Lune au cours d'un même mois calendaire ?",
         questionAnswer: [
-            "une 2ème nouvelle Lune au cours d'un même mois calendaire",
-            "une 2ème pleine Lune au cours d'un mois calendaire",
-            "c'est un autre nom pour définir une éclipse lunaire",
+            "lune noire",
+            "lune pare",
+            "Eclipse lunaire",
             "ça n'existe pas !"
         ],
         goodAnswerNo: 0,
         photoQuestion: "lune-lilith-1",
         photoAnswer: "lune-lilith-2",
-        answerName: "Une 2ème nouvelle Lune au cours d'un même mois calendaire",
+        answerName: "lune noire",
         answerExplanation: "La **Lune noire**, appelée aussi **Lune sombre** ou Lune de Lilith (nom de la première épouse légendaire d'Adam, avant Ève), est la phase où il n'y a pas de réflexion solaire et où la face lunaire est dans l'obscurité."
     )]
 
 let quizzPhenomenesObservables05 : [Questions] = [
     
     Questions(
-        questionValue: "À quoi sont dues la plupart des pluies d'étoiles filantes ?",
+        questionValue: "La plupart des pluies d'étoiles filantes sont dû à...",
         questionAnswer: [
-            "À des éruptions volcaniques",
-            "À des étoiles qui tombent du ciel",
-            "À des débris de comètes qui brûlent dans notre atmosphère",
-            "À la Lune qui tombe du ciel"
+            "des éruptions volcaniques",
+            "des étoiles qui tombent du ciel",
+            "des débris de comètes",
+            "la Lune qui tombe du ciel"
         ],
         goodAnswerNo: 2,
         photoQuestion: "etoiles-filantes-1",
         photoAnswer: "etoiles-filantes-2",
-        answerName: "A des débris de comètes qui brûlent dans notre atmosphère",
-        answerExplanation: "**Les étoiles filantes** (ou météores) sont causées par de petits grains de poussière venus de l'espace. Ces particules s'échauffent presque **instantanément** en plongeant à très grande vitesse dans la haute atmosphère terrestre (entre 65 et 135 kilomètres d'altitude), faisant briller l'air sur leur passage."
+        answerName: "A des débris de comètes",
+        answerExplanation: "**Les étoiles filantes** (ou météores) sont causées par des débris de comètes qui brûlent dans notre atmosphère. Ces particules s'échauffent presque **instantanément** en plongeant à très grande vitesse dans la haute atmosphère terrestre faisant briller l'air sur leur passage."
     ),
     
     Questions(
@@ -731,7 +731,7 @@ let quizzPhenomenesObservables05 : [Questions] = [
 let quizzAstronautes01 : [Questions] = [
 
     Questions(
-        questionValue: "Le 3/11/57, elle est devenue le 1er être vivant à aller dans l'Espace, à bord de Spoutnik 2, 1 mois à peine après Spoutnik 1 : déjà Khrouchtchev est en course avec les Américains. Dés le départ, il était connu qu'ils ne pourraient la récupérer. Cette chienne était extrêmement calme et d'une grande docilité, entraînée au confinement et à la centrifugeuse : sacrifiée inutilement. Quel est son nom ?",
+        questionValue: "Le 3/11/57, elle est devenue le 1er être vivant à aller dans l'Espace, à bord de Spoutnik 2, Quel est son nom ?",
         questionAnswer: [
             "Wernher von Braun",
             "John F. Kennedy",
@@ -742,11 +742,10 @@ let quizzAstronautes01 : [Questions] = [
         photoQuestion: "Astronaute-Question-1",
         photoAnswer: "Astronaute-1",
         answerName: "Laïka",
-        answerExplanation: "Laïka (en russe : Лайка, \"petit aboyeur\" ; 1954 – 3 novembre 1957) est une chienne du programme spatial soviétique et le premier être vivant mis en orbite autour de la Terre. Elle est lancée par l'URSS à bord de l'engin spatial Spoutnik 2 le 3 novembre 1957, un mois après le lancement du premier satellite artificiel Spoutnik 1."
-    ),
+        answerExplanation: "Laïka (en russe : Лайка, \"petit aboyeur\" ; 1954 – 3 novembre 1957) est une chienne du programme spatial soviétique et le premier être vivant mis en orbite autour de la Terre. Elle est lancée par l'URSS à bord de l'engin spatial Spoutnik 2 le 3 novembre 1957."),
     
     Questions(
-        questionValue: "Il est le 1er Français à avoir voyagé dans l'espace, en 1982. De même il est \"le 1er francophone et le 1er Européen de l'Ouest dans l'espace en 1982 (lors de la mission franco-soviétique PVH). Il fut également le 1er non-Russe et non-Américain à effectuer une sortie extra-véhiculaire dans l'espace\". Quel est le nom du 1er héros de l'espace qui ne fut pas de l'un des 2 blocs de la guerre froide ?",
+        questionValue: "Il est le 1er Français à avoir voyagé dans l'espace, en 1982. Quel est son nom ?",
         questionAnswer: [
             "Jean-Loup Chrétien",
             "Story Musgrave et Jeff Hoffman",
@@ -757,11 +756,11 @@ let quizzAstronautes01 : [Questions] = [
         photoQuestion: "Astronaute-Question-2",
         photoAnswer: "Astronaute-2",
         answerName: "Jean-Loup Chrétien",
-        answerExplanation: "Jean-Loup Jacques Marie Chrétien, né le 20 août 1938 à La Rochelle, est un général de brigade aérienne français, pilote de chasse dans l'armée de l'air et spationaute au Centre national d'études spatiales (CNES) puis à la National Aeronautics and Space Administration (NASA), à la suite de sa retraite européenne et de sa naturalisation américaine en 1999. Il devient le premier Français, le premier francophone et le premier Européen de l'Ouest spationaute en 1982 lors de la mission franco-soviétique PVH à bord de la station Saliout 7."
+        answerExplanation: "Jean-Loup Jacques Marie Chrétien, né le 20 août 1938 à La Rochelle, est un général de brigade aérienne français. Il devient le premier Français, le premier francophone et le premier Européen de l'Ouest spationaute en 1982 lors de la mission franco-soviétique PVH à bord de la station Saliout 7."
     ),
     
     Questions(
-        questionValue: "Il a accompli un exploit historique qui lui a valu 7 ans de gloire pour l'URSS : il a été le premier homme dans l'espace (108 minutes) au cours de la mission Vostok 1, le 12 avril 1961. Il a reçu les plus hautes distinctions soviétiques, dont la médaille de Lénine. Quel est le nom de cet astronaute qui, après avoir évité tant de dangers, est mort à 34 ans dans un accident d'avion ?",
+        questionValue: "Il a accompli un exploit historique qui lui a valu 7 ans de gloire pour l'URSS : il a été le premier homme dans l'espace (108 minutes) au cours de la mission Vostok 1, le 12 avril 1961. Quel est le nom de cet astronaute ?",
         questionAnswer: [
             "Youri Gagarine",
             "John Herschel Glenn, Jr.",
@@ -778,7 +777,7 @@ let quizzAstronautes01 : [Questions] = [
 let quizzAstronautes02 : [Questions] = [
     
     Questions(
-        questionValue: "En 1961, il est devenu le premier Américain à voyager dans l'espace, à bord du vaisseau spatial Freedom 7 et, en 1971, il a marché sur la Lune, le cinquième homme à fouler le sol lunaire et le premier à y jouer un peu au golf. Quel est le nom du premier astronaute américain ?",
+        questionValue: "Il est devenu le cinquième homme à fouler le sol lunaire et le premier à y jouer un peu au golf. Quel est le nom du premier astronaute américain ?",
         questionAnswer: [
             "Youri Gagarine",
             "John Herschel Glenn, Jr.",
@@ -789,11 +788,11 @@ let quizzAstronautes02 : [Questions] = [
         photoQuestion: "Astronaute-Question-4",
         photoAnswer: "Astronaute-4",
         answerName: "Alan Shepard",
-        answerExplanation: "Alan Bartlett Shepard Jr., né le 18 novembre 1923 à Derry (New Hampshire) et mort le 21 juillet 1998 à Pebble Beach (Californie), est un aviateur naval, pilote d'essai, astronaute et homme d'affaires américain. En 1961, il devient le premier Américain à voyager dans l'espace et, en 1971, il est le cinquième homme à avoir marché sur la Lune."
+        answerExplanation: "Alan Bartlett Shepard Jr.,  est un aviateur naval, pilote d'essai, astronaute et homme d'affaires américain. En 1961, il devient le premier Américain à voyager dans l'espace et, en 1971, il est le cinquième homme à avoir marché sur la Lune."
     ),
     
     Questions(
-        questionValue: "Cet astronaute fut un héros populaire : \"marines\" pendant la Seconde Guerre mondiale et Guerre de Corée, pilote de chasse. Devint ensuite pilote d'essai pour la NASA en 1959 : le premier Américain à effectuer un vol orbital, mission Friendship 7, programme Mercury, 10 mois après Gagarine. Quel est le nom de celui qui fut sénateur démocrate pendant 25 ans et est retourné dans l'espace en 1998 ?",
+        questionValue: "Cet astronaute devint le premier Américain à effectuer un vol orbital, mission Friendship 7, programme Mercury. Quel est son nom ?",
         questionAnswer: [
             "Youri Gagarine",
             "John Herschel Glenn, Jr.",
@@ -804,11 +803,11 @@ let quizzAstronautes02 : [Questions] = [
         photoQuestion: "Astronaute-Question-5",
         photoAnswer: "Astronaute-5",
         answerName: "John Herschel Glenn, Jr.",
-        answerExplanation: "John Glenn, né le 18 juillet 1921 à Cambridge (dans l'Ohio) et mort le 8 décembre 2016 à Columbus (dans le même État), est un astronaute et un homme politique américain. En 1962, à bord de la capsule de la mission spatiale Mercury-Atlas 6, Glenn fait trois fois le tour de la Terre et devient ainsi le premier Américain à effectuer un vol orbital."
+        answerExplanation: "John Glenn, est un astronaute et un homme politique américain. En 1962, à bord de la capsule de la mission spatiale Mercury-Atlas 6, Glenn fait trois fois le tour de la Terre et devient ainsi le premier Américain à effectuer un vol orbital."
     ),
     
     Questions(
-        questionValue: "Représenté sur timbre, le premier homme à réaliser une sortie dans l'espace, le 18 mars 1965 : ce soviétique est devenu la première personne à sortir d'un vaisseau spatial et à marcher dans l'espace. En 1975, il commanda la sonde Soyouz qui participa au au premier rendez-vous entre une sonde soviétique et une sonde américaine. Quel est son nom ?",
+        questionValue: "Représenté sur timbre, le premier homme à réaliser une sortie dans l'espace, le 18 mars 1965. Quel est son nom ?",
         questionAnswer: [
             "Alexei Leonov",
             "Valentina Vladimirovna Terechkova",
@@ -819,13 +818,13 @@ let quizzAstronautes02 : [Questions] = [
         photoQuestion: "Astronaute-6",
         photoAnswer: "Astronaute-Question-6",
         answerName: "Alexei Leonov",
-        answerExplanation: "Alexeï Arkhipovitch Leonov, né le 30 mai 1934 à Listvianka (oblast de Kemerovo) et mort le 11 octobre 2019 à Moscou, est un cosmonaute soviétique. Pilote de chasse de formation, il est sélectionné en 1961, au tout début de l'ère spatiale, pour faire partie du premier groupe de cosmonautes. Il est le premier homme à avoir réalisé une sortie extravéhiculaire dans l'espace dans le cadre de la mission Voskhod 2, le 18 mars 1965."
+        answerExplanation: "Alexeï Arkhipovitch Leonov,est un cosmonaute soviétique. Il est le premier homme à avoir réalisé une sortie extravéhiculaire dans l'espace dans le cadre de la mission Voskhod 2, le 18 mars 1965."
     )]
 
 let quizzAstronautes03 : [Questions] = [
 
     Questions(
-        questionValue: "Sur cette photo, il vit son grand moment : il est connu comme le premier Américain à avoir réalisé une sortie extravéhiculaire, hors de Gemini 4, le 3 juin 1965. Tristement, à bord d'Apollo 1, le 27 janvier 1967, un incendie lors d'un test sur le pas de tir, a mis fin à l'existence de 3 astronautes, dont celle de celui dont nous cherchons le nom :",
+        questionValue: "Il est connu comme le premier Américain à avoir réalisé une sortie extravéhiculaire, hors de Gemini 4, le 3 juin 1965. Quel est son nom ?",
         questionAnswer: [
             "Alexei Leonov",
             "Valentina Vladimirovna Terechkova",
@@ -836,11 +835,11 @@ let quizzAstronautes03 : [Questions] = [
         photoQuestion: "Astronaute-Question-7",
         photoAnswer: "Astronaute-7",
         answerName: "Edward White",
-        answerExplanation: "Edward « Ed » Higgins White II, né le 14 novembre 1930 à San Antonio et mort accidentellement le 27 janvier 1967 au centre spatial Kennedy à Cap Canaveral, est un astronaute américain. Il est connu pour être le premier Américain à avoir réalisé une sortie extravéhiculaire. Il meurt dans l'incendie d'Apollo 1 avec Virgil Grissom et Roger Chaffee."
+        answerExplanation: "Edward « Ed » Higgins White II, né le 14 novembre 1930 à San Antonio et mort accidentellement le 27 janvier 1967 au centre spatial Kennedy à Cap Canaveral, est un astronaute américain. Il meurt dans l'incendie d'Apollo 1 avec Virgil Grissom et Roger Chaffee."
     ),
     
     Questions(
-        questionValue: "Les 3 membres d'Apollo 8 sont un peu dans l'ombre des missions qui suivront, pourtant, ils ont été les premiers à quitter l'orbite terrestre, à entrer dans l'orbite d'un autre astre, à parcourir la face cachée de la Lune, à observer et filmer un «lever de Terre», le 24 décembre 1968 comme un cadeau à l'humanité pour lui rappeler la beauté et la fragilité de la terre. Qui est cet équipage ?",
+        questionValue: "Les 3 membres d'Apollo 8 sont un peu dans l'ombre des missions qui suivront, qui est cet équipage ?",
         questionAnswer: [
             "Franck Borman, James Lovell et William Anders",
             "Neil Amrstrong, Buzz Aldrin et Michael Collins",
@@ -851,11 +850,11 @@ let quizzAstronautes03 : [Questions] = [
         photoQuestion: "Astronaute-Question-8",
         photoAnswer: "Astronaute-8",
         answerName: "Franck Borman, James Lovell et William Anders",
-        answerExplanation: "Apollo 8 est le premier vaisseau spatial avec équipage à quitter l'orbite terrestre basse et le premier à atteindre la Lune, s'y mettre en orbite et en revenir. Les trois astronautes constituant l'équipage — Frank Borman, James Lovell et William Anders — sont les premiers à se rendre à proximité de la Lune, à assister à un lever de Terre, à le photographier et à échapper à la gravité d'un corps céleste."
+        answerExplanation: "Apollo 8 est le premier vaisseau spatial avec équipage à quitter l'orbite terrestre basse et le premier à atteindre la Lune, s'y mettre en orbite et en revenir. Ils sont les premiers à se rendre à proximité de la Lune, à assister à un lever de Terre, à le photographier et à échapper à la gravité d'un corps céleste."
     ),
     
     Questions(
-        questionValue: "De cet équipage provient également le deuxième homme à avoir marché sur la Lune et y avoir été près de 2 heures trente en devenant, avec Amstrong, les premiers humains à explorer la surface d'un autre monde. Dernier membre d'Apollo XI, celui qui est demeuré en orbite sur la lune pour les récupérer, le pilote : vous devez donc trouver leurs noms :",
+        questionValue: "De cet équipage provient également le deuxième homme à avoir marché sur la Lune, qui sont-ils ?",
         questionAnswer: [
             "Franck Borman, James Lovell et William Anders",
             "Buzz Aldrin et Michael Collins",
@@ -872,7 +871,7 @@ let quizzAstronautes03 : [Questions] = [
 let quizzAstronautes04 : [Questions] = [
 
         Questions(
-            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon : ils ont parcouru 28 km sur la surface lunaire. Nommez le commandant de la mission Apollo XV, qui est aussi le premier «automobiliste lunaire» et son coéquipier, le pilote du module lunaire qui contenait le véhicule.",
+            questionValue: "Trouvez les 2 premiers humains à rouler le rover lunaire, qu'on a inséré dans le module lunaire Falcon:",
             questionAnswer: [
                 "Robert Crippen et John Young",
                 "Guennadi Padalka",
@@ -883,11 +882,11 @@ let quizzAstronautes04 : [Questions] = [
             photoQuestion: "Astronaute-Question-10",
             photoAnswer: "Astronaute-10",
             answerName: "David Scott et Jim Irwin",
-            answerExplanation: "David Scott, né le 6 juin 1932 à San Antonio au Texas, est un militaire, pilote d'essai, astronaute et homme d'affaires américain. Il est le septième des douze hommes ayant foulé le sol lunaire à ce jour. Et James Benson Irwin, né le 17 mars 1930 à Pittsburgh, Pennsylvanie, et mort le 8 août 1991 à Glenwood Springs, Colorado, est un astronaute américain. Pilote du module lunaire lors de la mission Apollo 15, en 1971, il est le huitième des douze hommes ayant foulé le sol lunaire à ce jour."
+            answerExplanation: "David Scott, est un militaire, pilote d'essai, astronaute et homme d'affaires américain. Il est le septième des douze hommes ayant foulé le sol lunaire à ce jour. James Benson Irwin, est un astronaute américain. Il est le huitième des douze hommes ayant foulé le sol lunaire à ce jour."
         ),
     
     Questions(
-        questionValue: "La mission du Space Shuttle Columbia, la STS-1 est le 1er vol d'une navette spatiale. Imaginez l'exploit : à la rentrée, les pilotes ont déclaré avoir eu l'impression \"de voler à l'intérieur d'un tube néon\". Pour une 1ère fois, ils avaient un pare-brise et étaient aux loges, aux commandes, sans savoir que 14 tuiles de protection thermique manquaient et 148 étaient endommagées.",
+        questionValue: "Trouvez le nom des astronautes faisant partie de la mission du Space Shuttle Columbia, la STS-1 est le 1er vol d'une navette spatiale:",
         questionAnswer: [
             "Robert Crippen et John Young",
             "Guennadi Padalka",
@@ -898,11 +897,11 @@ let quizzAstronautes04 : [Questions] = [
         photoQuestion: "Astronaute-Question-11",
         photoAnswer: "Astronaute-11",
         answerName: "Robert Crippen et John Young",
-        answerExplanation: "Robert Laurel Crippen dit Bob Crippen est un astronaute américain né le 10 septembre 1937. Il est le premier pilote d'une navette spatiale lors du vol inaugural, le 12 avril 1981. Et John Watts Young, né le 24 septembre 1930 à San Francisco, en Californie, et mort le 5 janvier 2018 à Houston, au Texas, est un ancien pilote d'essai de la United States Navy et astronaute de la NASA. Sa carrière est particulièrement riche puisqu'il est le premier homme au monde à effectuer respectivement cinq et six vols spatiaux, qui plus est sur trois générations de vaisseaux différentes (Gemini, Apollo et la navette spatiale), à chaque fois à deux reprises."
+        answerExplanation: "Imaginez l'exploit : à la rentrée, les pilotes ont déclaré avoir eu l'impression \"de voler à l'intérieur d'un tube néon\". Pour une 1ère fois, ils avaient un pare-brise et étaient aux loges, aux commandes, sans savoir que 14 tuiles de protection thermique manquaient et 148 étaient endommagées."
     ),
     
     Questions(
-        questionValue: "Ce Russe est le cosmonaute ayant vécu le plus longtemps (à l'époque) dans l'espace avec une durée de séjour cumulée de 878 jours. Riche d'une expérience de 5 séjours dans l'espace, il a effectué sa première mission à bord de la station Mir avant d'accomplir 4 missions comme commandant de bord de l'ISS pour les programmes habités de Roskosmos. Quel est le nom du héros de cet exploit ?",
+        questionValue: "Ce Russe est le cosmonaute ayant vécu le plus longtemps (à l'époque) dans l'espace avec une durée de séjour cumulée de 878 jours. Quel est le nom du héros de cet exploit ?",
         questionAnswer: [
             "Robert Crippen et John Young",
             "Guennadi Padalka",
@@ -913,13 +912,13 @@ let quizzAstronautes04 : [Questions] = [
         photoQuestion: "Astronaute-Question-12",
         photoAnswer: "Astronaute-12",
         answerName: "Guennadi Padalka",
-        answerExplanation: "Guennadi Ivanovitch Padalka (en russe : Геннадий Иванович Падалка) est un cosmonaute russe né le 21 juin 1958 à Krasnodar, dans la partie russe de l'Union soviétique. Après une carrière de pilote militaire, il est sélectionné comme cosmonaute en 1989. Il effectue un premier séjour de longue durée dans l'espace à bord de la station spatiale Mir en 1998-1999 puis fait partie de l'équipage de la Station spatiale internationale à quatre reprises entre 2002 et 2015, en tant que commandant. Il est, d'après les statistiques établies en 2016, l'homme ayant vécu le plus longtemps dans l'espace avec une durée de séjour cumulée de 878 jours en 5 vols."
+        answerExplanation: "Guennadi Ivanovitch Padalka est un cosmonaute russe. Il effectue un premier séjour de longue durée dans l'espace à bord de la station spatiale Mir en 1998-1999 puis fait partie de l'équipage de la Station spatiale internationale à quatre reprises entre 2002 et 2015, en tant que commandant."
     )]
 
 let quizzAstronautes05 : [Questions] = [
     
     Questions(
-        questionValue: "Le sauvetage du télescope spatial Hubble, par la navette Endeavour STS-61, constitue un exploit : il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Qui sont les 2 astronautes qui ont fait ces 5 longues (6 à 8 heures fois) et délicates sorties dans l'espace ?",
+        questionValue: "Le sauvetage du télescope spatial Hubble, par la navette Endeavour STS-61, constitue un exploit. Qui sont les 2 sauveteurs ?",
         questionAnswer: [
             "Jean-Loup Chrétien",
             "Story Musgrave et Jeff Hoffman",
@@ -930,7 +929,7 @@ let quizzAstronautes05 : [Questions] = [
         photoQuestion: "Astronaute-Question-13",
         photoAnswer: "Astronaute-13",
         answerName: "Story Musgrave et Jeff Hoffman",
-        answerExplanation: "En 1996 (à 61 ans), il est devenu le deuxième astronaute à voler sur six vols spatiaux. Il a la particularité unique d'avoir effectué une mission sur les cinq navettes spatiales américaines1 et est le premier astronaute à effectuer une sortie extravéhiculaire à partir de la navette spatiale. Lors de sa cinquième mission, il effectue trois sorties pour une durée totale de vingt-deux heures pour effectuer la réparation du téléscope Hubble. Et Jeffrey Alan Hoffman, Ph.D. est un astronaute américain né le 2 novembre 1944, actuellement professeur d'aéronautique et d'astronautique au MIT. Hoffman a fait cinq vols en navette spatiale comme astronaute, incluant la première mission de réparation du télescope spatial Hubble en 1993, lorsque l'imperfection du télescope en orbite a été corrigée."
+        answerExplanation: "Il a d'abord fallu récupérer l'engin de 12 tonnes souffrant d'un défaut de fabrication à son miroir principal. Il a été fixé dans les soutes puis, on lui installa un dispositif correcteur. Story Musgrave et Jeff Hoffman ont fait 5 (6 à 8 heures fois) sorties dans l'espace"
     ),
     
     Questions(
