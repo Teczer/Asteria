@@ -51,7 +51,7 @@ struct QACardContent: View {
                 .frame(width:300, height:200)
                 .clipped()
             Text(questionSerieCurrent[quizzController.questionNoCurrent-1].questionValue)
-                .font(.system(size: 20))
+                .font(.system(size: 16))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)

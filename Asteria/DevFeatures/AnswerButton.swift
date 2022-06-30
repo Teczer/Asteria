@@ -41,8 +41,8 @@ struct AnswerButton: View {
                 .foregroundColor(selectedButton ? (goodAnswer == clicAnswer ? Color(.green) : Color(.red) ) : Color("OxfordBlue"))
                 .overlay(
                     Text(textInButton)
-                        .font(.system(size: 12))
-                        .frame(width: 73, height: 50)
+                        .font(.system(size: 11))
+                        .frame(width: 100, height: 50)
                         .foregroundColor(selectedButton ? Color("SpaceCadet") : Color.white )
                 )
         }

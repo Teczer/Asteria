@@ -52,17 +52,17 @@ struct QACardAnswerContent: View {
                 .frame(width:300, height:200)
                 .clipped()
             Text(questionSerieCurrent[quizzController.questionNoCurrent-1].answerName.uppercased())
-                .font(.system(size: 24))
+                .font(.system(size: 20))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("LavenderBlush"))
                 .tracking(5)
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:65)
+                .frame(width:270, height:55)
             Text(questionSerieCurrent[quizzController.questionNoCurrent-1].answerExplanation)
-                .font(.system(size: 16))
+                .font(.system(size: 15))
                 .foregroundColor(Color("LavenderBlush"))
                 .multilineTextAlignment(.center)
-                .frame(width:270, height:150)
+                .frame(width:270, height:160)
             
             if quizzController.questionNoCurrent >= quizzController.questionNoTotal {
                 NavigationLink (isActive: $change, destination: {QuizzEndingView(viewRouter: viewRouter, quizzController: quizzController)}) {}
