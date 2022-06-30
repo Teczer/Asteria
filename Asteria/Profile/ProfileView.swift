@@ -56,10 +56,7 @@ struct ProfileView: View {
                                     Text("30 ans")
                                         .font(.system(size: 12))
                                         .fontWeight(.thin)
-                                    Spacer()
-                                    Text("Niveau or".uppercased())
-                                        .font(.system(size: 13))
-                                        .fontWeight(.light)
+                                    
                                 }
                                 .foregroundColor(Color("LavenderBlush"))
                                 .frame(height:60)
