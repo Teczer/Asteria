@@ -86,3 +86,17 @@
 //
 //
 
+import SwiftUI
+
+struct UserStruct {
+    var name: String
+    var id: String
+    var levelprogression: Int
+    var mail: String
+    var imageprofile: String
+    var toDict: [String:Any]{
+        return ["name":name, "id":id,"levelprogression":levelprogression,"mail":mail,"imageprofile":imageprofile]
+    }
+}
+
+

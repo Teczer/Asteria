@@ -8,14 +8,14 @@
 import SwiftUI
 import FirebaseCore
 import GoogleSignIn
-
+import FirebaseAuth
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-
+      
     return true
       
       
@@ -26,12 +26,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct AsteriaApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var signUp = SignUpViewModel()
     @StateObject var viewRouter = ViewRouter()
 
     var body: some Scene {
         WindowGroup {
             MainView(login: .constant(""), viewRouter: ViewRouter())
-                .environmentObject(SignUpViewModel())
+                .environmentObject(signUp)
         }
     }
 }
