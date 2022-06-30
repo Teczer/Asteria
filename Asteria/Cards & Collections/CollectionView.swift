@@ -26,9 +26,9 @@ struct CollectionView: View {
                 
                     CollectionDetail(collection: collection1)
                     
-                    CollectionDetail(collection: collection2)
-                    
                     CollectionDetail(collection: collection3)
+                    
+                    CollectionDetail(collection: collection2)
                     
                     CollectionDetail(collection: collection4)
                     

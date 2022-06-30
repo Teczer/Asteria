@@ -83,43 +83,43 @@ struct QuizzEndingView: View {
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
                 case 6 :
-                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Voie lactée", cardFrontImage: "collec2-cardFrontImage-6-voielactee", collectionName: "Galaxie", cardNumber: "1", miniCard: true))
-                        .offset(x: cardOffsetAnim)
-                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 7 :
-                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Whirlpool", cardFrontImage: "collec2-cardFrontImage-7-whirlpool", collectionName: "Galaxie", cardNumber: "2", miniCard: true))
-                        .offset(x: cardOffsetAnim)
-                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 8 :
-                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Andromède", cardFrontImage: "collec2-cardFrontImage-8-andromede", collectionName: "Galaxie", cardNumber: "3", miniCard: true))
-                        .offset(x: cardOffsetAnim)
-                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 9 :
-                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Magellan", cardFrontImage: "collec2-cardFrontImage-9-magellan", collectionName: "Galaxie", cardNumber: "4", miniCard: true))
-                        .offset(x: cardOffsetAnim)
-                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 10 :
-                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Horsehead", cardFrontImage: "collec2-cardFrontImage-10-horsehead", collectionName: "Galaxie", cardNumber: "5", miniCard: true))
-                        .offset(x: cardOffsetAnim)
-                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 11 :
                     CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Éclipse", cardFrontImage: "collec3-cardFrontImage-11-eclipse", collectionName: "Phénomènes observables", cardNumber: "1", miniCard: true))
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 12 :
+                case 7 :
                     CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Super Lune", cardFrontImage: "collec3-cardFrontImage-12-moon", collectionName: "Phénomènes observables", cardNumber: "2", miniCard: true))
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 13 :
+                case 8 :
                     CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Étoiles filantes", cardFrontImage: "collec3-cardFrontImage-13-etoile", collectionName: "Phénomènes observables", cardNumber: "3", miniCard: true))
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 14 :
+                case 9 :
                     CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Lumière zodiacale", cardFrontImage: "collec3-cardFrontImage-14-zod-light", collectionName: "Phénomènes observables", cardNumber: "4", miniCard: true))
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
-                case 15 :
+                case 10 :
                     CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Météorite", cardFrontImage: "collec3-cardFrontImage-15-meteorite", collectionName: "Phénomènes observables", cardNumber: "5", miniCard: true))
+                        .offset(x: cardOffsetAnim)
+                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
+                case 11 :
+                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Voie lactée", cardFrontImage: "collec2-cardFrontImage-6-voielactee", collectionName: "Galaxie", cardNumber: "1", miniCard: true))
+                        .offset(x: cardOffsetAnim)
+                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
+                case 12 :
+                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Whirlpool", cardFrontImage: "collec2-cardFrontImage-7-whirlpool", collectionName: "Galaxie", cardNumber: "2", miniCard: true))
+                        .offset(x: cardOffsetAnim)
+                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
+                case 13 :
+                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Andromède", cardFrontImage: "collec2-cardFrontImage-8-andromede", collectionName: "Galaxie", cardNumber: "3", miniCard: true))
+                        .offset(x: cardOffsetAnim)
+                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
+                case 14 :
+                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Magellan", cardFrontImage: "collec2-cardFrontImage-9-magellan", collectionName: "Galaxie", cardNumber: "4", miniCard: true))
+                        .offset(x: cardOffsetAnim)
+                        .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
+                case 15 :
+                    CollectionCardFront(collectionCardFront: CardFrontType(cardTitle: "Horsehead", cardFrontImage: "collec2-cardFrontImage-10-horsehead", collectionName: "Galaxie", cardNumber: "5", miniCard: true))
                         .offset(x: cardOffsetAnim)
                         .rotation3DEffect(.degrees(cardRotationAnim), axis: (x: 1, y: 0, z: 1))
                 case 16 :
